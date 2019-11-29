@@ -21,14 +21,14 @@ hue-6-2: #e6c07b
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
-  color: #abb2bf;
+  padding: 0.7em;
+  color: #f8f5f5;
   background: #282c34;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #94cc6c;
   font-style: italic;
 }
 
@@ -55,7 +55,7 @@ hue-6-2: #e6c07b
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #98c379;
+  color: #94cc6c;
 }
 
 .hljs-built_in,

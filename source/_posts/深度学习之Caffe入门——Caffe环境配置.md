@@ -31,26 +31,26 @@ caffe依赖多且复杂，历来被人诟病，但是配置编译完成后caffe�
 　　在终端输入
 
 ``` yml
-　sudo apt-get install libprotobuf-dev   
-　sudo apt-get install libleveldb-dev   
-　sudo apt-get install libsnappy-dev   
-　sudo apt-get install libopencv-dev   
-　sudo apt-get install libhdf5-serial-dev   
-　sudo apt-get install protobuf-compiler  
-　sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get install libprotobuf-dev   
+sudo apt-get install libleveldb-dev   
+sudo apt-get install libsnappy-dev   
+sudo apt-get install libopencv-dev   
+sudo apt-get install libhdf5-serial-dev   
+sudo apt-get install protobuf-compiler  
+sudo apt-get install --no-install-recommends libboost-all-dev
 ```
 
 
-　　接下来安装ＢＬＡＳ（基本线性代数子库）
+　　接下来安装BALS(基本线性代数子库)
 
-```
+``` yml
   sudo apt-get install libatlas-base-dev
 ```
 
 
 　　使用默认Python来建立pycaffe接口，需要安装：
 
-```python
+``` yml
 sudo apt-get install python-dev  
 ##另一些兼容依赖库
 sudo apt-get install libgflags-dev  
@@ -64,13 +64,13 @@ sudo apt-get install liblmdb-dev
 
 安装git
 
-```
+``` yml
 sudo apt-get install git
 ```
 
 下载caffe 源代码
 
-```
+``` yml
 git clone https://github.com/BVLC/caffe.git
 ```
 
@@ -80,7 +80,7 @@ git clone https://github.com/BVLC/caffe.git
 
 如果需要Caffe的Python接口，切换到caffe下的python目录下，输入以下命令下载python依赖库（先安装pip）：
 
-```
+``` yml
 cd /caffe/python
 sudo apt-get install python-pip
 for req in (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallreq; done
@@ -92,7 +92,7 @@ for req in (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallr
 
 开始编译之前，建议输入以下命令：
 
-```
+``` yml
 make clean
 ```
 
@@ -100,35 +100,35 @@ make clean
 
 将原文本如下：
 
-```
+``` yml
 ＃CPU-only switch (uncomment to build without GPU support).
-#cpu_only :=1
+# cpu_only :=1
 ```
 
 改为如下形式：
 
-```
+``` yml
 ＃CPU-only switch (uncomment to build without GPU support).
 cpu_only :=1
 ```
 
 将原文本如下：
 
-```
+``` yml
 ＃Whatever else you find you need goes here.
 INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib
 ```
 
 改为如下形式：
 
-```
+``` yml
 ＃Whatever else you find you need goes here.
 INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial
 ```
 
 将原文本如下：
 
-```
+``` yml
 ＃NOTE: this is required only if you will compile the python interface.
 #
 We need to be able to find Python.h and numpy/arrayobject.h.
@@ -138,7 +138,7 @@ PYTHON_INCLUDE := /usr/include/python2.7 \
 
 改为如下形式：
 
-```
+``` yml
 ＃NOTE: this is required only if you will compile the python interface.
 #
 We need to be able to find Python.h and numpy/arrayobject.h.
@@ -151,7 +151,7 @@ PYTHON_INCLUDE := /usr/include/python2.7 \
 １、这些命令要在caffe路径下执行；
 ２、若编译报错与numpy有关，往往需要安装numpy:
 
-```
+``` yml
 sudo apt-get install python-numpy
 ```
 
@@ -160,7 +160,7 @@ sudo apt-get install python-numpy
 ４、在每条编译命令后面加上 -j8 -j16 的命令对提高编译速度很有帮助，将会调用尽可能多的ＣＰＵ资源进行编译。
 下面是编译命令：
 
-```
+``` yml
 make pycaffe
 make all
 make test
@@ -170,13 +170,13 @@ make runtest
 ## 测试
 测试Caffe的Python接口，切换到caffe/python文件目录下，记录下来当前路径，输入以下命令：
 
-```
+``` yml
 export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH
 ```
 
 进入Python环境，输入
 
-```
+``` yml
 import caffe
 ```
 
@@ -185,7 +185,7 @@ import caffe
 
 上面的方法，一旦关闭终端或者打开新终端则失效，如果放到配置文件中，可以永久有效果，命令操作如下：
 
-```python
+``` yml
 #A.把环境变量路径放到 ~/.bashrc文件中  
 sudo echo export PYTHONPATH="~/caffe/python" >> ~/.bashrc  
 #B.使环境变量生效  

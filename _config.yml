@@ -39,9 +39,9 @@ ignore:
 default_category: uncategorized # 分类&标签
 category_map:
 tag_map:
-search: # 局部搜索
-  path: search.xml
-  field: all
+##search: # 局部搜索
+ ## path: search.xml
+  ##field: all
 
 # 文章写作
 new_post_name: :title.md # 新文章文件名称
@@ -56,14 +56,24 @@ highlight:   #代码块高亮
   enable: true
   hljs: true
   #xinjia
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
+
+# Hexo feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
 
 # 分页 # order_by: Posts order. (Order by date descending by default)
 index_generator: 
   path: ''
-  per_page: 1  #主页每页多少个标签
+  per_page: 12  #主页每页多少个标签
   order_by: -date
 # 分页，为0表示关闭分页
 

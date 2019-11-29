@@ -11,7 +11,7 @@ tags:
 
 # 好久以前学Python中的一些笔记，转过来
 
-下午无聊找来一本python书，编了一些小例程
+### 原帖：
 
 **简单的人名对话**
 
@@ -50,7 +50,8 @@ end_fill()
 done()
 ```
 结果为
-{% asset_img Python%20is%20For%20Fun/2019-11-30-02-19-32.png %}
+{% img [class names] /image/a.png %}
+{% img [class names] /_posts/Python%20is%20For%20Fun/a.png %}
 
 **再来画个大蟒蛇吧:**
 
