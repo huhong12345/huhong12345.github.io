@@ -61,12 +61,13 @@ highlight:   #代码块高亮
   tab_replace: ''
 
 # 分页 # order_by: Posts order. (Order by date descending by default)
-index_generator:
+index_generator: 
   path: ''
-  per_page: 10
+  per_page: 1  #主页每页多少个标签
   order_by: -date
 # 分页，为0表示关闭分页
-per_page: 10
+
+per_page: 12   #归档每页多少个标签
 pagination_dir: page
 external_link:
   enable: true # 用新标签打开链接
