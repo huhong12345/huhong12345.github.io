@@ -9,14 +9,9 @@ tags:
 - 编程
 - 练习
 - DL
-
 ---
-
 # Read after me, Python is for Fun!   :)
-
-
 **简单的人名对话**
-
 ``` py
 name = input("输入姓名:")
 print("%s 同学，学好Python，前途无量！"%name)
