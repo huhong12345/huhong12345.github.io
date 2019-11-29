@@ -2,7 +2,8 @@
 title: Python is For Fun
 Date: 2019-11-29 21:55:33
 categories:
-- Diary
+- 编程
+  - Python
 tags:
 - Python
 - DL
@@ -20,13 +21,14 @@ print("%s 同学，学好Python，前途无量！"%name)
 print("%s 大侠，学好Python，大展拳脚！"%name[0])
 print("%s 哥哥，学好Python，人见人爱！"%name[1:])
 ```
+
 输入长者后，依次回显示江大侠和民哥哥
 
 ![20171103170324300](D:\桌面\20171103170324300.png)
 
 **九九乘法表输出**
 
-```
+``` py
 for i in range(1,10):
     for j in range(1,i+1):
         print("{}*{}={:2} ".format(j,i,i*j), end='')
@@ -35,7 +37,7 @@ for i in range(1,10):
 
 **绘制太阳花**
 
-```
+``` py
 from turtle import *
 color('red', 'yellow')
 begin_fill()
@@ -52,7 +54,7 @@ done()
 
 **再来画个大蟒蛇吧:**
 
-```
+``` py
 #e2.2DrawPython.py
 from turtle import *
 setup(650, 350, 200, 200)
@@ -76,7 +78,7 @@ fd(40 * 2/3)
 
 贴一段这样的代码：（表示华氏度和摄氏度的转换），很有参考意义
 
-```
+``` py
 #e1.1TempConvert.py
 TempStr = input("请输入带有符号的温度值: ")
 if TempStr[-1] in ['F','f']:
@@ -89,7 +91,7 @@ else:
     print("输入格式错误")
 ```
 **对于注释而言，**
-```
+``` py
 #可以表示单行注释
 print(pow(2,10))#也可以这样注释
 '''
@@ -100,7 +102,7 @@ fneisn
 ```
 **对于python的字符串而言**
 
-```
+``` py
 >>> aaa="110C"
 >>> print(aaa[-1])
 C
@@ -130,14 +132,14 @@ C
 
 **对输入：**
 
-```
+``` py
 TempStr=input("请输入带有符号的温度值：")
 ```
 也是很有参考意义的
 
 **对分支:**
 
-```
+``` py
 if TempStr[-1] in ['F','f']:
 elif TempStr[-1] in ['C','c']:
 ```
@@ -146,8 +148,8 @@ elif TempStr[-1] in ['C','c']:
 **另外，eval函数表示已python表达式的方式去解释并执行字符串**
 
 最后，该程序还能转化为函数形式：
-
-```
+ 
+``` py
 #*******************************e1.3TempConvert.py***********************************************
 def tempConvert(ValueStr):
     if ValueStr[-1] in ['F','f']:
