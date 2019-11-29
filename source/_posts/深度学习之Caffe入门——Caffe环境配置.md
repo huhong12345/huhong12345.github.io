@@ -27,10 +27,10 @@ caffe依赖多且复杂，历来被人诟病，但是配置编译完成后caffe�
 
 
 
-## １、安装依赖库
+## 安装依赖库
 　　在终端输入
 
-``` shell
+``` yml
 　sudo apt-get install libprotobuf-dev   
 　sudo apt-get install libleveldb-dev   
 　sudo apt-get install libsnappy-dev   
@@ -39,6 +39,7 @@ caffe依赖多且复杂，历来被人诟病，但是配置编译完成后caffe�
 　sudo apt-get install protobuf-compiler  
 　sudo apt-get install --no-install-recommends libboost-all-dev
 ```
+
 
 　　接下来安装ＢＬＡＳ（基本线性代数子库）
 
@@ -59,7 +60,7 @@ sudo apt-get install liblmdb-dev
 
 
 
-## 2、下载Caffe源码
+## 下载Caffe源码
 
 安装git
 
@@ -87,7 +88,7 @@ for req in (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallr
 
 
 
-## 3、编译Caffe
+## 编译Caffe
 
 开始编译之前，建议输入以下命令：
 
@@ -166,7 +167,7 @@ make test
 make runtest
 ```
 
-## 4、测试
+## 测试
 测试Caffe的Python接口，切换到caffe/python文件目录下，记录下来当前路径，输入以下命令：
 
 ```

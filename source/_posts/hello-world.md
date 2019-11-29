@@ -12,5 +12,10 @@ categories:
 {% img [class names] /image/a.jpg %}
 
 
+![](image/2019-11-30-01-54-08.png)
 
 
+{% img hello-world/a.png %}
+{% img [class names] /_posts/hello-world/b.png %}
+{% asset_img hello-world/2019-11-30-02-33-36.png %}
+{% asset_img hello-world/2019-11-30-02-33-46.png %}

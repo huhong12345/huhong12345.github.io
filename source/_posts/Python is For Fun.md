@@ -15,10 +15,6 @@ tags:
 
 **简单的人名对话**
 
-{% codeblock lang:objc %}
-alert('Hello World!');
-{% endcodeblock %}
-
 ``` py
 name = input("输入姓名:")
 print("%s 同学，学好Python，前途无量！"%name)
@@ -28,8 +24,7 @@ print("%s 哥哥，学好Python，人见人爱！"%name[1:])
 
 输入长者后，依次回显示江大侠和民哥哥
 
-
-![20171103170324300](D:\桌面\20171103170324300.png)
+{% asset_img Python%20is%20For%20Fun/2019-11-30-02-18-54.png %}
 
 **九九乘法表输出**
 
@@ -55,7 +50,7 @@ end_fill()
 done()
 ```
 结果为
-![20171103170048523](D:\桌面\20171103170048523.png)
+{% asset_img Python%20is%20For%20Fun/2019-11-30-02-19-32.png %}
 
 **再来画个大蟒蛇吧:**
 

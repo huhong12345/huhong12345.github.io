@@ -49,12 +49,12 @@ default_layout: post   #预设布局
 titlecase: false # 
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:   #代码块高亮
   enable: true
-  #hljs: true
+  hljs: true
   #xinjia
   line_number: true
   auto_detect: false
