@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: MaxiemeHu's Personal Blog
+title: My Personal Blog
 subtitle: '不积跬步无以至千里'
 description: 'A First-year THU PhD Candidate'
 keywords:
@@ -41,14 +41,14 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 highlight:
-  enable: true
-  hljs: true
+  enable: false
+  #hljs: true
   #xinjia
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   
 # Hexo local search

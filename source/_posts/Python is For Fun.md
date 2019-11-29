@@ -2,6 +2,12 @@
 title: Python is For Fun
 Date: 2019-11-29 21:55:33
 tags: Python
+categories：
+    - official
+    - responsive
+    - widget
+    - two_column
+    - one_column
 ---
 
 # 好久以前学Python中的一些笔记，转过来
