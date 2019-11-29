@@ -1,13 +1,11 @@
 ---
 title: Python is For Fun
 Date: 2019-11-29 21:55:33
-tags: Python
-categories：
-    - official
-    - responsive
-    - widget
-    - two_column
-    - one_column
+categories:
+- Diary
+tags:
+- Python
+- DL
 ---
 
 # 好久以前学Python中的一些笔记，转过来
@@ -16,7 +14,7 @@ categories：
 
 **简单的人名对话**
 
-```
+``` py
 name = input("输入姓名:")
 print("%s 同学，学好Python，前途无量！"%name)
 print("%s 大侠，学好Python，大展拳脚！"%name[0])

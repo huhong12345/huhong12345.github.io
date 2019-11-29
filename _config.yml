@@ -44,8 +44,8 @@ post_asset_folder: false
 relative_link: true
 future: true
 highlight:
-  enable: false
-  #hljs: true
+  enable: true
+  hljs: true
   #xinjia
   line_number: true
   auto_detect: true
