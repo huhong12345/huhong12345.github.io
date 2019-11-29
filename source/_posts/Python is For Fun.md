@@ -3,7 +3,7 @@ title: Python is For Fun
 Date: 2019-11-29 21:55:33
 categories:
 - 编程
-  - Python
+- Python
 tags:
 - Python
 - DL
@@ -15,6 +15,10 @@ tags:
 
 **简单的人名对话**
 
+{% codeblock lang:objc %}
+alert('Hello World!');
+{% endcodeblock %}
+
 ``` py
 name = input("输入姓名:")
 print("%s 同学，学好Python，前途无量！"%name)
@@ -23,6 +27,8 @@ print("%s 哥哥，学好Python，人见人爱！"%name[1:])
 ```
 
 输入长者后，依次回显示江大侠和民哥哥
+
+{% img [class names] /image/a.jpg [0.8] [height] "fds 'f123'" %}
 
 ![20171103170324300](D:\桌面\20171103170324300.png)
 
