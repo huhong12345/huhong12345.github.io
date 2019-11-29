@@ -1,6 +1,6 @@
 # If a option has many sub-options, and it's optional, then give it a `enable` sub-option. If not optional, don't use `enable`.
 
-menu:
+menu:  ##菜单设置
 - name: home
   link: /
   icon: <i class="fas fa-home"></i>

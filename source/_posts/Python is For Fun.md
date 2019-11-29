@@ -12,9 +12,8 @@ tags:
 
 ---
 
-# 好久以前学Python中的一些笔记，转过来
+# Read after me, Python is for Fun!   :)
 
-### 原帖：
 
 **简单的人名对话**
 
@@ -26,8 +25,7 @@ print("%s 哥哥，学好Python，人见人爱！"%name[1:])
 ```
 
 输入长者后，依次回显示江大侠和民哥哥
-
-{% asset_img Python%20is%20For%20Fun/2019-11-30-02-18-54.png %}
+{% img [class names] /image/a.png %}
 
 **九九乘法表输出**
 
@@ -39,7 +37,6 @@ for i in range(1,10):
 ```
 
 **绘制太阳花**
-
 ``` py
 from turtle import *
 color('red', 'yellow')
@@ -53,8 +50,8 @@ end_fill()
 done()
 ```
 结果为
-{% img [class names] /image/a.png %}
-{% img [class names] /_posts/Python%20is%20For%20Fun/a.png %}
+
+{% img [class names] /image/b.png %}
 
 **再来画个大蟒蛇吧:**
 
