@@ -1,7 +1,9 @@
 ---
 title: 整合一下深度学习caffe基本环境的配置
 Date: 2019-11-29 22:20
-tags: DL
+tags: 
+- DL
+- 配环境
 categories: 
 - DL
 - Caffe

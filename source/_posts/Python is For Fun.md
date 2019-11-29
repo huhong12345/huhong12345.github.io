@@ -6,7 +6,10 @@ categories:
 - Python
 tags:
 - Python
+- 编程
+- 练习
 - DL
+
 ---
 
 # 好久以前学Python中的一些笔记，转过来
