@@ -9,7 +9,6 @@ categories:
 - 编程
 - OJ
 ---
-<!--more-->
 # 自己在百炼OJ上练习的一些算法题
 
 ## 1088
@@ -50,7 +49,7 @@ int main(){
 }
 ```
 ## 1163
-<!--more-->
+
 ``` cpp
 
 #include <iostream>    
