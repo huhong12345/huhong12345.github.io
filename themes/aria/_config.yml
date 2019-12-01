@@ -153,19 +153,19 @@ blogroll:
 
 # `comment.commentjs.type`: Choose between `github` and `oschina`.
 comment:
-  enable: false
+  enable: true
   disqus_shortname:
   commentjs:
-    enable: false
-    type:
-    user:
-    repo:
-    client_id:
-    client_secret:
+    enable: true
+    type: "github"
+    user: "huhong12345"
+    repo: "huhong12345.github.io"
+    client_id: 553c59d0dc113422c1c6
+    client_secret: dd4d567e2c3038605681e28135d4a4265fd77b03
   valine:
     enable: false
-    app_id:
-    app_key:
+    app_id:  #PSzi1vc4OfAJuYaVAw4CLjqi-gzGzoHsz
+    app_key: #nJfplkzB7gSwSByQn3y8CeD4
     verify: false
     notify: false
     avatar: mm
