@@ -92,5 +92,7 @@ meta_generator: true  # 为false不会izai头部插入该标签
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/huhong12345/huhong12345.github.io
+  repository: 
+    github: https://github.com/huhong12345/huhong12345.github.io
+    coding: git@git.dev.tencent.com:MaximeHu/MaximeHu.git
   branch: master
