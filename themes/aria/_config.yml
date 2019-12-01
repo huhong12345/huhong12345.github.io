@@ -176,12 +176,12 @@ comment:
     highlight: true
     avatar_force: false
 
-reward:
-  enable: false
-  comment: 坚持原创技术分享，您的支持是我前进的动力！
-  # wechatpay_qrcode: images/WeChatPay.png
-  # alipay_qrcode: images/AliPay.png
-  # bitcoin_qrcode: images/BitCoin.png
+#reward:
+ # enable: false
+  #comment: 虽然不会有人，但功能还是要加上的~
+   #wechatpay_qrcode: images/wechat.jpg
+   #alipay_qrcode: 
+  # bitcoin_qrcode: 
 
 # Google Analytics Tracking ID
 google_analytics:
