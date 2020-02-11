@@ -5,7 +5,7 @@ tags:
 - NLP
 - 总结与摘抄
 categories:
-- 整理
+- 科研
 - NLP
 ---
 

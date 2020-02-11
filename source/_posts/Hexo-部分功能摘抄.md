@@ -1,11 +1,11 @@
 ---
-title: NLP一些基本概念的摘抄
-date: 2019-12-1 8:30:13
+title: Hexo部分功能摘抄
+date: 2019-11-29 22:10:33
 tags: 
 - 摘抄
 - Hexo
 categories:
-- 整理
+- 编程
 - Hexo
 ---
 
@@ -20,7 +20,7 @@ npm install hexo -g #安装Hexo
 npm update hexo -g #升级
 hexo init #初始化博客
 
-命令简写
+简写命令
 hexo n "我的博客" == hexo new "我的博客" #新建文章
 hexo g == hexo generate #生成
 hexo s == hexo server #启动服务预览
@@ -32,4 +32,4 @@ hexo server -p 5000 #更改端口
 hexo server -i 192.168.1.1 #自定义 IP
 hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 ```
-刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。
+这三个命令依次为新建一篇博客文章、生成网页、在本地预览的操作。
