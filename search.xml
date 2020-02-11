@@ -13,9 +13,9 @@
       
       <categories>
           
-          <category> 读书笔记 </category>
+          <category> 生活 </category>
           
-          <category> 菊与刀 </category>
+          <category> 读书笔记 </category>
           
       </categories>
       
@@ -42,9 +42,9 @@
       
       <categories>
           
-          <category> Mac </category>
+          <category> 生活 </category>
           
-          <category> 快捷键 </category>
+          <category> Mac </category>
           
       </categories>
       
@@ -102,9 +102,9 @@
       
       <categories>
           
-          <category> 脑洞集中营 </category>
+          <category> 科研 </category>
           
-          <category> 决策用强化与系统性机器学习 </category>
+          <category> RL </category>
           
       </categories>
       
@@ -133,7 +133,7 @@
       
       <categories>
           
-          <category> 整理 </category>
+          <category> 科研 </category>
           
           <category> NLP </category>
           
@@ -162,9 +162,9 @@
       
       <categories>
           
-          <category> 政治 </category>
+          <category> 生活 </category>
           
-          <category> 学习 </category>
+          <category> 政治 </category>
           
       </categories>
       
@@ -222,9 +222,9 @@
       
       <categories>
           
-          <category> DL </category>
+          <category> 科研 </category>
           
-          <category> Caffe </category>
+          <category> DL </category>
           
       </categories>
       
@@ -244,16 +244,16 @@
     
     
     <entry>
-      <title>Hexo-部分功能摘抄</title>
+      <title>Hexo部分功能摘抄</title>
       <link href="/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/"/>
       <url>/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/</url>
       
-        <content type="html"><![CDATA[<h3 id="先放几个有用的博客："><a href="#先放几个有用的博客：" class="headerlink" title="先放几个有用的博客："></a>先放几个有用的博客：</h3><p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br><a href="https://tengj.github.io/categories/hexo%E5%B9%B2%E8%B4%A7%E7%B3%BB%E5%88%97/" target="_blank" rel="noopener">https://tengj.github.io/categories/hexo%E5%B9%B2%E8%B4%A7%E7%B3%BB%E5%88%97/</a><br><a href="https://tengj.github.io/2016/03/06/hexo4/" target="_blank" rel="noopener">https://tengj.github.io/2016/03/06/hexo4/</a></p><h3 id="常用的Hexo-命令"><a href="#常用的Hexo-命令" class="headerlink" title="常用的Hexo 命令"></a>常用的Hexo 命令</h3><pre><code class="hljs py">npm install hexo -g <span class="hljs-comment">#安装Hexo</span>npm update hexo -g <span class="hljs-comment">#升级</span>hexo init <span class="hljs-comment">#初始化博客</span>命令简写hexo n <span class="hljs-string">"我的博客"</span> == hexo new <span class="hljs-string">"我的博客"</span> <span class="hljs-comment">#新建文章</span>hexo g == hexo generate <span class="hljs-comment">#生成</span>hexo s == hexo server <span class="hljs-comment">#启动服务预览</span>hexo d == hexo deploy <span class="hljs-comment">#部署</span>hexo server <span class="hljs-comment">#Hexo会监视文件变动并自动更新，无须重启服务器</span>hexo server -s <span class="hljs-comment">#静态模式</span>hexo server -p <span class="hljs-number">5000</span> <span class="hljs-comment">#更改端口</span>hexo server -i <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span> <span class="hljs-comment">#自定义 IP</span>hexo clean <span class="hljs-comment">#清除缓存，若是网页正常情况下可以忽略这条命令</span></code></pre><p>刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="先放几个有用的博客："><a href="#先放几个有用的博客：" class="headerlink" title="先放几个有用的博客："></a>先放几个有用的博客：</h3><p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br><a href="https://tengj.github.io/categories/hexo%E5%B9%B2%E8%B4%A7%E7%B3%BB%E5%88%97/" target="_blank" rel="noopener">https://tengj.github.io/categories/hexo%E5%B9%B2%E8%B4%A7%E7%B3%BB%E5%88%97/</a><br><a href="https://tengj.github.io/2016/03/06/hexo4/" target="_blank" rel="noopener">https://tengj.github.io/2016/03/06/hexo4/</a></p><h3 id="常用的Hexo-命令"><a href="#常用的Hexo-命令" class="headerlink" title="常用的Hexo 命令"></a>常用的Hexo 命令</h3><pre><code class="hljs py">npm install hexo -g <span class="hljs-comment">#安装Hexo</span>npm update hexo -g <span class="hljs-comment">#升级</span>hexo init <span class="hljs-comment">#初始化博客</span>简写命令hexo n <span class="hljs-string">"我的博客"</span> == hexo new <span class="hljs-string">"我的博客"</span> <span class="hljs-comment">#新建文章</span>hexo g == hexo generate <span class="hljs-comment">#生成</span>hexo s == hexo server <span class="hljs-comment">#启动服务预览</span>hexo d == hexo deploy <span class="hljs-comment">#部署</span>hexo server <span class="hljs-comment">#Hexo会监视文件变动并自动更新，无须重启服务器</span>hexo server -s <span class="hljs-comment">#静态模式</span>hexo server -p <span class="hljs-number">5000</span> <span class="hljs-comment">#更改端口</span>hexo server -i <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span> <span class="hljs-comment">#自定义 IP</span>hexo clean <span class="hljs-comment">#清除缓存，若是网页正常情况下可以忽略这条命令</span></code></pre><p>这三个命令依次为新建一篇博客文章、生成网页、在本地预览的操作。</p>]]></content>
       
       
       <categories>
           
-          <category> 整理 </category>
+          <category> 编程 </category>
           
           <category> Hexo </category>
           
@@ -263,6 +263,8 @@
         <tags>
             
             <tag> 摘抄 </tag>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
@@ -280,9 +282,9 @@
       
       <categories>
           
-          <category> 日记 </category>
+          <category> 生活 </category>
           
-          <category> 心情 </category>
+          <category> 心情&amp;日记 </category>
           
       </categories>
       
