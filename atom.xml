@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/huhong12345/huhong12345.github.io/"/>
-  <updated>2019-11-30T03:32:44.291Z</updated>
+  <updated>2020-02-11T07:28:50.777Z</updated>
   <id>https://github.com/huhong12345/huhong12345.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>整合一下深度学习caffe基本环境的配置</title>
-    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/11/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>https://github.com/huhong12345/huhong12345.github.io/2019/11/30/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2019-11-30T03:32:44.291Z</published>
-    <updated>2019-11-30T03:32:44.291Z</updated>
+    <title>《菊与刀》读书笔记</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2020/01/29/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2020/01/29/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-01-29T12:30:13.000Z</published>
+    <updated>2020-02-11T07:28:50.777Z</updated>
     
     <summary type="html">
     
@@ -29,23 +29,182 @@
       
         
         
-          &lt;p&gt;2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终拿到了个不好不坏的成绩：国二。说不甘心肯定是有的，但当时觉得数模也就那么回事，便申请负责了一个国创项目，间接进入导师实验室开始做科研训练。当时成绩还不错，又有很多竞赛，进了学校里一个很不错的组。也是第一次和DL
+          &lt;h3 id=&quot;引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。&quot;&gt;&lt;a href=&quot;#引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
-      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/DL/"/>
+      <category term="读书笔记" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Caffe" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/DL/Caffe/"/>
+      <category term="菊与刀" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8F%8A%E4%B8%8E%E5%88%80/"/>
     
     
-      <category term="心情" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
+      <category term="总结与摘抄" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    
+      <category term="读书笔记" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac快捷键介绍</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-12-03T02:55:03.000Z</published>
+    <updated>2020-02-11T05:31:27.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;很多人不喜欢Mac系统，觉得很多东西不如Windows上手直观。（这让以“简单易用”为宗旨的某公司怎么洗？？）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要原因其实是Mac系统的还是有一定的学习成本的（嗯，高贵的Unix贵族绝不屈服/🐶）。本部分
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/Mac/"/>
+    
+      <category term="快捷键" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/Mac/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+    
+      <category term="Mac" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/Mac/"/>
+    
+      <category term="快捷键" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百炼OJ练习</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/</id>
+    <published>2019-12-01T02:30:13.000Z</published>
+    <updated>2019-12-01T10:39:20.397Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;a href=&quot;#自己在百炼OJ上练习的一些算法题&quot; class=&quot;headerlink&quot; title=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;/a&gt;自己在百炼OJ上练习的一些算法题&lt;/h1&gt;&lt;h2 id=&quot;1088&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="OJ" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/OJ/"/>
+    
+    
+      <category term="编程" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="练习" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
+    
+      <category term="OJ" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/OJ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>决策用强化与系统性机器学习</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
+    <published>2019-12-01T01:34:28.000Z</published>
+    <updated>2019-12-01T10:39:20.396Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;a href=&quot;#决策用强化与系统性机器学习总结&quot; class=&quot;headerlink&quot; title=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;/a&gt;决策用强化与系统性机器学习总结&lt;/h2&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+    
+      <category term="脑洞集中营" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%84%91%E6%B4%9E%E9%9B%86%E4%B8%AD%E8%90%A5/"/>
+    
+      <category term="决策用强化与系统性机器学习" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%84%91%E6%B4%9E%E9%9B%86%E4%B8%AD%E8%90%A5/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
     
       <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
     
-      <category term="配环境" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/"/>
+      <category term="脑洞" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E8%84%91%E6%B4%9E/"/>
+    
+      <category term="整理" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%95%B4%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NLP一些基本概念的摘抄</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/</id>
+    <published>2019-12-01T00:30:13.000Z</published>
+    <updated>2019-12-01T10:39:20.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="整理" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E6%95%B4%E7%90%86/"/>
+    
+      <category term="NLP" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E6%95%B4%E7%90%86/NLP/"/>
+    
+    
+      <category term="NLP" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/NLP/"/>
+    
+      <category term="总结与摘抄" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>共产主义原理</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/</id>
+    <published>2019-11-30T18:00:00.000Z</published>
+    <updated>2020-02-11T06:44:40.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;弗·恩格斯写于 1847年10月底—11月&lt;/strong&gt; &lt;/p&gt;
+&lt;img src=&quot;/image/mks.png&quot; class=&quot;[class names]&quot;&gt;
+
+&lt;h4 id=&quot;第一个问题：什么是共产主义？&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="政治" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E6%94%BF%E6%B2%BB/"/>
+    
+      <category term="学习" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E6%94%BF%E6%B2%BB/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="政治" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/"/>
     
   </entry>
   
@@ -54,7 +213,7 @@
     <link href="https://github.com/huhong12345/huhong12345.github.io/2019/11/30/Python%20is%20For%20Fun/"/>
     <id>https://github.com/huhong12345/huhong12345.github.io/2019/11/30/Python%20is%20For%20Fun/</id>
     <published>2019-11-30T03:32:44.290Z</published>
-    <updated>2019-11-30T03:32:44.290Z</updated>
+    <updated>2019-12-10T03:37:29.953Z</updated>
     
     <summary type="html">
     
@@ -85,11 +244,11 @@
   </entry>
   
   <entry>
-    <title>百炼OJ练习</title>
-    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/11/30/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/"/>
-    <id>https://github.com/huhong12345/huhong12345.github.io/2019/11/30/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/</id>
-    <published>2019-11-30T02:30:13.000Z</published>
-    <updated>2019-11-29T21:48:18.679Z</updated>
+    <title>整合一下深度学习caffe基本环境的配置</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2019-11-29T14:34:28.000Z</published>
+    <updated>2019-12-01T10:39:20.397Z</updated>
     
     <summary type="html">
     
@@ -97,24 +256,23 @@
       
         
         
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;a href=&quot;#自己在百炼OJ上练习的一些算法题&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;strong&gt;本帖为一个回忆贴，最初写于2016年11月，大二上学期&lt;/strong&gt;&lt;br&gt;2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心（其实就是因为最初推到省里是国一，给了个高预期吧），但仔细想
         
       
     
     </summary>
     
     
-      <category term="编程" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/DL/"/>
     
-      <category term="OJ" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/OJ/"/>
+      <category term="Caffe" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/DL/Caffe/"/>
     
     
-      <category term="编程" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
     
-      <category term="练习" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
+      <category term="心情" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
     
-      <category term="OJ" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/OJ/"/>
+      <category term="配环境" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
@@ -139,68 +297,6 @@
     
     
       <category term="心情" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>决策用强化与系统性机器学习</title>
-    <link href="https://github.com/huhong12345/huhong12345.github.io/2017/02/13/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://github.com/huhong12345/huhong12345.github.io/2017/02/13/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
-    <published>2017-02-13T01:34:28.000Z</published>
-    <updated>2019-11-30T03:38:12.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;a href=&quot;#决策用强化与系统性机器学习总结&quot; class=&quot;headerlink&quot; title=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;/a&gt;决策用强化与系统性机器学习总结&lt;/h2&gt;&lt;h4
-        
-      
-    
-    </summary>
-    
-    
-      <category term="脑洞集中营" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%84%91%E6%B4%9E%E9%9B%86%E4%B8%AD%E8%90%A5/"/>
-    
-      <category term="决策用强化与系统性机器学习" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E8%84%91%E6%B4%9E%E9%9B%86%E4%B8%AD%E8%90%A5/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
-    
-      <category term="思考" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-      <category term="脑洞" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E8%84%91%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NLP一些基本概念的摘抄</title>
-    <link href="https://github.com/huhong12345/huhong12345.github.io/2016/12/29/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/"/>
-    <id>https://github.com/huhong12345/huhong12345.github.io/2016/12/29/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/</id>
-    <published>2016-12-29T07:30:13.000Z</published>
-    <updated>2019-11-30T03:02:06.147Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="NLP" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/NLP/"/>
-    
-    
-      <category term="NLP" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/NLP/"/>
-    
-      <category term="总结与摘抄" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
     
   </entry>
   
