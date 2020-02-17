@@ -183,6 +183,7 @@ export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH
 import caffe
 ```
 
+
 若没有出现异常，就说明编译成功了。
 如果没有报错，证明安装成功。
 
