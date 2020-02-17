@@ -10,9 +10,9 @@ categories:
 - DL
 ---
 **本帖为一个回忆贴，最初写于2016年11月，大二上学期**
-2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心（其实就是因为最初推到省里是国一，给了个高预期吧），但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国创项目，间接进入导师实验室开始做科研训练。（这里还是要感谢电院较好的学术氛围和师资）
+2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心，但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国创项目，间接进入导师实验室开始做科研训练。（这里还是要感谢电院较好的学术氛围和师资）
 
-当时因为是所谓的实验班学生，自己成绩还不错也有不少竞赛项目成果，找到了学校里一个挺不错的图像组的大佬当导师。那时候感觉DL没有现在那么火，自己也是第一次接触它当然，那时候第一次看这相关paper还是蛮难的，第一次接触“深度学习”这个词，但又被它各种玄幻但又挺符合常理的操作所折服。现在回忆起来，对本科生来说，多自学，早日将数学和英语水平提高到一定层次进组做科研比一味做一些所谓加分的竞赛对个人实力提升要有用得多。
+当时因为在院里实验班，自己成绩和竞赛也还不错，就找到了学校里一个挺不错的图像组的大佬当导师。那时候感觉DL没有现在那么火，自己也是第一次接触它当然，那时候第一次看这相关paper还是蛮难的，第一次接触“深度学习”这个词，但又被它各种玄幻但又挺符合常理的操作所折服。现在回忆起来，对本科生来说，多自学，早日将数学和英语水平提高到一定层次进组做科研比一味做一些所谓加分的竞赛对个人实力提升要有用得多。
 
 说回来，当时国创项目还是偏工程一些，主要关于衣物的目标检测与识别的内容。由于前期没有任何学长的帮助，一开始在配环境上就花了很长时间。那时候做目标检测还是Caffe的天下。（配过的同学应该知道这玩意有多恶心）不过后来问问基本都是这样过来的，格十几次系统不算大事。本blog主要记录的是配环境的总结。应该算是最后一种非常完善普适的方法了。（后期进实验室才发现，实验室框环境都配好的，从老的faster-RCNN到SSD、resnet等等都有学长给弄好的，需要做的只是安心看paper，带着数据去跑即可）
 
@@ -33,7 +33,7 @@ Caffe依赖多且复杂，历来被人诟病，但是配置编译完成后caffe�
 ## 安装依赖库
 　　在终端输入
 
-``` yml
+``` python
 sudo apt-get install libprotobuf-dev   
 sudo apt-get install libleveldb-dev   
 sudo apt-get install libsnappy-dev   
@@ -46,14 +46,14 @@ sudo apt-get install --no-install-recommends libboost-all-dev
 
 　　接下来安装BALS(基本线性代数子库)
 
-``` yml
+``` python
   sudo apt-get install libatlas-base-dev
 ```
 
 
 　　使用默认Python来建立pycaffe接口，需要安装：
 
-``` yml
+``` python
 sudo apt-get install python-dev  
 ##另一些兼容依赖库
 sudo apt-get install libgflags-dev  
@@ -67,13 +67,13 @@ sudo apt-get install liblmdb-dev
 
 安装git
 
-``` yml
+``` python
 sudo apt-get install git
 ```
 
 下载caffe 源代码
 
-``` yml
+``` python
 git clone https://github.com/BVLC/caffe.git
 ```
 
@@ -83,7 +83,7 @@ git clone https://github.com/BVLC/caffe.git
 
 如果需要Caffe的Python接口，切换到caffe下的python目录下，输入以下命令下载python依赖库（先安装pip）：
 
-``` yml
+``` python
 cd /caffe/python
 sudo apt-get install python-pip
 for req in (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallreq; done
@@ -95,7 +95,7 @@ for req in (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallr
 
 开始编译之前，建议输入以下命令：
 
-``` yml
+``` python
 make clean
 ```
 
@@ -103,35 +103,35 @@ make clean
 
 将原文本如下：
 
-``` yml
+``` python
 ＃CPU-only switch (uncomment to build without GPU support).
 # cpu_only :=1
 ```
 
 改为如下形式：
 
-``` yml
+``` python
 ＃CPU-only switch (uncomment to build without GPU support).
 cpu_only :=1
 ```
 
 将原文本如下：
 
-``` yml
+``` python
 ＃Whatever else you find you need goes here.
 INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib
 ```
 
 改为如下形式：
 
-``` yml
+``` python
 ＃Whatever else you find you need goes here.
 INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial
 ```
 
 将原文本如下：
 
-``` yml
+``` python
 ＃NOTE: this is required only if you will compile the python interface.
 #
 We need to be able to find Python.h and numpy/arrayobject.h.
@@ -141,7 +141,7 @@ PYTHON_INCLUDE := /usr/include/python2.7 \
 
 改为如下形式：
 
-``` yml
+``` python
 ＃NOTE: this is required only if you will compile the python interface.
 #
 We need to be able to find Python.h and numpy/arrayobject.h.
@@ -154,7 +154,7 @@ PYTHON_INCLUDE := /usr/include/python2.7 \
 １、这些命令要在caffe路径下执行；
 ２、若编译报错与numpy有关，往往需要安装numpy:
 
-``` yml
+``` python
 sudo apt-get install python-numpy
 ```
 
@@ -163,7 +163,7 @@ sudo apt-get install python-numpy
 ４、在每条编译命令后面加上 -j8 -j16 的命令对提高编译速度很有帮助，将会调用尽可能多的ＣＰＵ资源进行编译。
 下面是编译命令：
 
-``` yml
+``` python
 make pycaffe
 make all
 make test
@@ -173,13 +173,13 @@ make runtest
 ## 测试
 测试Caffe的Python接口，切换到caffe/python文件目录下，记录下来当前路径，输入以下命令：
 
-``` yml
+``` python
 export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH
 ```
 
 进入Python环境，输入
 
-``` yml
+``` python
 import caffe
 ```
 
@@ -188,7 +188,7 @@ import caffe
 
 上面的方法，一旦关闭终端或者打开新终端则失效，如果放到配置文件中，可以永久有效果，命令操作如下：
 
-``` yml
+``` python
 #A.把环境变量路径放到 ~/.bashrc文件中  
 sudo echo export PYTHONPATH="~/caffe/python" >> ~/.bashrc  
 #B.使环境变量生效  
