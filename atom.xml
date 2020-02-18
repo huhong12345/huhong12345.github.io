@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/huhong12345/huhong12345.github.io/"/>
-  <updated>2020-02-17T17:18:22.302Z</updated>
+  <updated>2020-02-18T13:03:57.028Z</updated>
   <id>https://github.com/huhong12345/huhong12345.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac录制屏内声音教程</title>
+    <link href="https://github.com/huhong12345/huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    <id>https://github.com/huhong12345/huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/</id>
+    <published>2020-02-18T12:31:22.000Z</published>
+    <updated>2020-02-18T13:03:57.028Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近疫情严重，上课开组会都是使用Zoom、腾讯会议这种线上平台进行。然而有时候教师为了保护知识产权，会不开放会议的屏幕录制功能。此时，自行录制上课/开会视频以便课后消化显得尤为重要。&lt;/p&gt;
+&lt;p&gt;然而在Mac端，直接使用自带的屏幕录制软件录不到电脑内屏放出的声音（只可录电
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Mac" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/Mac/"/>
+    
+    
+      <category term="Mac" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/Mac/"/>
+    
+      <category term="录屏" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BD%95%E5%B1%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Final Cut Pro 使用笔记</title>
@@ -298,13 +330,13 @@
       <category term="Python" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
     
     
+      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
+    
       <category term="Python" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/Python/"/>
     
       <category term="编程" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="练习" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
     
   </entry>
   
@@ -367,9 +399,9 @@
       <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/"/>
     
     
-      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
-    
       <category term="心情" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="DL" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/DL/"/>
     
       <category term="配环境" scheme="https://github.com/huhong12345/huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/"/>
     
