@@ -121,11 +121,12 @@ Mac 快捷键非常多，但一切快捷键都以四个初始键作为起始，�
 
 
 
+附：Mac 键盘快捷键:
+![](mac.jpg)
 
-{% img /image/mac.jpg %}Mac 键盘快捷键
 
 
-在 Windows PC 专用键盘上， 常用Alt 键代替 Option 键，用 Windows 标志键代替 Command 键。。
+另外，在 Windows PC 专用键盘上， 常用Alt 键代替 Option 键，用 Windows 标志键代替 Command 键。。
 
 ![img](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/divider.png)
 

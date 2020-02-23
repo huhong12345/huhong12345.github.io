@@ -20,7 +20,7 @@ print("%s 哥哥，学好Python，人见人爱！"%name[1:])
 ```
 
 输入长者后，依次回显示江大侠和民哥哥
-{% img [class names] /image/a.png %}
+![](a.png)
 
 **九九乘法表输出**
 
@@ -46,7 +46,7 @@ done()
 ```
 结果为
 
-{% img [class names] /image/b.png %}
+![](b.png)
 
 **再来画个大蟒蛇吧:**
 
@@ -70,7 +70,7 @@ fd(40 * 2/3)
 
 ```
 然后画出个大蟒蛇。。。。
-![这里写图片描述](https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcxMTAzMTcwNzI3Mzg1?x-oss-process=image/format,png)
+![](qq.png)
 
 贴一段这样的代码：（表示华氏度和摄氏度的转换），很有参考意义
 

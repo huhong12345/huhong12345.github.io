@@ -56,8 +56,8 @@ highlight:   #代码块高亮
   enable: true
   hljs: true
   #xinjia
-  line_number: true
-  auto_detect: true
+  line_number: false
+  auto_detect: false
   tab_replace: ''
 
 # Hexo feed
