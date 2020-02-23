@@ -88,6 +88,11 @@ external_link:
 theme: aria
 meta_generator: true  # 为false不会izai头部插入该标签
 
+
+# 自动生成sitemap
+sitemap:
+path: sitemap.xml
+
 #  上传
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
