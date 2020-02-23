@@ -8,7 +8,6 @@ tags:
 categories:
 - 生活
 - 剪视频
-typora-root-url: ./Final Cut Pro 使用笔记
 ---
 
 ### 这是一个关于Final Cut Pro来剪辑视频的笔记。
