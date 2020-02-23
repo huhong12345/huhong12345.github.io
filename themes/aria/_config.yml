@@ -40,7 +40,7 @@ creative_commons:
 
 # Available: atom-one-dark | atom-one-light | solarized-dark | solarized-light
 highlight: atom-one-dark
-
+#highlight: dark
 # Custom info in footer.
 custom_info: 托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
 
@@ -63,7 +63,7 @@ logo: images/mylogo2.png
 # Need quote to prevent `#` from comment.
 color: "#33363b"
 
-google_verification:
+google_verification: "OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk"
 
 since:
 
@@ -135,7 +135,7 @@ social:
       link: https://github.com/huhong12345
       icon: <i class="fab fa-github"></i>
     - name:  少临
-      link: https://www.zhihu.com/people/hu-hong-58-19/activities
+      link: https://www.zhihu.com/people/maximehu
       icon: <i class="fab fa-zhihu"></i>
 
 blogroll:

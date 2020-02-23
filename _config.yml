@@ -52,13 +52,20 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-highlight:   #代码块高亮
+highlight:
   enable: true
-  hljs: true
+  hljs: true # 添加这一行！
+  # line_number: false
+  # auto_detect: false
+  #tab_replace:
+#highlight:   #代码块高亮
+  #enable: true
+ # hljs: true
+  #gutter: true
   #xinjia
   line_number: false
   auto_detect: false
-  tab_replace: ''
+  #tab_replace: ''
 
 # Hexo feed
 feed:
