@@ -80,7 +80,7 @@ busuanzi: true
 # If you want ARIA generate excerpt, set it to the length you want. If you don't, leave it blank.
 # Recomend to place `<!--more-->` to where you want to stop excerpt in content instead of use this option.
 # Example: `auto_excerpt: 200`, use first 200 chars in post content as excerpt.
-auto_excerpt: 320
+auto_excerpt: 250
 ##每个博客在首页的字符数。
 ##也可在每个博客里使用 <!--more--> 停止
 

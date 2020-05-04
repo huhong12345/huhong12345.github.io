@@ -1,6 +1,7 @@
 ---
 title: Python is For Fun
-Date: 2019-11-29 21:55:33
+date: 2019-11-29 21:55:33
+#Date: 2019-11-29 
 categories:
 - 编程
 - Python
