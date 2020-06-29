@@ -55,8 +55,8 @@ custom_font:
   main:
   code:
 
-#avatar: images/26177172.jpg
-avatar: images/111.jpg
+#avatar: images/guidao3.jpg
+avatar: images/guidao.jpg
 
 logo: images/mylogo2.png
 
@@ -74,7 +74,7 @@ search: true
 sidebar: left
 
 # Animation in Home, Archive, Category and Tag.
-animate: false
+animate: true
 
 busuanzi: true
 
