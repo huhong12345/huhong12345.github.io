@@ -6,7 +6,7 @@
 # 网址题头布局
 title: My Personal Blog
 subtitle: '不积跬步无以至千里'
-description: 'First-year THU Ph.D Candidate'
+description: 'First-year Ph.D. Candidate @THU Economics& Social Analysis Group'
 keywords:
 author: MaximeHu
 language: zh_CN
@@ -105,6 +105,6 @@ path: sitemap.xml
 deploy:
   type: git
   repository: 
-    github: https://github.com/huhong12345/huhong12345.github.io
-    coding: git@e.coding.net:MaximeHu/MaximeHu.git
+    #github: https://github.com/huhong12345/huhong12345.github.io
+    coding: https://e.coding.net/MaximeHu/MaximeHu.git
   branch: master
