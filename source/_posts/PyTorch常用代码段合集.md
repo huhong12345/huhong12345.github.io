@@ -42,7 +42,7 @@ torch.cuda.get_device_name(0)   # GPU type
 ### **更新PyTorch**
 PyTorch 将被安装在 anaconda3/lib/python3.7/site-packages/torch/目录下。
 
-```shell
+```vb
 conda update pytorch torchvision -c pytorch
 ```
 

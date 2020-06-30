@@ -40,6 +40,7 @@ creative_commons:
 
 # Available: atom-one-dark | atom-one-light | solarized-dark | solarized-light
 highlight: atom-one-dark
+
 #highlight: dark
 # Custom info in footer.
 custom_info: 托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
