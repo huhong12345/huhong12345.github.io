@@ -11,7 +11,9 @@ tags:
 - DL
 ---
 
-干啥啥不行，拼接代码第一名。本合集代码中PyTorch版本为1.0，基本包为：
+一些Pytorch常用的代码段，会慢慢继续填充。
+
+首先需要调用的基本包大致为：
 
 ```python
 import collections
