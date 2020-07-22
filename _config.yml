@@ -42,6 +42,11 @@ tag_map:
 ##search: # 局部搜索
  ## path: search.xml
   ##field: all
+# Hexo local search
+search:
+  path: search.xml
+  field: all
+
 
 # 文章写作
 new_post_name: :title.md # 新文章文件名称
@@ -59,7 +64,7 @@ highlight:
   auto_detect: true
   tab_replace:
 
-# Hexo feed
+# Hexo feed RSS插件
 feed:
   type: atom
   path: atom.xml

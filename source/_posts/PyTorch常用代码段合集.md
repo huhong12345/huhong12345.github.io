@@ -9,9 +9,19 @@ tags:
 - Pytorch
 - 编程
 - DL
+mathjax: true
 ---
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-一些Pytorch常用的代码段，会慢慢继续填充。
+
+一些Pytorch常用的代码段，$x_2$会慢慢继续填充。
+
+$$x_2$$
+
+$$sin^2\theta + cos^2\theta = 1$$
+
 
 首先需要调用的基本包大致为：
 

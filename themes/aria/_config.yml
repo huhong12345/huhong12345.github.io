@@ -91,9 +91,11 @@ auto_excerpt: 320
 # You can also set `global: true` here to load MathJax in all pages.
 # But it's not recommended because MathJax sources are too large, that's why ARIA doesn't contain them and ask for CDN.
 mathjax:
-  enable: false
-  global:
-  cdn:
+  enable: true
+  per_page: false
+  #global: true
+  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Note: `fontawesome` is fontawesome-all. `scrollspy` and `util` are from bootstrap. `busuanzi` is `busuanzi.pure.mini.js`.
 # If you don't know what you are doing, don't change it.
