@@ -7,8 +7,8 @@ categories:
 tags:
 - 代码摘抄
 - Pytorch
-- 编程
 - DL
+- 更新
 mathjax: true
 ---
 <script type="text/javascript"
@@ -16,7 +16,7 @@ mathjax: true
 </script>
 
 
-一些Pytorch常用的代码段，$x_2$会慢慢继续填充。
+一些Pytorch常用的代码段，会慢慢继续填充。
 
 $$x_2$$
 
