@@ -1,9 +1,8 @@
 ---
 title: categories
-date: 2019-11-29 22:40:08
----
-
+tags: 心情
 categories:
-  - DL
-  - Python
   - 日记
+  - 心情
+date: 2020-10-02 19:30:19
+---
