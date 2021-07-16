@@ -103,5 +103,5 @@ deploy:
   type: git
   repository: 
     github: https://github.com/huhong12345/huhong12345.github.io
-    coding: https://e.coding.net/MaximeHu/MaximeHu.git
+#    coding: https://e.coding.net/MaximeHu/MaximeHu.git
   branch: master
