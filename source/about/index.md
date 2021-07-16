@@ -2,9 +2,4 @@
 title: about
 date: 2019-11-29 22:42:43
 ---
-一名文艺愤青的Blog。
-爱好电影，目前在学摄影，设备为富士XT30，欢迎交流：
-![](sheyin1.jpg)
-光圈：*f*/5.6，曝光时间：1/640，焦距：30mm（压缩大法好，60多M的图压到了几百K，hhh）
-
-<!-- {% img  /image/sheyin2.jpg %} -->
+Think different.
