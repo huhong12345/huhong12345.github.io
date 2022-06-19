@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Mac快捷键介绍 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="/images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Mac快捷键介绍</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-12-03T10:55:03+08:00">2019-12-03 10:55:03</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p><strong>很多人不喜欢Mac系统，觉得很多东西不如Windows上手直观。（这让以“简单易用”为宗旨的某公司怎么洗？？）</strong></p>
+<p><strong>主要原因其实是Mac系统的还是有一定的学习成本的（嗯，高贵的Unix贵族绝不屈服&#x2F;🐶）。本部分主要记录些常用的快捷键,多使用快捷键会极大地提高效率。</strong></p>
+<p>Mac 快捷键非常多，但一切快捷键都以四个初始键作为起始，键盘上从左上到右下分别是⇧，⌃，⌥，⌘。由这些键引出各种功能。</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">⇧</td>
+<td align="center">Shift</td>
+</tr>
+<tr>
+<td align="center">⌃</td>
+<td align="center">Control</td>
+</tr>
+<tr>
+<td align="center">⌥</td>
+<td align="center">Option</td>
+</tr>
+<tr>
+<td align="center">⌘</td>
+<td align="center">Command</td>
+</tr>
+</tbody></table>
+<p>先给出几个有趣的快捷键：</p>
+<p>快速调用 emoji 表情：⌘（command）+ ⌃（control）+ 空格键；</p>
+<p>浏览器中将网页加入个人收藏：⌘（command）+ D</p>
+<p>浏览器新建标签页：⌘（command）+ T</p>
+<p>匹配目标格式粘贴：⌘（command） + ⇧ （shift ）+ ⌥（option） + V</p>
+<p>打出 Apple logo 「 」：⇧（shift） + ⌥（option） + K</p>
+<p>不同应用程序之间的切换：⌘（command）+ tab（⇥）</p>
+<p>向前删除：Fn+delete</p>
+<table>
+<thead>
+<tr>
+<th>Ctrl + &#x2F;</th>
+<th>⌘&#x2F;</th>
+<th>以添加 “&#x2F;&#x2F;” 的方式添加注释</th>
+<th>★★★★☆</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Shift + &#x2F;</td>
+<td>⌘⌥&#x2F;</td>
+<td>添加 “&#x2F;**&#x2F;” 的方式添加注释</td>
+<td>★★★★☆</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Ctrl + X or Shift + Delete</th>
+<th>⌘X</th>
+<th>剪切</th>
+<th>★★★★★</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + C or Ctrl + Insert</td>
+<td>⌘C</td>
+<td>复制</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>Ctrl + V or Shift + Insert</td>
+<td>⌘V</td>
+<td>粘贴</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + V</td>
+<td>⌘⇧V</td>
+<td>从粘贴板中选择内容进行粘贴</td>
+<td>★★★☆☆</td>
+</tr>
+</tbody></table>
+<p>编辑：</p>
+<table>
+<thead>
+<tr>
+<th>组合键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command-B</td>
+<td>以粗体显示所选文本或切换文本粗体显示开&#x2F;关</td>
+</tr>
+<tr>
+<td>Command-I</td>
+<td>以斜体显示所选文本或切换文本斜体显示开&#x2F;关</td>
+</tr>
+<tr>
+<td>Command-U</td>
+<td>对所选文本加下划线或打开&#x2F;关闭加下划线功能</td>
+</tr>
+<tr>
+<td>Command-T</td>
+<td>显示或隐藏“字体”窗口</td>
+</tr>
+<tr>
+<td><strong>fn-Delete</strong></td>
+<td><strong>向前删除（适用于便携式 Mac 的内建键盘）</strong></td>
+</tr>
+<tr>
+<td>fn-上箭头</td>
+<td>向上滚动一页（相当于 Page Up 键）</td>
+</tr>
+<tr>
+<td>fn-下箭头</td>
+<td>向下滚动一页（相当于 Page Down 键）</td>
+</tr>
+<tr>
+<td>fn-左箭头</td>
+<td>滚动至文稿开头（相当于 Home 键）</td>
+</tr>
+<tr>
+<td>fn-右箭头</td>
+<td>滚动至文稿末尾（相当于 End 键）</td>
+</tr>
+<tr>
+<td>Command-右箭头</td>
+<td>将文本插入点移至当前行的<strong>行尾</strong></td>
+</tr>
+<tr>
+<td>Command-左箭头</td>
+<td>将文本插入点移至当前行的<strong>行首</strong></td>
+</tr>
+<tr>
+<td>Command-下箭头</td>
+<td>将文本插入点移至<strong>文稿末尾</strong></td>
+</tr>
+<tr>
+<td>Command-上箭头</td>
+<td>将文本插入点移至<strong>文稿开头</strong></td>
+</tr>
+<tr>
+<td>Option-右箭头</td>
+<td>将文本插入点移至下一个单词的末尾</td>
+</tr>
+<tr>
+<td>Option-左箭头</td>
+<td>将文本插入点移至上一个单词的开头</td>
+</tr>
+<tr>
+<td>Option-Delete</td>
+<td>删除光标左侧的词，以及词后的任何空格或标点符号</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>fn-Delete</th>
+<th>向前删除（适用于便携式 Mac 的内建键盘）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fn-上箭头</td>
+<td>向上滚动一页（相当于 Page Up 键）</td>
+</tr>
+<tr>
+<td>fn-下箭头</td>
+<td>向下滚动一页（相当于 Page Down 键）</td>
+</tr>
+<tr>
+<td>fn-左箭头</td>
+<td>滚动至文稿开头（相当于 Home 键）</td>
+</tr>
+<tr>
+<td>fn-右箭头</td>
+<td>滚动至文稿末尾（相当于 End 键）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">Win &#x2F; Linux</th>
+<th align="center">Mac</th>
+<th align="center">注释</th>
+<th align="center">使用频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + F</td>
+<td align="center">⌘F</td>
+<td align="center">查找</td>
+<td align="center">★★★★★</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Ctrl + R</th>
+<th>⌘R</th>
+<th>替换</th>
+<th>★★★★★</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Command-Z</th>
+<th>撤消上一命令（有些 app 可让您撤消多次）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command-Shift-Z</td>
+<td>重做，恢复上次使用撤消进行的更改（有些 app 可让您重做多次）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>组合键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command-Shift-3</td>
+<td>将屏幕捕捉到文件</td>
+</tr>
+<tr>
+<td>Command-Shift-Control-3</td>
+<td>将屏幕内容捕捉到剪贴板</td>
+</tr>
+<tr>
+<td>Command-Shift-4</td>
+<td>将所选屏幕内容捕捉到一个文件，或按空格键仅捕捉一个窗口</td>
+</tr>
+<tr>
+<td>Command-Shift-Control-4</td>
+<td>将所选屏幕内容捕捉到剪贴板，或按空格键仅捕捉一个窗口</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Command-Option-R</th>
+<th>在受支持的电脑上使用互联网恢复</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>附：Mac 键盘快捷键:<br><img src="/mac.jpg"></p>
+<p>另外，在 Windows PC 专用键盘上， 常用Alt 键代替 Option 键，用 Windows 标志键代替 Command 键。。</p>
+<p><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/divider.png" alt="img"></p>
+<h2 id="剪切、拷贝、粘贴和其他常用快捷键"><a href="#剪切、拷贝、粘贴和其他常用快捷键" class="headerlink" title="剪切、拷贝、粘贴和其他常用快捷键"></a>剪切、拷贝、粘贴和其他常用快捷键</h2><ul>
+<li><strong>Command-X</strong>：剪切所选项并拷贝到剪贴板。</li>
+<li><strong>Command-C</strong>：将所选项拷贝到剪贴板。这同样适用于“访达”中的文件。</li>
+<li><strong>Command-V</strong>：将剪贴板的内容粘贴到当前文稿或应用中。这同样适用于“访达”中的文件。</li>
+<li><strong>Command-Z</strong>：撤销上一个命令。随后您可以按 Shift-Command-Z 来重做，从而反向执行撤销命令。在某些应用中，您可以撤销和重做多个命令。</li>
+<li><strong>Command-A</strong>：全选各项。</li>
+<li><strong>Command-F</strong>：查找文稿中的项目或打开“查找”窗口。</li>
+<li><strong>Command-G</strong>：再次查找：查找之前所找到项目出现的下一个位置。要查找出现的上一个位置，请按 Shift-Command-G。</li>
+<li><strong>Command-H</strong>：隐藏最前面的应用的窗口。要查看最前面的应用但隐藏所有其他应用，请按 Option-Command-H。</li>
+<li><strong>Command-M</strong>：将最前面的窗口最小化至“程序坞”。要最小化最前面的应用的所有窗口，请按 Option-Command-M。</li>
+<li><strong>Command-O：</strong>打开所选项，或打开一个对话框以选择要打开的文件。</li>
+<li><strong>Command-P</strong>：打印当前文稿。</li>
+<li><strong>Command-S</strong>：存储当前文稿。</li>
+<li><strong>Command-T</strong>：打开新标签页。</li>
+<li><strong>Command-W</strong>：关闭最前面的窗口。要关闭应用的所有窗口，请按下 Option-Command-W。</li>
+<li><strong>Option-Command-Esc</strong>：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201276">强制退出</a>应用。</li>
+<li><strong>Command–空格键</strong>：显示或隐藏“<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201744">聚焦</a>”搜索栏。要从“访达”窗口执行“聚焦”搜索，请按 Command–Option–空格键。（如果您<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/guide/mac-help/type-in-another-language-with-input-sources-mchlp1406/mac">使用多个输入源</a>以便用不同的语言键入内容，这些快捷键会更改输入源而非显示“聚焦”。了解如何<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/guide/mac-help/change-a-conflicting-keyboard-shortcut-mh35591/mac">更改冲突的键盘快捷键</a>。）</li>
+<li><strong>Control-Command–空格键</strong>：显示字符检视器，您可以从中选择<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201586">表情符号和其他符号</a>。</li>
+<li><strong>Control-Command-F</strong>：全屏使用应用（如果应用支持）。</li>
+<li><strong>空格键</strong>：使用<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/guide/mac-help/quick-look-files-and-folders-mh14119/mac">快速查看</a>来预览所选项。</li>
+<li><strong>Command-Tab</strong>：在打开的应用中切换到下一个最近使用的应用。</li>
+<li><strong>Shift-Command-5</strong>：在 <a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201475">macOS Mojave</a> 中，拍摄屏幕快照或录制屏幕。在更早的 macOS 版本中，请使用 Shift-Command-3 或 Shift-Command-4 来拍摄屏幕快照。<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201361">进一步了解屏幕快照</a>。</li>
+<li><strong>Shift-Command-N：</strong>在“访达”中创建一个新文件夹。</li>
+<li>**Command-逗号 (,)**：打开最前面的应用的偏好设置。</li>
+</ul>
+<p><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/divider.png" alt="img"></p>
+<h2 id="睡眠、退出登录和关机快捷键"><a href="#睡眠、退出登录和关机快捷键" class="headerlink" title="睡眠、退出登录和关机快捷键"></a>睡眠、退出登录和关机快捷键</h2><p>在这些快捷键中，您可能需要按住其中一些快捷键稍长时间。这样可以避免您无意中启用快捷键。</p>
+<ul>
+<li><strong>电源按钮</strong>：按下可将 Mac 开机或将 Mac 从睡眠状态唤醒。按住这个按钮 1.5 秒可使 Mac 进入睡眠状态。*继续按住<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201150">则会强制您的 Mac 关机</a>。</li>
+<li><strong>Option–Command–电源按钮</strong>*或 <strong>Option–Command–Media Eject（Option–Command–介质推出键）</strong>：将您的 Mac 置于睡眠状态。</li>
+<li><strong>Control–Shift–电源按钮</strong>*或 <strong>Control–Shift–Media Eject（Control–Shift–介质推出键）</strong>：将显示器置于睡眠状态。</li>
+<li><strong>Control–电源按钮</strong>*或 <strong>Control–Media Eject（Control–介质推出键）</strong>：显示一个对话框，询问您是要重新启动、睡眠还是关机。</li>
+<li><strong>Control–Command–Power 电源按钮</strong>：*强制 Mac 重新启动，系统不会提示是否要存储任何打开且未存储的文稿。</li>
+<li><strong>Control–Command–Media Eject（Control–Command–介质推出键）</strong>：退出所有应用，然后重新启动您的 Mac。如果任何打开的文稿有未存储的更改，系统会询问您是否要存储这些更改。</li>
+<li><strong>Control–Option-Command–电源按钮</strong>*或 <strong>Control–Option–Command–Media Eject（Control–Option–Command–介质推出键）</strong>：退出所有应用，然后将您的 Mac 关机。如果任何打开的文稿有未存储的更改，系统会询问您是否要存储这些更改。</li>
+<li><strong>Shift–Command–Q</strong>：退出登录您的 macOS 用户帐户。系统将提示您确认。要在不确认的情况下立即退出登录，请按下 Option-Shift-Command-Q。</li>
+</ul>
+<p>* 不适用于<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT207054">触控 ID 传感器</a>。</p>
+<p><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/divider.png" alt="img"></p>
+<h2 id="访达和系统快捷键"><a href="#访达和系统快捷键" class="headerlink" title="访达和系统快捷键"></a>访达和系统快捷键</h2><ul>
+<li><strong>Command-D</strong>：复制所选文件。</li>
+<li><strong>Command-E</strong>：推出所选磁盘或宗卷。</li>
+<li><strong>Command-F</strong>：在“访达”窗口中开始“聚焦”搜索。</li>
+<li><strong>Command-I</strong>：显示所选文件的“显示简介”窗口。</li>
+<li><strong>Command-R</strong>：(1) 如果在“访达”中选择了某个别名：显示所选别名对应的原始文件。(2) 在某些应用（如“日历”或 Safari 浏览器）中，刷新或重新载入页面。(3) 在<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT201541">“软件更新”偏好设置</a>中，再次检查有没有软件更新。</li>
+<li><strong>Shift-Command-C</strong>：打开“电脑”窗口。</li>
+<li><strong>Shift-Command-D</strong>：打开“桌面”文件夹。</li>
+<li><strong>Shift-Command-F</strong>：打开“最近使用”窗口，其中显示了您最近查看或更改过的所有文件。</li>
+<li><strong>Shift-Command-G</strong>：打开“前往文件夹”窗口。</li>
+<li><strong>Shift-Command-H</strong>：打开当前 macOS 用户帐户的个人文件夹。</li>
+<li><strong>Shift-Command-I</strong>：打开 iCloud 云盘。</li>
+<li><strong>Shift-Command-K</strong>：打开“网络”窗口。</li>
+<li><strong>Option-Command-L</strong>：打开“下载”文件夹。</li>
+<li><strong>Shift-Command-N：</strong>新建文件夹。</li>
+<li><strong>Shift-Command-O</strong>：打开“文稿”文件夹。</li>
+<li><strong>Shift-Command-P</strong>：在“访达”窗口中显示或隐藏预览面板。</li>
+<li><strong>Shift-Command-R</strong>：打开“隔空投送”窗口。</li>
+<li><strong>Shift-Command-T</strong>：显示或隐藏“访达”窗口中的标签页栏。</li>
+<li><strong>Ctrl-Shift-Command-T</strong>：将所选的“访达”项目添加到“程序坞”（OS X Mavericks 或更高版本）</li>
+<li><strong>Shift-Command-U</strong>：打开“实用工具”文件夹。</li>
+<li><strong>Option-Command-D</strong>：显示或隐藏“程序坞”。</li>
+<li><strong>Control-Command-T</strong>：将所选项添加到边栏（OS X Mavericks 或更高版本）。</li>
+<li><strong>Option-Command-P</strong>：隐藏或显示“访达”窗口中的路径栏。</li>
+<li><strong>Option-Command-S</strong>：隐藏或显示“访达”窗口中的边栏。</li>
+<li>**Command–斜线 (&#x2F;)**：隐藏或显示“访达”窗口中的状态栏。</li>
+<li><strong>Command-J</strong>：显示“显示”选项。</li>
+<li><strong>Command-K</strong>：打开“连接服务器”窗口。</li>
+<li><strong>Command-L</strong>：为所选项制作替身。</li>
+<li><strong>Command-N</strong>：打开一个新的“访达”窗口。</li>
+<li><strong>Option-Command-N</strong>：新建智能文件夹。</li>
+<li><strong>Command-T</strong>：在当前“访达”窗口中有单个标签页开着的状态下显示或隐藏标签页栏。</li>
+<li><strong>Option-Command-T</strong>：在当前“访达”窗口中有单个标签页开着的状态下显示或隐藏工具栏。</li>
+<li><strong>Option-Command-V</strong>：移动：将剪贴板中的文件从原始位置移动到当前位置。</li>
+<li><strong>Command-Y</strong>：使用“快速查看”预览所选文件。</li>
+<li><strong>Option-Command-Y</strong>：显示所选文件的快速查看幻灯片显示。</li>
+<li><strong>Command-1</strong>：以图标方式显示“访达”窗口中的项目。</li>
+<li><strong>Command-2</strong>：以列表方式显示“访达”窗口中的项目。</li>
+<li><strong>Command-3</strong>：以分栏方式显示“访达”窗口中的项目。</li>
+<li><strong>Command-4</strong>：以封面流方式显示“访达”窗口中的项目。</li>
+<li>**Command–左中括号 ([)**：前往上一文件夹。</li>
+<li>**Command–右中括号 (])**：前往下一个文件夹。</li>
+<li><strong>Command–上箭头</strong>：打开包含当前文件夹的文件夹。</li>
+<li><strong>Command–Control–上箭头</strong>：在新窗口中打开包含当前文件夹的文件夹。</li>
+<li><strong>Command–下箭头</strong>：打开所选项。</li>
+<li><strong>右箭头</strong>：打开所选文件夹。这个快捷键仅在列表视图中有效。</li>
+<li><strong>左箭头</strong>：关闭所选文件夹。这个快捷键仅在列表视图中有效。</li>
+<li><strong>Command-Delete</strong>：将所选项移到废纸篓。</li>
+<li><strong>Shift-Command-Delete</strong>：清倒废纸篓。</li>
+<li><strong>Option-Shift-Command-Delete</strong>：清倒废纸篓而不显示确认对话框。</li>
+<li><strong>Command–调高亮度</strong>：打开或关闭<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT204592">目标显示器模式</a>。</li>
+<li><strong>Command–调低亮度</strong>：当您的 Mac 连接到多台显示器时，打开或关闭<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT202351#mirroring">视频镜像</a>。</li>
+<li><strong>Option–调高亮度</strong>：打开“显示器”偏好设置。这个快捷键可与任一亮度键搭配使用。</li>
+<li><strong>Control–调高亮度</strong>或 <strong>Control–调低亮度</strong>：更改外部显示器的亮度（如果显示器支持）。</li>
+<li><strong>Option-Shift–调高亮度</strong>或 <strong>Option-Shift–调低亮度</strong>：以较小的步幅调节显示器亮度。如果您的显示器支持，可以将 Control 键添加到此快捷键，以便在外置显示器上进行调节。</li>
+<li><strong>Option–“调度中心”</strong>：打开“调度中心”偏好设置。</li>
+<li><strong>Command–“调度中心”</strong>：显示桌面。</li>
+<li><strong>Control–下箭头</strong>：显示最前面的应用的所有窗口。</li>
+<li><strong>Option–调高音量</strong>：打开“声音”偏好设置。这个快捷键可与任一音量键搭配使用。</li>
+<li><strong>Option-Shift–调高音量</strong>或 <strong>Option-Shift–调低音量</strong>：以较小的步幅调节音量。</li>
+<li><strong>Option–键盘调高亮度</strong>：打开“键盘”偏好设置。这个快捷键可与任一键盘亮度键搭配使用。</li>
+<li><strong>Option-Shift–键盘调高亮度</strong>或 <strong>Option-Shift–键盘调低亮度</strong>：以较小的步幅调节键盘亮度。</li>
+<li><strong>连按 Option 键</strong>：在单独的窗口中打开项目，然后关闭原始窗口。</li>
+<li><strong>连按 Command 键</strong>：在单独的标签页或窗口中打开文件夹。</li>
+<li><strong>按住 Command 键拖移到另一个宗卷</strong>：将拖移的项目移到另一个宗卷，而不是拷贝它。</li>
+<li><strong>按住 Option 键拖移</strong>：拷贝托移的项目。拖移项目时指针会随之变化。</li>
+<li><strong>按住 Option-Command 键拖移</strong>：为拖移的项目制作替身。拖移项目时指针会随之变化。</li>
+<li><strong>按住 Option 键点按开合三角</strong>：打开所选文件夹内的所有文件夹。此快捷键仅在列表视图中有效。</li>
+<li><strong>按住 Command 键点按窗口标题</strong>：查看包含当前文件夹的文件夹。</li>
+<li><a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/guide/mac-help/select-items-mchlp1378/mac">了解如何使用 Command 或 Shift 在“访达”中选择多个项目</a>。</li>
+<li>点按“访达”菜单栏中的“前往”菜单查看用于打开许多常用文件夹（如“应用程序”、“文稿”、“下载”、“实用工具”和“iCloud 云盘”）的快捷键。</li>
+</ul>
+<p><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/divider.png" alt="img"></p>
+<h2 id="文稿快捷键"><a href="#文稿快捷键" class="headerlink" title="文稿快捷键"></a>文稿快捷键</h2><p>这些快捷键的行为可能因您使用的应用而异。</p>
+<ul>
+<li><strong>Command-B</strong>：以粗体显示所选文本，或者打开或关闭粗体显示功能。</li>
+<li><strong>Command-I</strong>：以斜体显示所选文本，或者打开或关闭斜体显示功能。</li>
+<li><strong>Command-K</strong>：添加网页链接。</li>
+<li><strong>Command-U</strong>：对所选文本加下划线，或者打开或关闭加下划线功能。</li>
+<li><strong>Command-T</strong>：显示或隐藏“字体”窗口。</li>
+<li><strong>Command-D</strong>：从“打开”对话框或“存储”对话框内选择“桌面”文件夹。</li>
+<li><strong>Control-Command-D</strong>：显示或隐藏所选字词的定义。</li>
+<li>**Shift-Command–冒号 (:)**：显示“拼写和语法”窗口。</li>
+<li>**Command–分号 (;)**：查找文稿中拼写错误的字词。</li>
+<li><strong>Option-Delete</strong>：删除插入点左边的字词。</li>
+<li><strong>Control-H</strong>：删除插入点左边的字符。也可以使用 Delete 键。</li>
+<li><strong>Control-D</strong>：删除插入点右边的字符。也可以使用 Fn-Delete。</li>
+<li><strong>Fn-Delete</strong>：在没有向前删除  键的键盘上向前删除。也可以使用 Control-D。</li>
+<li><strong>Control-K</strong>：删除插入点与行或段落末尾处之间的文本。</li>
+<li><strong>Fn–上箭头</strong>：Page Up：向上滚动一页。</li>
+<li><strong>Fn–下箭头</strong>：Page Down：向下滚动一页。</li>
+<li><strong>Fn–左箭头：</strong>Home：滚动到文稿开头。</li>
+<li><strong>Fn–右箭头</strong>：End：滚动到文稿末尾。</li>
+<li><strong>Command–上箭头</strong>：将插入点移至文稿开头。</li>
+<li><strong>Command–下箭头</strong>：将插入点移至文稿末尾。</li>
+<li><strong>Command–左箭头</strong>：将插入点移至当前行的行首。</li>
+<li><strong>Command–右箭头</strong>：将插入点移至当前行的行尾。</li>
+<li><strong>Option–左箭头</strong>：将插入点移至上一字词的词首。</li>
+<li><strong>Option–右箭头</strong>：将插入点移至下一字词的词尾。</li>
+<li><strong>Shift-Command–上箭头</strong>：选中插入点与文稿开头之间的文本。</li>
+<li><strong>Shift-Command–下箭头</strong>：选中插入点与文稿末尾之间的文本。</li>
+<li><strong>Shift-Command–左箭头</strong>：选中插入点与当前行行首之间的文本。</li>
+<li><strong>Shift-Command–右箭头</strong>：选中插入点与当前行行尾之间的文本。</li>
+<li><strong>Shift–上箭头</strong>：将文本选择范围扩展到上一行相同水平位置的最近字符处。</li>
+<li><strong>Shift–下箭头</strong>：将文本选择范围扩展到下一行相同水平位置的最近字符处。</li>
+<li><strong>Shift–左箭头</strong>：将文本选择范围向左扩展一个字符。</li>
+<li><strong>Shift–右箭头</strong>：将文本选择范围向右扩展一个字符。</li>
+<li><strong>Option–Shift–上箭头</strong>：将文本选择范围扩展到当前段落的段首，再按一次则扩展到下一段落的段首。</li>
+<li><strong>Option–Shift–下箭头</strong>：将文本选择范围扩展到当前段落的段尾，再按一次则扩展到下一段落的段尾。</li>
+<li><strong>Option–Shift–左箭头</strong>：将文本选择范围扩展到当前字词的词首，再按一次则扩展到后一字词的词首。</li>
+<li><strong>Option–Shift–左箭头</strong>：将文本选择范围扩展到当前字词的词尾，再按一次则扩展到后一字词的词尾。</li>
+<li><strong>Control–A</strong>：移至行或段落的开头。</li>
+<li><strong>Control–E</strong>：移至行或段落的末尾。</li>
+<li><strong>Control–F</strong>：向前移动一个字符。</li>
+<li><strong>Control–B</strong>：向后移动一个字符。</li>
+<li><strong>Control–L</strong>：将光标或所选内容置于可见区域中央。</li>
+<li><strong>Control–P</strong>：上移一行。</li>
+<li><strong>Control–N</strong>：下移一行。</li>
+<li><strong>Control–O</strong>：在插入点后新插入一行。</li>
+<li><strong>Control–T</strong>：将插入点后面的字符与插入点前面的字符交换。</li>
+<li>**Command–左花括号 ({)**：左对齐。</li>
+<li>**Command–右花括号 (})**：右对齐。</li>
+<li>**Shift-Command–竖线 (|)**：居中对齐。</li>
+<li><strong>Option-Command-F</strong>：前往搜索栏。</li>
+<li><strong>Option-Command-T</strong>：显示或隐藏应用中的工具栏。</li>
+<li><strong>Option-Command-C</strong>：拷贝样式：将所选项的格式设置拷贝到剪贴板。</li>
+<li><strong>Option-Command-V</strong>：粘贴样式：将拷贝的样式应用到所选项。</li>
+<li><strong>Option-Shift-Command-V</strong>：粘贴并匹配样式：将周围内容的样式应用到粘贴在该内容中的项目。</li>
+<li><strong>Option-Command-I</strong>：显示或隐藏检查器窗口。</li>
+<li><strong>Shift-Command-P</strong>：页面设置：显示用于选择文稿设置的窗口。</li>
+<li><strong>Shift-Command-S</strong>：显示“存储为”对话框或复制当前文稿。</li>
+<li>**Shift-Command-减号 (-)**：缩小所选项。</li>
+<li>**Shift-Command-加号 (+)**：放大所选项。Command–等号 (&#x3D;) 可实现相同的功能。</li>
+<li>**Shift-Command–问号 (?)**：打开“帮助”菜单。</li>
+</ul>
+<p>洗完了，好累。。。以上</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Mac/" rel="tag"><i class="fas fa-tags"></i>Mac</a>
+        
+        <a class="post-tag button" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag"><i class="fas fa-tags"></i>快捷键</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/" rel="next" title="百炼OJ-C++练习"><i class="fas fa-angle-left"></i><span class="nav-title">百炼OJ-C++练习</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/" rel="prev" title="“李约瑟问题”思考——从墨家思想的消亡说起"><span class="nav-title">“李约瑟问题”思考——从墨家思想的消亡说起</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "Mac快捷键介绍",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">36</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%89%AA%E5%88%87%E3%80%81%E6%8B%B7%E8%B4%9D%E3%80%81%E7%B2%98%E8%B4%B4%E5%92%8C%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">剪切、拷贝、粘贴和其他常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%9D%A1%E7%9C%A0%E3%80%81%E9%80%80%E5%87%BA%E7%99%BB%E5%BD%95%E5%92%8C%E5%85%B3%E6%9C%BA%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">睡眠、退出登录和关机快捷键</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%AE%BF%E8%BE%BE%E5%92%8C%E7%B3%BB%E7%BB%9F%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">访达和系统快捷键</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%96%87%E7%A8%BF%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">文稿快捷键</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

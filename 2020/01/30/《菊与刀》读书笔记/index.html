@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>《菊与刀》读书笔记 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="/images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">《菊与刀》读书笔记</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-01-30T20:30:13+08:00">2020-01-30 20:30:13</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h3 id="引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。"><a href="#引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。" class="headerlink" title="引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。"></a>引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。</h3><p>首先，这本书写于二战末期。反法西斯阵营即将取胜，但他们而却要面对一个完全不能理解的民族。在美国人看来，大和民族非常的“矛盾”，它不属于西方文化传统，但又全服武装、训练有素：</p>
+<blockquote>
+<p>这个民族既彬彬有礼又粗鲁野蛮；既顽固不化又善于改革；既谦卑温顺又不愿受制于人；既忠心耿耿又背信弃义、睚眦必报；既上街任意又不愿愧对内心；既纪律严明又难以管束；既兼容并蓄又故步自封；<strong>既醉心于菊花的美又崇尚刀剑和武士道的无上荣耀。</strong></p>
+</blockquote>
+<p>“菊”是日本皇室的象征，代表着谦和与儒雅；而“刀”则是武士刀，是日本尚武、好战的体现。这两个意象在日本人身上得到了非常好的融合。这两者也是这本书洞察大和民族民族特性的落脚点。<br><img src="/fsh.jpg"></p>
+<p>在日本民族性格的形成中，<strong>矛盾</strong>或许是一个普遍存在的因素。正因处于矛盾中，他们常常表现出紧张焦虑的情绪。他们害怕竞争，不善竞争，却毕生处在和自己的斗争中。因此相对于外界，他们更习惯于坚守原来的秩序而不是狂热的革命，这或许也是他们的社会体系长期稳定的原因。但是矛盾依然存在，或者说他们不愿放弃矛盾，他们的稳定中又充满了善变.“菊花与刀剑”的矛盾，并不像平时被人所理解的“日本人对内部很和谐，而对外部十分残酷”这种矛盾这么简单。或许，菊花就好比日本人心中的精神力量的来源，是美好的；而刀剑就好比奉行这种精神或原则的方式，很难突破。</p>
+<p>同时，日本人对于<strong>报恩与尊重</strong>有着近乎执拗的偏好。他们对待天皇会毫无原则毫无理由地服从，哪怕心里知道那样做是错的也甘愿奉献自己的全部。同时他们对精神和意志的影响有着超凡的信任，认为这可以超出物质本身。也就是说，日本人对于生，对于死迥异于其他国家民族的生存至上的逻辑。曾看到《挪威的森林中》写着：</p>
+<blockquote>
+<p>“死并非是生的对立面，而是作为生的一部分存在。”<br><img src="/fsh3.jpg"></p>
+</blockquote>
+<p>日本人往往以死表达心理情感的一种极度升华，是对国家对个人的一种牺牲与尊严，以此凸显自己的人生价值。这种<strong>细腻却自尊，带着淡淡悲伤和强烈荣誉感的情怀</strong>，或许就是日本人对生与死的直接诠释。</p>
+<p>这个民族无疑是令人感伤的。他们似乎从诞生起就背负着苦难，但又不屈服于现实。<strong>他们有着超出自己国土与人力资源的野心与梦想并甘愿一代代为之玉碎。</strong>伴随着一曲《The Empire of the Sun》，我仿佛能看到那个好斗又和善；尚武又爱美；傲慢又懂礼；顽固又善变；驯服又桀骜；忠诚又叛逆；勇敢又懦弱的民族。<strong>那个在日出之地冉冉升起，迸发出无穷活力的新兴帝国，经历过黑暗的幕府时代、光明却集权的明治维新时代，有着民主繁荣，洋溢着浮世绘中诗意浪漫的大正时期，最终却高呼万岁，陷入癫狂的军国主义。这个年轻的帝国将整个亚洲卷入混乱与黑暗，最终自己也蒙受苦难，七十年奋斗成果，化为一堆焦土和两声轰鸣巨响，只落得樱花落尽，生灵涂炭……</strong><br><img src="/feiji.jpeg"><br>回顾日出帝国这励精图治的风雨七十年，追求力量的途中被战争这个便捷的方式冲昏头脑的历史，你可能只会想到<strong>那标着红日的战机和军舰，那南京城里流血的屠刀，那一个个誓死战斗，眼神里充满着自信与正义的神风之子。</strong>不会想到阴谋与野心，想到那全民支持的这场“正义战争”背后的深层原因。</p>
+<p>庞勒曾在《乌合之众》中详细展示，<strong>组织化群体的无意识行为是如何极端化、情绪化与低智商化的。虽然本书中将人的群体属性归结为文化模式。认为人类文化各有其不同的价值体系和特征，在不同民族中呈现着一定的主旋律，即民族精神。</strong></p>
+<p>但发动战争的是政客，这固然与其封建残余的军国主义有关。而政客也需要不断利用媒体与集群效应煽动民众，得到支持。当国家宣传机器全力开动，政客们也往往借助本民族最直接的“痛点”反复借力，那些宣传的口号无疑会让本就信息不对称并担心离群的人民振奋且陷入疯狂。</p>
+<p>当庄严神圣的口号再度响起，民族精神与国家前途以军队具象化的形式让民众热血沸腾时，阵阵万岁浪潮的山呼海啸很容易去除人民的理智，让人民放弃思考。有时保持清醒头脑的人会被视为保守的极右主义者，在全民疯狂的情形下被当作异类清除。</p>
+<p><strong>此时，你是否还愿意保持着清醒。</strong><br><img src="/shenfeng.jpg"></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>总结与摘抄</a>
+        
+        <a class="post-tag button" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fas fa-tags"></i>读书笔记</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/" rel="next" title="“李约瑟问题”思考——从墨家思想的消亡说起"><i class="fas fa-angle-left"></i><span class="nav-title">“李约瑟问题”思考——从墨家思想的消亡说起</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/" rel="prev" title="部分个人影评合集（保持更新）"><span class="nav-title">部分个人影评合集（保持更新）</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "《菊与刀》读书笔记",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">36</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%BC%95%E8%A8%80%EF%BC%9A%E6%9C%80%E5%AD%A4%E7%AB%8B%E7%9A%84%E5%BE%AE%E5%B0%8F%E8%A1%8C%E4%B8%BA%E4%B9%8B%E9%97%B4%E4%B9%9F%E5%AD%98%E5%9C%A8%E7%9D%80%E8%81%94%E7%B3%BB%EF%BC%8C%E8%BF%99%E4%BA%9B%E7%BA%B7%E7%B9%81%E5%A4%8D%E6%9D%82%E7%9A%84%E5%8D%95%E9%A1%B9%E8%A1%8C%E4%B8%BA%E6%9E%84%E6%88%90%E4%BA%86%E4%B8%80%E4%B8%AA%E6%80%BB%E4%BD%93%E6%A8%A1%E5%BC%8F%E3%80%82"><span class="toc-text">引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

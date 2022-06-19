@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>部分个人影评合集（保持更新） | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="/images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">部分个人影评合集（保持更新）</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-02-10T22:31:45+08:00">2020-02-10 22:31:45</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%94%9F%E6%B4%BB/%E5%BD%B1%E8%AF%84/" itemprop="url" rel="index"><span itemprop="name">影评</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评："><a href="#寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：" class="headerlink" title="寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评："></a>寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：</h2><h3 id="《窃听风暴》"><a href="#《窃听风暴》" class="headerlink" title="《窃听风暴》"></a>《窃听风暴》</h3><h4 id="豆瓣9-1，06年奥斯卡最佳外语片"><a href="#豆瓣9-1，06年奥斯卡最佳外语片" class="headerlink" title="豆瓣9.1，06年奥斯卡最佳外语片"></a>豆瓣9.1，06年奥斯卡最佳外语片</h4><p>故事发生在1984-1989柏林墙倒塌期间的东德。当时整个社会弥漫在国家安全局的高压统治下，他们如同鬼魅般毫无理由地监听控制着整个国家。男主也是这个国家85000名秘密警察中的一个，他业务熟练，冷血无情，像一个工具一样闭眼倾听着一对艺术家夫妇。艺术家们往往是社会进步的重要力量。但此时他们的自由主义思想，却被视为对国家政权的重要威胁。他们被监视、被窃听，从没有创作自由，甚至没有人身自由。男主的生活冷酷高压，反而监听时耳中那个诗意浪漫的家庭好似幻梦，他看到了一个世界里不止有无情的政治斗争，还有诗，音乐和温暖。同时对社会主义和党员义务无比坚定的他却一次次发现党内高层违背党的宗旨，文艺部部长都利用职权强迫艺术家妻子成为自己的情妇…男主的美好梦境一次次打破了，他决定保护艺术家一家，但最终自己也失去了一切。<br>亚里士多德曾说过：“政治是最高的善”。它本应是人类为了保护个人权利，自由与财产而出现的一种社会契约。但在官僚主义横行的，“斯塔西”们处处监控的高压社会，政治在国家机器的手中，就会成为了剥夺个人自由与意志的恶。当身居高位的执政者一次次亵渎他们自己的誓言，而真心实意坚信这个体制的人被一次次伤害时，“国家意志”只会成为少数人的谋取个人权利的意志。而布尔什维克（多数）也就无从谈起。<br><img src="/qt1.jpg"></p>
+<h3 id="《钢的琴》"><a href="#《钢的琴》" class="headerlink" title="《钢的琴》"></a>《钢的琴》</h3><h4 id="豆瓣8-4，一部很难得的中国电影"><a href="#豆瓣8-4，一部很难得的中国电影" class="headerlink" title="豆瓣8.4，一部很难得的中国电影"></a>豆瓣8.4，一部很难得的中国电影</h4><p>故事背景与人物是设计在上世纪改革开放后的老东北工业区，那个充满着体制化与革命的时代突然崩塌，一批批下岗工人也转瞬从国家的主人翁成为社会的边缘人，这在心理上是很难接受的，仿佛过去的一切都没有意义。但本片并没有陷入自怨自艾的情绪中，反而以一种黑色幽默般的故事清晰描绘出一个小人物在时代洪流下的无奈与心酸，抗争到最后释怀与和解。虽然本片内核是悲凉的，但看完却更多是一种感叹与怀念，和对这一代劳动者的尊敬。历史车轮滚滚向前，我们更应该接受它，带着上一代留下来的精神宝藏继续前行。这部片子2010年上映，王千源是主演，更多的是“哀而不伤”。后来还有一部类似题材的《暴雪将至》则完全是时代的挽歌，结局雪花的飘零仿佛就是要把那些东西毁灭给你看。<br><img src="/bx.jpg"></p>
+<h3 id="《搏击俱乐部》"><a href="#《搏击俱乐部》" class="headerlink" title="《搏击俱乐部》"></a>《搏击俱乐部》</h3><h4 id="豆瓣9-0，不说了，两个字：NB"><a href="#豆瓣9-0，不说了，两个字：NB" class="headerlink" title="豆瓣9.0，不说了，两个字：NB"></a>豆瓣9.0，不说了，两个字：NB</h4><p>表面看是对消费主义社会下各种虚伪的精神慰藉的辛辣讽刺，但深层次应该很容易想到的是与“虚无主义”，“自由”甚至与左派思潮的精神追求有关。但和《V字仇杀队》那种纯粹的革命又不同，可能更加地形而上学吧。这部片我觉得个人理解可能还不够深，还在思考，就分享几段别人的影评吧：</p>
+<blockquote>
+<p><strong>”叛逆“与”革命“</strong><br>＂叛逆＂是个体对体制与所谓＂主流＂的不认同与不合作，而＂颠覆＂虽同样追求与主流的离异，但却还隐藏着推倒体制的含义．＂叛逆者＂是小小的破坏分子，他们是远离者，是孤独者．而＂颠覆＂却暗示着他们的对立面－－＂建立＂，他们不满足与象叛逆者那样，远远的扔石块，冷冷的嘲弄，他们想要的是改变体制，扭转＂主流＂．因此，当这些特征发展到一定阶段的时候，就像影片中所呈现的那样，叛逆成了破坏者．颠覆则不可避免的到达了它的第二阶段－－＂革命＂．<br>已经成为物欲囚徒的城市中产阶级和为了生活而挣扎的小人物们，希望通过对身体的破坏来获取精神的刺激,籍此找回字我存在的意义和作为人的自尊．很明显,肉体的欢愉（性和毒品）所带来的刺激已经被这个社会修剪的那么＂生活化、健康化和科学性＂（多么主流的词汇），他的稀松平常显然已经不能挑起人们精神的刺激,更无法触及人的自尊.如此一来,聪明的泰勒便发现了欢愉的对立面—痛感（一个绝好的办法,却也是让人绝望的悲哀）．正如尼采所言，现代社会塑造了人，他们把自己的优越感无偿的献给了自我保存．他们是由欲望和理性组合而成却没有抱负的人，他们没有任何获得比他人更伟大的认可的欲望，没有杰出感和成就感,他们是＂最后的人＂．<br>但尽管如此，他们可能并不是＂革命者＂，因为这与他们真正的目的是分道扬镳的．泰勒和他的组织越来越壮大，这是事实．但他们的力量源泉在于它的＂破坏性＂而不在于＂创造性＂，他们有的是叛逆者愤怒的反抗与不甘，而不是革命者的野心勃勃和充满抱负．叛逆者们追求自由，找寻自由，而革命者却试图创造自由，给予自由．叛逆者是无政府主义者，是不屑于主流或绝望或聪明的人们，他们用各种方式嘲弄着体制：对一本正经的人们残忍的捉弄，用尸体油脂制作香皂，大楼上的笑脸（这倒颇有纳粹的意味）．革命者却不会在乎这种小大小闹,嬉笑怒骂对他们而言,简直是一种侮辱，他们才是真正的危险人物．叛逆者乐于不同于主流，他们憎恨、蔑视主流，为自己是个unique而沾沾自喜，革命者却渴望成为主流，通过颠覆原先的统治者．<br>一个主流文化的存在，总是伴随着大量的少数派与之对抗．那些叛逆者乐于自己作为少数派的角色，乐在其中，他们其实也就是这个主流文化的一部分．这种主流与少数派之间对抗所形成的张力，正是体制存在的动因和能量源泉．叛逆者是天生的反对派（正如亨廷顿说学生是天生的反对派），一个天生的反对派，一旦失去了它强大的敌人，也就丧失了自身存在的意义，活不下去了．所以说叛逆者的角色是荒谬、尴尬而又可悲的．他们蔑视主流，却是主流之兄，体制之子．一如我们亲身体验的一样，对兄弟的敌意，对父亲的仇视，是我们天生的禀赋．叛逆的人们，你们是可悲的，你们不能成为神圣的摩西，却注定是忤逆的该隐．而体制永远不会因为叛逆者的反抗而土崩瓦解，反而是当反抗者们丧失了斗志和力量时，体制将变得僵硬和臃肿，失去了活动，腐朽不堪了．<br>泰勒的组织，与革命其实并没有什么联系和共同点，与其说它是政治性的，不如说它是宗教性的．人们为了追求精神的解脱和信仰加入其中，他们通过肉体的感受试图唤醒精神的短暂振奋．<br>另外说实话，我一点也不喜欢对自己喜爱的电影作这样的剖析，我更愿意陶醉于那种朦胧的美感，在理解与不理解之间玩味．就好象面对一个美丽的女子，我们更愿意欣赏她衣裳与骨骼之间的肉体，抚摸服饰与血肉之间的肌肤．当然，你可能会问，为何不愿触及她的灵魂呢？呵呵，如果为了触及一个人的灵魂，何必要选择一个美丽的女子呢？之所以我现在要玷污这位美人，只是因为不愿意玷污她的不是我本人。</p>
+</blockquote>
+<blockquote>
+<p> <strong>《中产危机》</strong><br> 市场经济的基础不是价格，而是欲望。经济学家告诉我们，边际消费倾向越高，经济总量增长越快。工人越消费，厂商越有生产动力，越能获得利润；获得更多的利润，就能给更多的工资让工人消费。所以在市场经济的条件下，大家最应该做的事情就是尽情地挥霍自己的欲望：尽情地消费，尽情地占有。于是消费主义横行，人们只知消费，不知思考；只知纵欲，不知节制。<br>    欲望的一大特点就是易消逝性。如果一个的目标是赚到一百万，当他在欲望的号召下费尽千辛万苦赚到一百万，却发现当欲望的实现消解了欲望本身时，得到的只不过是莫大的空虚。这样的空虚到处都在上演，于是有人开始厌倦，开始反抗。<br>    大卫芬奇在《搏击俱乐部》中给我们讲了这样一个故事：一个空虚的中产在厌倦了物欲不断满足的空虚之后开始失眠，于是他参加各种绝症患者社团，通过分享别人的濒死体验，来激发自己的存在本能。但一个同样空虚的女人的到来让他看清了自己的虚伪，于是他自己在无意识的情况下分裂出另一个自己，寻找解决之道。他建立了搏击俱乐部，在这里人们自由互殴。痛是最直接的强烈感受，很容易感受到自己的存在；他对自己的分身谈论期待中的互殴对象：海明威，林肯,甘地……成为英雄对大多数平庸的我们只是不实的梦，实现这些不现实的梦不应该成为我们存在的意义；他建立了秘密组织，在这种类似军队的集体主义组织中，个人没有象征个性的名字，只有集体分配给他的代号。个体不存在了，欲望也就不容易产生。最后，他喊出了最具震撼力的口号：消灭物质。没有物质，自然没有对物质的欲望，一切问题就迎刃而解了。整个电影就在成熟的市场经济的象征——个人信用信息中心的大楼轰塌中结束了。物质没有了，欲望也没有了，一切归于平静。<br>    《搏击俱乐部》是身处后现代的大卫芬奇的又一次布道，号召不甘在欲望中湮灭的中产们团结起来毁灭这个以欲望为基础的体制。但是芬奇并没有给出解决之道：我们在毁灭了一切之后怎么办？我们是应该站在物质的废墟上等死，还是任由以追求个人利益最大化为本能的我们开始新一轮的物质建设？<br>    在又一次看完芬奇这部中产的悲剧之后，一位曾经的同窗向我抱怨他的不安：中国新兴的中产没有政党为他们说话，财产没有保障，生活过不安稳。我心中感慨万千：在中国未来的中产还在担心未来的中产生活没有保障时，外国的中产早已厌倦了光鲜富足，开始着手物质的毁灭。<br>    其实两者都是悲哀的。<br><img src="/bj1.jpg"></p>
+</blockquote>
+<h3 id="《本杰明巴顿奇事》"><a href="#《本杰明巴顿奇事》" class="headerlink" title="《本杰明巴顿奇事》"></a>《本杰明巴顿奇事》</h3><h4 id="豆瓣8-9。我高中时最喜欢的电影之一，更喜欢另一个译名-《返老还童》"><a href="#豆瓣8-9。我高中时最喜欢的电影之一，更喜欢另一个译名-《返老还童》" class="headerlink" title="豆瓣8.9。我高中时最喜欢的电影之一，更喜欢另一个译名:《返老还童》"></a>豆瓣8.9。我高中时最喜欢的电影之一，更喜欢另一个译名:《返老还童》</h4><p>08年大卫芬奇的运镜和调度早已炉火纯青，三个小时的故事平铺直叙你却感受不到时间，环环相扣的情节宛如流水。你会记住那个反方向的钟，那个被雷电劈过七次的男人，那个独自游过大西洋的女人，以及黛西怀里抱着的婴儿：本杰明。诗意的画面和娓娓道来的故事会让你主动浸入到那个奇特的隽永时光中。<br><img src="/bjm.jpg"></p>
+<h3 id="《布达佩斯大饭店》"><a href="#《布达佩斯大饭店》" class="headerlink" title="《布达佩斯大饭店》"></a>《布达佩斯大饭店》</h3><h4 id="豆瓣评分8-8，获奥斯卡5项提名4项正奖。"><a href="#豆瓣评分8-8，获奥斯卡5项提名4项正奖。" class="headerlink" title="豆瓣评分8.8，获奥斯卡5项提名4项正奖。"></a>豆瓣评分8.8，获奥斯卡5项提名4项正奖。</h4><p>这是一部画面极其考究，色彩艳丽，构图将对称美学进行到底的电影。但就画面就能称得上一部艺术片并值回票价。<br>艺术成就上，片中情节荒诞却紧凑，仿佛与生俱来就带有着贵族的优雅。有人说它既满足侦探片的悬念冲突，又有着文艺片的温馨优雅，更有着政治片的黑色幽默与隐喻。</p>
+<p>一部好的电影一定应该做到雅俗共赏，层层精彩。这个角度来说，本片或许是战前属于“欧式贵族”最后优雅的赞歌。主人公一丝不苟，面对逐渐礼崩乐坏的现实也坚守着欧洲那最后的人文家园。<br>（类似的主题，再推荐一部虽然有些争议，但个人还蛮喜欢的最近的片子《罗曼蒂克消亡史》，可以感受到属于旧上海那最后的优雅消亡的悲剧）<br><img src="/bdp2.jpg"></p>
+<h3 id="《寄生虫》"><a href="#《寄生虫》" class="headerlink" title="《寄生虫》"></a>《寄生虫》</h3><h4 id="2020年奥斯卡最终大赢家-碎碎念"><a href="#2020年奥斯卡最终大赢家-碎碎念" class="headerlink" title="2020年奥斯卡最终大赢家+碎碎念"></a>2020年奥斯卡最终大赢家+碎碎念</h4><p>初看的时候它刚得戛纳金棕榈和金球最佳外语片，那时我抱着它毕竟是这么多年来韩国片获奖最多的，就看了一下，但直到今天看到奥斯卡奖一出，我酸了。真的也不至于最佳影片最佳导演最佳剧本等六项大奖吧。我个人心目中大概只能打个8.5左右，但是这得奖规模几乎是个能豆瓣9.0+能进影史前一百的片子了。可能是运气太爆棚了吧……<br>说回电影：总的来说，这部片肯定是好片，质量上乘，主题深刻。简单来说，这是一个寓言式的阶级矛盾相生相杀的故事。(这部片属于剧情片，我怕剧透就不多说了）电影的内核其实片中已点明了：财富能把一切东西熨平，而美德，不过是富人生活的衍生品和精神慰藉罢了。穷人并不是天生就算计，凶险，充满着罪恶与不知廉耻，他们只是需要生计。而中国这个道理也早就说过了，过去有“仓廪足而知礼节”，现在有“经济基础决定上层建筑”。<br>所以在片中，其实也没有好人坏人富人穷人，所有人都非常矛盾，游离在善与恶的边缘。富人们没有兴趣关心穷人的想法与生活，穷人们心中富人的纸醉金迷也只是表象与他们的意淫。整部片仿佛就是要把两个对立的东西揉起来讲，打破隔离地探讨阶级矛盾。这符合影片“戏剧冲突”与“好看”这一最重要的指标<br>但我个人认为，全片有一些太“刻意”了，剧本虽完美无暇，主题严肃认真，但片子是以商业片的形式，规范化的指挥让你迅速达到主旨。但可能我更喜欢那种有余韵和不那么“匠气”的电影吧。<br>最关键的还是奥斯卡的过誉，让我觉得不那么值当，也是为今年其他几部很不错的电影愤慨吧。ε&#x3D;(´ο｀*)))唉，也有可能就是酸了<br><img src="/jsc.jpg"></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%9B%B4%E6%96%B0/" rel="tag"><i class="fas fa-tags"></i>更新</a>
+        
+        <a class="post-tag button" href="/tags/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E8%AF%84/" rel="tag"><i class="fas fa-tags"></i>个人影评</a>
+        
+        <a class="post-tag button" href="/tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/" rel="tag"><i class="fas fa-tags"></i>整理合集</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="next" title="《菊与刀》读书笔记"><i class="fas fa-angle-left"></i><span class="nav-title">《菊与刀》读书笔记</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" rel="prev" title="Final Cut Pro 使用笔记"><span class="nav-title">Final Cut Pro 使用笔记</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "部分个人影评合集（保持更新）",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">36</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AF%92%E5%81%87%E7%9C%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%B5%E5%BD%B1%EF%BC%8C%E6%9C%89%E7%9A%84%E6%98%AF%E4%B9%8B%E5%89%8D%E7%9C%8B%E8%BF%87%EF%BC%8C%E7%8E%B0%E5%9C%A8%E9%87%8D%E6%96%B0%E7%9C%8B%E4%B8%80%E9%81%8D%EF%BC%8C%E5%86%99%E4%BA%86%E5%87%A0%E4%B8%AA%E5%B0%8F%E5%BD%B1%E8%AF%84%EF%BC%9A"><span class="toc-text">寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E7%AA%83%E5%90%AC%E9%A3%8E%E6%9A%B4%E3%80%8B"><span class="toc-text">《窃听风暴》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B1%86%E7%93%A39-1%EF%BC%8C06%E5%B9%B4%E5%A5%A5%E6%96%AF%E5%8D%A1%E6%9C%80%E4%BD%B3%E5%A4%96%E8%AF%AD%E7%89%87"><span class="toc-text">豆瓣9.1，06年奥斯卡最佳外语片</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E9%92%A2%E7%9A%84%E7%90%B4%E3%80%8B"><span class="toc-text">《钢的琴》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B1%86%E7%93%A38-4%EF%BC%8C%E4%B8%80%E9%83%A8%E5%BE%88%E9%9A%BE%E5%BE%97%E7%9A%84%E4%B8%AD%E5%9B%BD%E7%94%B5%E5%BD%B1"><span class="toc-text">豆瓣8.4，一部很难得的中国电影</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E6%90%8F%E5%87%BB%E4%BF%B1%E4%B9%90%E9%83%A8%E3%80%8B"><span class="toc-text">《搏击俱乐部》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B1%86%E7%93%A39-0%EF%BC%8C%E4%B8%8D%E8%AF%B4%E4%BA%86%EF%BC%8C%E4%B8%A4%E4%B8%AA%E5%AD%97%EF%BC%9ANB"><span class="toc-text">豆瓣9.0，不说了，两个字：NB</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E6%9C%AC%E6%9D%B0%E6%98%8E%E5%B7%B4%E9%A1%BF%E5%A5%87%E4%BA%8B%E3%80%8B"><span class="toc-text">《本杰明巴顿奇事》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B1%86%E7%93%A38-9%E3%80%82%E6%88%91%E9%AB%98%E4%B8%AD%E6%97%B6%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E7%94%B5%E5%BD%B1%E4%B9%8B%E4%B8%80%EF%BC%8C%E6%9B%B4%E5%96%9C%E6%AC%A2%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%AF%91%E5%90%8D-%E3%80%8A%E8%BF%94%E8%80%81%E8%BF%98%E7%AB%A5%E3%80%8B"><span class="toc-text">豆瓣8.9。我高中时最喜欢的电影之一，更喜欢另一个译名:《返老还童》</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E5%B8%83%E8%BE%BE%E4%BD%A9%E6%96%AF%E5%A4%A7%E9%A5%AD%E5%BA%97%E3%80%8B"><span class="toc-text">《布达佩斯大饭店》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B1%86%E7%93%A3%E8%AF%84%E5%88%868-8%EF%BC%8C%E8%8E%B7%E5%A5%A5%E6%96%AF%E5%8D%A15%E9%A1%B9%E6%8F%90%E5%90%8D4%E9%A1%B9%E6%AD%A3%E5%A5%96%E3%80%82"><span class="toc-text">豆瓣评分8.8，获奥斯卡5项提名4项正奖。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E3%80%8A%E5%AF%84%E7%94%9F%E8%99%AB%E3%80%8B"><span class="toc-text">《寄生虫》</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#2020%E5%B9%B4%E5%A5%A5%E6%96%AF%E5%8D%A1%E6%9C%80%E7%BB%88%E5%A4%A7%E8%B5%A2%E5%AE%B6-%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-text">2020年奥斯卡最终大赢家+碎碎念</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

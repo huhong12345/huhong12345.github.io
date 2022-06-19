@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>整合一下深度学习caffe基本环境的配置 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="/images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">整合一下深度学习caffe基本环境的配置</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-29T22:34:28+08:00">2019-11-29 22:34:28</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%A7%91%E7%A0%94/DL/" itemprop="url" rel="index"><span itemprop="name">DL</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p><strong>本帖为一个回忆贴，最初写于2016年11月，大二上学期</strong><br>2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心，但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国创项目，间接进入导师实验室开始做科研训练。（这里还是要感谢电院较好的学术氛围和师资）</p>
+<p>当时因为在院里实验班，自己成绩和竞赛也还不错，就找到了学校里一个挺不错的图像组的大佬当导师。那时候感觉DL没有现在那么火，自己也是第一次接触它当然，那时候第一次看这相关paper还是蛮难的，第一次接触“深度学习”这个词，但又被它各种玄幻但又挺符合常理的操作所折服。现在回忆起来，对本科生来说，多自学，早日将数学和英语水平提高到一定层次进组做科研比一味做一些所谓加分的竞赛对个人实力提升要有用得多。</p>
+<p>说回来，当时国创项目还是偏工程一些，主要关于衣物的目标检测与识别的内容。由于前期没有任何学长的帮助，一开始在配环境上就花了很长时间。那时候做目标检测还是Caffe的天下。（配过的同学应该知道这玩意有多恶心）不过后来问问基本都是这样过来的，格十几次系统不算大事。本blog主要记录的是配环境的总结。应该算是最后一种非常完善普适的方法了。（后期进实验室才发现，实验室框环境都配好的，从老的faster-RCNN到SSD、resnet等等都有学长给弄好的，需要做的只是安心看paper，带着数据去跑即可）</p>
+<p>本来也参考了很多CSDN前辈的教程，也按照《深度学习——２１天实战caffe》这本书来配过，但是都不成功。Caffe不像现在TensorFlow，Pytorch这种兼容性那么强，它于各种电脑的配置、环境都极大相关，且修复较难，牵一发而动全身。加上后来配GPU版的时，才发现只能先装Cuda等驱动才能在在其基础上装Caffe-gpu，又得推翻重来。（可能也是因为自己菜，当时大二上也没怎么有很多Linux的基础）故仅凭一篇教程来配置caffe是欠妥当的。建议后面的朋友主要看看每篇教程有什么不同，配的时候多带着些思考，哪些依赖包是教程没有提及但自己电脑又确实没有的。<br>　　<br>Caffe依赖多且复杂，历来被人诟病，但是配置编译完成后caffe所带来的欣喜与便捷也足以回报先前的煞费苦心。相信自己的能力也会随配环境这个过程逐步提高，而慢慢入门。希望未来看到这篇博客的你不要灰心丧气、半途而废！</p>
+<p>　　正文开始：<br>　　由于选择的是CPU训练，所以暂时没有配置Cuda和CuDNN两个环境。</p>
+<p>　　计算机配置：<br>　　Ubuntu 16.04 LTS<br>　　i7-4720HQ<br>　　8G内存</p>
+<h2 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h2><p>　　在终端输入</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">sudo apt-get install libprotobuf-dev   <br>sudo apt-get install libleveldb-dev   <br>sudo apt-get install libsnappy-dev   <br>sudo apt-get install libopencv-dev   <br>sudo apt-get install libhdf5-serial-dev   <br>sudo apt-get install protobuf-compiler  <br>sudo apt-get install --no-install-recommends libboost-<span class="hljs-built_in">all</span>-dev<br></code></pre></td></tr></table></figure>
+
+
+<p>　　接下来安装BALS(基本线性代数子库)</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">sudo apt-get install libatlas-base-dev<br></code></pre></td></tr></table></figure>
+
+
+<p>　　使用默认Python来建立pycaffe接口，需要安装：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">sudo apt-get install python-dev  <br><span class="hljs-comment">##另一些兼容依赖库</span><br>sudo apt-get install libgflags-dev  <br>sudo apt-get install libgoogle-glog-dev   <br>sudo apt-get install liblmdb-dev <br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="下载Caffe源码"><a href="#下载Caffe源码" class="headerlink" title="下载Caffe源码"></a>下载Caffe源码</h2><p>安装git</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">sudo apt-get install git<br></code></pre></td></tr></table></figure>
+
+<p>下载caffe 源代码</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">git clone https://github.com/BVLC/caffe.git<br></code></pre></td></tr></table></figure>
+
+<p>在终端下载可能会有些慢，而且容易掉线，还不支持断点续传，所以我们也可以访问上面的网站，在网站下载ｚｉｐ格式的文件，再解压到&#x2F;home 就可以了。</p>
+<p>这里多说一句，在终端下载源文件时系统会自动在&#x2F;home 下生成一个名叫caffe 的文件夹，当遇到了下载不成功的情况时，我们需要找到这个文件夹，把它删除，当然里面什么也没有。这样下次再用命令行下载才不会报错。</p>
+<p>如果需要Caffe的Python接口，切换到caffe下的python目录下，输入以下命令下载python依赖库（先安装pip）：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">cd /caffe/python<br>sudo apt-get install python-pip<br><span class="hljs-keyword">for</span> req <span class="hljs-keyword">in</span> (catrequirements.txt);dopipinstall(catrequirements.txt);dopipinstallreq; done<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="编译Caffe"><a href="#编译Caffe" class="headerlink" title="编译Caffe"></a>编译Caffe</h2><p>开始编译之前，建议输入以下命令：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">make clean<br></code></pre></td></tr></table></figure>
+
+<p>我们来到caffe 文件夹中，将Makefile.config.example 文件复制一份，改名为Makefile.config，然后我们打开这个复本文件，做一些必要的修改。</p>
+<p>将原文本如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">＃CPU-only switch (uncomment to build without GPU support).<br><span class="hljs-comment"># cpu_only :=1</span><br></code></pre></td></tr></table></figure>
+
+<p>改为如下形式：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">＃CPU-only switch (uncomment to build without GPU support).<br>cpu_only :=<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>将原文本如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">＃Whatever <span class="hljs-keyword">else</span> you find you need goes here.<br>INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/includeLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib<br></code></pre></td></tr></table></figure>
+
+<p>改为如下形式：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">＃Whatever <span class="hljs-keyword">else</span> you find you need goes here.<br>INCLUDE_DIRS :=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHONINCLUDE)/usr/local/include　/usr/include/hdf5/serialLIBRARYDIRS:=(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial<br></code></pre></td></tr></table></figure>
+
+<p>将原文本如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">＃NOTE: this <span class="hljs-keyword">is</span> required only <span class="hljs-keyword">if</span> you will <span class="hljs-built_in">compile</span> the python interface.<br><span class="hljs-comment">#</span><br>We need to be able to find Python.h <span class="hljs-keyword">and</span> numpy/arrayobject.h.<br>PYTHON_INCLUDE := /usr/include/python2<span class="hljs-number">.7</span> \<br>/usr/lib/python2<span class="hljs-number">.7</span>/dist-packages/numpy/core/include<br></code></pre></td></tr></table></figure>
+
+<p>改为如下形式：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">＃NOTE: this <span class="hljs-keyword">is</span> required only <span class="hljs-keyword">if</span> you will <span class="hljs-built_in">compile</span> the python interface.<br><span class="hljs-comment">#</span><br>We need to be able to find Python.h <span class="hljs-keyword">and</span> numpy/arrayobject.h.<br>PYTHON_INCLUDE := /usr/include/python2<span class="hljs-number">.7</span> \<br>/usr/local/lib/python2<span class="hljs-number">.7</span>/dist-packages/numpy/core/include<br></code></pre></td></tr></table></figure>
+
+<p>接下来是编译。<br>这里需要注意四点：<br>１、这些命令要在caffe路径下执行；<br>２、若编译报错与numpy有关，往往需要安装numpy:</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">sudo apt-get install python-numpy<br></code></pre></td></tr></table></figure>
+
+<p>若报错与matplotlib相关，则需要相应安装这个package;<br>３、若编译出现失败，需要执行make clean 命令，然后重新将四条编译命令再依次执行。<br>４、在每条编译命令后面加上 -j8 -j16 的命令对提高编译速度很有帮助，将会调用尽可能多的ＣＰＵ资源进行编译。<br>下面是编译命令：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">make pycaffe<br>make <span class="hljs-built_in">all</span><br>make test<br>make runtest<br></code></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试Caffe的Python接口，切换到caffe&#x2F;python文件目录下，记录下来当前路径，输入以下命令：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH<br></code></pre></td></tr></table></figure>
+
+<p>进入Python环境，输入</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> caffe<br></code></pre></td></tr></table></figure>
+
+
+<p>若没有出现异常，就说明编译成功了。<br>如果没有报错，证明安装成功。</p>
+<p>上面的方法，一旦关闭终端或者打开新终端则失效，如果放到配置文件中，可以永久有效果，命令操作如下：</p>
+<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#A.把环境变量路径放到 ~/.bashrc文件中  </span><br>sudo echo export PYTHONPATH=<span class="hljs-string">&quot;~/caffe/python&quot;</span> &gt;&gt; ~/.bashrc  <br><span class="hljs-comment">#B.使环境变量生效  </span><br>source ~/.bashrc <br></code></pre></td></tr></table></figure>
+
+
+
+<p>非常感谢这位前辈的博文对配置环境的帮助</p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/muzilinxi90/article/details/53673184">http://blog.csdn.net/muzilinxi90/article/details/53673184</a></p>
+<p>github也有一篇文档很好，篇幅原因不再翻译，感兴趣的朋友可以参考一下。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide">https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide</a></p>
+<p>import caffe 出现问题也可以参考这个网站：</p>
+<p><a target="_blank" rel="noopener" href="http://www.linuxdiyf.com/linux/23093.html">http://www.linuxdiyf.com/linux/23093.html</a></p>
+<p>caffe官网给出的教程，第一手的资料，建议阅读：</p>
+<p><a target="_blank" rel="noopener" href="http://caffe.berkeleyvision.org/installation.html">http://caffe.berkeleyvision.org/installation.html</a></p>
+<p>基本上完成CPU only的caffe配置后，并且在不断摸索中，对linux系统和基本依赖包就已经很熟了。之后开始真正做项目需要用cuda，GPU的配置其实也很容易上手。</p>
+<p><strong>另外我们发现，其实与其去看那么多的博客，不如自己去读英文的官方文件，或者github下下来后的readme文件，那才是最权威的第一手资料</strong></p>
+<p>下为cuda官方文件的翻译</p>
+<p>##NVIDIA CUDA Installation Guide for Linux<br>###Linux 系统下的NVIDIA CUDA 安装指南</p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/hhy_csdn/article/details/64440406">http://blog.csdn.net/hhy_csdn/article/details/64440406</a></p>
+<p>到了这里基本就结束了。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E5%BF%83%E6%83%85/" rel="tag"><i class="fas fa-tags"></i>心情</a>
+        
+        <a class="post-tag button" href="/tags/DL/" rel="tag"><i class="fas fa-tags"></i>DL</a>
+        
+        <a class="post-tag button" href="/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/" rel="tag"><i class="fas fa-tags"></i>配环境</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/" rel="next" title="Hexo部分功能摘抄"><i class="fas fa-angle-left"></i><span class="nav-title">Hexo部分功能摘抄</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/" rel="prev" title="中国是否愚弄了西方"><span class="nav-title">中国是否愚弄了西方</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "整合一下深度学习caffe基本环境的配置",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">36</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="toc-text">安装依赖库</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E4%B8%8B%E8%BD%BDCaffe%E6%BA%90%E7%A0%81"><span class="toc-text">下载Caffe源码</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%BC%96%E8%AF%91Caffe"><span class="toc-text">编译Caffe</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

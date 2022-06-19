@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>My Personal Blog</title>
+  
+  <subtitle>不积跬步无以至千里</subtitle>
+  <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://huhong12345.github.io/"/>
+  <updated>2022-03-17T15:56:52.000Z</updated>
+  <id>https://huhong12345.github.io/</id>
+  
+  <author>
+    <name>MaximeHu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学术论文句式整理(保持更新)</title>
+    <link href="https://huhong12345.github.io/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/"/>
+    <id>https://huhong12345.github.io/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/</id>
+    <published>2020-10-02T09:31:28.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;批判性描述&quot;&gt;&lt;a href=&quot;#批判性描述&quot; class=&quot;headerlink&quot; title=&quot;批判性描述&quot;&gt;&lt;/a&gt;批判性描述&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="论文写作" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    
+    
+    <category term="总结与摘抄" scheme="https://huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    
+    <category term="写作" scheme="https://huhong12345.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="保持更新" scheme="https://huhong12345.github.io/tags/%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>厦门&amp;鼓浪屿</title>
+    <link href="https://huhong12345.github.io/2020/07/25/%E6%89%80%E4%BB%A5%EF%BC%8C%E6%88%91%E7%88%B1%E4%B8%8A%E4%BA%86%E9%82%A3%E7%89%87%E6%B5%B7/"/>
+    <id>https://huhong12345.github.io/2020/07/25/%E6%89%80%E4%BB%A5%EF%BC%8C%E6%88%91%E7%88%B1%E4%B8%8A%E4%BA%86%E9%82%A3%E7%89%87%E6%B5%B7/</id>
+    <published>2020-07-24T18:11:03.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/first.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/123.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/4.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/8.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="心情&amp;日记" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="心情" scheme="https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+    <category term="照片" scheme="https://huhong12345.github.io/tags/%E7%85%A7%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyTorch常用代码段合集（保持更新）</title>
+    <link href="https://huhong12345.github.io/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/"/>
+    <id>https://huhong12345.github.io/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/</id>
+    <published>2020-06-29T15:13:44.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script type=&quot;text/javascript&quot;
+  </summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="Pytorch" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
+    
+    
+    <category term="代码摘抄" scheme="https://huhong12345.github.io/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
+    
+    <category term="Pytorch" scheme="https://huhong12345.github.io/tags/Pytorch/"/>
+    
+    <category term="DL" scheme="https://huhong12345.github.io/tags/DL/"/>
+    
+    <category term="更新" scheme="https://huhong12345.github.io/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多路电梯算法调度的解决思路——类设计角度</title>
+    <link href="https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/"/>
+    <id>https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</id>
+    <published>2020-06-21T12:34:01.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这学期C++接触得有点多，为熟练类设计，做了一个多路电梯调度算法。&lt;/p&gt;
+&lt;p&gt;总的来说，这份代码主要包含调度核心算法、乘客行为设计、电梯动作函数设计等，最终完成了一个十路电梯的群控仿真算法系统。同时为了增强了整个电梯系统的控制简便性和高效性，还将电梯进行分组。也设计了不</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="C++" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/"/>
+    
+    
+    <category term="C++" scheme="https://huhong12345.github.io/tags/C/"/>
+    
+    <category term="面向对象编程" scheme="https://huhong12345.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="电梯调度算法" scheme="https://huhong12345.github.io/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac录制屏内声音教程</title>
+    <link href="https://huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    <id>https://huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/</id>
+    <published>2020-02-18T12:31:22.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于最近疫情严重，上课开组会都是使用Zoom、腾讯会议这种线上平台进行。然而有时候教师为了保护知识产权，会不开放会议的屏幕录制功能。此时，自行录制上课&amp;#x2F;开会视频以便课后消化显得尤为重要。&lt;/p&gt;
+&lt;p&gt;然而在Mac端，直接使用自带的屏幕录制软件录不到电脑内屏放出的</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="Mac" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/Mac/"/>
+    
+    
+    <category term="Mac" scheme="https://huhong12345.github.io/tags/Mac/"/>
+    
+    <category term="录屏" scheme="https://huhong12345.github.io/tags/%E5%BD%95%E5%B1%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Final Cut Pro 使用笔记</title>
+    <link href="https://huhong12345.github.io/2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>https://huhong12345.github.io/2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-02-15T13:31:45.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;这是一个关于Final-Cut-Pro来剪辑视频的笔记。&quot;&gt;&lt;a href=&quot;#这是一个关于Final-Cut-Pro来剪辑视频的笔记。&quot; class=&quot;headerlink&quot; title=&quot;这是一个关于Final Cut</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="剪视频" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%89%AA%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="技巧" scheme="https://huhong12345.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="剪视频" scheme="https://huhong12345.github.io/tags/%E5%89%AA%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部分个人影评合集（保持更新）</title>
+    <link href="https://huhong12345.github.io/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>https://huhong12345.github.io/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
+    <published>2020-02-10T14:31:45.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：&quot;&gt;&lt;a href=&quot;#寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="影评" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BD%B1%E8%AF%84/"/>
+    
+    
+    <category term="更新" scheme="https://huhong12345.github.io/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+    <category term="个人影评" scheme="https://huhong12345.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E8%AF%84/"/>
+    
+    <category term="整理合集" scheme="https://huhong12345.github.io/tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《菊与刀》读书笔记</title>
+    <link href="https://huhong12345.github.io/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://huhong12345.github.io/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-01-30T12:30:13.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。&quot;&gt;&lt;a href=&quot;#引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="读书笔记" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="总结与摘抄" scheme="https://huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    
+    <category term="读书笔记" scheme="https://huhong12345.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>“李约瑟问题”思考——从墨家思想的消亡说起</title>
+    <link href="https://huhong12345.github.io/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/"/>
+    <id>https://huhong12345.github.io/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/</id>
+    <published>2019-12-30T10:28:15.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="个人思考" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/"/>
+    
+    
+    <category term="个人思考" scheme="https://huhong12345.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/"/>
+    
+    <category term="辩证" scheme="https://huhong12345.github.io/tags/%E8%BE%A9%E8%AF%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac快捷键介绍</title>
+    <link href="https://huhong12345.github.io/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/"/>
+    <id>https://huhong12345.github.io/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/</id>
+    <published>2019-12-03T02:55:03.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;很多人不喜欢Mac系统，觉得很多东西不如Windows上手直观。（这让以“简单易用”为宗旨的某公司怎么洗？？）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要原因其实是Mac系统的还是有一定的学习成本的（嗯，高贵的Unix贵族绝不屈服&amp;#x2F;🐶</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="Mac" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/Mac/"/>
+    
+    
+    <category term="Mac" scheme="https://huhong12345.github.io/tags/Mac/"/>
+    
+    <category term="快捷键" scheme="https://huhong12345.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百炼OJ-C++练习</title>
+    <link href="https://huhong12345.github.io/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/"/>
+    <id>https://huhong12345.github.io/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/</id>
+    <published>2019-12-01T02:30:13.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;a href=&quot;#自己在百炼OJ上练习的一些算法题&quot; class=&quot;headerlink&quot; title=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;/a&gt;自己在百炼OJ上练习的一些算法题&lt;/h1&gt;&lt;h2 id=&quot;1088&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="C++" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/"/>
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="OJ" scheme="https://huhong12345.github.io/tags/OJ/"/>
+    
+    <category term="C++练习" scheme="https://huhong12345.github.io/tags/C-%E7%BB%83%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>决策用强化与系统性机器学习</title>
+    <link href="https://huhong12345.github.io/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://huhong12345.github.io/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
+    <published>2019-12-01T01:34:28.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;a href=&quot;#决策用强化与系统性机器学习总结&quot; class=&quot;headerlink&quot; title=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;/a&gt;决策用强化与系统性机器学习总结&lt;/h2&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="RL" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/RL/"/>
+    
+    
+    <category term="DL" scheme="https://huhong12345.github.io/tags/DL/"/>
+    
+    <category term="脑洞" scheme="https://huhong12345.github.io/tags/%E8%84%91%E6%B4%9E/"/>
+    
+    <category term="整理" scheme="https://huhong12345.github.io/tags/%E6%95%B4%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NLP一些基本概念的摘抄</title>
+    <link href="https://huhong12345.github.io/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/"/>
+    <id>https://huhong12345.github.io/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/</id>
+    <published>2019-12-01T00:30:13.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="NLP" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/NLP/"/>
+    
+    
+    <category term="NLP" scheme="https://huhong12345.github.io/tags/NLP/"/>
+    
+    <category term="总结与摘抄" scheme="https://huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弗·恩格斯——《GC主义原理》</title>
+    <link href="https://huhong12345.github.io/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/"/>
+    <id>https://huhong12345.github.io/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/</id>
+    <published>2019-11-30T18:00:00.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;弗·恩格斯写于 1847年10月底—11月&lt;/strong&gt; &lt;/p&gt;
+&lt;img src=&quot;/image/mks.png&quot; class=&quot;[class names]&quot;&gt;
+
+&lt;h4 id=&quot;第一个问题：什么是共产主义？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="政治" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
+    
+    
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="政治" scheme="https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python is For Fun</title>
+    <link href="https://huhong12345.github.io/2019/11/30/Python%20is%20For%20Fun/"/>
+    <id>https://huhong12345.github.io/2019/11/30/Python%20is%20For%20Fun/</id>
+    <published>2019-11-30T03:32:44.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Read-after-me-Python-is-for-Fun&quot;&gt;&lt;a href=&quot;#Read-after-me-Python-is-for-Fun&quot; class=&quot;headerlink&quot; title=&quot;Read after me, Python is for</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Python" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Python/"/>
+    
+    
+    <category term="DL" scheme="https://huhong12345.github.io/tags/DL/"/>
+    
+    <category term="Python" scheme="https://huhong12345.github.io/tags/Python/"/>
+    
+    <category term="编程" scheme="https://huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="练习" scheme="https://huhong12345.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国是否愚弄了西方</title>
+    <link href="https://huhong12345.github.io/2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/"/>
+    <id>https://huhong12345.github.io/2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/</id>
+    <published>2019-11-29T15:10:33.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天看见一个帖子，里面虽然说的是资本方面的问题，但是在相当程度上提出了舆论的作用，西方舆论的虚伪以及追求资本利益的本质。文字可能多一些，但是说的很透彻。&lt;/p&gt;
+&lt;p&gt;以下是原文：&lt;/p&gt;
+&lt;p&gt;一位教授语出惊人：中国真在愚弄欺骗全世界&lt;/p&gt;
+&lt;p&gt;摘要:</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="政治" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
+    
+    
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="思考" scheme="https://huhong12345.github.io/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>整合一下深度学习caffe基本环境的配置</title>
+    <link href="https://huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2019-11-29T14:34:28.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;本帖为一个回忆贴，最初写于2016年11月，大二上学期&lt;/strong&gt;&lt;br&gt;2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心，但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国</summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="DL" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/"/>
+    
+    
+    <category term="心情" scheme="https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+    <category term="DL" scheme="https://huhong12345.github.io/tags/DL/"/>
+    
+    <category term="配环境" scheme="https://huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo部分功能摘抄</title>
+    <link href="https://huhong12345.github.io/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/"/>
+    <id>https://huhong12345.github.io/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/</id>
+    <published>2019-11-29T14:10:33.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;先放几个有用的博客：&quot;&gt;&lt;a href=&quot;#先放几个有用的博客：&quot; class=&quot;headerlink&quot; title=&quot;先放几个有用的博客：&quot;&gt;&lt;/a&gt;先放几个有用的博客：&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Hexo" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Hexo/"/>
+    
+    
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="Hexo" scheme="https://huhong12345.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World，Hexo</title>
+    <link href="https://huhong12345.github.io/2019/11/29/Hello%20World%EF%BC%8CHexo/"/>
+    <id>https://huhong12345.github.io/2019/11/29/Hello%20World%EF%BC%8CHexo/</id>
+    <published>2019-11-29T13:30:13.000Z</published>
+    <updated>2022-03-17T15:56:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Hello，World&quot;&gt;&lt;a href=&quot;#Hello，World&quot; class=&quot;headerlink&quot; title=&quot;Hello，World~&quot;&gt;&lt;/a&gt;Hello，World~&lt;/h2&gt;&lt;p&gt;总感觉原来用CSDN写博客太多人看到了，现在开始使用Hexo+GitHub托管的方式写博客。会加很多碎碎念~~&lt;br&gt;新心情，新头像，Hello World！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/a.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="心情&amp;日记" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="心情" scheme="https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+</feed>

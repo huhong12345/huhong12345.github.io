@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>学术论文句式整理(保持更新) | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="/images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="/images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">学术论文句式整理(保持更新)</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-10-02T17:31:28+08:00">2020-10-02 17:31:28</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">论文写作</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="批判性描述"><a href="#批判性描述" class="headerlink" title="批判性描述"></a>批判性描述</h2><h3 id="突出以往研究的不足（Highlighting-inadequacies-of-previous-studies）"><a href="#突出以往研究的不足（Highlighting-inadequacies-of-previous-studies）" class="headerlink" title="突出以往研究的不足（Highlighting inadequacies of previous studies）"></a>突出以往研究的不足（Highlighting inadequacies of previous studies）</h3><p>Previous studies of X have not dealt with …<br>Researchers have not treated X in much detail.<br>Such expositions are unsatisfactory because they …<br>Most studies in the field of X have only focused on …<br>Such approaches, however, have failed to address …<br>Previous published studies are limited to local surveys.<br>Half of the studies evaluated failed to specify whether …<br>The research to date has tended to focus on X rather than Y.<br>Previously published studies on the effect of X are not consistent.<br>Smith’s analysis does not take account of …, nor does she examine …<br>The existing accounts fail to resolve the contradiction between X and Y.<br>Most studies of X have only been carried out in a small number of areas.<br>However, much of the research up to now has been descriptive in nature …<br>The generalisability of much published research on this issue is problematic.<br>Research on the subject has been mostly restricted to limited comparisons of …<br>However, few writers have been able to draw on any systematic research into …<br>Short-term studies such as these do not necessarily show subtle changes over time …<br>Although extensive research has been carried out on X, no single study exists which …<br>However, these results were based upon data from over 30 years ago and it is unclear if …<br>The experimental data are rather controversial, and there is no general agreement about …<br>以前对X的研究还没有涉及……<br>研究人员并未对X进行详细的处理。<br>这样的论述是不令人满意的，因为它们……<br>X领域的大多数研究仅集中于……<br>但是，这种方法却没有解决……<br>以前发表的研究仅限于本地调查。<br>评估的研究中有一半未能说明是否……<br>迄今为止，研究倾向于将重点放在X而不是Y上。<br>先前发表的关于X影响的研究不一致。<br>Smith的分析没有考虑…，也没有进行调查…<br>现有的说明无法解决X和Y之间的矛盾。X的<br>大多数研究仅在少数领域进行。<br>但是，到目前为止，许多研究本质上都是描述性的……<br>关于这一问题的许多已发表研究的普遍性是有问题的。<br>关于该主题的研究主要限于对…的有限比较。<br>但是，很少有作家能够对…进行任何系统的研究。<br>诸如此类的短期研究不一定会随着时间的流逝而发生细微的变化……<br>尽管已经进行了广泛的研究。在X上，没有一项单独的研究……<br>但是，这些结果是基于30年前的数据而来的，目前尚不清楚……<br>实验数据是否颇具争议，并且关于……还没有普遍的共识。</p>
+<h3 id="识别单个研究或论文中的弱点-Identifying-a-weakness-in-a-single-study-or-paper-close"><a href="#识别单个研究或论文中的弱点-Identifying-a-weakness-in-a-single-study-or-paper-close" class="headerlink" title="识别单个研究或论文中的弱点(Identifying a weakness in a single study or paper - close)"></a>识别单个研究或论文中的弱点(Identifying a weakness in a single study or paper - close)</h3><p> (However,)Smith fails to fully define what …<br>Jones fails to acknowledge the significance of …<br>the author overlooks the fact that X contributes to Y.<br>what Smith fails to do is to draw a distinction between …<br>the paper would appear to be over-ambitious in its claims.<br>another weakness is that we are given no explanation of how …<br>no attempt was made to quantify the association between X and Y.<br>the main weakness of the study is the failure to address how …<br>the study fails to consider the differing categories of damage that …<br>the research does not take into account pre-existing … such as …<br>the author offers no explanation for the distinction between X and Y.<br>Smith makes no attempt to differentiate between different types of X. | </p>
+<p>（然而，）史密斯未能完全定义……<br>琼斯未能承认……的意义……<br>作者忽视了X对Y作出贡献的事实。<br>史密斯未能做的是在两者之间做出区分……<br>论文似乎在主张上过于雄心勃勃 。<br>另一个弱点是我们没有解释如何……<br>没有尝试量化X和Y之间的关联<br>该研究的主要弱点是无法解决……<br>该研究没有考虑到不同的损害类别……<br>该研究没有考虑诸如……之类的先前存在的内容。<br>作者没有对X和Y之间的区别进行解释。<br>Smith并未尝试区分不同类型的X。 </p>
+<p>Smith，The paper，The book、fails to；does not<br>makes no attempt to<br>specify …<br>quantify …<br>compare …<br>separate …<br>account for …<br>suggest why …<br>analyse how …<br>ascertain whether …<br>distinguish between …<br>explain the meaning of …<br>provide information on …<br>address the question of …<br>assess the effectiveness of …<br>use a standardised method of …<br>give sufficient consideration to …<br>consider the long term impact of …<br>offer an adequate explanation for …<br>engage with current discourses on …<br>determine the underlying causes of …<br>systematically review all the relevant literature. </p>
+<p>史密斯、论文、书失败地；没有<br>没有尝试	<br>指定…<br>量化……<br>比较……<br>分离开……<br>证明…<br>说明为什么……<br>分析如何…<br>确定是否……<br>在之间…区分<br>解释词义的…<br>提供…信息<br>地址的问题…<br>评估的有效性……<br>用……的标准化方法<br>给予足够的考虑…<br>考虑…的长期影响…<br>为…从事有关…的当前论述提供适当的解释…<br>确定…的根本原因…<br>系统地审查所有相关文献。</p>
+<h3 id="提供建设性建议"><a href="#提供建设性建议" class="headerlink" title="提供建设性建议"></a>提供建设性建议</h3><p>The study would have been more interesting<br>The study would have been more interesting if it had included …<br>These studies would have been more useful if they had focused on …<br>The study would have been more relevant if the researchers had asked …<br>The questionnaire would have been more useful if it had asked participants about …<br>The research would have been more relevant if a wider range of X had been explored<br>A more comprehensive study would include all the groups of …<br>A better study would examine a large, randomly selected sample of societies with …<br>A much more systematic approach would identify how X interacts with other variables that are believed to be linked to …<br>如果包含以下内容，则该研究会更有趣… …<br>如果专注于这些研究，这些研究将更为有用…<br>如果研究人员提出..要求，则该研究将更加相关…<br>如果询问参与者，该问卷将更加有用。关于…<br>如果探索更广泛的X，则该研究将更有意义。<br>一项更全面的研究将包括…的所有群体。<br>一项更好的研究将通过…研究一个随机选择的大型社会样本。<br>一种更为系统的方法将确定X如何与被认为与…关联的其他变量相互作用。</p>
+<h3 id="介绍问题和局限性：理论或论点"><a href="#介绍问题和局限性：理论或论点" class="headerlink" title="介绍问题和局限性：理论或论点"></a>介绍问题和局限性：理论或论点</h3><p>The main weakness with this theory is that …<br>The key problem with this explanation is that …<br>However, this theory does not fully explain why …<br>One criticism of much of the literature on X is that …<br>However, there is an inconsistency with this argument.<br>A serious weakness with this argument, however, is that …<br>One question that needs to be asked, however, is whether …<br>Smith’s argument relies too heavily on qualitative analysis of …<br>Smith’s interpretation overlooks much of the historical research …<br>Many writers have challenged Smith’s claim on the grounds that …<br>Smith’s analysis does not take account of X, nor does he examine …<br>It seems that Jones’ understanding of the X framework is questionable.<br>The existing accounts fail to resolve the contradiction between X and Y.<br>One of the limitations with this explanation is that it does not explain why…</p>
+<p>该理论的主要弱点是：…<br>这种解释的关键问题是…<br>但是，该理论不能完全解释原因…<br>对X上许多文献的一种批评是…<br>但是，该论点存在矛盾之处。<br>但是，该论点的一个严重缺陷是……但是，<br>需要提出的一个问题是……<br>史密斯的论点是否过于依赖定性分析……<br>史密斯的解释忽视了<br>许多历史研究……许多作家对史密斯的主张提出了质疑。理由是……<br>史密斯的分析没有考虑X，也没有审查……<br>似乎琼斯对X框架的理解是有问题的。<br>现有帐户无法解决X和Y之间的矛盾。<br>这种解释的局限性之一是它不能解释为什么……</p>
+<h3 id="问题和局限性介绍：方法或实践（drawbacks，limitations，weaknesses，shortcomings，disadvantages-）"><a href="#问题和局限性介绍：方法或实践（drawbacks，limitations，weaknesses，shortcomings，disadvantages-）" class="headerlink" title="问题和局限性介绍：方法或实践（drawbacks，limitations，weaknesses，shortcomings，disadvantages.）"></a>问题和局限性介绍：方法或实践（drawbacks，limitations，weaknesses，shortcomings，disadvantages.）</h3><p>One major drawback of this approach is that …<br>Selection bias is another potential concern because …<br>Perhaps the most serious disadvantage of this method is that …<br>The main limitation of biosynthetic incorporation, however, is …<br>Non-government agencies are also very critical of the new policies.<br>All the studies reviewed so far, however, suffer from the fact that …<br>Critics of laboratory-based experiments contend that such studies …<br>Another problem with this approach is that it fails to take X into account.<br>Difficulties arise, however, when an attempt is made to implement the policy.<br>Critics have also argued that not only do surveys provide an inaccurate measure of X, but the …<br>Nevertheless, the strategy has not escaped criticism from governments, agencies and academics.</p>
+<p>这种方法的主要缺点是…<br>选择偏见是另一个潜在的问题，因为…<br>该方法最严重的缺点是…<br>但是，生物合成掺入的主要局限性是…<br>非政府机构对新方法也非常批评政策。<br>但是，到目前为止，所有复习的研究都受到以下事实的困扰<br>：基于实验室的实验的批评者认为，此类研究……<br>这种方法的另一个问题是，它没有考虑X。<br>但是，当尝试执行该策略时会遇到困难。<br>评论家们还指出，不仅调查提供的X值不准确，而且…<br>然而，该策略并未逃脱政府，机构和学者的批评。</p>
+<h3 id="使用评估形容词评论研究"><a href="#使用评估形容词评论研究" class="headerlink" title="使用评估形容词评论研究"></a>使用评估形容词评论研究</h3><p>useful，timely，seminal，detailed，thorough，excellent，influential，important，innovative，pioneering，impressive，wide-ranging，comprehensive，ground-breaking </p>
+<p>study (of X), survey (of X), analysis (of X), examination (of X), investigation (into X), </p>
+<p>Smith (2012) showed that …<br/>Jones (2013) concluded that … </p>
+<h3 id="介绍一般批评"><a href="#介绍一般批评" class="headerlink" title="介绍一般批评"></a>介绍一般批评</h3><p>Critics question the ability of poststructuralist theory to provide …<br>Non-government agencies are also very critical of the new policies.<br>Smith’s meta-analysis has been subjected to considerable criticism.<br>The most important of these criticisms is that Smith failed to note that …<br>The X theory has been vigorously challenged in recent years by a number of writers.<br>These claims have been strongly contested in recent years by a number of writers.<br>More recent arguments against X have been summarised by Smith and Jones (1982):<br>Critics have also argued that not only do surveys provide an inaccurate measure of X, but the …<br>Many analysts now argue that the strategy of X has not been successful. Jones (2003), for example, argues that …</p>
+<p>批评者质疑后结构主义理论提供的能力……<br>非政府机构也非常批评新政策。<br>史密斯的荟萃分析受到了相当多的批评。<br>这些批评中最重要的是史密斯未能指出……<br>近年来，许多作家对X理论提出了严峻的挑战。<br>近年来，许多作家都强烈质疑这些主张。<br>史密斯和琼斯（Smith and Jones，1982）总结了反对X的最新观点：<br>批评者还认为，不仅调查提供的X度量不准确，而且……<br>许多分析家现在认为X的策略并未成功。例如，琼斯（Jones）（2003）认为……</p>
+<h3 id="介绍特定作家的批评立场"><a href="#介绍特定作家的批评立场" class="headerlink" title="介绍特定作家的批评立场"></a>介绍特定作家的批评立场</h3><p>Jones (2003) has also questioned why …<br>However, Jones (2003) points out that …<br>The author challenges the widely held view that …<br>Smith (1999) takes issue with the contention that …<br>The idea that … was first challenged by Smith (1992).<br>Smith is critical of the tendency to compartmentalise X.<br>However, Smith (1967) questioned this hypothesis and …<br>Smith (1980) broke with tradition by raising the question of …<br>Jones (2003) has challenged some of Smith’s conclusions, arguing that …<br>Another major criticism of Smith’s study, made by Jones (2003), is that …<br>Jones (2003) is critical of the conclusions that Smith draws from his findings.<br>An alternative interpretation of the origins of X can be found in Smith (1976).<br>Jones (2003) is probably the best known critic of the X theory. He argues that …<br>In her discussion of X, Smith further criticises the ways in which some authors …<br>Smith’s decision to reject the classical explanation of X merits some discussion …<br>The latter point has been devastatingly critiqued by Jones (2003), who argues that …<br>In a recent article in <em>Academic Journal</em>, Smith (2014) questions the extent to which …<br>A recently published article by Smith <em>et al</em>. (2011) casts doubt on Jones’ assumption that …<br>Other authors (see Harbison, 2003; Kaplan, 2004) question the usefulness of such an approach.</p>
+<p>琼斯（2003）也质疑为什么……<br>但是，琼斯（2003）指出…<br>作者挑战了……<br>史密斯（1999）对<br>以下观点的质疑：……最早由史密斯（1992）提出质疑的观点）。<br>史密斯（Smith）对将X划分的趋势提出了批评。<br>然而，史密斯（1967）质疑了这一假设，<br>史密斯（1980）通过提出问题来打破了传统……<br>琼斯（2003）挑战了史密斯的某些结论，认为…<br>另一个主要问题琼斯（2003）对史密斯研究的批评是……<br>琼斯（2003）批评史密斯从他的发现中得出的结论。<br>X起源的另一种解释可以在Smith（1976）中找到。<br>琼斯（2003）可能是X理论最著名的批评家。他辩称：…<br>在对X的讨论中，史密斯进一步批评了一些作者的方式…<br>史密斯拒绝接受X的经典解释的决定值得进行讨论…<br>琼斯（2003）毁灭性地批评了后者，他认为… Smith（2014）<br>在《Academic Journal》上的最新文章中质疑……<br>Smith等人最近发表的文章的程度。（2011年）对琼斯的假设产生了怀疑。<br>其他作者（见Harbison，2003年； Kaplan，2004年）质疑这种方法的有效性。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>总结与摘抄</a>
+        
+        <a class="post-tag button" href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fas fa-tags"></i>写作</a>
+        
+        <a class="post-tag button" href="/tags/%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0/" rel="tag"><i class="fas fa-tags"></i>保持更新</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2020/07/25/%E6%89%80%E4%BB%A5%EF%BC%8C%E6%88%91%E7%88%B1%E4%B8%8A%E4%BA%86%E9%82%A3%E7%89%87%E6%B5%B7/" rel="next" title="厦门&鼓浪屿"><i class="fas fa-angle-left"></i><span class="nav-title">厦门&鼓浪屿</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="/css/commentjs.css">
+  <script defer type="text/javascript" src="/js/marked.min.js"></script>
+  <script defer type="text/javascript" src="/js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="/js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="/js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "学术论文句式整理(保持更新)",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">19</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="/categories/">18</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="/tags/">36</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%89%B9%E5%88%A4%E6%80%A7%E6%8F%8F%E8%BF%B0"><span class="toc-text">批判性描述</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%AA%81%E5%87%BA%E4%BB%A5%E5%BE%80%E7%A0%94%E7%A9%B6%E7%9A%84%E4%B8%8D%E8%B6%B3%EF%BC%88Highlighting-inadequacies-of-previous-studies%EF%BC%89"><span class="toc-text">突出以往研究的不足（Highlighting inadequacies of previous studies）</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%AF%86%E5%88%AB%E5%8D%95%E4%B8%AA%E7%A0%94%E7%A9%B6%E6%88%96%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E5%BC%B1%E7%82%B9-Identifying-a-weakness-in-a-single-study-or-paper-close"><span class="toc-text">识别单个研究或论文中的弱点(Identifying a weakness in a single study or paper - close)</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%8F%90%E4%BE%9B%E5%BB%BA%E8%AE%BE%E6%80%A7%E5%BB%BA%E8%AE%AE"><span class="toc-text">提供建设性建议</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BB%8B%E7%BB%8D%E9%97%AE%E9%A2%98%E5%92%8C%E5%B1%80%E9%99%90%E6%80%A7%EF%BC%9A%E7%90%86%E8%AE%BA%E6%88%96%E8%AE%BA%E7%82%B9"><span class="toc-text">介绍问题和局限性：理论或论点</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%97%AE%E9%A2%98%E5%92%8C%E5%B1%80%E9%99%90%E6%80%A7%E4%BB%8B%E7%BB%8D%EF%BC%9A%E6%96%B9%E6%B3%95%E6%88%96%E5%AE%9E%E8%B7%B5%EF%BC%88drawbacks%EF%BC%8Climitations%EF%BC%8Cweaknesses%EF%BC%8Cshortcomings%EF%BC%8Cdisadvantages-%EF%BC%89"><span class="toc-text">问题和局限性介绍：方法或实践（drawbacks，limitations，weaknesses，shortcomings，disadvantages.）</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%84%E4%BC%B0%E5%BD%A2%E5%AE%B9%E8%AF%8D%E8%AF%84%E8%AE%BA%E7%A0%94%E7%A9%B6"><span class="toc-text">使用评估形容词评论研究</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BB%8B%E7%BB%8D%E4%B8%80%E8%88%AC%E6%89%B9%E8%AF%84"><span class="toc-text">介绍一般批评</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BB%8B%E7%BB%8D%E7%89%B9%E5%AE%9A%E4%BD%9C%E5%AE%B6%E7%9A%84%E6%89%B9%E8%AF%84%E7%AB%8B%E5%9C%BA"><span class="toc-text">介绍特定作家的批评立场</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
