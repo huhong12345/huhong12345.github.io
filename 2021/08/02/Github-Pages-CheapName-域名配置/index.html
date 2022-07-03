@@ -252,10 +252,10 @@
 <p>hosts里添加Github的ip地址</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">140.82.113.4 github.com<br>199.232.5.194 github.global.ssl.fastly.net<br>54.231.114.219 github-cloud.s3.amazonaws.com<br></code></pre></td></tr></table></figure>
 
-<p>也可以尝试访问下<a target="_blank" rel="noopener" href="https://ipaddress.com/website/www.github.com%E5%8E%BB%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%89%8DGithub%E7%9A%84%E5%AE%9E%E9%99%85IP%E3%80%82">https://ipaddress.com/website/www.github.com去查看目前Github的实际IP。</a></p>
+<p>也可以尝试访问下<a target="_blank" rel="noopener" href="https://ipaddress.com/website/www.github.com">https://ipaddress.com/website/www.github.com</a> 去查看目前Github的实际IP。</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#更新一下hosts</span><br><span class="hljs-built_in">source</span> /etc/hosts<br></code></pre></td></tr></table></figure>
 
-<p>也使用Github国内镜像网站的方法，在clone某个项目的时候将github.com替换为github.com.cnpmjs.org或git.sdut.me即可。个人没有试过，记下来：</p>
+<p>也使用Github国内镜像网站的方法，在clone某个项目的时候将github.com替换为github.com.cnpmjs.org或git.sdut.me即可。个人没有试过，供参考：</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">//这是我们要<span class="hljs-built_in">clone</span>的<br>git <span class="hljs-built_in">clone</span> https://github.com/Hackergeek/architecture-samples<br>//使用镜像<br>git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/Hackergeek/architecture-samples<br>//或者使用镜像<br>git <span class="hljs-built_in">clone</span> https://git.sdut.me/Hackergeek/architecture-samples<br></code></pre></td></tr></table></figure>
 
 
