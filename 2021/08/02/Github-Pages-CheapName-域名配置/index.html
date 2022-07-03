@@ -258,7 +258,16 @@
 <p>也使用Github国内镜像网站的方法，在clone某个项目的时候将github.com替换为github.com.cnpmjs.org或git.sdut.me即可。个人没有试过，供参考：</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">//这是我们要<span class="hljs-built_in">clone</span>的<br>git <span class="hljs-built_in">clone</span> https://github.com/Hackergeek/architecture-samples<br>//使用镜像<br>git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/Hackergeek/architecture-samples<br>//或者使用镜像<br>git <span class="hljs-built_in">clone</span> https://git.sdut.me/Hackergeek/architecture-samples<br></code></pre></td></tr></table></figure>
 
-<p>hexo 每次发布后需要手动在 github page 的 setting 里重新设置自定义域名，在source文件夹里将CNAME内容改为huhong.me （即你自己网站的域名）<br>具体参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b6fe1c5c74ed">https://www.jianshu.com/p/b6fe1c5c74ed</a></p>
+<p>hexo 每次发布后需要手动在 github page 的 setting 里重新设置自定义域名，具体有四个解决方法：<br>方法一（最推荐）：在source文件夹里将CNAME内容改为huhong.me （即你自己网站的域名）。</p>
+<p>方法二：每次 hexo d 之后，去 GitHub 仓库根目录新建 CNAME文件</p>
+<p>方法三：每次 hexo d 之后，按照上述CNAME文件配置处，重新在自己github.io仓库的Settings-Pages项里，设置一遍Custom domain</p>
+<p>方法四：通过安装插件（不太推荐）：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-generator-cname --save<br></code></pre></td></tr></table></figure>
+<p>然后在_config.yml中添加一条</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Plugins: - hexo-generator-cname<br></code></pre></td></tr></table></figure>
+
+<p>同理，若想避免 README.md 文件被解析，可在执行hexo deploy前把在本地写好的README.md文件复制到.deploy文件夹中，再去执行hexo deploy。</p>
+<p>因为Hexo原理就是hexo在执行hexo generate时会在本地先把博客生成的一套静态站点放到public文件夹中，在执行hexo deploy时将其复制到.deploy文件夹中。Github的版本库通常建议同时附上README.md说明文件，但是hexo默认情况下会把所有md文件解析成html文件，所以即使你在线生成了 README. md，它也会在你下一次部署时被删去。</p>
 
     </main>
     <footer class="post-footer">
