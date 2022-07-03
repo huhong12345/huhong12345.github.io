@@ -6,7 +6,7 @@
   <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://huhong12345.github.io/"/>
-  <updated>2022-07-03T12:38:26.466Z</updated>
+  <updated>2022-07-03T13:52:16.834Z</updated>
   <id>https://huhong12345.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github-Pages-CheapName-域名配置</title>
+    <link href="https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
+    <id>https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</id>
+    <published>2021-08-02T09:19:25.000Z</published>
+    <updated>2022-07-03T13:52:16.834Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;整体思路&quot;&gt;&lt;a href=&quot;#整体思路&quot; class=&quot;headerlink&quot; title=&quot;整体思路&quot;&gt;&lt;/a&gt;整体思路&lt;/h2&gt;&lt;p&gt;个人Blog是使用Hexo+Github Pages搭建的。Pages的域名都是默认&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="域名" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/"/>
+    
+    
+    <category term="Github" scheme="https://huhong12345.github.io/tags/Github/"/>
+    
+    <category term="域名" scheme="https://huhong12345.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>ubuntu中Nodejs安装的问题</title>
@@ -594,28 +623,6 @@
     <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
     
     <category term="Hexo" scheme="https://huhong12345.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World，Hexo</title>
-    <link href="https://huhong12345.github.io/2019/11/29/Hello%20World%EF%BC%8CHexo/"/>
-    <id>https://huhong12345.github.io/2019/11/29/Hello%20World%EF%BC%8CHexo/</id>
-    <published>2019-11-29T13:30:13.000Z</published>
-    <updated>2022-07-03T09:14:13.032Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Hello，World&quot;&gt;&lt;a href=&quot;#Hello，World&quot; class=&quot;headerlink&quot; title=&quot;Hello，World~&quot;&gt;&lt;/a&gt;Hello，World~&lt;/h2&gt;&lt;p&gt;总感觉原来用CSDN写博客太多人看到了，现在开始使用Hexo+GitHub托管的方式写博客。会加很多碎碎念~~&lt;br&gt;新心情，新头像，Hello World！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/11/29/Hello%20World%EF%BC%8CHexo/a.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="心情&amp;日记" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="心情" scheme="https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
