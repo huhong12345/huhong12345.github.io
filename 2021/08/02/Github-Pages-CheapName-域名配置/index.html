@@ -161,7 +161,7 @@
     </script>
     
     <script defer type="text/javascript" src="../../../../js/custom.js"></script>
-    <title>Github-Pages+CheapName-域名配置 | My Personal Blog - 不积跬步无以至千里</title>
+    <title>Github-Pages+CheapName域名配置 | My Personal Blog - 不积跬步无以至千里</title>
   <meta name="generator" content="Hexo 5.4.1"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -218,7 +218,7 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">Github-Pages+CheapName-域名配置</h1>
+      <h1 class="post-title" itemprop="name headline">Github-Pages+CheapName域名配置</h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -240,7 +240,7 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><p>个人Blog是使用Hexo+Github Pages搭建的。Pages的域名都是默认<a target="_blank" rel="noopener" href="https://github.com/XXX/XXX.github.io%E3%80%82">https://github.com/XXX/XXX.github.io。</a> 如果要绑定域名，需要在域名解析服务商和Github两边都完成操作。具体思路为：<br>1、在域名解析商处注册个人域名，并配置域名解析，将域名绑定到个人的XXX.github.io<br>2、在github pages设置页面配置CNAME文件重定向到解析商得到的域名。<br>类似于双向握手，握手成功即可。</p>
+      <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><p>个人Blog是使用Hexo+Github Pages搭建的。Pages的域名都是默认<a target="_blank" rel="noopener" href="https://github.com/XXX/XXX.github.io%E3%80%82">https://github.com/XXX/XXX.github.io。</a> 如果要绑定域名，需要在域名解析服务商和Github两边都完成操作。具体思路为：<br>1、在域名解析商处注册个人域名，并配置域名解析，将域名绑定到个人的XXX.github.io<br>2、在github pages设置页面配置CNAME文件重定向到解析商得到的域名。<br>类似于双向握手，两边信息匹配握手成功即可。</p>
 <h2 id="域名解析配置"><a href="#域名解析配置" class="headerlink" title="域名解析配置"></a>域名解析配置</h2><p>这里使用的是Namecheap上注册的域名，官网是<a target="_blank" rel="noopener" href="https://www.namecheap.com/">https://www.namecheap.com/</a> 。 如果有Github认证学生身份，可以在GitHub Student Developer Pack里找到。感觉这家的域名足够的短，最终注册了huhong.me的个人域名。<br><img src="/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/name.png"></p>
 <p>通过学生身份，可以得到一年的域名和SSL认证 <a target="_blank" rel="noopener" href="https://education.github.com/pack/offers%E3%80%82">https://education.github.com/pack/offers。</a><br>如果不需要SSL认证（即使用HTTPS），只需要在Domain List-Advanced DNS处增加三条内容即可：<br><img src="/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/dns.png"><br>第三条根据自己的情况填写。需要注意的是，github.io.后面有个点，不能省略。<br>到这里，保存后即完成域名解析的配置。</p>
 <h2 id="CNAME文件配置"><a href="#CNAME文件配置" class="headerlink" title="CNAME文件配置"></a>CNAME文件配置</h2><p>配置CNAME文件是为了使得 GitHub Page个人网站.github.io解析到个人申请购买的云服务器域名，也就是当你输入.github.io时会自动DNS解析访问至云服务器域名。</p>
@@ -258,8 +258,7 @@
 <p>也使用Github国内镜像网站的方法，在clone某个项目的时候将github.com替换为github.com.cnpmjs.org或git.sdut.me即可。个人没有试过，供参考：</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">//这是我们要<span class="hljs-built_in">clone</span>的<br>git <span class="hljs-built_in">clone</span> https://github.com/Hackergeek/architecture-samples<br>//使用镜像<br>git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/Hackergeek/architecture-samples<br>//或者使用镜像<br>git <span class="hljs-built_in">clone</span> https://git.sdut.me/Hackergeek/architecture-samples<br></code></pre></td></tr></table></figure>
 
-
-
+<p>hexo 每次发布后需要手动在 github page 的 setting 里重新设置自定义域名，在source文件夹里将CNAME的内容改为 mydomain.com （其中mydomain.com是你网站的域名）<br>具体参考：</p>
 
     </main>
     <footer class="post-footer">
@@ -309,7 +308,7 @@
       "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "Github-Pages+CheapName-域名配置",
+      "issue_title": "Github-Pages+CheapName域名配置",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
