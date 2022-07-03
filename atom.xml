@@ -6,7 +6,7 @@
   <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://huhong12345.github.io/"/>
-  <updated>2022-03-17T15:56:52.000Z</updated>
+  <updated>2022-07-03T09:49:49.398Z</updated>
   <id>https://huhong12345.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu中Nodejs安装的问题</title>
+    <link href="https://huhong12345.github.io/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://huhong12345.github.io/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <published>2021-07-03T09:19:25.000Z</published>
+    <updated>2022-07-03T09:49:49.398Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;方法一：下载源码，直接软连接&quot;&gt;&lt;a href=&quot;#方法一：下载源码，直接软连接&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Nodejs" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/Nodejs/"/>
+    
+    
+    <category term="Linux" scheme="https://huhong12345.github.io/tags/Linux/"/>
+    
+    <category term="Nodejs" scheme="https://huhong12345.github.io/tags/Nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title>学术论文句式整理(保持更新)</title>
