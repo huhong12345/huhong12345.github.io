@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>Linux常用命令 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Linux常用命令</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-09-16T22:56:01+08:00">2022-09-16 22:56:01</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%A7%91%E7%A0%94/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h2><p>这是一个非常基本，也是大家经常需要使用的命令，它用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /root/Docements <span class="hljs-comment"># 切换到目录/root/Docements</span><br><span class="hljs-built_in">cd</span> ./path          <span class="hljs-comment"># 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="hljs-built_in">cd</span> ../path         <span class="hljs-comment"># 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><p>这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，也可以组合使用，如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">-l <span class="hljs-comment">#列出长数据串，包含文件的属性与权限数据等</span><br>-a <span class="hljs-comment">#列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）</span><br>-d <span class="hljs-comment">#仅列出目录本身，而不是列出目录的文件数据</span><br>-h <span class="hljs-comment">#将文件容量以较易读的方式（GB，kB等）列出来</span><br>-R <span class="hljs-comment">#连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来</span><br><span class="hljs-built_in">ls</span> -l <span class="hljs-comment">#以长数据串的形式列出当前目录下的数据文件和目录</span><br><span class="hljs-built_in">ls</span> -lR <span class="hljs-comment">#以长数据串的形式列出当前目录下的所有文件</span><br></code></pre></td></tr></table></figure>
+<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p>该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，它的简单语法为</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">grep [-acinv] [--color=auto] <span class="hljs-string">&#x27;查找字符串&#x27;</span> filename<br></code></pre></td></tr></table></figure>
+
+<p>它的常用参数为</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">-a ：将binary文件以text文件的方式查找数据<br>-c ：计算找到‘查找字符串’的次数<br>-i ：忽略大小写的区别，即把大小写视为相同<br>-v ：反向选择，即显示出没有‘查找字符串’内容的那一行<br><span class="hljs-comment"># 例如：</span><br><span class="hljs-comment"># 取出文件/etc/man.config中包含MANPATH的行，并把找到的关键字加上颜色</span><br>grep --color=auto <span class="hljs-string">&#x27;MANPATH&#x27;</span> /etc/man.config<br><span class="hljs-comment"># 把ls -l的输出中包含字母file（不区分大小写）的内容输出</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h2><p>find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出，它的基本语法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs bash">find [PATH] [option] [action]<br><br><span class="hljs-comment"># 与时间有关的参数：</span><br>-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；<br>-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；<br>-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；<br>-newer file : 列出比file还要新的文件名<br><span class="hljs-comment"># 例如：</span><br>find /root -mtime 0 <span class="hljs-comment"># 在当前目录下查找今天之内有改动的文件</span><br><br><span class="hljs-comment"># 与用户或用户组名有关的参数：</span><br>-user name : 列出文件所有者为name的文件<br>-group name : 列出文件所属用户组为name的文件<br>-uid n : 列出文件所有者为用户ID为n的文件<br>-gid n : 列出文件所属用户组为用户组ID为n的文件<br><span class="hljs-comment"># 例如：</span><br>find /home/ljianhui -user ljianhui <span class="hljs-comment"># 在目录/home/ljianhui中找出所有者为ljianhui的文件</span><br><br><span class="hljs-comment"># 与文件权限及名称有关的参数：</span><br>-name filename ：找出文件名为filename的文件<br>-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件<br>-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、<br>             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；<br>-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；<br>-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示<br>-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示<br><span class="hljs-comment"># 例如：</span><br>find / -name passwd <span class="hljs-comment"># 查找文件名为passwd的文件</span><br>find . -perm 0755 <span class="hljs-comment"># 查找当前目录中文件权限的0755的文件</span><br>find . -size +12k <span class="hljs-comment"># 查找当前目录中大于12KB的文件，注意c表示byte</span><br></code></pre></td></tr></table></figure>
+<h2 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h2><p>该命令用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下， 它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">-a ：将文件的特性一起复制<br>-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份<br>-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行<br>-r ：递归持续复制，用于目录的复制行为<br>-u ：目标文件与源文件有差异时才会复制<br></code></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> -a file1 file2 <span class="hljs-comment">#连同文件的所有特性把文件file1复制成文件file2</span><br><span class="hljs-built_in">cp</span> file1 file2 file3 <span class="hljs-built_in">dir</span> <span class="hljs-comment">#把文件file1、file2、file3复制到目录dir中</span><br></code></pre></td></tr></table></figure>
+<h2 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h2><p>该命令用于移动文件、目录或更名，move之意，它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖<br>-i ：若目标文件已经存在，就会询问是否覆盖<br>-u ：若目标文件已经存在，且比目标文件新，才会更新<br></code></pre></td></tr></table></figure>
+<p>注：该命令可以把一个文件或多个文件一次移动一个文件夹中，但是最后一个目标文件一定要是“目录”。例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mv</span> file1 file2 file3 <span class="hljs-built_in">dir</span> <span class="hljs-comment"># 把文件file1、file2、file3移动到目录dir中</span><br><span class="hljs-built_in">mv</span> file1 file2 <span class="hljs-comment"># 把文件file1重命名为file2</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h2><p>该命令用于删除文件或目录，remove之间，它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息<br>-i ：互动模式，在删除前会询问用户是否操作<br>-r ：递归删除，最常用于目录删除，它是一个非常危险的参数<br></code></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -i file <span class="hljs-comment"># 删除文件file，在删除之前会询问是否进行该操作</span><br><span class="hljs-built_in">rm</span> -fr <span class="hljs-built_in">dir</span> <span class="hljs-comment"># 强制删除目录dir中的所有文件</span><br></code></pre></td></tr></table></figure>
+<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2><p>该命令用于将某个时间点的进程运行情况选取下来并输出，process之意，它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">-A ：所有的进程均显示出来<br>-a ：不与terminal有关的所有进程<br>-u ：有效用户的相关进程<br>-x ：一般与a参数一起使用，可列出较完整的信息<br>-l ：较长，较详细地将PID的信息列出<br></code></pre></td></tr></table></figure>
+<p>其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps aux <span class="hljs-comment"># 查看系统所有的进程数据</span><br>ps ax <span class="hljs-comment"># 查看不与terminal有关的所有进程</span><br>ps -lA <span class="hljs-comment"># 查看系统所有的进程数据</span><br>ps axjf <span class="hljs-comment"># 查看连同一部分进程树状态</span><br></code></pre></td></tr></table></figure>
+<h2 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h2><p>该命令用于向某个工作（%jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用，它的基本语法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">kill</span> -signal PID<br></code></pre></td></tr></table></figure>
+<p>signal的常用参数如下：<br>注：最前面的数字为信号的代号，使用时可以用代号代替相应的信号。</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">1：SIGHUP，启动被终止的进程<br>2：SIGINT，相当于输入ctrl+c，中断一个程序的进行<br>9：SIGKILL，强制中断一个进程的进行<br>15：SIGTERM，以正常的结束进程方式来终止进程<br>17：SIGSTOP，相当于输入ctrl+z，暂停一个进程的进行<br></code></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 以正常的结束进程方式来终于第一个后台工作，可用jobs命令查看后台中的第一个工作进程</span><br><span class="hljs-built_in">kill</span> -SIGTERM %1 <br><span class="hljs-comment"># 重新改动进程ID为PID的进程，PID可用ps命令通过管道命令加上grep命令进行筛选获得</span><br><span class="hljs-built_in">kill</span> -SIGHUP PID<br></code></pre></td></tr></table></figure>
+<h2 id="killall命令"><a href="#killall命令" class="headerlink" title="killall命令"></a>killall命令</h2><p>该命令用于向一个命令启动的进程发送一个信号，它的一般语法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">killall [-iIe] [<span class="hljs-built_in">command</span> name]<br></code></pre></td></tr></table></figure>
+<p>它的参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">-i ：交互式的意思，若需要删除时，会询问用户<br>-e ：表示后面接的<span class="hljs-built_in">command</span> name要一致，但<span class="hljs-built_in">command</span> name不能超过15个字符<br>-I ：命令名称忽略大小写<br><span class="hljs-comment"># 例如：</span><br>killall -SIGHUP syslogd <span class="hljs-comment"># 重新启动syslogd</span><br></code></pre></td></tr></table></figure>
+<h2 id="file命令"><a href="#file命令" class="headerlink" title="file命令"></a>file命令</h2><p>该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">file filename<br><span class="hljs-comment">#例如：</span><br>file ./test<br></code></pre></td></tr></table></figure>
+<h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><p>该命令用于对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压。它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">-c ：新建打包文件<br>-t ：查看打包文件的内容含有哪些文件名<br>-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中<br>-j ：通过bzip2的支持进行压缩/解压缩<br>-z ：通过gzip的支持进行压缩/解压缩<br>-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来<br>-f filename ：filename为要处理的文件<br>-C <span class="hljs-built_in">dir</span> ：指定压缩/解压缩的目录<span class="hljs-built_in">dir</span><br></code></pre></td></tr></table></figure>
+<p>通常记住以下三条：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称<br>查询：tar -jtv -f filename.tar.bz2<br>解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录<br></code></pre></td></tr></table></figure>
+<p>注：文件名并不定要以后缀tar.bz2结尾，这里主要是为了说明使用的压缩程序为bzip2</p>
+<h2 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h2><p>该命令用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用，从而可以一页页地查看数据。例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> text | less <span class="hljs-comment"># 查看text文件中的内容</span><br><span class="hljs-comment"># 注：这条命令也可以使用less text来代替</span><br></code></pre></td></tr></table></figure>
+<h2 id="chgrp命令"><a href="#chgrp命令" class="headerlink" title="chgrp命令"></a>chgrp命令</h2><p>该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chgrp</span> [-R] <span class="hljs-built_in">dirname</span>/filename<br>-R ：进行递归的持续对所有文件和子目录更改<br><span class="hljs-comment"># 例如：</span><br><span class="hljs-built_in">chgrp</span> <span class="hljs-built_in">users</span> -R ./dir <span class="hljs-comment"># 递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为users</span><br></code></pre></td></tr></table></figure>
+<h2 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h2><p>该命令用于改变文件的权限，一般的用法如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> [-R] xyz 文件或目录<br>-R：进行递归的持续更改，即连同子目录下的所有文件都会更改<br></code></pre></td></tr></table></figure>
+<p>同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、&#x3D;（设置）跟rwx搭配来对文件的权限进行更改。</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 例如：</span><br><span class="hljs-built_in">chmod</span> 0755 file <span class="hljs-comment"># 把file的文件权限改变为-rxwr-xr-x</span><br><span class="hljs-built_in">chmod</span> g+w file <span class="hljs-comment"># 向file的文件权限中加入用户组可写权限</span><br></code></pre></td></tr></table></figure>
+<h2 id="gcc命令"><a href="#gcc命令" class="headerlink" title="gcc命令"></a>gcc命令</h2><p>对于一个用Linux开发C程序的人来说，这个命令就非常重要了，它用于把C语言的源程序文件，编译成可执行程序，由于g++的很多参数跟它非常相似，所以这里只介绍gcc的参数，它的常用参数如下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">-o ：output之意，用于指定生成一个可执行文件的文件名<br>-c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序<br>-I ：增加编译时搜索头文件的路径<br>-L ：增加编译时搜索静态连接库的路径<br>-S ：把源文件生成汇编代码文件<br>-lm：表示标准库的目录中名为libm.a的函数库<br>-lpthread ：连接NPTL实现的线程库<br>-std= ：用于指定把使用的C语言的版本<br><br><span class="hljs-comment"># 例如：</span><br><span class="hljs-comment"># 把源文件test.c按照c99标准编译成可执行程序test</span><br>gcc -o <span class="hljs-built_in">test</span> test.c -lm -std=c99<br><span class="hljs-comment">#把源文件test.c转换为相应的汇编程序源文件test.s</span><br>gcc -S test.c<br></code></pre></td></tr></table></figure>
+<h2 id="time命令"><a href="#time命令" class="headerlink" title="time命令"></a>time命令</h2><p>该命令用于测算一个命令（即程序）的执行时间。它的使用非常简单，就像平时输入命令一样，不过在命令的前面加入一个time即可，例如：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">time ./process<br>time ps aux<br></code></pre></td></tr></table></figure>
+<p>在程序或命令运行结束后，在最后输出了三个时间，它们分别是：</p>
+<p>user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；</p>
+<p>system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；</p>
+<p>real：实际时间，从command命令行开始执行到运行终止的消逝时间；</p>
+<p>注：用户CPU时间和系统CPU时间之和为CPU时间，即命令占用CPU执行的时间总和。实际时间要大于CPU时间，因为Linux是多任务操作系统，往往在执行一条命令时，系统还要处理其它任务。另一个需要注意的问题是即使每次执行相同命令，但所花费的时间也是不一样，其花费时间是与系统运行相关的。</p>
+<h1 id="详细命令"><a href="#详细命令" class="headerlink" title="详细命令"></a>详细命令</h1><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="切换、查看、删除、移动、链接"><a href="#切换、查看、删除、移动、链接" class="headerlink" title="切换、查看、删除、移动、链接"></a>切换、查看、删除、移动、链接</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home 进入 <span class="hljs-string">&#x27;/ home&#x27;</span> 目录<br><span class="hljs-built_in">cd</span> .. 返回上一级目录 <br><span class="hljs-built_in">cd</span> ../.. 返回上两级目录 <br><span class="hljs-built_in">cd</span> 进入个人的主目录 <br><span class="hljs-built_in">cd</span> ~user1 进入个人的主目录 <br><span class="hljs-built_in">cd</span> - 返回上次所在的目录 <br><span class="hljs-built_in">pwd</span> 显示工作路径 <br><span class="hljs-built_in">ls</span> 查看目录中的文件 <br><span class="hljs-built_in">ls</span> -F 查看目录中的文件 <br><span class="hljs-built_in">ls</span> -l 显示文件和目录的详细资料 <br><span class="hljs-built_in">ls</span> -a 显示隐藏文件 <br><span class="hljs-built_in">ls</span> *[0-9]* 显示包含数字的文件名和目录名 <br>tree 显示文件和目录由根目录开始的树形结构<br>lstree 显示文件和目录由根目录开始的树形结构<br><span class="hljs-built_in">mkdir</span> dir1 创建一个叫做 <span class="hljs-string">&#x27;dir1&#x27;</span> 的目录<br><span class="hljs-built_in">mkdir</span> dir1 dir2 同时创建两个目录 <br><span class="hljs-built_in">mkdir</span> -p /tmp/dir1/dir2 创建一个目录树 <br><span class="hljs-built_in">rm</span> -f file1 删除一个叫做 <span class="hljs-string">&#x27;file1&#x27;</span> 的文件<br><span class="hljs-built_in">rmdir</span> dir1 删除一个叫做 <span class="hljs-string">&#x27;dir1&#x27;</span> 的目录<br><span class="hljs-built_in">rm</span> -rf dir1 删除一个叫做 <span class="hljs-string">&#x27;dir1&#x27;</span> 的目录并同时删除其内容 <br><span class="hljs-built_in">rm</span> -rf dir1 dir2 同时删除两个目录及它们的内容 <br><span class="hljs-built_in">mv</span> dir1 new_dir 重命名/移动 一个目录 <br><span class="hljs-built_in">cp</span> file1 file2 复制一个文件 <br><span class="hljs-built_in">cp</span> <span class="hljs-built_in">dir</span>/* . 复制一个目录下的所有文件到当前工作目录 <br><span class="hljs-built_in">cp</span> -a /tmp/dir1 . 复制一个目录到当前工作目录 <br><span class="hljs-built_in">cp</span> -a dir1 dir2 复制一个目录 <br><span class="hljs-built_in">cp</span> -r dir1 dir2 复制一个目录及子目录<br><span class="hljs-built_in">ln</span> -s file1 lnk1 创建一个指向文件或目录的软链接 <br><span class="hljs-built_in">ln</span> file1 lnk1 创建一个指向文件或目录的物理链接 <br><span class="hljs-built_in">touch</span> -t 0712250000 file1 修改一个文件或目录的时间戳 - (YYMMDDhhmm) <br>file file1 outputs the mime <span class="hljs-built_in">type</span> of the file as text <br>iconv -l 列出已知的编码<br></code></pre></td></tr></table></figure>
+
+<h3 id="文件授权"><a href="#文件授权" class="headerlink" title="文件授权"></a>文件授权</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">文件的权限 —— 使用 <span class="hljs-string">&quot;+&quot;</span> 设置权限，使用 <span class="hljs-string">&quot;-&quot;</span> 用于取消 <br><span class="hljs-built_in">ls</span> -lh 显示权限 <br><span class="hljs-built_in">ls</span> /tmp | <span class="hljs-built_in">pr</span> -T5 -W<span class="hljs-variable">$COLUMNS</span> 将终端划分成5栏显示 <br><span class="hljs-built_in">chmod</span> ugo+rwx directory1 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限 <br><span class="hljs-built_in">chmod</span> go-rwx directory1 删除群组(g)与其他人(o)对目录的读写执行权限 <br><span class="hljs-built_in">chown</span> user1 file1 改变一个文件的所有人属性 <br><span class="hljs-built_in">chown</span> -R user1 directory1 改变一个目录的所有人属性并同时改变改目录下所有文件的属性 <br><span class="hljs-built_in">chgrp</span> group1 file1 改变文件的群组 <br><span class="hljs-built_in">chown</span> user1:group1 file1 改变一个文件的所有人和群组属性 <br>find / -perm -u+s 罗列一个系统中所有使用了SUID控制的文件 <br><span class="hljs-built_in">chmod</span> u+s /bin/file1 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限 <br><span class="hljs-built_in">chmod</span> u-s /bin/file1 禁用一个二进制文件的 SUID位 <br><span class="hljs-built_in">chmod</span> g+s /home/public 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的 <br><span class="hljs-built_in">chmod</span> g-s /home/public 禁用一个目录的 SGID 位 <br><span class="hljs-built_in">chmod</span> o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件 <br><span class="hljs-built_in">chmod</span> o-t /home/public 禁用一个目录的 STIKY 位 s<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="chmod使用"><a href="#chmod使用" class="headerlink" title="chmod使用"></a>chmod使用</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> [可选项] &lt;mode&gt; &lt;file...&gt;<br><br>可选项：<br>  -c, --changes          like verbose but report only when a change is made (若该档案权限确实已经更改，才显示其更改动作)<br>  -f, --silent, --quiet  suppress most error messages  （若该档案权限无法被更改也不要显示错误讯息）<br>  -v, --verbose          output a diagnostic <span class="hljs-keyword">for</span> every file processed（显示权限变更的详细资料）<br>       --no-preserve-root  <span class="hljs-keyword">do</span> not treat <span class="hljs-string">&#x27;/&#x27;</span> specially (the default)<br>       --preserve-root    fail to operate recursively on <span class="hljs-string">&#x27;/&#x27;</span><br>       --reference=RFILE  use RFILEs mode instead of MODE values<br>  -R, --recursive        change files and directories recursively （以递归的方式对目前目录下的所有档案与子目录进行相同的权限变更)<br>       --<span class="hljs-built_in">help</span>   显示此帮助信息<br>       --version    显示版本信息<br>mode ：权限设定字串，详细格式如下：<br>[ugoa...][[+-=][rwxX]...][,...]，其中<br>[ugoa...]<br>u 表示该档案的拥有者，g 表示与该档案的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示所有（包含上面三者）。<br>[+-=]<br>+ 表示增加权限，- 表示取消权限，= 表示唯一设定权限。<br>[rwxX]<br>r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该档案是个子目录或者该档案已经被设定过为可执行。<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="数字权限使用格式"><a href="#数字权限使用格式" class="headerlink" title="数字权限使用格式"></a>数字权限使用格式</h3><p>在这种使用方式中，首先我们需要了解数字如何表示权限。 首先，我们规定 数字 4 、2 和 1表示读、写、执行权限（具体原因可见下节权限详解内容），即 r&#x3D;4，w&#x3D;2，x&#x3D;1 。此时其他的权限组合也可以用其他的八进制数字表示出来，如： rwx &#x3D; 4 + 2 + 1 &#x3D; 7 rw &#x3D; 4 + 2 &#x3D; 6 rx &#x3D; 4 +1 &#x3D; 5 即</p>
+<p>若要同时设置 rwx (可读写运行） 权限则将该权限位 设置 为 4 + 2 + 1 &#x3D; 7 若要同时设置 rw- （可读写不可运行）权限则将该权限位 设置 为 4 + 2 &#x3D; 6 若要同时设置 r-x （可读可运行不可写）权限则将该权限位 设置 为 4 +1 &#x3D; 5</p>
+<p>上面我们提到，每个文件都可以针对三个粒度，设置不同的rwx(读写执行)权限。即我们可以用用三个8进制数字分别表示 拥有者 、群组 、其它组( u、 g 、o)的权限详情，并用chmod直接加三个8进制数字的方式直接改变文件权限。</p>
+<h3 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a>文件搜索</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">find / -name file1 从 <span class="hljs-string">&#x27;/&#x27;</span> 开始进入根文件系统搜索文件和目录 <br>find / -user user1 搜索属于用户 <span class="hljs-string">&#x27;user1&#x27;</span> 的文件和目录 <br>find /home/user1 -name \*.bin 在目录 <span class="hljs-string">&#x27;/ home/user1&#x27;</span> 中搜索带有<span class="hljs-string">&#x27;.bin&#x27;</span> 结尾的文件 <br>find /usr/bin -<span class="hljs-built_in">type</span> f -atime +100 搜索在过去100天内未被使用过的执行文件 <br>find /usr/bin -<span class="hljs-built_in">type</span> f -mtime -10 搜索在10天内被创建或者修改过的文件 <br>find / -name \*.rpm -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">chmod</span> 755 <span class="hljs-string">&#x27;&#123;&#125;&#x27;</span> \; 搜索以 <span class="hljs-string">&#x27;.rpm&#x27;</span> 结尾的文件并定义其权限 <br>find / -xdev -name \*.rpm 搜索以 <span class="hljs-string">&#x27;.rpm&#x27;</span> 结尾的文件，忽略光驱、捷盘等可移动设备 <br>locate \*.ps 寻找以 <span class="hljs-string">&#x27;.ps&#x27;</span> 结尾的文件 - 先运行 <span class="hljs-string">&#x27;updatedb&#x27;</span> 命令 <br>whereis halt 显示一个二进制文件、源码或man的位置 <br><span class="hljs-built_in">which</span> halt 显示一个二进制文件或可执行文件的完整路径<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="文件特殊属性"><a href="#文件特殊属性" class="headerlink" title="文件特殊属性"></a>文件特殊属性</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">文件的特殊属性 - 使用 <span class="hljs-string">&quot;+&quot;</span> 设置权限，使用 <span class="hljs-string">&quot;-&quot;</span> 用于取消 <br>chattr +a file1 只允许以追加方式读写文件 <br>chattr +c file1 允许这个文件能被内核自动压缩/解压 <br>chattr +d file1 在进行文件系统备份时，dump程序将忽略这个文件 <br>chattr +i file1 设置成不可变的文件，不能被删除、修改、重命名或者链接 <br>chattr +s file1 允许一个文件被安全地删除 <br>chattr +S file1 一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘 <br>chattr +u file1 若文件被删除，系统会允许你在以后恢复这个被删除的文件 <br>lsattr 显示特殊的属性<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> file1 file2 ... | <span class="hljs-built_in">command</span> &lt;&gt; file1_in.txt_or_file1_out.txt general syntax <span class="hljs-keyword">for</span> text manipulation using PIPE, STDIN and STDOUT <br><span class="hljs-built_in">cat</span> file1 | <span class="hljs-built_in">command</span>( sed, grep, awk, grep, etc...) &gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个新文件中 <br><span class="hljs-built_in">cat</span> file1 | <span class="hljs-built_in">command</span>( sed, grep, awk, grep, etc...) &gt;&gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个已有的文件中 <br>grep Aug /var/log/messages 在文件 <span class="hljs-string">&#x27;/var/log/messages&#x27;</span>中查找关键词<span class="hljs-string">&quot;Aug&quot;</span> <br>grep ^Aug /var/log/messages 在文件 <span class="hljs-string">&#x27;/var/log/messages&#x27;</span>中查找以<span class="hljs-string">&quot;Aug&quot;</span>开始的词汇 <br>grep [0-9] /var/log/messages 选择 <span class="hljs-string">&#x27;/var/log/messages&#x27;</span> 文件中所有包含数字的行 <br>grep Aug -R /var/log/* 在目录 <span class="hljs-string">&#x27;/var/log&#x27;</span> 及随后的目录中搜索字符串<span class="hljs-string">&quot;Aug&quot;</span> <br>sed <span class="hljs-string">&#x27;s/stringa1/stringa2/g&#x27;</span> example.txt 将example.txt文件中的 <span class="hljs-string">&quot;string1&quot;</span> 替换成 <span class="hljs-string">&quot;string2&quot;</span> <br>sed <span class="hljs-string">&#x27;/^$/d&#x27;</span> example.txt 从example.txt文件中删除所有空白行 <br>sed <span class="hljs-string">&#x27;/ *#/d; /^$/d&#x27;</span> example.txt 从example.txt文件中删除所有注释和空白行 <br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;esempio&#x27;</span> | <span class="hljs-built_in">tr</span> <span class="hljs-string">&#x27;[:lower:]&#x27;</span> <span class="hljs-string">&#x27;[:upper:]&#x27;</span> 合并上下单元格内容 <br>sed -e <span class="hljs-string">&#x27;1d&#x27;</span> result.txt 从文件example.txt 中排除第一行 <br>sed -n <span class="hljs-string">&#x27;/stringa1/p&#x27;</span> 查看只包含词汇 <span class="hljs-string">&quot;string1&quot;</span>的行 <br>sed -e <span class="hljs-string">&#x27;s/ *$//&#x27;</span> example.txt 删除每一行最后的空白字符 <br>sed -e <span class="hljs-string">&#x27;s/stringa1//g&#x27;</span> example.txt 从文档中只删除词汇 <span class="hljs-string">&quot;string1&quot;</span> 并保留剩余全部 <br>sed -n <span class="hljs-string">&#x27;1,5p;5q&#x27;</span> example.txt 查看从第一行到第5行内容 <br>sed -n <span class="hljs-string">&#x27;5p;5q&#x27;</span> example.txt 查看第5行 <br>sed -e <span class="hljs-string">&#x27;s/00*/0/g&#x27;</span> example.txt 用单个零替换多个零 <br><span class="hljs-built_in">cat</span> -n file1 标示文件的行数 <br><span class="hljs-built_in">cat</span> example.txt | awk <span class="hljs-string">&#x27;NR%2==1&#x27;</span> 删除example.txt文件中的所有偶数行 <br><span class="hljs-built_in">echo</span> a b c | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> 查看一行第一栏 <br><span class="hljs-built_in">echo</span> a b c | awk <span class="hljs-string">&#x27;&#123;print $1,$3&#125;&#x27;</span> 查看一行的第一和第三栏 <br><span class="hljs-built_in">paste</span> file1 file2 合并两个文件或两栏的内容 <br><span class="hljs-built_in">paste</span> -d <span class="hljs-string">&#x27;+&#x27;</span> file1 file2 合并两个文件或两栏的内容，中间用<span class="hljs-string">&quot;+&quot;</span>区分 <br><span class="hljs-built_in">sort</span> file1 file2 排序两个文件的内容 <br><span class="hljs-built_in">sort</span> file1 file2 | <span class="hljs-built_in">uniq</span> 取出两个文件的并集(重复的行只保留一份) <br><span class="hljs-built_in">sort</span> file1 file2 | <span class="hljs-built_in">uniq</span> -u 删除交集，留下其他的行 <br><span class="hljs-built_in">sort</span> file1 file2 | <span class="hljs-built_in">uniq</span> -d 取出两个文件的交集(只留下同时存在于两个文件中的文件) <br><span class="hljs-built_in">comm</span> -1 file1 file2 比较两个文件的内容只删除 <span class="hljs-string">&#x27;file1&#x27;</span> 所包含的内容 <br><span class="hljs-built_in">comm</span> -2 file1 file2 比较两个文件的内容只删除 <span class="hljs-string">&#x27;file2&#x27;</span> 所包含的内容 <br><span class="hljs-built_in">comm</span> -3 file1 file2 比较两个文件的内容只删除两个文件共有的部分<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="字符设置和文件格式转换"><a href="#字符设置和文件格式转换" class="headerlink" title="字符设置和文件格式转换"></a>字符设置和文件格式转换</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">dos2unix filedos.txt fileunix.txt 将一个文本文件的格式从MSDOS转换成UNIX <br>unix2dos fileunix.txt filedos.txt 将一个文本文件的格式从UNIX转换成MSDOS <br>recode ..HTML &lt; page.txt &gt; page.html 将一个文本文件转换成html <br>recode -l | more 显示所有允许的转换格式<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="文件系统分析"><a href="#文件系统分析" class="headerlink" title="文件系统分析"></a>文件系统分析</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">badblocks -v /dev/hda1 检查磁盘hda1上的坏磁块 <br>fsck /dev/hda1 修复/检查hda1磁盘上linux文件系统的完整性 <br>fsck.ext2 /dev/hda1 修复/检查hda1磁盘上ext2文件系统的完整性 <br>e2fsck /dev/hda1 修复/检查hda1磁盘上ext2文件系统的完整性 <br>e2fsck -j /dev/hda1 修复/检查hda1磁盘上ext3文件系统的完整性 <br>fsck.ext3 /dev/hda1 修复/检查hda1磁盘上ext3文件系统的完整性 <br>fsck.vfat /dev/hda1 修复/检查hda1磁盘上fat文件系统的完整性 <br>fsck.msdos /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性 <br>dosfsck /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="挂载一个文件系统"><a href="#挂载一个文件系统" class="headerlink" title="挂载一个文件系统"></a>挂载一个文件系统</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">mount /dev/hda2 /mnt/hda2 挂载一个叫做hda2的盘 - 确定目录 <span class="hljs-string">&#x27;/ mnt/hda2&#x27;</span> 已经存在 <br>umount /dev/hda2 卸载一个叫做hda2的盘 - 先从挂载点 <span class="hljs-string">&#x27;/ mnt/hda2&#x27;</span> 退出 <br>fuser -km /mnt/hda2 当设备繁忙时强制卸载 <br>umount -n /mnt/hda2 运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用 <br>mount /dev/fd0 /mnt/floppy 挂载一个软盘 <br>mount /dev/cdrom /mnt/cdrom 挂载一个cdrom或dvdrom <br>mount /dev/hdc /mnt/cdrecorder 挂载一个cdrw或dvdrom <br>mount /dev/hdb /mnt/cdrecorder 挂载一个cdrw或dvdrom <br>mount -o loop file.iso /mnt/cdrom 挂载一个文件或ISO镜像文件 <br>mount -t vfat /dev/hda5 /mnt/hda5 挂载一个Windows FAT32文件系统 <br>mount /dev/sda1 /mnt/usbdisk 挂载一个usb 捷盘或闪存设备 <br>mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 挂载一个windows网络共享<br></code></pre></td></tr></table></figure>
+
+<h3 id="初始化一个文件系统"><a href="#初始化一个文件系统" class="headerlink" title="初始化一个文件系统"></a>初始化一个文件系统</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkfs /dev/hda1 在hda1分区创建一个文件系统 <br>mke2fs /dev/hda1 在hda1分区创建一个linux ext2的文件系统 <br>mke2fs -j /dev/hda1 在hda1分区创建一个linux ext3(日志型)的文件系统 <br>mkfs -t vfat 32 -F /dev/hda1 创建一个 FAT32 文件系统 <br>fdformat -n /dev/fd0 格式化一个软盘 <br>mkswap /dev/hda3 创建一个swap文件系统<br></code></pre></td></tr></table></figure>
+
+<h3 id="SWAP文件系统"><a href="#SWAP文件系统" class="headerlink" title="SWAP文件系统"></a>SWAP文件系统</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">mkswap /dev/hda3 创建一个swap文件系统 <br>swapon /dev/hda3 启用一个新的swap文件系统 <br>swapon /dev/hda2 /dev/hdb3 启用两个swap分区<br></code></pre></td></tr></table></figure>
+
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">dump -0aj -f /tmp/home0.bak /home 制作一个 <span class="hljs-string">&#x27;/home&#x27;</span> 目录的完整备份 <br>dump -1aj -f /tmp/home0.bak /home 制作一个 <span class="hljs-string">&#x27;/home&#x27;</span> 目录的交互式备份 <br>restore -<span class="hljs-keyword">if</span> /tmp/home0.bak 还原一个交互式备份 <br>rsync -rogpav --delete /home /tmp 同步两边的目录 <br>rsync -rogpav -e ssh --delete /home ip_address:/tmp 通过SSH通道rsync <br>rsync -az -e ssh --delete ip_addr:/home/public /home/local 通过ssh和压缩将一个远程目录同步到本地目录 <br>rsync -az -e ssh --delete /home/local ip_addr:/home/public 通过ssh和压缩将本地目录同步到远程目录 <br><span class="hljs-built_in">dd</span> bs=1M <span class="hljs-keyword">if</span>=/dev/hda | gzip | ssh user@ip_addr <span class="hljs-string">&#x27;dd of=hda.gz&#x27;</span> 通过ssh在远程主机上执行一次备份本地磁盘的操作 <br><span class="hljs-built_in">dd</span> <span class="hljs-keyword">if</span>=/dev/sda of=/tmp/file1 备份磁盘内容到一个文件 <br>tar -Puf backup.tar /home/user 执行一次对 <span class="hljs-string">&#x27;/home/user&#x27;</span> 目录的交互式备份操作 <br>( <span class="hljs-built_in">cd</span> /tmp/local/ &amp;&amp; tar c . ) | ssh -C user@ip_addr <span class="hljs-string">&#x27;cd /home/share/ &amp;&amp; tar x -p&#x27;</span> 通过ssh在远程目录中复制一个目录内容 <br>( tar c /home ) | ssh -C user@ip_addr <span class="hljs-string">&#x27;cd /home/backup-home &amp;&amp; tar x -p&#x27;</span> 通过ssh在远程目录中复制一个本地目录 <br>tar cf - . | (<span class="hljs-built_in">cd</span> /tmp/backup ; tar xf - ) 本地将一个目录复制到另一个地方，保留原有权限及链接 <br>find /home/user1 -name <span class="hljs-string">&#x27;*.txt&#x27;</span> | xargs <span class="hljs-built_in">cp</span> -av --target-directory=/home/backup/ --parents 从一个目录查找并复制所有以 <span class="hljs-string">&#x27;.txt&#x27;</span> 结尾的文件到另一个目录 <br>find /var/log -name <span class="hljs-string">&#x27;*.log&#x27;</span> | tar cv --files-from=- | bzip2 &gt; log.tar.bz2 查找所有以 <span class="hljs-string">&#x27;.log&#x27;</span> 结尾的文件并做成一个bzip包 <br><span class="hljs-built_in">dd</span> <span class="hljs-keyword">if</span>=/dev/hda of=/dev/fd0 bs=512 count=1 做一个将 MBR (Master Boot Record)内容复制到软盘的动作 <br><span class="hljs-built_in">dd</span> <span class="hljs-keyword">if</span>=/dev/fd0 of=/dev/hda bs=512 count=1 从已经保存到软盘的备份中恢复MBR内容<br></code></pre></td></tr></table></figure>
+<h2 id="系统操作"><a href="#系统操作" class="headerlink" title="系统操作"></a>系统操作</h2><h3 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">arch</span> 显示机器的处理器架构<br><span class="hljs-built_in">uname</span> -m 显示机器的处理器架构<br><span class="hljs-built_in">uname</span> -r 显示正在使用的内核版本 <br>dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI) <br>hdparm -i /dev/hda 罗列一个磁盘的架构特性 <br>hdparm -tT /dev/sda 在磁盘上执行测试性读取操作 <br><span class="hljs-built_in">cat</span> /proc/cpuinfo 显示CPU info的信息 <br><span class="hljs-built_in">cat</span> /proc/interrupts 显示中断 <br><span class="hljs-built_in">cat</span> /proc/meminfo 校验内存使用 <br><span class="hljs-built_in">cat</span> /proc/swaps 显示哪些swap被使用 <br><span class="hljs-built_in">cat</span> /proc/version 显示内核的版本 <br><span class="hljs-built_in">cat</span> /proc/net/dev 显示网络适配器及统计 <br><span class="hljs-built_in">cat</span> /proc/mounts 显示已加载的文件系统 <br>lspci -tv 罗列 PCI 设备 <br>lsusb -tv 显示 USB 设备 <br><span class="hljs-built_in">date</span> 显示系统日期 <br>cal 2007 显示2007年的日历表 <br><span class="hljs-built_in">date</span> 041217002007.00 设置日期和时间 - 月日时分年.秒 <br>clock -w 将时间修改保存到 BIOS<br></code></pre></td></tr></table></figure>
+
+<h3 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a>用户和群组</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash">groupadd group_name 创建一个新用户组 <br>groupdel group_name 删除一个用户组 <br>groupmod -n new_group_name old_group_name 重命名一个用户组 <br>useradd -c <span class="hljs-string">&quot;Name Surname &quot;</span> -g admin -d /home/user1 -s /bin/bash user1 创建一个属于 <span class="hljs-string">&quot;admin&quot;</span> 用户组的用户 <br>useradd user1 创建一个新用户 <br>userdel -r user1 删除一个用户 ( <span class="hljs-string">&#x27;-r&#x27;</span> 排除主目录) <br>usermod -c <span class="hljs-string">&quot;User FTP&quot;</span> -g system -d /ftp/user1 -s /bin/nologin user1 修改用户属性 <br>passwd 修改口令 <br>passwd user1 修改一个用户的口令 (只允许root执行) <br>chage -E 2005-12-31 user1 设置用户口令的失效期限 <br>pwck 检查 <span class="hljs-string">&#x27;/etc/passwd&#x27;</span> 的文件格式和语法修正以及存在的用户 <br>grpck 检查 <span class="hljs-string">&#x27;/etc/passwd&#x27;</span> 的文件格式和语法修正以及存在的群组 <br>newgrp group_name 登陆进一个新的群组以改变新创建文件的预设群组<br></code></pre></td></tr></table></figure>
+
+<h3 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a>磁盘空间</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">磁盘空间 <br><span class="hljs-built_in">df</span> -h 显示已经挂载的分区列表 <br><span class="hljs-built_in">ls</span> -lSr |more 以尺寸大小排列文件和目录 <br><span class="hljs-built_in">du</span> -sh dir1 估算目录 <span class="hljs-string">&#x27;dir1&#x27;</span> 已经使用的磁盘空间<span class="hljs-string">&#x27; </span><br><span class="hljs-string">du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小 </span><br><span class="hljs-string">rpm -q -a --qf &#x27;</span>%10&#123;SIZE&#125;t%&#123;NAME&#125;n<span class="hljs-string">&#x27; | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统) </span><br><span class="hljs-string">dpkg-query -W -f=&#x27;</span><span class="hljs-variable">$&#123;Installed-Size;10&#125;</span>t<span class="hljs-variable">$&#123;Package&#125;</span>n<span class="hljs-string">&#x27; | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="关机、重启、登出"><a href="#关机、重启、登出" class="headerlink" title="关机、重启、登出"></a>关机、重启、登出</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">shutdown -h now 关闭系统<br>init 0 关闭系统<br>telinit 0 关闭系统<br>shutdown -h hours:minutes &amp; 按预定时间关闭系统 <br>shutdown -c 取消按预定时间关闭系统 <br>shutdown -r now 重启<br>reboot 重启<br><span class="hljs-built_in">logout</span> 注销<br></code></pre></td></tr></table></figure>
+<h3 id="yum-软件包"><a href="#yum-软件包" class="headerlink" title="yum 软件包"></a>yum 软件包</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">YUM 软件包升级器 - （Fedora, RedHat及类似系统） <br>yum install package_name 下载并安装一个rpm包 <br>yum localinstall package_name.rpm 将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系 <br>yum update package_name.rpm 更新当前系统中所有安装的rpm包 <br>yum update package_name 更新一个rpm包 <br>yum remove package_name 删除一个rpm包 <br>yum list 列出当前系统中安装的所有包 <br>yum search package_name 在rpm仓库中搜寻软件包 <br>yum clean packages 清理rpm缓存删除下载的包 <br>yum clean headers 删除所有头文件 <br>yum clean all 删除所有缓存的包和头文件<br></code></pre></td></tr></table></figure>
+<h3 id="DEB包-dpkg"><a href="#DEB包-dpkg" class="headerlink" title="DEB包 dpkg"></a>DEB包 dpkg</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">DEB 包 (Debian, Ubuntu 以及类似系统) <br>dpkg -i package.deb 安装/更新一个 deb 包 <br>dpkg -r package_name 从系统删除一个 deb 包 <br>dpkg -l 显示系统中所有已经安装的 deb 包 <br>dpkg -l | grep httpd 显示所有名称中包含 <span class="hljs-string">&quot;httpd&quot;</span> 字样的deb包 <br>dpkg -s package_name 获得已经安装在系统中一个特殊包的信息 <br>dpkg -L package_name 显示系统中已经安装的一个deb包所提供的文件列表 <br>dpkg --contents package.deb 显示尚未安装的一个包所提供的文件列表 <br>dpkg -S /bin/ping 确认所给的文件由哪个deb包提供<br></code></pre></td></tr></table></figure>
+<h3 id="apt软件包"><a href="#apt软件包" class="headerlink" title="apt软件包"></a>apt软件包</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">APT 软件工具 (Debian, Ubuntu 以及类似系统) <br>apt-get install package_name 安装/更新一个 deb 包 <br>apt-cdrom install package_name 从光盘安装/更新一个 deb 包 <br>apt-get update 升级列表中的软件包 <br>apt-get upgrade 升级所有已安装的软件 <br>apt-get remove package_name 从系统删除一个deb包 <br>apt-get check 确认依赖的软件仓库正确 <br>apt-get clean 从下载的软件包中清理缓存 <br>apt-cache search searched-package 返回包含所要搜索字符串的软件包名称<br></code></pre></td></tr></table></figure>
+
+<h2 id="系统进程"><a href="#系统进程" class="headerlink" title="系统进程"></a>系统进程</h2><h3 id="linux查看端口占用"><a href="#linux查看端口占用" class="headerlink" title="linux查看端口占用"></a>linux查看端口占用</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看端口进程</span><br>netstat -tunlp | grep 端口号<br><span class="hljs-comment"># 查看端口占用</span><br>lsof -i:端口号<br><span class="hljs-comment"># 查看TCP的listen的端口</span><br>ss -tln <br><span class="hljs-comment"># 查看哪些进程使用了监听端口</span><br>ss -tlnp<br></code></pre></td></tr></table></figure>
+<h3 id="ps命令-1"><a href="#ps命令-1" class="headerlink" title="ps命令"></a>ps命令</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps命令常用用法（方便查看系统进程）<br><br>ps a 显示现行终端机下的所有程序，包括其他用户的程序。<br>ps -A 显示所有进程。<br>ps c 列出程序时，显示每个程序真正的指令名称，而不包含路径，参数或常驻服务的标示。<br>ps -e 此参数的效果和指定<span class="hljs-string">&quot;A&quot;</span>参数相同。<br>ps e 列出程序时，显示每个程序所使用的环境变量。<br>ps f 用ASCII字符显示树状结构，表达程序间的相互关系。<br>ps -H 显示树状结构，表示程序间的相互关系。<br>ps -N 显示所有的程序，除了执行ps指令终端机下的程序之外。<br>ps s 采用程序信号的格式显示程序状况。<br>ps S 列出程序时，包括已中断的子程序资料。<br>ps -t&lt;终端机编号&gt; 　指定终端机编号，并列出属于该终端机的程序的状况。<br>ps u 　以用户为主的格式来显示程序状况。<br>ps x 　显示所有程序，不以终端机来区分。<br></code></pre></td></tr></table></figure>
+<p>常用指令组合 ：ps aux,然后再通过管道使用grep命令过滤查找特定的进程,然后再对特定的进程进行操作。</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps aux | grep program_filter_word,ps -ef |grep tomcat<br>ps -ef|grep java|grep -v grep 显示出所有的java进程，去处掉当前的grep进程。<br></code></pre></td></tr></table></figure>
+
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="ifconfig命令"><a href="#ifconfig命令" class="headerlink" title="ifconfig命令"></a>ifconfig命令</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#作用：</span><br>ifconfig命令用于显示或设置网络设备。<br><span class="hljs-comment">#说明： </span><br>与windows下的ipconfig命令类似,linux下使用ifconfig命令查看<br><span class="hljs-comment">#格式</span><br>ifconfig [网络设备][down up -allmulti -arp -promisc][add&lt;地址&gt;][del&lt;地址&gt;][&lt;hw&lt;网络设备类型&gt;&lt;硬件地址&gt;][io_addr&lt;I/O地址&gt;][irq&lt;IRQ地址&gt;][media&lt;网络媒介类型&gt;][mem_start&lt;内存地址&gt;][metric&lt;数目&gt;][mtu&lt;字节&gt;][netmask&lt;子网掩码&gt;][tunnel&lt;地址&gt;][-broadcast&lt;地址&gt;][-pointopoint&lt;地址&gt;][IP地址]<br><br><span class="hljs-comment">#参数</span><br>add&lt;地址&gt; 设置网络设备IPv6的IP地址。<br>del&lt;地址&gt; 删除网络设备IPv6的IP地址。<br>down 关闭指定的网络设备。<br>&lt;hw&lt;网络设备类型&gt;&lt;硬件地址&gt; 设置网络设备的类型与硬件地址。<br>io_addr&lt;I/O地址&gt; 设置网络设备的I/O地址。<br>irq&lt;IRQ地址&gt; 设置网络设备的IRQ。<br>media&lt;网络媒介类型&gt; 设置网络设备的媒介类型。<br>mem_start&lt;内存地址&gt; 设置网络设备在主内存所占用的起始地址。<br>metric&lt;数目&gt; 指定在计算数据包的转送次数时，所要加上的数目。<br>mtu&lt;字节&gt; 设置网络设备的MTU。<br>netmask&lt;子网掩码&gt; 设置网络设备的子网掩码。<br>tunnel&lt;地址&gt; 建立IPv4与IPv6之间的隧道通信地址。<br>up 启动指定的网络设备。<br>-broadcast&lt;地址&gt; 将要送往指定地址的数据包当成广播数据包来处理。<br>-pointopoint&lt;地址&gt; 与指定地址的网络设备建立直接连线，此模式具有保密功能。<br>-promisc 关闭或启动指定网络设备的promiscuous模式。<br>[IP地址] 指定网络设备的IP地址。<br>[网络设备] 指定网络设备的名称。<br><br><span class="hljs-comment">#实例</span><br>显示网络设备信息<br><br><span class="hljs-comment"># ifconfig        </span><br>eth0   Link encap:Ethernet HWaddr 00:50:56:0A:0B:0C <br>     inet addr:192.168.0.3 Bcast:192.168.0.255 Mask:255.255.255.0<br>     inet6 addr: fe80::250:56ff:fe0a:b0c/64 Scope:Link<br>     UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1<br>     RX packets:172220 errors:0 dropped:0 overruns:0 frame:0<br>     TX packets:132379 errors:0 dropped:0 overruns:0 carrier:0<br>     collisions:0 txqueuelen:1000 <br>     RX bytes:87101880 (83.0 MiB) TX bytes:41576123 (39.6 MiB)<br>     Interrupt:185 Base address:0x2024 <br><br>lo    Link encap:Local Loopback <br>     inet addr:127.0.0.1 Mask:255.0.0.0<br>     inet6 addr: ::1/128 Scope:Host<br>     UP LOOPBACK RUNNING MTU:16436 Metric:1<br>     RX packets:2022 errors:0 dropped:0 overruns:0 frame:0<br>     TX packets:2022 errors:0 dropped:0 overruns:0 carrier:0<br>     collisions:0 txqueuelen:0 <br>     RX bytes:2459063 (2.3 MiB) TX bytes:2459063 (2.3 MiB)<br>启动关闭指定网卡<br><br><span class="hljs-comment"># ifconfig eth0 down</span><br><span class="hljs-comment"># ifconfig eth0 up</span><br>为网卡配置和删除IPv6地址<br><br><span class="hljs-comment"># ifconfig eth0 add 33ffe:3240:800:1005::2/ 64 //为网卡诶之IPv6地址</span><br><br><span class="hljs-comment"># ifconfig eth0 del 33ffe:3240:800:1005::2/ 64 //为网卡删除IPv6地址</span><br>用ifconfig修改MAC地址<br><br><span class="hljs-comment"># ifconfig eth0 down //关闭网卡</span><br><span class="hljs-comment"># ifconfig eth0 hw ether 00:AA:BB:CC:DD:EE //修改MAC地址</span><br><span class="hljs-comment"># ifconfig eth0 up //启动网卡</span><br><span class="hljs-comment"># ifconfig eth1 hw ether 00:1D:1C:1D:1E //关闭网卡并修改MAC地址 </span><br><span class="hljs-comment"># ifconfig eth1 up //启动网卡</span><br>配置IP地址<br><br><span class="hljs-comment"># ifconfig eth0 192.168.1.56 </span><br>//给eth0网卡配置IP地址<br><span class="hljs-comment"># ifconfig eth0 192.168.1.56 netmask 255.255.255.0 </span><br>// 给eth0网卡配置IP地址,并加上子掩码<br><span class="hljs-comment"># ifconfig eth0 192.168.1.56 netmask 255.255.255.0 broadcast 192.168.1.255</span><br>// 给eth0网卡配置IP地址,加上子掩码,加上个广播地址<br>启用和关闭ARP协议<br><br><span class="hljs-comment"># ifconfig eth0 arp  //开启</span><br><span class="hljs-comment"># ifconfig eth0 -arp  //关闭</span><br>设置最大传输单元<br><br><span class="hljs-comment"># ifconfig eth0 mtu 1500 </span><br>//设置能通过的最大数据包大小为 1500 bytes<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#作用</span><br>用于检测主机。若远端主机的网络功能没有问题，就会回应该信息，因而得知该主机运作正常。<br><span class="hljs-comment">#格式</span><br>ping [-dfnqrRv][-c&lt;完成次数&gt;][-i&lt;间隔秒数&gt;][-I&lt;网络界面&gt;][-l&lt;前置载入&gt;][-p&lt;范本样式&gt;][-s&lt;数据包大小&gt;][-t&lt;存活数值&gt;][主机名称或IP地址]<br><span class="hljs-comment">#参数</span><br>-d 使用Socket的SO_DEBUG功能。<br>-c&lt;完成次数&gt; 设置完成要求回应的次数。<br>-f 极限检测。<br>-i&lt;间隔秒数&gt; 指定收发信息的间隔时间。<br>-I&lt;网络界面&gt; 使用指定的网络界面送出数据包。<br>-l&lt;前置载入&gt; 设置在送出要求信息之前，先行发出的数据包。<br>-n 只输出数值。<br>-p&lt;范本样式&gt; 设置填满数据包的范本样式。<br>-q 不显示指令执行过程，开头和结尾的相关信息除外。<br>-r 忽略普通的Routing Table，直接将数据包送到远端主机上。<br>-R 记录路由过程。<br>-s&lt;数据包大小&gt; 设置数据包的大小。<br>-t&lt;存活数值&gt; 设置存活数值TTL的大小。<br>-v 详细显示指令的执行过程。<br><span class="hljs-comment">#实例</span><br>检测是否与主机连通<br>ping www.baidu.com<br>//需要终止按ctrl +c<br>指定接收包的次数<br>ping -c 2 www.baidu.com<br>//收到两次包后，自动退出<br></code></pre></td></tr></table></figure>
+<h3 id="nslookup命令"><a href="#nslookup命令" class="headerlink" title="nslookup命令"></a>nslookup命令</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#作用：</span><br>查看dns信息用的，linux系统不自带，需要手动安装<br>如果你的Linux系统没有nslookup命令，那么八成是你没有安装bind-utils包。<br>直接yum install bind-utils就可以解决问题了。<br><br><span class="hljs-comment">#格式：</span><br>        进入非交互模式       nslookup 域名（www.baidu.com）<br>非交互模式nslookup会连接到默认的域名服务器<br>（即/etc/resolv.conf的第一个dns地<span class="hljs-comment">#址）。</span><br>        进入交互模式         nslookup<br><br><span class="hljs-comment">#交互模式常用命令：</span><br><span class="hljs-built_in">exit</span>        退出交互模式<br><span class="hljs-built_in">set</span> all 列出nslookup工具常用选项设置值<br><br><span class="hljs-comment">#返回值说明</span><br>返回值一共分为两部分，第一部分是本机的DNS信息，包括服务器和地址<br><br>第二部分非权威应答对应的英文是：Non-authoritative answer。什么叫非权威应答？假设某个DNS server没有域名test.com的记录信息，当有客户端通过它请求获取test.com的域名信息，此DNS Server会通过迭代递归的方式从<span class="hljs-built_in">test</span>公司实际存储此记录信息的DNS server中获取test.com的域名信息，反馈给发出请求的客户端，同时会把test.com的记录信息放在自身缓存中放置一段时间，当又有客户端请求test.com域名解析时，此DNS server直接从自身缓存中提取返回给客户端，这个回答叫“非权威回答”，简言之凡是从非实际记录存储DNS server中获取的域名解析回答，都叫“非权威回答”。<br><br>[root@localhost ~]<span class="hljs-comment"># nslookup www.baidu.com</span><br>Server:     114.114.114.114<br>Address:    114.114.114.114<span class="hljs-comment">#53</span><br><br>Non-authoritative answer:<br>www.baidu.com   canonical name = www.a.shifen.com.<br>Name:   www.a.shifen.com<br>Address: 61.135.169.121<br>Name:   www.a.shifen.com<br>Address: 61.135.169.125<br><br><span class="hljs-comment">#www.a.shifen.com.指代www.baidu.com对应的dns主机名记录</span><br></code></pre></td></tr></table></figure>
+<h3 id="traceroute"><a href="#traceroute" class="headerlink" title="traceroute"></a>traceroute</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#作用：</span><br>显示数据包到主机间的路径。<br>对应window下的tracert命令<br><br><span class="hljs-comment">#格式： </span><br>Traceroute [options] &lt;IP-address or domain-name&gt; [data size]<br><br><span class="hljs-comment">#参数</span><br>  -d   使用Socket层级的排错功能。<br>  -f&lt;存活数值&gt;   设置第一个检测数据包的存活数值TTL的大小。<br>  -F   设置勿离断位。<br>  -g&lt;网关&gt;   设置来源路由网关，最多可设置8个。<br>  -i&lt;网络界面&gt;   使用指定的网络界面送出数据包。<br>  -I   使用ICMP回应取代UDP资料信息。<br>  -m&lt;存活数值&gt;   设置检测数据包的最大存活数值TTL的大小。<br>  -n   直接使用IP地址而非主机名称。<br>  -p&lt;通信端口&gt;   设置UDP传输协议的通信端口。(缺省为33434)<br><br>  -q  设置TTL测试数目(缺省为3)<br>  -r   忽略普通的Routing Table，直接将数据包送到远端主机上。<br>  -s&lt;来源地址&gt;   设置本地主机送出数据包的IP地址。<br>  -t&lt;服务类型&gt;   设置检测数据包的TOS数值。<br>  -v   详细显示指令的执行过程。<br>  -w&lt;超时秒数&gt;   设置等待远端主机回报的时间。<br>  -x   开启或关闭数据包的正确性检验。  <br>[data size]:每次测试包的数据字节长度(缺省为38)<br><span class="hljs-comment">#返回值说明</span><br>显示到达目的地的数据包路由<br>[root@localhost ~]<span class="hljs-comment"># traceroute www.baidu.com</span><br>traceroute to www.baidu.com (61.135.169.125), 30 hops max, 60 byte packets<br> 1  10.20.35.254 (10.20.35.254)  0.626 ms  1.205 ms  1.476 ms<br> 2  10.20.0.1 (10.20.0.1)  0.365 ms  0.453 ms  0.463 ms<br> 3  124.160.189.213 (124.160.189.213)  2.377 ms  2.226 ms  2.250 ms<br> 4  124.160.188.101 (124.160.188.101)  2.253 ms 124.160.188.105 (124.160.188.105)  2.396 ms  2.518 ms<br> 5  124.160.189.89 (124.160.189.89)  8.592 ms 124.160.189.97 (124.160.189.97)  11.756 ms 124.160.189.105 (124.160.189.105)  7.020 ms<br> 6  219.158.96.133 (219.158.96.133)  28.295 ms  27.595 ms 219.158.96.129 (219.158.96.129)  27.675 ms<br> 7  202.96.12.114 (202.96.12.114)  29.006 ms  28.724 ms 124.65.194.154 (124.65.194.154)  30.519 ms<br> 8  61.148.155.50 (61.148.155.50)  31.042 ms 124.65.58.198 (124.65.58.198)  28.132 ms 124.65.58.54 (124.65.58.54)  27.523 ms<br> 9  202.106.48.18 (202.106.48.18)  27.811 ms 123.125.248.102 (123.125.248.102)  26.961 ms 123.125.248.46 (123.125.248.46)  50.428 ms<br></code></pre></td></tr></table></figure>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="打包和压缩文件"><a href="#打包和压缩文件" class="headerlink" title="打包和压缩文件"></a>打包和压缩文件</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash">bunzip2 file1.bz2 解压一个叫做 <span class="hljs-string">&#x27;file1.bz2&#x27;</span>的文件 <br>bzip2 file1 压缩一个叫做 <span class="hljs-string">&#x27;file1&#x27;</span> 的文件 <br>gunzip file1.gz 解压一个叫做 <span class="hljs-string">&#x27;file1.gz&#x27;</span>的文件 <br>gzip file1 压缩一个叫做 <span class="hljs-string">&#x27;file1&#x27;</span>的文件 <br>gzip -9 file1 最大程度压缩 <br>rar a file1.rar test_file 创建一个叫做 <span class="hljs-string">&#x27;file1.rar&#x27;</span> 的包 <br>rar a file1.rar file1 file2 dir1 同时压缩 <span class="hljs-string">&#x27;file1&#x27;</span>, <span class="hljs-string">&#x27;file2&#x27;</span> 以及目录 <span class="hljs-string">&#x27;dir1&#x27;</span> <br>rar x file1.rar 解压rar包 <br>unrar x file1.rar 解压rar包 <br>tar -cvf archive.tar file1 创建一个非压缩的 tarball <br>tar -cvf archive.tar file1 file2 dir1 创建一个包含了 <span class="hljs-string">&#x27;file1&#x27;</span>, <span class="hljs-string">&#x27;file2&#x27;</span> 以及 <span class="hljs-string">&#x27;dir1&#x27;</span>的档案文件 <br>tar -tf archive.tar 显示一个包中的内容 <br>tar -xvf archive.tar 释放一个包 <br>tar -xvf archive.tar -C /tmp 将压缩包释放到 /tmp目录下 <br>tar -cvfj archive.tar.bz2 dir1 创建一个bzip2格式的压缩包 <br>tar -jxvf archive.tar.bz2 解压一个bzip2格式的压缩包 <br>tar -cvfz archive.tar.gz dir1 创建一个gzip格式的压缩包 <br>tar -zxvf archive.tar.gz 解压一个gzip格式的压缩包 <br>zip file1.zip file1 创建一个zip格式的压缩包 <br>zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包 <br>unzip file1.zip 解压一个zip格式压缩包<br></code></pre></td></tr></table></figure>
+
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
+        
+        <a class="post-tag button" href="../../../../tags/Linux/" rel="tag"><i class="fas fa-tags"></i>Linux</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/" rel="next" title="N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建"><i class="fas fa-angle-left"></i><span class="nav-title">N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="../../20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/" rel="prev" title="单向度的人"><span class="nav-title">单向度的人</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "Linux常用命令",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">29</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">26</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">48</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#cd%E5%91%BD%E4%BB%A4"><span class="toc-text">cd命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#ls%E5%91%BD%E4%BB%A4"><span class="toc-text">ls命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#grep%E5%91%BD%E4%BB%A4"><span class="toc-text">grep命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#find%E5%91%BD%E4%BB%A4"><span class="toc-text">find命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#cp%E5%91%BD%E4%BB%A4"><span class="toc-text">cp命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#mv%E5%91%BD%E4%BB%A4"><span class="toc-text">mv命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#rm%E5%91%BD%E4%BB%A4"><span class="toc-text">rm命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#ps%E5%91%BD%E4%BB%A4"><span class="toc-text">ps命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#kill%E5%91%BD%E4%BB%A4"><span class="toc-text">kill命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#killall%E5%91%BD%E4%BB%A4"><span class="toc-text">killall命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#file%E5%91%BD%E4%BB%A4"><span class="toc-text">file命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#tar%E5%91%BD%E4%BB%A4"><span class="toc-text">tar命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#cat%E5%91%BD%E4%BB%A4"><span class="toc-text">cat命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#chgrp%E5%91%BD%E4%BB%A4"><span class="toc-text">chgrp命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#chmod%E5%91%BD%E4%BB%A4"><span class="toc-text">chmod命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#gcc%E5%91%BD%E4%BB%A4"><span class="toc-text">gcc命令</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#time%E5%91%BD%E4%BB%A4"><span class="toc-text">time命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E8%AF%A6%E7%BB%86%E5%91%BD%E4%BB%A4"><span class="toc-text">详细命令</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">文件操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%88%87%E6%8D%A2%E3%80%81%E6%9F%A5%E7%9C%8B%E3%80%81%E5%88%A0%E9%99%A4%E3%80%81%E7%A7%BB%E5%8A%A8%E3%80%81%E9%93%BE%E6%8E%A5"><span class="toc-text">切换、查看、删除、移动、链接</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%87%E4%BB%B6%E6%8E%88%E6%9D%83"><span class="toc-text">文件授权</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#chmod%E4%BD%BF%E7%94%A8"><span class="toc-text">chmod使用</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%95%B0%E5%AD%97%E6%9D%83%E9%99%90%E4%BD%BF%E7%94%A8%E6%A0%BC%E5%BC%8F"><span class="toc-text">数字权限使用格式</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2"><span class="toc-text">文件搜索</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%87%E4%BB%B6%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7"><span class="toc-text">文件特殊属性</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">文本处理</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%AD%97%E7%AC%A6%E8%AE%BE%E7%BD%AE%E5%92%8C%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">字符设置和文件格式转换</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90"><span class="toc-text">文件系统分析</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%8C%82%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">挂载一个文件系统</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">初始化一个文件系统</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#SWAP%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">SWAP文件系统</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%A4%87%E4%BB%BD"><span class="toc-text">备份</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C"><span class="toc-text">系统操作</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="toc-text">系统信息</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BE%A4%E7%BB%84"><span class="toc-text">用户和群组</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4"><span class="toc-text">磁盘空间</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E7%99%BB%E5%87%BA"><span class="toc-text">关机、重启、登出</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#yum-%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-text">yum 软件包</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#DEB%E5%8C%85-dpkg"><span class="toc-text">DEB包 dpkg</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#apt%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-text">apt软件包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B"><span class="toc-text">系统进程</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#linux%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8"><span class="toc-text">linux查看端口占用</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#ps%E5%91%BD%E4%BB%A4-1"><span class="toc-text">ps命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-text">网络</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#ifconfig%E5%91%BD%E4%BB%A4"><span class="toc-text">ifconfig命令</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#ping%E5%91%BD%E4%BB%A4"><span class="toc-text">ping命令</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#nslookup%E5%91%BD%E4%BB%A4"><span class="toc-text">nslookup命令</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#traceroute"><span class="toc-text">traceroute</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6"><span class="toc-text">打包和压缩文件</span></a></li></ol></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

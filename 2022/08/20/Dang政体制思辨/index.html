@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>Dang政体制思辨 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">Dang政体制思辨</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-08-20T17:54:39+08:00">2022-08-20 17:54:39</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/" itemprop="url" rel="index"><span itemprop="name">政治</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>传统国家的重新组织本质上是资本主义性质的市民社会动用自己在封建专制母腹中日趋壮大的组织力量对国家进行扬弃和重建的过程。没有市民社会的自组织，很难想象有民族国家的再组织。</p>
+<h2 id="党政体制由来"><a href="#党政体制由来" class="headerlink" title="党政体制由来"></a>党政体制由来</h2><h3 id="西方市民社会演变"><a href="#西方市民社会演变" class="headerlink" title="西方市民社会演变"></a>西方市民社会演变</h3><p>西欧民族国家的建立实际上是现代化对传统国家的重新组织。按照经典现代化理论，传统国家重新组织的动力来自市民社会的资本及相关组织的扩张要求，如城市自治组织，契约观念塑造的市民团体与制度，与财产、能力、才智及职业活动紧密相关的＂中产阶级“，采用资本主义原则经营投资与放贷的商人集团、银行、企业、运输系统等私人机构等，正是这些初步自我组织的资本的力量(“现代性的因素”)逐步构成了布莱克所说的“现代化的领导“，从而开启了“经济和社会的转型” -—－从乡村和农业的生活方式转变为城市和工业的生活方式，表现在政治上，其标志性事件就是法国大革命，最终达成“社会的一体化” ——社会结构的根本性改组。换句话说，<strong>在西欧民族国家的成长过程中，中世纪后期出现的市民社会组织为经济和社会的转型以及现代国家的到来提供了不可或缺的组织资源</strong>。</p>
+<p>在欧美工业化国家，现代意义的政党是伴随着代议民主制而出现的， <strong>是为了适应阶级和阶层利益的表达与综合，最大限度进行选票动员，进而获得组织政府的权力而存在的</strong>。政党由此被视为介千国家和市民社会之间的政治组织，政党的权利不过是宪法规定的公民权利的组织化的延伸，政党只有进入国家，并通过既定的程序和方式以国家的名义说话和行事，才能成为政治生活中与国家机关具有某种同等分量的因素。</p>
+<h3 id="中国政治进程演变"><a href="#中国政治进程演变" class="headerlink" title="中国政治进程演变"></a>中国政治进程演变</h3><p>但在中国现代政治史上，政党的存在及其与国家的关系同欧美国家不可等量齐观，最明显的区别是，政党无法在体制内依靠既存的机制从事政治动员并由此获得国家权力，这迫使它不得不从体制外谋求社会改造和推动政治发展。</p>
+<p>20 世纪的中国政治进程表明，政党最初是旧国家的敌人，经过规模、性质和暴烈程度不等的革命取得国家权力，进而变成新国家的支柱。孙中山的以党建国、以党治国是如此，共产党的社会革命、开国建政亦是如此。经由这种方式立国主政，政党就成为国家特殊的支配性的组织和力量，因而可以把政党的组织、制度和价值输入国家，从而决定国家的命脉、形构、方向、进程和特征。<strong>这样一种融政党千国家并与国家权力高度结合的政治形态，构成了当代中国党政体制的内在规定和根本特征。</strong></p>
+<h3 id="使命型政党"><a href="#使命型政党" class="headerlink" title="使命型政党"></a>使命型政党</h3><p>中国的党政体制的政治特征有三重面相：<strong>首先，作为一种动员型政治，政党是国家和社会政治运行与变革的发动机，政党的意识形态充当了“启蒙”和＂唤醒“国民、推动现代政治进程的工具，并由此获得了统摄、规划和引领人们的观念与行为规范的地位。其次，作为一种整合型政治，政党的各级组织机构遍布全国，按照中央制定的路线、方针、政策，自上而下地将地方机构、社会团体和政治入口“整编“纳入既定的政治框架中，形成行政性的、组织化的政治社会。最后，作为一种全控型政治，通过垄断全部暴力资源和大部分人力、组织资源，主导国家的政治方向，规定国家的政治过程，决定政治价值的配置，政党成为国家和社会政治体制的核心结构，使整个社会政治生活具有浓厚的政党、国家与社会三者边界彼此重合、功能高度重叠的总体化色彩。</strong>当然，不是所有的政党都具有建构这种党政体制的<strong>意愿和能力</strong>，也不是所有掌控了执政权力的政党都意味着必然走向党政一体化的形式。建构这种党政体制的政党至少需要具备几个条件或特质： （ 1) 有一套精致而系统的理论学说作为思想基础； （ 2) 有一个关于未来社会远景的构想作为奋斗目标；(3) 有精心设计的并获得理论支持的战略和策略作为实现目标的手段； （ 4) 有统一严密的中央、地方和基层组织网络作为行动支撑； （ 5) 有成熟而富有经验和激情的职业化政治精英集团作为协调行动的“总参谋部“; （ 6) 有倡导为主义不惜献身的精神教育作为党员的道德律令。这样一种政党又被称为<strong>“使命型政党”、“动员型政党”或“意识形态型政党”</strong> 。在中国现代政治史上，具备这些特质的政党屈指可数孙中山仿苏俄方式改组后的国民党可算一个，它曾试图按此方向建设和提升党的品质，但最终只是在一定形式上获得其中的某几项特征，相比之下，完全符合以上条件或特质而且一直坚持将其作为党建任务和目标的政党则是中国共产党。</p>
+<h2 id="社会的组织状态"><a href="#社会的组织状态" class="headerlink" title="社会的组织状态"></a>社会的组织状态</h2><p>理解当代中国党政体制的发生和发展，应注意：其一，把中国共产主义革命置于20 世纪中国现代化的世界历史场景之中。一方面，要看到中国与外部世界接触后出现的结构性的总体危机，这种总体危机集中表现在政治领域，但<strong>其根源在于社会和经济，在内部结构受到国际环境的强烈影响包括中国在国际权力结构中地位的变化，发达国家提出的挑战与提供的模式，资本主义世界经济和政治的输入与入侵</strong>。这是一个基本的结构约束。另一方面，要看到结构的约束不是机械的、静止的、线性的，结构本身不过是人们集体行动的产物，因此行为主体在结构中仍然拥有选择的自由，在一定条件下能够随着宏观历史与行为主体的交互作用而改变这种结构。其二，把中国共产主义革命和中国现代国家建设联系起来的中观视角（“中层理论”)，通过这样的中观视角来使宏观历史场景成为一个有理论假设和经验事实支持的＂具体的宏观和具体的抽象” 。这一视角并不排斥关千中国可以和西方社会分享现代性因素的论证，所需要的只是将此置于逻辑和证据有机关联的基础上，通过比较中国国家建设和西欧国家建设的异同来揭示革命与现代化在中国的特殊历程。例如，<strong>精英如何对大众动员，建立一个强有力的政党，用它的政治力量、组织方法，深入和控制每一个阶层与每一个领域，达到改造或重建社会、国家和各领域的组织制度，以最终克服结构性的总体危机。</strong>这种中观视角的旨趣之一就是2 0 世纪初中国社会的组织化状态与中国党政体制兴起的历史关联。</p>
+<p>西欧的国家建设经验表明，<strong>社会自组织的存在是传统国家向现代国家转型的动力和基础</strong>。在这方面． 中国的民族国家建设是不同的。1 9 世纪中叶以后，中国在外强入侵和内部危机频发的环境下开始了自己的现代国家建设，但它可资利用的组织资源是相当匮乏的，主要表现在三个方面：第一，<strong>在（州） 县以下不设职能性官员和机构的乡村地区</strong>，基层社会的治理很大程度上只能靠地方士绅集团。但是，<strong>1905年科举制废除后</strong>，作为＂乡村组织的基石”的士绅集团急速分化解体·——科举时代对于收拢农民起过重大社会作用的士绅向城市不断单向迁移，滞留于乡村的士绅日益沦为＂土豪劣绅“，地方精英集团的品质迅速恶化，导致了地方社会秩序的紊乱；第二，在社会团体相对集中的通商口岸，各种商业组织既缺乏严密的专业分工，也缺乏市场竞争性的自主交往性质，<strong>业缘性的城市组织（如行会）被地缘性和血缘性的同乡组织覆盖，凭借千宗族和乡籍关系</strong>，这些组织成功地在异地环境中保住了自己的利益，也保持了与整个城市社区的距离。在某些民用工业领域，由于一开始就采取了“官督商办”的办法，结果导致了“商人”、”绅士”、“买办“和“官吏”之间身份角色的模糊不清，对行业帮会的依赖和对官府的依赖限制了这些组织的正常发育；第三，晚清官僚机构在开创治局和维系社会秩序方面，更多的是依靠伦理纲常而不是正规组织，更多的是专注于基层政治安全而不是地方、区域和全国性整合的统治目标，由于<strong>其治理方式是伦理性的而非行政性的，官僚录用是诗文性的而非技术性的，统治取向是维持性的而非变革性的，主导社会的组织原则是分散化的而不是动员化的，因此极大地抑制了统治者创造各种有效组织手段的动力，也极大地限制了统治者开发各种组织资源的能力。</strong></p>
+<p>罗兹曼在把中国同日本、俄国的现代化做比较后说： ”概言之，中国的组织状况看上去大不同于日本和俄国……中国人有时能在重大问题上成功地动员起来，但国家却从未认真地建立起组织构架，以便待久地积聚资源。组织的延续性是与缓慢演进的（甚至在地方上是繁荣而自由发展的）前现代社会相适应的，但<strong>这个社会并非广泛动员起来的社会，因而无法对现代变革作出进一步的有力反应，更谈不上能应付现代化势力的挑战了</strong>。”</p>
+<p>中国社会的这种组织状态． 一言以蔽之，即<strong>低组织化状态，是中国现代化失败的主要原因</strong>，这在当时已为大多数先进的中国人所认识。例如孙中山的＂宗族团体论”、梁启超的“新民团体论”、梁漱淏的“集团生活论”、毛泽东的“民众大联合论”等等，都是针对这种低组织化状态开出的”组织革命”的药方。他们都认识到“团体”、”组织”这些社会政治要件对千中国现代国家建设的决定性作用，<strong>中国人唯有通过组织，才能激活民族的“机能“，振奋民族的精神，而在一个缺乏”组织”的国度， ”组织起来“天然具有一种“根本解决“ 、”急进革命”、＂刻不容缓” 的性质，这是来自西方的个入主义在20世纪的中国迅速屈从千同样来自西方的团体主义、社会主义的根本原因。总之，中国如果不发动一场组织运动，就不能摆脱后发现代化国家面临的内外困境。</strong></p>
+<h2 id="组织建设途径"><a href="#组织建设途径" class="headerlink" title="组织建设途径"></a>组织建设途径</h2><p>组织的途径曾有不同的构想（如合宗族为民族、联职业团体为国家），但是比较而言，最直接、最有效、最能代表中国人学习西方民族国家建设经验的努力，因而也<strong>最“现代化”的方式就是组织政党</strong>。当时的舆论认为：** “欧西各国政治，皆操之于政党。政党者，聚全国爱国之士，以参与一国之政；聚全国舌辩之士，以议论一国之政者也。凡设立内阁，则内阁之大臣，皆政党之魁首。召集会议，则议会之议员，皆政党之名士。用以抵抗暴政， 则暴政绝迹而不行；用以代表民情，则民情无微而弗达…… 故吾国国民而坐视吾国之亡则亡，苟不忍吾国之亡，则必大声疾呼，号召国之志士，联为大群，不论为士为农为工为商，苟痛心疾首以四万万之水深火热为己忧者，皆听其入会，立一中国三千年来所未有之大党，其而后中国之元气，乃聚而不散，一而不纷，风霜不能侮，刀火不能侵，暴君民贼不能制，异国异族不能灭，非中国历史上一大盛事乎？**） 这种主张采行西方议会政治、政党政治，以政党形式把中国人“联为大群”、“合为大党”的呼声表明，中国的政党时代到来了。虽然“毁党”、“造党”的争议时有起伏，但随着西方政治观念的不断传入，政党对于民族国家建设的重要作用逐渐成为共识。</p>
+<p>民国初期是政党组织纷呈迭出，即多党政治的黄金时代，<strong>几乎所有的西方政党类型都可以在中国找到</strong>。孙中山这样的革命党人也一度认可多党竞争的必要性与合理性。不过人们很快发现，<strong>多党竞争的必要性与合理性只能停留在西方政治的理论层面，而在中国政治土壤中却发生了橘积之变。</strong>随着袁世凯称帝运动的表面化，议会政治、政党政治的乐观情绪很快便被冷峻的利益较量和严酷的武力政治所湮没。<strong>政党的引入本来是为了组织社会进而组织国家，但在一个民族资本发展缓慢、专制势力强大、缺乏自主参政和政治妥协传统、内外危机日益深重的国家，其结果却是加剧了社会和国家的非组织化。人</strong>们注意到，民国初期的政党政治败千政治强人，但政治强人不是凭空而出的，政治强人之所以能够运用非法律、非程序的强力左右政治的进程，恰恰说明这个社会在性质上存在着一种集权政治的逻辑：<strong>分散的社会只有强有力的政治才能整合，强大的专制只有更强大的力量才能制服，在政党来临的时代，要形成更强大的力量，只能组织更强大的政党。</strong>适合这样一个强大政党的活动及其诉求的政治条件，必定是一个更有效的政党体制．它不能是原来的多党体制，因为“在任何进行现代化的国家里，多党体制都是软弱无力的政党体制”，更不能回到无党体制的时代，因为作为无党体制基础的传统君主政体已经被打破。 事实表明，<strong>多党体制和无党体制都不能改变中国的低组织化和非组织化的状态，都不能完成现代民族国家建设的使命。于是，组织化的话语便转化为社会革命的话语，政党政治的话语便转化为党建国家、党治国家的话语。</strong></p>
+<p>无论是国民党还是共产党，按照列宁式而非西方式政党结构，实行党治国家战略，建构一个融政党千国家并与国家权力高度结合的党政体制，<strong>本质上都是20 世纪的中国在现代化压力之下，欲采取革命动员方式摆脱中国社会“低组织化状态”约束、进行现代国家建设的一种选择。</strong>1921 年，在共产国际的扶待下，中国出现了马克思列宁主义的共产党。三年以后，在多党政治的失败中饱经创痛的国民党，在苏俄和中国共产党的帮助下，开始了“以俄为师”的党务革新。国民党的改组，奠定了＂党治国家”的思想和组织基础，在成功北伐之后，形成了＂党国体制”的政治形态；共产党在其后与国民党的战争中摧毁了国民党的党国结构． 并依托在革命动员过程中积聚起来的强大的政治权威，以一种更为有力的方式，刷新和重建了“党治国家“赖以存在的社会组织网络。</p>
+<p>正如邹说所言： <strong>“在20 世纪初极度无组织的中国社会，传统秩序已经崩溃，对取而代之的基本原则并未达成共识，政治权力不得不以一种明确的意识形态为基础，并以新的组织结构为中心建立起来…… 马列主义和列宁式政党结构被一群激进的异化知识分子接受。然后他们根据这种意识形态寻求中国社会的全面改造……随着1949 年内战的最后胜利，它成为列宁式政党国家的执政党。党外不存在任何抗衡力量对其权力进行制衡。在实施改造社会分层制度和建立社会主义的纲领中，政党国家对市民社会的渗透更加深入，对各种社会团体和个人的控制日益严厉·… . . ）</strong></p>
+<p>中国共产党的领导在国家政治生活中起主导作用，国家的实际权力核心是政党而不是政府。这样一种政治体制弥补了传统中国“治国“资源的匮乏（尤其是组织资源严重不足），<strong>实现了在落后的、分散的、低组织化的社会里开始现代国家建设的可能性</strong>。完成这一过程包含两个重要的方面：<strong>一是中国共产党自身具有高度的组织性和纪律性，是一个严格实行民主集中制的政党；二是中国共产党将自身的组织方法通过党和国家体制拓展到整个社会，形成党治国家的格局。</strong></p>
+<h2 id="政治FB"><a href="#政治FB" class="headerlink" title="政治FB"></a>政治FB</h2><p>改革开放后，在国家和社会关系出现分离、中央向地方放权让利、市场和社会逐渐发育成长的趋势下，<strong>一元化领导的范围、形式和强度发生着变化</strong>，这种变化主要表现为：其一，权力的集中不再是专断性地集中千少数个人，而是明确要求在民主的基础上集中于领导集体，集体领导与个人负责取得了某种平衡；其二，权力的形态不再是粗放式的、强制般的功能重叠与结构统合，而是按照现代政府原理科学地划分结构与功能，因而党政不分、以党代政的局面有了程度不同的改观；其三，权力的作用范围不再是不加区分地覆盖整个社会领域，而是主要地以合乎程序的方式施加于国家公权系统，即使是涉及社会政治性事务，也并非诉诸直接的、命令的方式，而是采取间接的、引导的方式；其四，最重要的是，<strong>权力的行使开始纳入宪法和法律的轨道，依法治国、依法执政、依法行政作为新的领导方式被明确提出</strong>，表明了一元化领导受到法治国家建设目标的约束，因而在一定程度上开始了一元化权力的法律化和制度化进程。</p>
+<p><strong>党的领导体制和领导方式最核心的问题是处理党和国家、社会的关系。</strong>党和国家的关系涉及党的执政方式，即党权如何与政权发生关联，如何在国家活动中贯彻党的路线、方针和政策。<strong>党和社会的关系则集中表现为党如何动员、组织和整合社会，如何巩固和扩大党的社会群众基础</strong>。随着市场化改革的启动和演进，中国的社会、经济、政治生活逐步摆脱了计划体制的束缚，出现了许多深刻的变化，其中在国家与社会关系领域， 一方面是国家与社会发生了一定程度的分离，不再是过去国家高度覆盖社会的状态；另一方面是社会组织在迅速发育成长．社会自主性的发展对国家建设的推动作用越来越明显。**在此过程中，如何依据现实社会的发展逻辑，平衡和调适国家与社会的关系，引导和保持政治与经济的良性互动，建立党领导国家和组织社会的有效体制， 是中国共产党在新时期面临的深刻挑战。</p>
+<p>1980 年8 月18 日，邓在中共中央政治局扩大会议上发表了题为《党和国家领导制度的改革》的重要讲话，这个讲话通常被视为中国政治体制改革的纲领性宣言。这个讲话把基于计划经济体制的制度缺陷归结为＂权力过分集中“，提出必须解决高度集权所导致的党政不分、以党代政的问题．以及<strong>提出建立退休制度，实现干部队伍革命化、年轻化、知识化和专业化的战略措施</strong>，其主旨是改善党的领导，发扬人民民主，使民主制度化和法律化。</p>
+<p>1987 年10 月召开的党的十三大，是贯彻邓关于政治体制改革思想的里程碑。党的十三大报告对党的领导作了一个重要界定： <strong>＂党的领导是政治领导，即政治原则、政治方向、重大决策的领导和向国家政权机关推荐重要干部。党对国家事务实行政治领导的主要方式是：使党的主张经过法定程序变成国家意志，通过党组织的活动和党员的模范作用带动广大人民群众．实现党的路线、方针、政策。”</strong>值得注意的是，在党的十三大通过的党章修正案中．党的领导仍然沿用过去的提法，即“政治领导、思想领导和组织领导”的三位一体｀而党的十三大报告只提“政治领导“，并没有把“思想领导”和”组织领导“纳入其中。人们当时倾向于认为，要改变党政不分、以党代政的局面，党就需要从行政和社会事务中超脱出来，党的领导应主要体现为掌控大政方针及向国家机关推荐党的重要干部（由此摆脱以往党权直接运作或指挥政权的权力模式），以及在公共生活中诉诸党员的模范作用和感召力（由此代替过去意识形态思想动员的灌输模式）。</p>
+<p><strong>在中国，党的领导在国家政治生活中起主导作用，国家的实际权力核心是政党而不是政府</strong>。这样一种政治体制弥补了传统中国“治国“资源的匮乏（尤其是组织资源严重不足），实现了在落后的、分散的、低组织化的社会里开始现代国家建设的可能性，<strong>但完成这一过程包含两个重要的方面：一是中国共产党自身具有高度的组织性和纪律性，是一个严格实行民主集中制的政党；二是中国共产党将自身的组织方法通过党和国家体制拓展到整个社会，形成党治国家的格局。</strong></p>
+<p>就党的十三大报告所提的“政治领导”的内涵而言，“政治原则、政治方向、重大决策的领导和向国家政权机关推荐重要干部“虽然没有改变市场经济条件下党和国家关系的基本特征，而“使党的主张经过法定程序变成国家意志，通过党组织的活动和党员的模范作用带动广大入民群众，实现党的路线、方针、政策”的法治化和制度化的途径，与现代政府原理相契合，但在中国现代化对党和国家一体化仍存有极大需求的情况下，设想让党从实际控制的政府部门和社会基层退出来（如十三大报告中关千取消政府内部的党组设置、把基层党组织的作用由“领导核心”转为“保证监督”等提法），在政治实践中很可能导致“政治领导“失去组织和意识形态的依托。</p>
+<p>1989 年政治风波发生后，中国共产党中央领导集体对政治体制改革中党的领导、党政分开及其在基层的实践等问题进行了反思。在当年8 月召开的全国组织部长会议上，时任总书记江指出： ＂党的领导作用只提政治领导不够，还应该有思想领导和组织领导。”“党组织还是要管干部。党是政治领导核心，离开了组织领导、思想领导，那个核心就是空的！这一点在思想上要明确。”</p>
+<h2 id="意识形态"><a href="#意识形态" class="headerlink" title="意识形态"></a>意识形态</h2><h3 id="意识形态特色"><a href="#意识形态特色" class="headerlink" title="意识形态特色"></a>意识形态特色</h3><p><strong>人类政治经验表明，任何一个阶级若不能掌握意识形态的领导权，就不能掌握或不能长期掌握国家政权。</strong>，<strong>意识形态在哲学上是指关千客观世界与行动主体间关系的知识、观念体系，在政治学上是指统治阶级关于政治统治合法性（正当性）的一套有机论证，通常以学说、理论和战略阐释为表现形式。</strong></p>
+<p><strong>中国共产党是一个使命型政党，为完成其宏大的改造社会与国家结构的使命，对历史与未来、阶级与政治、国家与革命、领袖与群众、执政与治理、战略目标与行动策略等都有相对完整而精致的理论建构，这种理论建构对于形成高度的思想统一以达成高度的一致行动是不可或缺的</strong></p>
+<p>这种强烈的意识形态色彩主要体现为三个方面： 第一，意识形态构成了党的路线、方针、政策的依据，<strong>党在不同历史时期工作重心的转换首先是通过意识形态的再阐释来开道</strong>的，无论是发动“文化大革命”还是结束“文化大革命”以开启改革开放，都经历了意识形态的斗争（前者表现为“以阶级斗争为纲＂，后者表现为“思想解放运动”)，形成了不同的理论阐释系统（如“无产阶级专政下继续革命”理论和“社会主义初级阶段“理论） 。第二，意识形态和党的政治纪律紧密联系在一起，<strong>党内允许不同意见的存在和争论，但不允许逾越意识形态的底线</strong>，尤其是在党的大政方针确定之后，不允许党员公开发表有违千此的言论，全体党员特别是党的高层的思想统一是党追求的目标，党的政治纪律则是维持思想统一的重要保证之一。第三，党的意识形态扩展和渗透到社会生活的各个方面，成为约束和规范社会思想与行为的“主流意识形态”，<strong>为了实现意识形态的这一主导功能，“社会主义核心价值观”的提出与传播、新闻出版网络的监控、思想文化舆论的引导，以及关于意识形态”阵地意识”的强化、对异端意识形态的批判抵制、意识形态主管部门工作的持续加强等，都发挥着极为重要的作用</strong>。</p>
+<p>一般来说，共产党是按照马克思列宁主义原理组建的政党，马克思列宁主义原理由一整套理论学说构成，通常被称为共产党人的意识形态。意识形态被认为是由体现一定社会阶级利益的各种具体的意识形式构成的有机的思想理论体系，在现代社会分裂为资产阶级和无产阶级以后，则形成了资产阶级的意识形态和无产阶级的意识形态。对无产阶级政党来说，<strong>意识形态是关于历史与未来、国家与革命、阶级与党派及其利益诉求和行动方略的世界观与方法论，它以解释、分析和评价现存秩序的方式来动员、组织与指导社会政治世界的改造和重建，并在解决社会冲突和维护新的统治秩序过程中具有重要的功能。</strong>中国共产党是一个意识形态特征鲜明的政党，不仅因为它向来高度重视和强调意识形态领域无产阶级和资产阶级的斗争，而且因为意识形态以上这些特质和功能深刻主导与影响了它的组织建设、行动纲领和行为规范。</p>
+<p>1949 年，中国共产党摧毁了旧国家的社会政治结构，建立起相对完备的国家政治与行政体系，改变了过去国家无力深入渗透社会、中央政府政令无法贯彻到基层的局面，为中国的现代化和现代国家建设奠定了坚实的政治基础。在这个过程中．中国共产党的组织及其所掌控的巨大的政治权力成为重组中国社会、推进工业化和现代化的决定性因素。党的意识形态成为国家的主流意识形态。<strong>这种意识形态本质上是关于中国国家建设的现代化方案的阐释，这个现代化方案是建立在马克思列宁主义对资本主义现代性的批判的基础上的</strong>，因此，对西方资本主义现代性的批评和抵制贯穿了新中国主流意识形态的三个部分。</p>
+<p>19 世纪以来世界资本主义向中国的输入及其与中国落后经济关系的畸形结合所造成的社会衰败，都使马克思对资本主义的批判和对未来理想社会的揭示在中国共产主义革命中产生了强烈的反响。在中国共产党的意识形态中，反对私有财产制度、阶级剥削和社会压迫、作为“资产阶级法权“基础的个人主义、脱离群众的官僚主义、专家治国论，乃至反对市场主义和利润挂帅的思想路线，以及鼓励旨在缩小与消灭三大差别的共产主义“新公社”运动、作为道德规范的集体主义精神和“社会主义新人“风尚，强调群众路线、群众首创性、群众政治参与和革命无私奉献精神的思想取向， 一起构成了意识形态的价值一信仰部分的正反两个方面。</p>
+<h3 id="意识形态变化"><a href="#意识形态变化" class="headerlink" title="意识形态变化"></a>意识形态变化</h3><p>中国共产党通过国家宣传、党团组织和其他社会机构，<strong>在相当长一个时期广泛传播和灌输阶级斗争、群众运动、思想革命化等政治信息与象征符号，以配合中央集权、赶超战略、社会重建、国民训练、理想过渡等国家政治目标的施行。</strong>其中，阶级斗争和群众运动是这个时期意识形态的行动一策略层面的最鲜明的特征，它们通过排除一般的公民权所隐含的抽象的法律权利平等观念，以阶级身份的归属和由此承载的具体的经济社会权利的享有，实现了国家与社会的联系。</p>
+<p>改开以后，在价值—信仰层面，把“建设有中国特色的社会主义”、建设“高度民主、高度文明的社会主义现代化国家”、“实现中华民族的伟大复兴”作为人民的共同理想，把以法律和制度为支撑的人民民主、以共产主义思想道德为基础的精神文明和以避免两极分化为前提的共同富裕作为中国社会发展的奋斗目标。在肯定这些理想价值的同时，也强调“物质鼓励”的不可或缺；在重提“人是要有一点精神的“ 的同时，也承认市场经济的逻辑，主张把生产者和经营者的物质利益与他们的经济活动绩效联系起来。意识形态的价值取向显示出某种世俗化的特征。在认知—阐释层面，<strong>辩证唯物主义与历史唯物主义的世界观和方法论仍然得以坚持，阶级分析的观点仍然受到尊重</strong>，但是关于当代中国社会的性质和主体、所处阶段和时代、目标任务的表达已经纳入了 <strong>“社会主义初级阶段论”</strong>的阐释范式。社会主义初级阶段，即不发达的社会主义阶段，其主要矛盾是日益增长的物质文化需要同落后的社会生产力之间的矛盾，这被视为事关全局的基本国情。”为了摆脱贫穷和落后，尤其要把发展生产力作为全部工作的中心。是否有利千发展生产力｀应当成为我们考虑一切问题的出发点和检验一切工作的根本标准。”</p>
+<p>随着市场经济体制的逐步构建、社会组织与公共领域的逐步成长，政治调控战略由一元统治转向多中心治理，政党行为从革命方式转向执政方式，意识形态的三个部分出现了一些新的特点。在价值—信仰方面，党的十六届三中全会提出“以人为本”是一个意义深远的突破，虽然关于“人”的界定仍然存在一些争议，但是，<strong>“以每个人的全面而自由的发展为基本原则的社会形式”则越来越为大多数人所认同。“</strong>以人为本“观念既接续了作为执政党指导思想的马克思主义的传统，<strong>也反映了西方文化中具有人类文明价值的优秀成果</strong>，同时还可以看作对中国传统政治思想精华的批判性继承。正是在这一点上，<strong>主流意识形态和非主流意识形态（ 社会其他思想意识）取得了价值上的某种共识</strong>。在认知—阐释方面，“科学发展观”和“和谐社会”的提出是另一个具有重大意义的命题。“科学发展观”是根据“以人为本”的价值观念对中国国家建设的发展内涵、发展本质、发展方式、发展难题的重新认识，谋求和落实全面的、协调的和可持续的发展已经成为主流意识形态在新时期的认知—阐释系统的重要维度。同样，”和谐社会”也标志着执政党对“中国特色社会主义规律”认识发生的新发展，把中国国家建设的总体布局由经济建设（市场经济）、政治建设（民主政治）、文化建设(“先进文化”)的三位一体，扩展为包括社会建设（“和谐社会”)和生态文明建设在内的五位一体，体现了当代社会不同群体与成员追求平等和幸福生活的共同要求，也反映了改革开放以来主流意识形态关千治国理念和施政方略的深刻转折。作为行动一策略部分的主流意识形态也开始逐步转变自己的灌输、传播方式。由千中国的改革开放是从松动国家对社会的控制、促成中国社会自主性成长开始的，所以主流意识形态不能不力图保持自己与社会领域的有效互动，既要努力从社会实践与行动领域检验、修正和发展自己的义理、话语和论证机制，也要从价值一信仰、认知— 阐释出发对社会实践与行动领域保持其指导、规范和引领作用。在这些方面，人们可以看到主流意识形态对公民政治参与、基层和社区自治、协商民主、民意表达、民间维权行动、地方治理、民生幸福乃至以“突发事件”出现的社会抗议等，所表现出来的某种包容性、调适性、对话性、吸纳性等特点。</p>
+<p>可以说，改革开放30 余年，从话语特征来看，<strong>中国共产党的意识形态大致显现了从超越性（脱离生产力发展的生产关系革命）到世俗性（以经济建设和社会建设为中心，重视民生发展和共同富裕目标）、从排斥性（“以阶级斗争为纲＂的非此即彼的思想斗争）到包容性（人类优秀文化的＂兼容并蓄”和社会主义价值观的“共建共享＂）的变迁轨迹</strong>。</p>
+<p>美国学者沈大伟以 <strong>“收缩与调适”</strong>为主题对中国共产党的意识形态的变迁过程作了比较完整的描述心所谓“收缩”主要就是<strong>扬弃原来的超越性目标中的乌托邦成分</strong>，撤出或减弱对一些领域的控制，<strong>放下身段以适应世俗化的要求和品味</strong>；“调适”则是有意识地利用市场、商业资源，与传统媒体和新媒体合作．<strong>通过话语与意义的创造性转换来重建中国共产党的使命性基础</strong>。</p>
+<h2 id="困境"><a href="#困境" class="headerlink" title="困境"></a>困境</h2><p>1978 年启动的改革开放结束了中国的封闭状态，开始了中国全面而有选择地加入全球化的进程。全球化最大的特征是信息技术革命带来的贸易、投资和金融的大规模跨国流动，以及资讯传播、网络社会和公共领域的超常规发展，这对大众政治参与和国家治理模式的现代化产生了巨大影响。中国共产党深刻感受到了这个变化世界的压力和挑战，认识到 <strong>“社会主义要赢得与资本主义相比较的优势，就必须大胆吸收和借鉴人类社会创造的一切文明成果，吸收和借鉴当今世界各国包括资本主义发达国家的一切反映现代社会化生产规律的先进经营方式、管理方法”</strong></p>
+<p>从党的十一届三中全会以来，主流意识形态逐步形成了一种<strong>放眼世界、海纳百川、与时俱进</strong>的品质，正如具有全球眼光的邓小平所指出的：“现存我们干的是中国几千年来从未干过的事。这场改革不仅影响中国，而且会影响世界。” “我们的改革不仅在中国，而且在国际范围内也是一种试验，我们相信会成功。如果成功了，可以对世界上的社会主义事业和不发达国家的发展提供某些经验。心） 或如有的学者所表述的，这是一种<strong>新的全球主义的心态，因此领导人把中国有选择地融入全球体系看作中国成为强大民族国家的必经之路，调整了中国的政治秩序以适应正在兴起的以利益为基础的经济秩序，重建了国家官僚系统和经济制度以推动经济发展和培育新生的市场经济</strong>。 这种具备世界视野的意识形态越来越重视理论的创新，并把理论创新作为制度创新、科技创新、文化创新以及其他各方面创新的前提和关键，由此创造性地形成了邓小平理论、“ 三个代表”重要思想和科学发展观。其中，作为中国共产党意识形态创新范例的“ 三个代表”重要思想具有里程碑式的意义，它是中国共产党对全球化条件下信息技术革命、市场化改革、社会组织结构分层化以及社会思想和生活方式多元化趋势的重大回应。</p>
+<p>在全球化信息技术革命和世界历史变化的条件下，政党政治遇到的问题是当代中国发展进程中的时代性和结构性问题，这些问题的解决有赖于经济、政治体制的“第二次革命” 。为解决这些问题，它<strong>必须积极吸收工业文明国家的现代理论成果</strong>，如<strong>现代化理论、比较优势发展理论、市场经济理论、国家建设理论、社会建设理论、民主法治理论</strong>等理论资源，同时着眼千中国的实际，经由理论和实际的结合，并通过实践的检验，形成一系列不同于以往时代的旨在回答“什么是社会主义”、“如何建设社会主义”的理论观点，这些理论观点充满”中国意义”、“中国意识”、“中国元素” 、“中国风格”， 一言以蔽之，即具有新的“中国特色“，其内容包括中国特色社会主义本质论、中国特色社会主义改革开放论、中国特色社会主义市场经济论、中国特色社会主义民主政治论、中国特色社会主义先进文化论、中国特色社会主义和谐社会论、中国特色社会主义生态文明建设论、中国特色社会主义国家统一论、中国特色社会主义和平外交论、中国特色社会主义政党建设论等等。当然，中国特色社会主义理论体系是不断发展的开放的理论体系，它是在当代中国改革开放和现代化建设的实践中逐步形成与发展起来的，也必将随着中国改革开放和现代化建设实践的不断推进而日益深化与完善。</p>
+<p>总而言之，中国共产党的意识形态发生了很大的变化，就中国改革开放本质上是社会主义的自我更新和自我完善而言，这些变化应被理解为意识形态在坚持马克思主义前提下的发展和创新的过程。换言之，<strong>意识形态的内核或许并没有改变，改变的只是边层</strong>，<strong>内核是由基本原理和基本符号构成的，边层则由原理及符号的具体化和灵活化的叙事表达构成。边层的变化当然会对内核构成某种压力，从而使内核发生变化，但因后者涉及意识形态的基本规定，其变化是相对缓慢的。</strong></p>
+<p><strong>从根本上说，意识形态有两条底线是不能逾越的，这就是马克思列宁主义语境中的社会主义道路与共产党领导，它们构成意识形态的核心符号，前者指涉国家走向（方向）问题，后者指涉国家性质问题。</strong>显然，这是意识形态的”重大问题”。虽然社会主义道路不再是简单地作为资本主义的对立面，但是，在中国这样一个发展中国家，<strong>既要充分吸纳资本主义的文明成果，又要避免资本主义的两极分化，既要“集中力量办大事”，快速地发展综合国力，又要达致平等、和谐、共同富裕的目标，社会主义的方向是不可偏离的</strong>。</p>
+<p>同理，虽然共产党领导这样一个极具政治本质的“根本问题“不再是从“阶级”、“阶级斗争”、“国家与革命”的总体性决战的对抗性思维来理解它对历史、现实和未来的意义，党的领导也不再像以往所表达的那样具有以党代政、凌驾千宪法和法律之上的特殊含义，而是强调它同人民民主与依法治国的“有机结合”，但在一个规模超大、人均资源贫弱而正处千现代化转型的国家，党的领导对于确保国家的社会主义方向、对于现代化的平稳过渡、对千公共政策的合理制定、对于人力资源的供给、对于国家政权建设的推动、对千社会和人心的维系等，仍然是不可摆脱、不容颠覆的。意识形态的这些本质规定对国家的政治生态构成了内在的制约，给政党的组织结构和特性提供了深层的文化支持。</p>
+<h2 id="民主集中制的思考"><a href="#民主集中制的思考" class="headerlink" title="民主集中制的思考"></a>民主集中制的思考</h2><p>中国共产党的组织特性从根本上说是由民主集中制的组织原则决定的。<strong>民主集中制是马克思列宁主义政党区别于其他政党的标志性特征</strong>，是中国共产党内部政治生活包括<strong>组建、议事、决策、行动以及解决内部权力</strong>关系的最高法则。在马克思恩格斯看来，民主制不是集中制，但民主制包含集中和权威，也需要集中和权威，只不过这种集中和权威是建立在党员授权的基础上并受党员的监督而已。在这里，民主制是一个包容性结构—一集中或集权是民主制的题中应有之义。马克思恩格斯对民主制的强调和西欧议会民主政治的相对发达是分不开的。</p>
+<p>而在列宁的著述中，集中制有突出的地位和作用。在1899 年的《我们的当前任务》中，列宁指出， “社会民主党地方性活动必须完全自由，同时又必须成立统一的因而也是集中制的党” 。集中制的党本质上是以那些完全献身千革命、在理论和实际活动方面最有修养、对革命最忠诚、同无产阶级保持密切联系的职业革命家为中央领导核心组织起来的“职业革命家组织“,“给我们一个革命家组织，我们就能把俄国翻转过来”立集中制其实所有革命党的个性特征，<strong>革命党以颠覆(“翻转”)现存秩序为己任，就把自己推到了现存秩序的对立面；革命党运用暴力手段改造社会政治结构，就使自己与现存秩序之间的关系具有极度紧张与不妥协的性质，这两点决定了革命党生存环境的压迫性与严酷性</strong>。</p>
+<p>所以列宁说，<strong>一个处在专制高压统治下的革命党试图像德国社会民主党那样按照“广泛民主原则”来建设自己的组织结构是幼稚可笑的</strong>，因为“广泛民主原则”所依赖的两个条件，即“完全的公开性”与“一切职务经选举产生“，在俄国如此恶劣的政治环境中根本无法实行。只有到1905 年之后，由于沙皇政府被迫承认人民的集会结社自由，社会民主工党的活动条件有所改善，列宁才把民主制作为平衡集中制的因素引入党内，第一次提出“在党组织中真正实现民主集中制的原则” ，创造了“民主集中制”这个概念。<strong>从根本上说，共产党旨在彻底改造社会政治、经济结构的使命及其遭遇的来自传统势力的顽强抵抗是其组织建制最重要的约束条件，传统势力越是强大，党的组织结构就越是趋向集权，以便积聚起更加强大的力量来制服这个强大的传统势力。</strong></p>
+<p>政党以获取公共权力为目的，现代民主条件下政党最显著的政治功能不外乎集中在这样几个方面：选举动员、控制议会、组织政府、施行政纲，借此维护和实现政党以及政党所代表的阶级的利益。马克思列宁主义政党同样具备一般意义的政党的政治功能，如参加选举、争夺议席、组织和控制政府、推动社会改革等，但由于意识形态的规定（两个“彻底决裂”)，<strong>它在“进入国家”的道路上面临着既存体制的天然拒斥，这迫使它不得不在体制外发动群众，诉诸暴力手段摧毁横亘在通往权力之路的障碍</strong>。如前所述，在这个过程中，它对宏观理论战略、微观大众动员机制、超凡政治权威、超强组织力量、全面系统控制的高度依赖和运用，最终克服了旧国家的结构性障碍，在社会重组的基础上建立起一个强有力的党政体制。中国共产党的革命建政就是如此。因此，作为马克思列宁主义政党的中国共产党，在革命后的国家，具有西方类型的政党没有或难以拥有的许多功能。这些功能最深刻的含义是，党的所有“执政”行为本质上都是一种“领导“行为，党对整个社会和国家实行的组织、管理、控制和引导，实际上体现了党在公共生活空间的全面的领导权。</p>
+<p>虽然“领导”与“执政”是两个重复率和互换使用率极高的概念，但从权力的意义上看，或者从支配的意义上看．两者是相通的，都是<strong>指主体所具有的对客体施加影响、控制以达到自己目的的能力和过程</strong>。但两者不能简单地等址齐观。“领导“偏重政治性质，是指主体基于其道义、价值和理论上的正当性与公信力去说服、劝导、引领对象的过程；“执政”则偏重法理性质．是指主体基千法律、制度和程序上的“合法性”去要求、规范、支配对象的过程。前者主要发生在社会和公民之中，所针对的是全部社会政治生活；后者主要发生在与公共权力相联系的正式领域，如国家领域中，所针对的是国家政权的运作过程．是取得执政地位的政党以公共权力的强制力为后盾，并以公共权力的名义所采取的行动。正因为是一种强制力，所以公共权力的使用有严格限制，表现为执政活动受到宪法和法律的规范与制约。对西方多数政党而言，拥有执政权未必拥有领导权，因为在多元自由主义社会，承认和服从某个政党的执政权，并不意味着其他社会政治集团必然接受其领导权。对中国共产党而言，它在革命中已经以它卓有成效的宣传、动员和组织在社会政治领域建立起统摄一切的领导权，拥有领导权必然要求执政权，从革命到建国、在政治与法统之间的逻辑就是如此， 反过来，拥有执政权亦绝不放弃领导权，只有落实了领导权才有巩固的执政权，这就是党重视意识形态工作和在社会各个层面扩展它的组织网络的原因，也是中国共产党区别千西方政党最重要的特征。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E6%94%BF%E6%B2%BB/" rel="tag"><i class="fas fa-tags"></i>政治</a>
+        
+        <a class="post-tag button" href="../../../../tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/" rel="tag"><i class="fas fa-tags"></i>意识形态</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/" rel="next" title="就业去向分析"><i class="fas fa-angle-left"></i><span class="nav-title">就业去向分析</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="../../23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/" rel="prev" title="虚无主义思考"><span class="nav-title">虚无主义思考</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "Dang政体制思辨",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">29</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">26</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">48</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%85%9A%E6%94%BF%E4%BD%93%E5%88%B6%E7%94%B1%E6%9D%A5"><span class="toc-text">党政体制由来</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%A5%BF%E6%96%B9%E5%B8%82%E6%B0%91%E7%A4%BE%E4%BC%9A%E6%BC%94%E5%8F%98"><span class="toc-text">西方市民社会演变</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B2%BB%E8%BF%9B%E7%A8%8B%E6%BC%94%E5%8F%98"><span class="toc-text">中国政治进程演变</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BD%BF%E5%91%BD%E5%9E%8B%E6%94%BF%E5%85%9A"><span class="toc-text">使命型政党</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%A4%BE%E4%BC%9A%E7%9A%84%E7%BB%84%E7%BB%87%E7%8A%B6%E6%80%81"><span class="toc-text">社会的组织状态</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%BB%84%E7%BB%87%E5%BB%BA%E8%AE%BE%E9%80%94%E5%BE%84"><span class="toc-text">组织建设途径</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%94%BF%E6%B2%BBFB"><span class="toc-text">政治FB</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81"><span class="toc-text">意识形态</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E7%89%B9%E8%89%B2"><span class="toc-text">意识形态特色</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E5%8F%98%E5%8C%96"><span class="toc-text">意识形态变化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%9B%B0%E5%A2%83"><span class="toc-text">困境</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%B0%91%E4%B8%BB%E9%9B%86%E4%B8%AD%E5%88%B6%E7%9A%84%E6%80%9D%E8%80%83"><span class="toc-text">民主集中制的思考</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

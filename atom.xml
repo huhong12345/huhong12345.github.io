@@ -6,7 +6,7 @@
   <link href="http://huhong.me/atom.xml" rel="self"/>
   
   <link href="http://huhong.me/"/>
-  <updated>2022-07-04T07:49:28.000Z</updated>
+  <updated>2022-11-02T10:12:28.745Z</updated>
   <id>http://huhong.me/</id>
   
   <author>
@@ -17,11 +17,249 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>单向度的人</title>
+    <link href="http://huhong.me/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/"/>
+    <id>http://huhong.me/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/</id>
+    <published>2022-09-20T09:54:39.000Z</published>
+    <updated>2022-11-02T10:12:28.745Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h2&gt;&lt;p&gt;——张峰</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="政治" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
+    
+    
+    <category term="政治" scheme="http://huhong.me/tags/%E6%94%BF%E6%B2%BB/"/>
+    
+    <category term="意识形态" scheme="http://huhong.me/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://huhong.me/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://huhong.me/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-09-16T14:56:01.000Z</published>
+    <updated>2022-11-02T10:12:28.721Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h1&gt;&lt;h2 id=&quot;cd命令&quot;&gt;&lt;a href=&quot;#cd命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    <category term="Linux" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/Linux/"/>
+    
+    
+    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="Linux" scheme="http://huhong.me/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建</title>
+    <link href="http://huhong.me/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/"/>
+    <id>http://huhong.me/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/</id>
+    <published>2022-09-08T03:51:26.000Z</published>
+    <updated>2022-11-02T10:12:28.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;发发发最近刚刚接触软路由，记录一下All in One的思路。我的方案其实已经算目前圈子里较为成熟的选择，主要是跟着其他博客大佬，看他们设计自己All in</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="软路由" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    
+    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="软路由" scheme="http://huhong.me/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="ESXi" scheme="http://huhong.me/tags/ESXi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>球状闪电阅读摘抄</title>
+    <link href="http://huhong.me/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/"/>
+    <id>http://huhong.me/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/</id>
+    <published>2022-09-02T06:51:16.000Z</published>
+    <updated>2022-11-02T10:12:28.753Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;球状闪电阅读摘抄&quot;&gt;&lt;a href=&quot;#球状闪电阅读摘抄&quot; class=&quot;headerlink&quot; title=&quot;球状闪电阅读摘抄&quot;&gt;&lt;/a&gt;球状闪电阅读摘抄&lt;/h2&gt;&lt;p&gt;三体前传：球状闪电  刘慈欣&lt;/p&gt;
+&lt;h3 id=&quot;◆-序曲&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="读书笔记" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="读书" scheme="http://huhong.me/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Code-server配置方法</title>
+    <link href="http://huhong.me/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
+    <id>http://huhong.me/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</id>
+    <published>2022-08-30T09:07:30.000Z</published>
+    <updated>2022-11-02T10:12:28.717Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h2&gt;&lt;p&gt;一般来说，Vscode可由&lt;a href=&quot;https://vscode.dev/&quot;&gt;https://vscode.dev&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Code" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Code/"/>
+    
+    
+    <category term="Code Online" scheme="http://huhong.me/tags/Code-Online/"/>
+    
+    <category term="配置" scheme="http://huhong.me/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚无主义思考</title>
+    <link href="http://huhong.me/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/"/>
+    <id>http://huhong.me/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/</id>
+    <published>2022-08-23T06:51:16.000Z</published>
+    <updated>2022-11-02T10:12:28.757Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;虚无主义&quot;&gt;&lt;a href=&quot;#虚无主义&quot; class=&quot;headerlink&quot; title=&quot;虚无主义&quot;&gt;&lt;/a&gt;虚无主义&lt;/h2&gt;&lt;h3 id=&quot;虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="哲学" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E5%93%B2%E5%AD%A6/"/>
+    
+    
+    <category term="思考" scheme="http://huhong.me/tags/%E6%80%9D%E8%80%83/"/>
+    
+    <category term="哲学" scheme="http://huhong.me/tags/%E5%93%B2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dang政体制思辨</title>
+    <link href="http://huhong.me/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/"/>
+    <id>http://huhong.me/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/</id>
+    <published>2022-08-20T09:54:39.000Z</published>
+    <updated>2022-11-02T10:12:28.721Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;传统国家的重新组织本质上是资本主义性质的市民社会动用自己在封建专制母腹中日趋壮大的组织力量对国家进行扬弃和重建的过程。没有市民社会的自组织，很难想象有民族国家的再组织。&lt;/p&gt;
+&lt;h2 id=&quot;党政体制由来&quot;&gt;&lt;a href=&quot;#党政体制由来&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="政治" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
+    
+    
+    <category term="政治" scheme="http://huhong.me/tags/%E6%94%BF%E6%B2%BB/"/>
+    
+    <category term="意识形态" scheme="http://huhong.me/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>就业去向分析</title>
+    <link href="http://huhong.me/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/"/>
+    <id>http://huhong.me/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/</id>
+    <published>2022-08-11T07:11:32.000Z</published>
+    <updated>2022-11-02T10:12:28.753Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;就业去向看到的一个评论，有点意思，摘抄一下：&lt;/p&gt;
+&lt;p&gt;80年代大家都是挤破脑袋进体制内。公务员和军队是一等人，国企事业单位次之。私企？个体户？那是资本主义的尾巴，哪天说割就割了。&lt;/p&gt;
+&lt;p&gt;然而，90年代实现双轨制。造导弹的不如卖茶叶蛋的，一大堆体制内下海经商，国</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="就业" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A/"/>
+    
+    
+    <category term="思考" scheme="http://huhong.me/tags/%E6%80%9D%E8%80%83/"/>
+    
+    <category term="就业" scheme="http://huhong.me/tags/%E5%B0%B1%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github-Pages+CheapName域名配置</title>
     <link href="http://huhong.me/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
     <id>http://huhong.me/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</id>
     <published>2021-08-02T09:19:25.000Z</published>
-    <updated>2022-07-04T07:49:28.000Z</updated>
+    <updated>2022-11-02T10:12:28.721Z</updated>
     
     
       
@@ -50,7 +288,7 @@
     <link href="http://huhong.me/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://huhong.me/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2021-07-03T09:19:25.000Z</published>
-    <updated>2022-07-04T13:01:34.004Z</updated>
+    <updated>2022-11-02T10:14:32.425Z</updated>
     
     
       
@@ -79,7 +317,7 @@
     <link href="http://huhong.me/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/"/>
     <id>http://huhong.me/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/</id>
     <published>2020-10-02T09:31:28.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.753Z</updated>
     
     
       
@@ -110,7 +348,7 @@
     <link href="http://huhong.me/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/"/>
     <id>http://huhong.me/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/</id>
     <published>2020-07-24T18:11:03.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.745Z</updated>
     
     
       
@@ -140,7 +378,7 @@
     <link href="http://huhong.me/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/"/>
     <id>http://huhong.me/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/</id>
     <published>2020-06-29T15:13:44.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.737Z</updated>
     
     
       
@@ -158,11 +396,11 @@
     <category term="Pytorch" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
     
     
+    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
+    
     <category term="代码摘抄" scheme="http://huhong.me/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
     
     <category term="Pytorch" scheme="http://huhong.me/tags/Pytorch/"/>
-    
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
     
     <category term="更新" scheme="http://huhong.me/tags/%E6%9B%B4%E6%96%B0/"/>
     
@@ -173,7 +411,7 @@
     <link href="http://huhong.me/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/"/>
     <id>http://huhong.me/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</id>
     <published>2020-06-21T12:34:01.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.753Z</updated>
     
     
       
@@ -205,7 +443,7 @@
     <link href="http://huhong.me/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/"/>
     <id>http://huhong.me/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/</id>
     <published>2020-02-18T12:31:22.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.721Z</updated>
     
     
       
@@ -235,7 +473,7 @@
     <link href="http://huhong.me/2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://huhong.me/2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
     <published>2020-02-15T13:31:45.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.721Z</updated>
     
     
       
@@ -266,7 +504,7 @@
     <link href="http://huhong.me/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
     <id>http://huhong.me/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
     <published>2020-02-10T14:31:45.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.757Z</updated>
     
     
       
@@ -297,7 +535,7 @@
     <link href="http://huhong.me/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://huhong.me/2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
     <published>2020-01-30T12:30:13.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.737Z</updated>
     
     
       
@@ -326,7 +564,7 @@
     <link href="http://huhong.me/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/"/>
     <id>http://huhong.me/2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/</id>
     <published>2019-12-30T10:28:15.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.745Z</updated>
     
     
       
@@ -355,7 +593,7 @@
     <link href="http://huhong.me/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/"/>
     <id>http://huhong.me/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/</id>
     <published>2019-12-03T02:55:03.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
+    <updated>2022-11-02T10:12:28.733Z</updated>
     
     
       
@@ -377,252 +615,6 @@
     <category term="Mac" scheme="http://huhong.me/tags/Mac/"/>
     
     <category term="快捷键" scheme="http://huhong.me/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百炼OJ-C++练习</title>
-    <link href="http://huhong.me/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/"/>
-    <id>http://huhong.me/2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/</id>
-    <published>2019-12-01T02:30:13.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;a href=&quot;#自己在百炼OJ上练习的一些算法题&quot; class=&quot;headerlink&quot; title=&quot;自己在百炼OJ上练习的一些算法题&quot;&gt;&lt;/a&gt;自己在百炼OJ上练习的一些算法题&lt;/h1&gt;&lt;h2 id=&quot;1088&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="C++" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/C/"/>
-    
-    
-    <category term="编程" scheme="http://huhong.me/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="OJ" scheme="http://huhong.me/tags/OJ/"/>
-    
-    <category term="C++练习" scheme="http://huhong.me/tags/C-%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>决策用强化与系统性机器学习</title>
-    <link href="http://huhong.me/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://huhong.me/2019/12/01/%E5%86%B3%E7%AD%96%E7%94%A8%E5%BC%BA%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
-    <published>2019-12-01T01:34:28.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;a href=&quot;#决策用强化与系统性机器学习总结&quot; class=&quot;headerlink&quot; title=&quot;决策用强化与系统性机器学习总结&quot;&gt;&lt;/a&gt;决策用强化与系统性机器学习总结&lt;/h2&gt;&lt;h4</summary>
-        
-      
-    
-    
-    
-    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    <category term="RL" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/RL/"/>
-    
-    
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
-    
-    <category term="脑洞" scheme="http://huhong.me/tags/%E8%84%91%E6%B4%9E/"/>
-    
-    <category term="整理" scheme="http://huhong.me/tags/%E6%95%B4%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NLP一些基本概念的摘抄</title>
-    <link href="http://huhong.me/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/"/>
-    <id>http://huhong.me/2019/12/01/NLP%E9%83%A8%E5%88%86%E6%91%98%E6%8A%84/</id>
-    <published>2019-12-01T00:30:13.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    <category term="NLP" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/NLP/"/>
-    
-    
-    <category term="NLP" scheme="http://huhong.me/tags/NLP/"/>
-    
-    <category term="总结与摘抄" scheme="http://huhong.me/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>弗·恩格斯——《GC主义原理》</title>
-    <link href="http://huhong.me/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/"/>
-    <id>http://huhong.me/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/</id>
-    <published>2019-11-30T18:00:00.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;弗·恩格斯写于 1847年10月底—11月&lt;/strong&gt; &lt;/p&gt;
-&lt;img src=&quot;/2019/12/01/%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/mks.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="政治" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
-    
-    
-    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
-    
-    <category term="政治" scheme="http://huhong.me/tags/%E6%94%BF%E6%B2%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python is For Fun</title>
-    <link href="http://huhong.me/2019/11/30/Python%20is%20For%20Fun/"/>
-    <id>http://huhong.me/2019/11/30/Python%20is%20For%20Fun/</id>
-    <published>2019-11-30T03:32:44.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Read-after-me-Python-is-for-Fun&quot;&gt;&lt;a href=&quot;#Read-after-me-Python-is-for-Fun&quot; class=&quot;headerlink&quot; title=&quot;Read after me, Python is for</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Python" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Python/"/>
-    
-    
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
-    
-    <category term="Python" scheme="http://huhong.me/tags/Python/"/>
-    
-    <category term="编程" scheme="http://huhong.me/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="练习" scheme="http://huhong.me/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中国是否愚弄了西方</title>
-    <link href="http://huhong.me/2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/"/>
-    <id>http://huhong.me/2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/</id>
-    <published>2019-11-29T15:10:33.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天看见一个帖子，里面虽然说的是资本方面的问题，但是在相当程度上提出了舆论的作用，西方舆论的虚伪以及追求资本利益的本质。文字可能多一些，但是说的很透彻。&lt;/p&gt;
-&lt;p&gt;以下是原文：&lt;/p&gt;
-&lt;p&gt;一位教授语出惊人：中国真在愚弄欺骗全世界&lt;/p&gt;
-&lt;p&gt;摘要:</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="政治" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/"/>
-    
-    
-    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
-    
-    <category term="思考" scheme="http://huhong.me/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>整合一下深度学习caffe基本环境的配置</title>
-    <link href="http://huhong.me/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://huhong.me/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2019-11-29T14:34:28.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;本帖为一个回忆贴，最初写于2016年11月，大二上学期&lt;/strong&gt;&lt;br&gt;2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心，但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国</summary>
-        
-      
-    
-    
-    
-    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    <category term="DL" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/DL/"/>
-    
-    
-    <category term="心情" scheme="http://huhong.me/tags/%E5%BF%83%E6%83%85/"/>
-    
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
-    
-    <category term="配环境" scheme="http://huhong.me/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo部分功能摘抄</title>
-    <link href="http://huhong.me/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/"/>
-    <id>http://huhong.me/2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/</id>
-    <published>2019-11-29T14:10:33.000Z</published>
-    <updated>2022-07-03T09:14:13.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;先放几个有用的博客：&quot;&gt;&lt;a href=&quot;#先放几个有用的博客：&quot; class=&quot;headerlink&quot; title=&quot;先放几个有用的博客：&quot;&gt;&lt;/a&gt;先放几个有用的博客：&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Hexo" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Hexo/"/>
-    
-    
-    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
-    
-    <category term="Hexo" scheme="http://huhong.me/tags/Hexo/"/>
     
   </entry>
   

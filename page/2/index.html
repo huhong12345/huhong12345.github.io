@@ -208,6 +208,456 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/" itemprop="url">PyTorch常用代码段合集（保持更新）</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-06-29T23:13:44+08:00">2020-06-29 23:13:44</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%A7%91%E7%A0%94/Pytorch/" itemprop="url" rel="index"><span itemprop="name">Pytorch</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      一些Pytorch常用的代码段，会慢慢继续填充。 $$x_2$$ $$sin^2\theta + cos^2\theta &#x3D; 1$$ 首先需要调用的基本包大致为： 123456789import collectionsimport osimport shutilimport tqdmimport numpy as npimport PIL.Imageimport torchimport torchvision 基础配置检查 PyTorch 版本1234torch.__version__ # PyTorch versiontorch.version.cuda # Corresponding CUDA versiontorch
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/DL/" rel="tag"><i class="fas fa-tags"></i>DL</a>
+        
+        <a class="post-tag button" href="../../tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>代码摘抄</a>
+        
+        <a class="post-tag button" href="../../tags/Pytorch/" rel="tag"><i class="fas fa-tags"></i>Pytorch</a>
+        
+        <a class="post-tag button" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag"><i class="fas fa-tags"></i>更新</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/" itemprop="url">多路电梯算法调度的解决思路——类设计角度</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-06-21T20:34:01+08:00">2020-06-21 20:34:01</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      这学期C++接触得有点多，为熟练类设计，做了一个多路电梯调度算法。 总的来说，这份代码主要包含调度核心算法、乘客行为设计、电梯动作函数设计等，最终完成了一个十路电梯的群控仿真算法系统。同时为了增强了整个电梯系统的控制简便性和高效性，还将电梯进行分组。也设计了不同时间段（早晚高峰、平时）的算法仿真流程。 OPP其实是一种思想，所以本博客的核心还是在于边写边继续加深面向对象编程的理解吧。 整体代码框架 整体调度思路总的来说，调度算法采用了短寻找楼层时间优先（SSTF-Shortest Seek Time First）算法，其分为内部调度和外部调度两个部分，最终形成每部电梯的任务库，每部电梯根据自己的任务库进行合理运行。 内部调度中，电梯
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/C/" rel="tag"><i class="fas fa-tags"></i>C++</a>
+        
+        <a class="post-tag button" href="../../tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fas fa-tags"></i>面向对象编程</a>
+        
+        <a class="post-tag button" href="../../tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/" rel="tag"><i class="fas fa-tags"></i>电梯调度算法</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/" itemprop="url">Mac录制屏内声音教程</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-02-18T20:31:22+08:00">2020-02-18 20:31:22</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      由于最近疫情严重，上课开组会都是使用Zoom、腾讯会议这种线上平台进行。然而有时候教师为了保护知识产权，会不开放会议的屏幕录制功能。此时，自行录制上课&#x2F;开会视频以便课后消化显得尤为重要。 然而在Mac端，直接使用自带的屏幕录制软件录不到电脑内屏放出的声音（只录电脑外置麦克风收到的声音）。下面将介绍如何在Mac上录制电脑屏幕+只有屏内声音无屏外声音。 首先需要下载一款开源插件Soundflower： https://github.com/mattingalls/Soundflower. 接着安装。此时有的人会出现安全性问题提示，请保证自己的系统偏好设置里安全性与隐私部分，”允许任何来源“： 安装完后打开系统自带的“音频MID
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/Mac/" rel="tag"><i class="fas fa-tags"></i>Mac</a>
+        
+        <a class="post-tag button" href="../../tags/%E5%BD%95%E5%B1%8F/" rel="tag"><i class="fas fa-tags"></i>录屏</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/02/15/Final%20Cut%20Pro%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" itemprop="url">Final Cut Pro 使用笔记</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-02-15T21:31:45+08:00">2020-02-15 21:31:45</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E5%89%AA%E8%A7%86%E9%A2%91/" itemprop="url" rel="index"><span itemprop="name">剪视频</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      这是一个关于Final Cut Pro来剪辑视频的笔记。Final Cut Pro 是一个苹果公司开发的一款非线性视频剪辑软件，运行于Mac系统。整个的用户界面可以大致被分为以下几块： 工作区说明： 左上方区域称为：浏览器它的主要功能为*管理所有素材*。此处管理可理解为导入、浏览，使用各种素材。其左上方三个按钮分别为：资源库、照片和音频、字幕。 中间的区域称为：监视器它的主要功能为预览和播放相关素材，无论是资源库中的素材还是时间线中的素材。同时可以变换素材的尺寸、裁剪（在左下方第一个按钮）；改变素材的播放速度（第三个按钮） 右上方区域称为：检查器这里可以*查看素材的基本信息（如分辨率、时长、编码器等），也可以修改素材参数*（如调色、
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/%E6%8A%80%E5%B7%A7/" rel="tag"><i class="fas fa-tags"></i>技巧</a>
+        
+        <a class="post-tag button" href="../../tags/%E5%89%AA%E8%A7%86%E9%A2%91/" rel="tag"><i class="fas fa-tags"></i>剪视频</a>
+        
+        <a class="post-tag button" href="../../tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/" itemprop="url">部分个人影评合集（保持更新）</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-02-10T22:31:45+08:00">2020-02-10 22:31:45</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E5%BD%B1%E8%AF%84/" itemprop="url" rel="index"><span itemprop="name">影评</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：《窃听风暴》豆瓣9.1，06年奥斯卡最佳外语片故事发生在1984-1989柏林墙倒塌期间的东德。当时整个社会弥漫在国家安全局的高压统治下，他们如同鬼魅般毫无理由地监听控制着整个国家。男主也是这个国家85000名秘密警察中的一个，他业务熟练，冷血无情，像一个工具一样闭眼倾听着一对艺术家夫妇。艺术家们往往是社会进步的重要力量。但此时他们的自由主义思想，却被视为对国家政权的重要威胁。他们被监视、被窃听，从没有创作自由，甚至没有人身自由。男主的生活冷酷高压，反而监听时耳中那个诗意浪漫的家庭好似幻梦，他看到了一个世界里不止有无情的政治斗争，还有诗，音乐和温暖。同时对社会主义和党
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/%E6%9B%B4%E6%96%B0/" rel="tag"><i class="fas fa-tags"></i>更新</a>
+        
+        <a class="post-tag button" href="../../tags/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E8%AF%84/" rel="tag"><i class="fas fa-tags"></i>个人影评</a>
+        
+        <a class="post-tag button" href="../../tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/" rel="tag"><i class="fas fa-tags"></i>整理合集</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2020/01/30/%E3%80%8A%E8%8F%8A%E4%B8%8E%E5%88%80%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url">《菊与刀》读书笔记</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2020-01-30T20:30:13+08:00">2020-01-30 20:30:13</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      引言：最孤立的微小行为之间也存在着联系，这些纷繁复杂的单项行为构成了一个总体模式。首先，这本书写于二战末期。反法西斯阵营即将取胜，但他们而却要面对一个完全不能理解的民族。在美国人看来，大和民族非常的“矛盾”，它不属于西方文化传统，但又全服武装、训练有素： 这个民族既彬彬有礼又粗鲁野蛮；既顽固不化又善于改革；既谦卑温顺又不愿受制于人；既忠心耿耿又背信弃义、睚眦必报；既上街任意又不愿愧对内心；既纪律严明又难以管束；既兼容并蓄又故步自封；既醉心于菊花的美又崇尚刀剑和武士道的无上荣耀。 “菊”是日本皇室的象征，代表着谦和与儒雅；而“刀”则是武士刀，是日本尚武、好战的体现。这两个意象在日本人身上得到了非常好的融合。这两者也是这本书洞察大和民族
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>总结与摘抄</a>
+        
+        <a class="post-tag button" href="../../tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fas fa-tags"></i>读书笔记</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2019/12/30/%E5%A2%A8%E5%AE%B6%E7%9A%84%E6%B6%88%E6%B2%89/" itemprop="url">“李约瑟问题”思考——从墨家思想的消亡说起</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-12-30T18:28:15+08:00">2019-12-30 18:28:15</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">个人思考</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      引言：众所周知，在十七世纪前，中国在政治制度、技术、艺术、文学等多方面遥遥领先全世界。无论是《马可波罗传》还是门多萨的《中华大帝国史》中的描述，中国的历史文化、地理风物、社会习俗、科学工艺都使全世界为之惊叹。但到十七世纪后，以英国为首西欧诸国的开始了大航海时期并展开了轰轰烈烈的工业革命，科学技术达到高速发展。最终在19、20世纪几乎以碾压优势横扫了亚洲以小农经济为主的诸多国家，包括一直以天朝上国自称，长期保持全世界经济领头羊上千年的满清中国。这一切确实使人非常困惑，即中国在十五世纪前的科学发现和技术工艺远远超过同时期的欧洲，但中国却直到鸦片战争都一直没产生近代科学呢？且中国长期以来的稳定繁荣、国力昌盛，宗教思想也不像欧洲那样广泛，每
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/" rel="tag"><i class="fas fa-tags"></i>个人思考</a>
+        
+        <a class="post-tag button" href="../../tags/%E8%BE%A9%E8%AF%81/" rel="tag"><i class="fas fa-tags"></i>辩证</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="../../2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" itemprop="url">Mac快捷键介绍</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-12-03T10:55:03+08:00">2019-12-03 10:55:03</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      很多人不喜欢Mac系统，觉得很多东西不如Windows上手直观。（这让以“简单易用”为宗旨的某公司怎么洗？？） 主要原因其实是Mac系统的还是有一定的学习成本的（嗯，高贵的Unix贵族绝不屈服&#x2F;🐶）。本部分主要记录些常用的快捷键,多使用快捷键会极大地提高效率。 Mac 快捷键非常多，但一切快捷键都以四个初始键作为起始，键盘上从左上到右下分别是⇧，⌃，⌥，⌘。由这些键引出各种功能。 符号 说明 ⇧ Shift ⌃ Control ⌥ Option ⌘ Command 先给出几个有趣的快捷键： 快速调用 emoji 表情：⌘（command）+ ⌃（control）+ 空格键； 浏览器中将网页加入个人收藏：⌘（comman
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../tags/Mac/" rel="tag"><i class="fas fa-tags"></i>Mac</a>
+        
+        <a class="post-tag button" href="../../tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag"><i class="fas fa-tags"></i>快捷键</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/12/01/%E7%99%BE%E7%82%BCOJ%E7%BB%83%E4%B9%A0/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="MaximeHu">
@@ -421,288 +871,9 @@
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
-        
         <a class="post-tag button" href="../../tags/%E6%94%BF%E6%B2%BB/" rel="tag"><i class="fas fa-tags"></i>政治</a>
         
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/11/30/Python%20is%20For%20Fun/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="../../images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="../../2019/11/30/Python%20is%20For%20Fun/" itemprop="url">Python is For Fun</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-30T11:32:44+08:00">2019-11-30 11:32:44</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      Read after me, Python is for Fun! :)简单的人名对话 1234name = input(&quot;输入姓名:&quot;)print(&quot;%s 同学，学好Python，前途无量！&quot;%name)print(&quot;%s 大侠，学好Python，大展拳脚！&quot;%name[0])print(&quot;%s 哥哥，学好Python，人见人爱！&quot;%name[1:]) 输入长者后，依次回显示江大侠和民哥哥 九九乘法表输出 1234for i in range(1,10): for j in range(1,i+1): print(&quot;&#123;&#125;*
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="../../tags/DL/" rel="tag"><i class="fas fa-tags"></i>DL</a>
-        
-        <a class="post-tag button" href="../../tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
-        
-        <a class="post-tag button" href="../../tags/%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fas fa-tags"></i>编程</a>
-        
-        <a class="post-tag button" href="../../tags/%E7%BB%83%E4%B9%A0/" rel="tag"><i class="fas fa-tags"></i>练习</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="../../images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="../../2019/11/29/%E4%B8%AD%E5%9B%BD%E6%98%AF%E5%90%A6%E6%84%9A%E5%BC%84%E4%BA%86%E8%A5%BF%E6%96%B9/" itemprop="url">中国是否愚弄了西方</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-29T23:10:33+08:00">2019-11-29 23:10:33</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB/" itemprop="url" rel="index"><span itemprop="name">政治</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      今天看见一个帖子，里面虽然说的是资本方面的问题，但是在相当程度上提出了舆论的作用，西方舆论的虚伪以及追求资本利益的本质。文字可能多一些，但是说的很透彻。 以下是原文： 一位教授语出惊人：中国真在愚弄欺骗全世界 摘要: 西方媒体的焦虑，正是中国年轻人的机会。中国能否坚持自己成功的道路，要看年青一代了 … 近日，BBC推出纪录片《中国是如何愚弄世界的》（How China Fooled the World），再次预测中国经济即将崩溃，引发读者热议。 观察者网就此专访先后在北京大学、复旦大学、美哥伦比亚大学、德克萨斯大学担任博导及高级研究员的陈平教授，就其数十年在海外生活的经验以及对中西之间的观察做出评论。陈平教授早年师从诺贝尔化学奖得主
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
         <a class="post-tag button" href="../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
-        
-        <a class="post-tag button" href="../../tags/%E6%80%9D%E8%80%83/" rel="tag"><i class="fas fa-tags"></i>思考</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="../../images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="../../2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url">整合一下深度学习caffe基本环境的配置</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-29T22:34:28+08:00">2019-11-29 22:34:28</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index"><span itemprop="name">科研</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%A7%91%E7%A0%94/DL/" itemprop="url" rel="index"><span itemprop="name">DL</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      本帖为一个回忆贴，最初写于2016年11月，大二上学期2016年11月，经历了数模校赛，培训，国赛等一系列折磨后，最终结果是拿到了个不好不坏的成绩：国二。虽然还是有些不甘心，但仔细想觉得数模也就那么回事，随缘就好，便申请负责了一个国创项目，间接进入导师实验室开始做科研训练。（这里还是要感谢电院较好的学术氛围和师资） 当时因为在院里实验班，自己成绩和竞赛也还不错，就找到了学校里一个挺不错的图像组的大佬当导师。那时候感觉DL没有现在那么火，自己也是第一次接触它当然，那时候第一次看这相关paper还是蛮难的，第一次接触“深度学习”这个词，但又被它各种玄幻但又挺符合常理的操作所折服。现在回忆起来，对本科生来说，多自学，早日将数学和英语水平提
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="../../tags/%E5%BF%83%E6%83%85/" rel="tag"><i class="fas fa-tags"></i>心情</a>
-        
-        <a class="post-tag button" href="../../tags/DL/" rel="tag"><i class="fas fa-tags"></i>DL</a>
-        
-        <a class="post-tag button" href="../../tags/%E9%85%8D%E7%8E%AF%E5%A2%83/" rel="tag"><i class="fas fa-tags"></i>配环境</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="../../images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="../../2019/11/29/Hexo-%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E6%91%98%E6%8A%84/" itemprop="url">Hexo部分功能摘抄</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-29T22:10:33+08:00">2019-11-29 22:10:33</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%BC%96%E7%A8%8B/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      先放几个有用的博客：https://zhuanlan.zhihu.com/p/26625249https://tengj.github.io/categories/hexo%E5%B9%B2%E8%B4%A7%E7%B3%BB%E5%88%97/https://tengj.github.io/2016/03/06/hexo4/ 常用的Hexo 命令123456789101112131415npm install hexo -g #安装Hexonpm update hexo -g #升级hexo init #初始化博客简写命令hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
-        
-        <a class="post-tag button" href="../../tags/Hexo/" rel="tag"><i class="fas fa-tags"></i>Hexo</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me../../2019/11/29/Hello%20World%EF%BC%8CHexo/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="../../images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="../../2019/11/29/Hello%20World%EF%BC%8CHexo/" itemprop="url">Hello World，Hexo</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-11-29T21:30:13+08:00">2019-11-29 21:30:13</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">心情&日记</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <h2 id="Hello，World"><a href="#Hello，World" class="headerlink" title="Hello，World~"></a>Hello，World~</h2><p>总感觉原来用CSDN写博客太多人看到了，现在开始使用Hexo+GitHub托管的方式写博客。会加很多碎碎念~~<br>新心情，新头像，Hello World！</p>
-<p><img src="/2019/11/29/Hello%20World%EF%BC%8CHexo/a.jpg"></p>
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="../../tags/%E5%BF%83%E6%83%85/" rel="tag"><i class="fas fa-tags"></i>心情</a>
         
       </div>
       
@@ -711,7 +882,7 @@
   
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="../../"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="../../">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="../../"><i class="fas fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="../../">1</a><span class="page-number current">2</span><a class="page-number" href="../3/">3</a><a class="extend next" rel="next" href="../3/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
   </nav>
   
   
@@ -755,21 +926,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="../../archives/">21</a></div>
+      <div><a href="../../archives/">29</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="../../categories/">21</a></div>
+      <div><a href="../../categories/">26</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="../../tags/">40</a></div>
+      <div><a href="../../tags/">48</a></div>
     </div>
     
     

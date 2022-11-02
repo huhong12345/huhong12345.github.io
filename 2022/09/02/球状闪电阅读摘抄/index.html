@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>球状闪电阅读摘抄 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">球状闪电阅读摘抄</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-09-02T14:51:16+08:00">2022-09-02 14:51:16</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="球状闪电阅读摘抄"><a href="#球状闪电阅读摘抄" class="headerlink" title="球状闪电阅读摘抄"></a>球状闪电阅读摘抄</h2><p>三体前传：球状闪电  刘慈欣</p>
+<h3 id="◆-序曲"><a href="#◆-序曲" class="headerlink" title="◆ 序曲"></a>◆ 序曲</h3><blockquote>
+<p>理想主义者和玩世不恭的人都觉得对方很可怜，可他们实际都很幸运</p>
+</blockquote>
+<h3 id="◆-大学"><a href="#◆-大学" class="headerlink" title="◆ 大学"></a>◆ 大学</h3><blockquote>
+<p>传来了爸爸的声音：“美妙人生的关键在于你能迷上什么东西。”我现在真正体会到他这话的正确，我现在的人生好比一颗疾飞的炮弹，除了对到达目标时那一声爆炸的渴望之外什么都没有。这个目标完全是非功利的，达到它就意味着生活的完结，我不知道为什么要去那儿，我只是想去，这就够了，这是人类最本源的冲动。很奇怪的，到现在为止，我一次都没有去查过它的资料。我和它，像两个要用一生时间准备一场决斗的骑士，当我没准备好的时候，既不去见它也不去想它。</p>
+</blockquote>
+<h3 id="◆-球状闪电"><a href="#◆-球状闪电" class="headerlink" title="◆ 球状闪电"></a>◆ 球状闪电</h3><blockquote>
+<p>各种数学工具如脱缰的野马一般难以掌握<br>一接触到复杂的电磁和流体结构，数学描述就变得面目狰狞起来，怪异的偏微方程像一道道绞索，烦琐的矩阵如插满利刃的陷阱。<br>你需要的只是一支铅笔一张纸，你要做的就是构筑出一个球状闪电的数学模型，这应该是一个自洽的模型，在理论上要有独创性，在数学上要完美精致，在计算机上要玩得转，你就当自己在做一个理论艺术品。<br>“黑洞能被接受吗？在至今没有其存在的直接证据的情况下，你看看天体物理学界已把它的理论发展到了何等地步，有多少人靠它吃饭？球状闪电至少是确实存在的！不要怕，如果达到我上面的要求，而论文还通不过，我就辞职，与你一起从这个大学滚蛋！”</p>
+</blockquote>
+<h3 id="◆-林云之一"><a href="#◆-林云之一" class="headerlink" title="◆ 林云之一"></a>◆ 林云之一</h3><blockquote>
+<p>远远的街灯明了，好像是闪着无数的星星。<br>天上的明星现了，好像是点着无数的街灯。”<br>我想那缥缈的空中，定然有美丽的街市。<br>街市上陈列的一些物品，定然是世上没有的珍奇。</p>
+</blockquote>
+<h3 id="◆-张彬"><a href="#◆-张彬" class="headerlink" title="◆ 张彬"></a>◆ 张彬</h3><blockquote>
+<p>那我这话就更好说了。说实在的，高教授，我还从未见过您这么有才气的人，这绝不是恭维，但恕我直言，我觉得您这人干事总缺少恒心，比如前一阵那个建筑防雷系统CAD，多好的项目，只是花点力气就完成了，结果您把开拓性的工作做完后又嫌麻烦推给了别人。”<br>“哈，像这样的恒心，像这样一辈子干一件事已不符合时代潮流了，这个时代，除了基础科学，其他的研究都应快刀斩乱麻。我这次来就是向你进一步证明我是如何缺乏恒心的，还记得我说过的话吗？如果你的论文通不过，我就辞职。<br>看过一本俄文小说，说一个富裕的庄园主，生活中唯一的乐趣是美酒。有一次他从一个神秘的旅人那里买到一个从古代沉船里打捞上来的酒瓶，瓶底还剩一点点酒，他把那点酒喝了以后就全部身心陶醉于其中。旅人告诉他，那艘沉船中一共捞上来两瓶这样的酒，另一瓶不知流落何方。庄园主开始没在意，但对那酒的回味使他日不能终夜不能寐，以至于最后卖掉了庄园和所有的财产，浪迹天涯去寻找那另一瓶酒。他历尽千辛万苦，走遍了世界，从年轻找到年老，最后终于找到了，这时他已是一个病魔缠身的老乞丐，他喝光了那瓶酒，然后在幸福中死去。</p>
+</blockquote>
+<h3 id="◆-晴空霹雳"><a href="#◆-晴空霹雳" class="headerlink" title="◆ 晴空霹雳"></a>◆ 晴空霹雳</h3><blockquote>
+<p>在我告诉高波将随他去雷电研究所的决定时，他说：“在你做出最终决定前，我应把事情说清楚：我知道你现在满脑子想的是球状闪电，虽然我们的出发点不同，我也对这个项目看好，但你要知道，一开始，我不可能让所里用很大的力量搞你这个项目。你知道张彬为什么失败吗？他钻到理论里出不来了！但这也不能怪他，实在是条件所限。这两年我给你的印象是忽视实验，错了，你做博士项目时我没考虑实验，是因为这种实验的投入太高了，照我们现有的条件，根本做不好，不精确甚至不真实的实验结果会拖理论的后腿，最后理论和实验都搞不出什么东西。我招你来，是让你搞球状闪电研究的，这点毫无疑问，但必须在实验基础都具备时才能正式开始搞。现在我们需要的第一是钱，第二是钱，第三还是钱，你要和我齐心协力去搞钱，明白吗？”这番话使我重新认识了高波这人，像他这样在学术上思想如此活跃，在社会上又如此现实的人真是不多见，这可能就是麻省理工出来的人的特点吧。<br>上世纪所有的重大科学进展，比如航天、核能、计算机等等，都是科学家和军人这两帮不同路的人把他们各自目标的共同点放在一起的结果。我们目标的共同之处很明显：人工产生球状闪电，只不过这对你是终点而对我仅仅是开始。我这次来，不是向你解释我的目的，在这方面我们要相互理解是很难的；我只是来帮助你减少一些对雷电武器的厌恶感。”</p>
+</blockquote>
+<h3 id="◆-SETI-home"><a href="#◆-SETI-home" class="headerlink" title="◆ SETI@home"></a>◆ SETI@home</h3><blockquote>
+<p>到江星辰的第一眼，就让我明白同他竞争是毫无意义的。与现在习惯于在潜在竞争者面前咄咄逼人地显示力量的都市男性相反，他每时每刻都努力将自己的力量隐藏起来，这是一种善意，怕这种力量伤害了像我这样的人。他仿佛时时都在说：我真的很抱歉，让您在她面前感到自卑，这不是故意的，让我们共同改变这种状况吧。<br>“为了您的航母，我们每个老百姓平均要纳十元的税。”我试图使自己轻松起来，话一出口才发现是那么的笨拙。<br>“这还不包括舰载机和护航的巡洋舰，所以，每次出航我们都像是把它扛在肩上一样。”他认真地说，再一次成功地释放了我的紧张感。<br>集中精力研制一种供电力系统使用的新型雷电定位系统，同时完成首都大剧院的防雷工程设计，这样大型机的事自然没戏，连球状闪电研究本身以后也只能业余搞了。<br>我知道你们在计算什么，BL，别浪费生命了，来找我！——俄罗斯联邦新西伯利亚州诺克思柏克科市24街106幢561号</p>
+</blockquote>
+<h3 id="◆-西伯利亚"><a href="#◆-西伯利亚" class="headerlink" title="◆ 西伯利亚"></a>◆ 西伯利亚</h3><blockquote>
+<p>在莫斯科的一个傍晚，林云向团长请假后出去了，深夜才回到饭店。我去她的房间里看她，见她一个人呆呆地坐在那儿，眼睛红着，脸上有泪痕，这让我很惊奇，在我的印象中她是不会哭的。她什么也没有说，我也不好问，以后在莫斯科的三天里，她的情绪一直很低落。从这件事我发现，林云的生活远比我想象的复杂<br>那个浪漫时代留给我们的记忆只有失败了。<br>但从扉页那幅头顶上长着世界地图的作者像上就知道它是什么了。林云把书拿过去看了一眼，又放回去。<br>关于苏维埃社会主义联盟建立新民主体制并融入民主社会并成为其亲密一员的可能性的新思维<br>西伯利亚，苦难、浪漫、理想、献身……<br>你说的是过去的和小说中的西伯利亚，现在这里只剩下失落和贪婪了，在下面的这块土地上，到处是无节制的砍伐和猎取，从油田泄漏的黑色原油到处流淌……<br>四十多年前，我在莫斯科大学获得物理学博士学位，现在还清楚地记得那一天，我同成千上万的人一起，看着刚从太空返回的加加林乘坐的敞篷吉普车穿过红场。他挥着鲜花，胸前挂满勋章。那时我热血沸腾，怀着去一个全新的世界创造一个伟大业绩的渴望，主动要求去正在组建的苏联科学院西伯利亚分院<br>项目负责人是尼古拉伊•纳尔诺夫院士，这是个极其少见的人，即便在当时，他也属于在政治上反常狂热的那一类，他偷偷看托洛茨基的著作，对全球革命的思想入了迷。当我问他3141项目的内容时，他这么说：‘格莫夫同志，我知道最近太空飞行的成就对你很有感召力，但那算什么？加加林在轨道上并不能把一块石头扔到华尔街那些资本家的头上；我们的项目就不同了，如果我们成功，将使帝国主义的所有坦克变成玩具，将使他们的机群像蝴蝶一样脆弱，将使他们的舰队像一堆浮在水面上的硬纸箱一样不堪一击！’<br>以后的事情我就不详细说了，即使有时间，我也怀疑自己的精神是否能承受。你们只需要知道，我们所在的地方，曾是世界上最大的球状闪电研究基地，在这里，对球状闪电的研究持续了三十年时间，最多的时候，曾有五千多人在这里工作，苏联最优秀的物理学家和数学家，都或多或少地卷入过这项研究。为了说明在这项研究上进行了多么巨大的投入，我只举一个例子，你们看——”<br>当时球状闪电在我们眼中只是一个普通的电磁现象，3141项目最初并没打算做到很大的规模，当时上自科学院和红军的最高领导者，下至参加项目的科学家和工程师都认为，对于一个已经把人送上太空的国家来说，只要集中科研力量，人工生成球状闪电只是时间问题，事实上，研究拖了三年才出成果已经出乎大多数人的预料了。当那个球状闪电出现时，我们的感觉只是如释重负，谁都没有想到，还有二十七年漫长的岁月和最后的失败在等着我们。<br>纳尔诺夫捧着那一大摞资料，说：‘我们把导弹撤回来没什么，还有更能让帝国主义胆寒的东西！’<br>决定论和机械论是压倒一切的思维方式，研究者们认为自然界是由铁一般的因果关系主宰着。这种思维方式是由政治环境决定的<br>于是纳尔诺夫对这五万次试验的结果给出了一个理所当然的解释：第一次产生球状闪电的那次试验参数记录有误。<br>纳尔诺夫在技术上却离不了我，就向上面建议，让我服刑期间回基地继续原来的工作。回到基地后，我过着低人一等的生活，没有人身自由，活动范围只能在基地之内，连穿的工作服颜色都同别人不一样。最难受的还是孤独，除了在工作中，没人愿意同我接触，只有组里一位刚分配来的女大学生平等地对待我，给了我许多温暖，后来她成了我的妻子<br>141基地拥有世界上最大的雷电模拟系统，在进行球状闪电研究的同时，也进行一些其他的军用或民用实验研究项目。在一次为防雷工程进行的试验中，竟意外地再次产生了球状闪电！这次闪电的参数，同我们第一次成功试验的参数相差甚远，没有任何共同之处；至于各种外加因素，如磁场和微波激射等，这次试验中根本就没有，只是一次纯闪电<br>回到格莫夫的住处后，我们三个整夜无节制地喝酒。西伯利亚的狂风在窗外呼号，《新思维》一本接一本地在壁炉中化为灰烬。墙上和天花板上无数个球状闪电围着我旋转，越转越快，我仿佛陷入一个白色光球的旋涡中。<br>格莫夫朝林云扬起一只手，“不，少校，我让你们来的目的就是想把这一切公之于世，我想让人们知道，在那个可悲的理想主义年代，有一群共青团员来到了西伯利亚的密林深处，在那里追逐一个幽灵，并为此献出了一生……”我们紧紧拥抱，泪流满面。</p>
+<p> 傍晚的北京春风拂面，有一种令人陶醉的温馨，一时还看不出战争的阴影。冰雪中的西伯利亚这时对我来说已是一个无比遥远、似乎只在梦中存在过的世界。其实现在看来，我以前的所有生活也是一场梦，现在梦醒了。<br> 在华灯初上的长安街上，我和林云相视无语。我们本不是同一条路上的人，我们各自的世界相距那么远，是球状闪电把我们联到一起，现在，这个纽带不存在了。张彬、郑敏、格莫夫……在那个祭坛上被肢解的人已经够多了，再加上我一个也没有太大的意义，我感觉到自己心中那已经熄灭的希望之火又被泼上了冷水，现在那里只剩下浸在冰水中的灰了。</p>
+</blockquote>
+<h3 id="◆-灯塔启示"><a href="#◆-灯塔启示" class="headerlink" title="◆ 灯塔启示"></a>◆ 灯塔启示</h3><blockquote>
+<p>我努力使自己适应新的生活。开始上网玩游戏，开始去看球赛，也自己打球了，打牌可以到很晚，还去图书馆把所有的专业书都还了，然后抱回一大摞DVD；我开始试着炒股，还打算养只小狗；我继续着在西伯利亚引发的酒瘾，有时自己喝，有时与正在结识的越来越多的各式各样的朋友喝……我甚至打算找一个女朋友，建立一个家庭，只是一时还没有机会罢了。再也用不着在午夜两点还盯着一堆偏微分方程发呆，再也用不着一连十几个小时守着计算机，等着那注定要让自己失望的结果；以前对我来说万分珍贵的时间，现在变得用之不竭了；第一次知道了什么是轻松和休闲，第一次看到生活原来还有这么丰富的内容，第一次恍然大悟：那些过去被自己轻视甚至可怜的人，原来都过得比我好。一个多月后，我开始发胖了，已掉得有些稀的头发又开始长密了，我不止一次地为自己庆幸：醒得还不算晚。<br>我总觉得是睡在那个遥远的地下洞厅里，梯形的祭坛耸立在黑暗中，上面有许多蛇形的曲线……但很快，窗帘上被路灯摇曳出的树影使我意识到自己在哪儿，然后总能很快地再次睡去。这就像你把一具尸体埋在后院里，埋得很深，你自以为摆脱了它；可是不然，你总是知道它在那儿，更重要的是，你总知道你知道。你后来明白要想真正摆脱它，就要去后院把它再挖出来，到远远的地方去烧掉，但你已经没有精神力量去做这件事了，埋得越深，你就越难把它挖出来，你更不敢想象它在地里已变成了什么样儿。<br>的这种新生活本来会舒适平滑地延续下去，我会坠入爱河，然后会有家，会有孩子，在事业上会有人们都想得到的那种成功，总之我会有一个与大多数人一样的平凡而幸福的人生。也许，在我的暮年，坐在夕阳下的沙滩上，记忆最深处的东西会浮上来一些，我会想起那云南的小镇、雷雨中的泰山、北京近郊的那个雷电武器基地和风雪中的西伯利亚，会想起那个穿军装的姑娘和别在她胸前的利剑……但那时，这些一定都十分遥远了，像是发生在另一个时空里。<br>其实，也不要被他们那种巨大投入和长周期吓住，从林云回来后的介绍，我看出一点：苏联人是在用僵化的武器研究机制来研究自然科学界的一个基础课题，其过程中不免缺少新思想，缺少想象力和创造力。”<br>那灯本来就在那里的，但只有亮的时候你才能看到……</p>
+</blockquote>
+<h3 id="◆-林峰将军"><a href="#◆-林峰将军" class="headerlink" title="◆ 林峰将军"></a>◆ 林峰将军</h3><blockquote>
+<p>有时你飞到了头，却发现还不如中间掉下来<br>我们也许可以硬扭着方程式搞出一个牵强的数学模型，但直觉告诉我那不是真的。它能量施放的选择性和穿透性这类不可思议的特性，确实不是传统理论能解释的。”<br>球状闪电并不是由闪电产生的，而是自然界早已存在的一种结构。”<br>林将军是哈军工的高才生</p>
+</blockquote>
+<h3 id="◆-雷球"><a href="#◆-雷球" class="headerlink" title="◆ 雷球"></a>◆ 雷球</h3><blockquote>
+<p>我们都是凡人，虽然我们用超过常人的努力去探寻，可我们还是凡人，只能在基础理论提供的框架中进行推演，不可能越雷池半步，否则就像步入没有空气的虚空一样，但在这个框架中，我们什么也推演不出来</p>
+</blockquote>
+<h3 id="◆-宏电子"><a href="#◆-宏电子" class="headerlink" title="◆ 宏电子"></a>◆ 宏电子</h3><blockquote>
+<p>我知道，有很多人为解决这个自然之谜进行了艰苦的努力，其中包括陈博士和林少校这样的人。他们用尽毕生精力，把那些电磁和流体方程式缠扭到令人头晕目眩的程度，使它们接近断裂的极限；再打上一个摞一个的补丁，以补上到处出现的漏洞；架上一根又一根额外的支杆，以撑住那摇摇欲坠的大厦；最后出现的是一个庞大复杂、奇丑无比的东西……陈博士，知道你们失败在什么地方吗？你们不是想得不够复杂，而是想得不够简单。”<br> 这话我在林云的父亲那里也听到过，两个不同领域的超人在这个高度上不谋而合。</p>
+</blockquote>
+<h3 id="◆-武器"><a href="#◆-武器" class="headerlink" title="◆ 武器"></a>◆ 武器</h3><blockquote>
+<p>我无所谓，我所研究的东西，尺度要么在十的负三十次方厘米以下，要么在一百亿光年以上，在这两个尺度上，地球和人类都微不足道。”<br> “生命微不足道吗？”<br> “从物理学的角度看，生命这种物质运动形式，与其他的物质运动相比并没有更高的含义，从生命中你找不到新的物理规律，所以从我的角度看，一个人的死与一块冰的消融没有本质的区别。陈博士，你这人有时候想得太多，你应该学会从宇宙终极规律的角度看待生活，这样过得就舒服多了</p>
+</blockquote>
+<h3 id="◆-观察者"><a href="#◆-观察者" class="headerlink" title="◆ 观察者"></a>◆ 观察者</h3><blockquote>
+<p>是的，但观察的强度是有极大区别的，摄下影像是强观察，而地面的沙粒被震离原位只是弱观察，弱观察也能引起量子状态的坍缩，但很微小。”</p>
+</blockquote>
+<h3 id="◆-异象之四"><a href="#◆-异象之四" class="headerlink" title="◆ 异象之四"></a>◆ 异象之四</h3><blockquote>
+<p>被烧毁的CPU和内存条也像宏电子那样处于量子态？</p>
+</blockquote>
+<h3 id="◆-“珠峰号”沉没"><a href="#◆-“珠峰号”沉没" class="headerlink" title="◆ “珠峰号”沉没"></a>◆ “珠峰号”沉没</h3><blockquote>
+<p>珠峰号’航母战斗群在海上遭遇大批巡航导弹的袭击</p>
+</blockquote>
+<h3 id="◆-海上伏击"><a href="#◆-海上伏击" class="headerlink" title="◆ 海上伏击"></a>◆ 海上伏击</h3><blockquote>
+<p>共有三十五艘水面舰只。潜艇的情况还不太清楚，估计有十艘左右的攻击潜艇。下面大家看到的是舰队的队形布局示意图。”大屏幕上出现的图形，像是一个由许多长条形棋子组成的复杂棋局。“这是我们的伏击队形。”在示意图中敌舰队行进方向的两侧，出现了两排小点，每排二十五个。“大家按这个图形，就很容易确定自己的负责的目标。这里要说明：敌舰队进入近海后，可能要改变队形，不过目前显示的已经是典型的近海防御布局，估计变动不会太大，到时候各火力点依实际情况重新调整目标。<br>“这里要特别强调打击的重点：我刚才了解了一下，大家一致认为打击重点是航母。陆军的同志这样想还情有可原，但有些海军的同志也持这个想法就很可笑了，记住：不要理会航母，打击的重点是巡洋舰！它们是舰队宙斯盾防御系统电子部分的主干和控制中心，然后是驱逐舰，它们是防御系统的有机组成部分，只要这些一瘫痪，整个舰队就是一堆案板上的肉了！同时，从位置上看，它们也是距离各火力点最近的，如果不顾外围先打核心的舰母，那后果不堪设想。再重复一遍：航母是肉，巡洋舰和驱逐舰是舰队的骨头！对每艘巡洋舰，至少要分配八百发，每艘驱逐舰一百五十至两百发。”<br>大屏幕上出现了一幅一艘军舰的纵剖面图，显示出的内部结构复杂得令人目眩。接着从舰桥上延伸出一条绿线，弯弯曲曲地贯穿了大部分舰体，像一条舰体内的蛔虫。<br> “这是一艘提康德罗加级巡洋舰的剖面图，这条绿线就是雷球机枪的扫射路线。”<br> 那条弯曲绿线上的不同位置出现了许多小圆圈，每个圆圈旁边都有一个数字。<br> “现在标出的是重点打击部位，旁边的数字是该部位建议分配的雷球数量。刚刚给你们每人发的那本图册，就是敌舰队所有舰只的剖面图和相应的扫射路线，这么点时间都背下来不可能，每人重点记住自己负责的目标。对于陆军的同志，理解这幅图的原理困难一些，只好死记硬背了。但我可以简单地说明：对于巡洋舰和驱逐舰重点打击其宙斯盾的计算机系统。下面请武器系统技术负责人再补充一些细节。”林云走到前面说：“该说的我们在北京训练中心都已经说过了，这里我只想再提醒大家一次：按照雷球机枪的平均射速，你们对每个目标的射击将在四十秒至一分钟的时间内完成，这是相当长的一段时间。所以大家不要慌，雷球的弹道很清晰，你们就像用普通机枪打曳光弹那样，先把稳定的弹道建立起来，再开始移动弹着点进行扫射。<br>“舰队造成的尾浪是一大问题，我们的船都很小，因而造成的波动肯定影响射击。当敌舰队完全进入伏击海域时，伏击线的前半部分还没有尾浪，后半部分的尾浪已基本平息，所以射击时受影响最大的是伏击线的中部，我们在那里部署的是最熟练的火力小组，他们曾在海上训练过，对在海浪的颠簸中射击较有经验……这些本来应该进行更长时间的训练，但来不及了，只能靠大家战场上发挥了！”</p>
+</blockquote>
+<blockquote>
+<p>它们是防御系统的有机组成部分，只要这些一瘫痪，整个舰队就是一堆案板上的肉了！同时，从位置上看，它们也是距离各火力点最近的，如果不顾外围先打核心的舰母，那后果不堪设想。再重复一遍：航母是肉，巡洋舰和驱逐舰是舰队的骨头！对每艘巡洋舰，至少要分配八百发，每艘驱逐舰一百五十至两百发。</p>
+</blockquote>
+<h3 id="◆-宏聚变"><a href="#◆-宏聚变" class="headerlink" title="◆ 宏聚变"></a>◆ 宏聚变</h3><blockquote>
+<p>电话另一端沉默了两秒钟，也只有两秒钟，林将军语气平静地问：“这需要请示吗？”</p>
+</blockquote>
+<h3 id="◆-林云之二"><a href="#◆-林云之二" class="headerlink" title="◆ 林云之二"></a>◆ 林云之二</h3><blockquote>
+<p>的，随着我的成长，我对音乐、文学和艺术之美的认识和敏感已超过了大多数同龄人，而这种能力对我最大的意义，就是让我在更深的层次上感受到武器之美，我意识到，那些能让大多数人陶冶性情的美是软弱无力的，真正的美要有内在的力量来支撑，它是通过像恐惧和残酷这类更有穿透力的感觉来展现自己的，你能够从它获得力量，也可能死在它上面，武器将这种美体现得最为淋漓尽致。从此，我对武器的迷恋便上升到美学和哲学高度，这大概是我上高中的时候，而这一升华，别伤心爸爸，确实是您帮我完成的。”</p>
+</blockquote>
+<h3 id="◆-量子玫瑰"><a href="#◆-量子玫瑰" class="headerlink" title="◆ 量子玫瑰"></a>◆ 量子玫瑰</h3><blockquote>
+<p>那个超级观察者觉察到我们对它的觉察了<br>从量子力学的角度来讲，人的死亡过程就是由一个强观察者变为弱观察者再变为非观察者的过程，当我变成弱观察者时，玫瑰的概率云向毁灭态的坍缩速度就会慢一些，我就有希望看到它。</p>
+</blockquote>
+<h3 id="◆-后记"><a href="#◆-后记" class="headerlink" title="◆ 后记"></a>◆ 后记</h3><blockquote>
+<p>是1981年夏季作者在河北邯郸市的一次大雷雨中的亲眼所见，地点是中华路南头，当时那里还比较僻静，向前走就是大片农田了。</p>
+</blockquote>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
+        
+        <a class="post-tag button" href="../../../../tags/%E8%AF%BB%E4%B9%A6/" rel="tag"><i class="fas fa-tags"></i>读书</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../../08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" rel="next" title="Code-server配置方法"><i class="fas fa-angle-left"></i><span class="nav-title">Code-server配置方法</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="../../08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/" rel="prev" title="N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建"><span class="nav-title">N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "球状闪电阅读摘抄",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">29</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">26</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">48</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84"><span class="toc-text">球状闪电阅读摘抄</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%BA%8F%E6%9B%B2"><span class="toc-text">◆ 序曲</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%A4%A7%E5%AD%A6"><span class="toc-text">◆ 大学</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5"><span class="toc-text">◆ 球状闪电</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%9E%97%E4%BA%91%E4%B9%8B%E4%B8%80"><span class="toc-text">◆ 林云之一</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%BC%A0%E5%BD%AC"><span class="toc-text">◆ 张彬</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%99%B4%E7%A9%BA%E9%9C%B9%E9%9B%B3"><span class="toc-text">◆ 晴空霹雳</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-SETI-home"><span class="toc-text">◆ SETI@home</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E8%A5%BF%E4%BC%AF%E5%88%A9%E4%BA%9A"><span class="toc-text">◆ 西伯利亚</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E7%81%AF%E5%A1%94%E5%90%AF%E7%A4%BA"><span class="toc-text">◆ 灯塔启示</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%9E%97%E5%B3%B0%E5%B0%86%E5%86%9B"><span class="toc-text">◆ 林峰将军</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E9%9B%B7%E7%90%83"><span class="toc-text">◆ 雷球</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%AE%8F%E7%94%B5%E5%AD%90"><span class="toc-text">◆ 宏电子</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%AD%A6%E5%99%A8"><span class="toc-text">◆ 武器</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E8%A7%82%E5%AF%9F%E8%80%85"><span class="toc-text">◆ 观察者</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%BC%82%E8%B1%A1%E4%B9%8B%E5%9B%9B"><span class="toc-text">◆ 异象之四</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E2%80%9C%E7%8F%A0%E5%B3%B0%E5%8F%B7%E2%80%9D%E6%B2%89%E6%B2%A1"><span class="toc-text">◆ “珠峰号”沉没</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%B5%B7%E4%B8%8A%E4%BC%8F%E5%87%BB"><span class="toc-text">◆ 海上伏击</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%AE%8F%E8%81%9A%E5%8F%98"><span class="toc-text">◆ 宏聚变</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E6%9E%97%E4%BA%91%E4%B9%8B%E4%BA%8C"><span class="toc-text">◆ 林云之二</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E9%87%8F%E5%AD%90%E7%8E%AB%E7%91%B0"><span class="toc-text">◆ 量子玫瑰</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E2%97%86-%E5%90%8E%E8%AE%B0"><span class="toc-text">◆ 后记</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

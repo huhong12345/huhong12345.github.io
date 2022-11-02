@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>虚无主义思考 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">虚无主义思考</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-08-23T14:51:16+08:00">2022-08-23 14:51:16</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/%E5%93%B2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">哲学</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="虚无主义"><a href="#虚无主义" class="headerlink" title="虚无主义"></a>虚无主义</h2><h3 id="虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。"><a href="#虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。" class="headerlink" title="虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。"></a>虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。</h3><h3 id="用哲学的话语来讲，就是主体丧失了把自己的生命组织起来，把自己的精神动员起来的能力"><a href="#用哲学的话语来讲，就是主体丧失了把自己的生命组织起来，把自己的精神动员起来的能力" class="headerlink" title="用哲学的话语来讲，就是主体丧失了把自己的生命组织起来，把自己的精神动员起来的能力"></a>用哲学的话语来讲，就是主体丧失了把自己的生命组织起来，把自己的精神动员起来的能力</h3><h3 id="尼采曾说过，虚无主义意味着最高价值的自我贬黜和自我扬弃。虚无主义代表着由启蒙运动的方案开发出来现代世界，有着根本的缺陷，而它现在难以为继了，支撑着现代世界的那些原则，走向了自我否定。"><a href="#尼采曾说过，虚无主义意味着最高价值的自我贬黜和自我扬弃。虚无主义代表着由启蒙运动的方案开发出来现代世界，有着根本的缺陷，而它现在难以为继了，支撑着现代世界的那些原则，走向了自我否定。" class="headerlink" title="尼采曾说过，虚无主义意味着最高价值的自我贬黜和自我扬弃。虚无主义代表着由启蒙运动的方案开发出来现代世界，有着根本的缺陷，而它现在难以为继了，支撑着现代世界的那些原则，走向了自我否定。"></a>尼采曾说过，虚无主义意味着最高价值的自我贬黜和自我扬弃。虚无主义代表着由启蒙运动的方案开发出来现代世界，有着根本的缺陷，而它现在难以为继了，支撑着现代世界的那些原则，走向了自我否定。</h3><p>人们不相信宗教、党派、主义可以将祖国重新粘合。</p>
+<p>当一件事的难度大到不可想象时，革命者走向瓦解，艺术家们就容易走向荒诞与自嘲，把革命民族宗教体质全数打翻解构，最后只剩下虚空。漂泊的土地和理想成了再也无法实现的乡愁幻梦。</p>
+<h2 id="资产阶级法权"><a href="#资产阶级法权" class="headerlink" title="资产阶级法权"></a>资产阶级法权</h2><p>劳动创造了价值，劳动者创造了产品，二者却又被剥离开来，资产阶级法权主导了这种剥离，又将其所拥有的全部社会力量精确地定位了劳动者的身份和社会地位，使劳动者自以为合理合法地“参与”到了自由市场中，此时的劳动者失去了一切封建的依附关系，自由到只有主动接受剥削才能生存，他们不得不出卖更多的劳动来换取显然低于自身劳动量的生活资料，并且沉醉在自我折磨、主动要求剥削的“奋斗”之中，人与人之间通过包含等量劳动的物质交换的平等关系被消费主义的面纱所掩盖，人们追逐着明星娱乐网红产品不亦乐乎，永远地忘记了自己作为商品监护人、劳动所有者的身份，欢呼着跪倒在自己创造的物质世界面前，仿佛资本主义世界早已产生也将永恒地存在下去。</p>
+<h2 id="天道"><a href="#天道" class="headerlink" title="天道"></a>天道</h2><p>修行以行制性，悟道以性施行。</p>
+<p>觉者由心生律，修者以律制心。</p>
+<p>所谓真经，就是能够达到寂空涅碦的究竟法门，可悟不可修。修为成佛，在求。悟为明性，在知。修行以行制性，悟道以性施行，觉者由心生律，修者以律制心。不落恶果者有信无证，住因住果、住念住心，如是生灭。不昧因果者无住而住，无欲无不欲，无戒无不戒，如是涅碦。</p>
+<p>透视社会依次为三个层面：技术、制度和文化，小到一个人，大到一个国家，一个民族，任何一种命运归根到底都是那种文化属性的产物，强势文化造就强者，弱势文化造就弱者，这是规律，也可以理解为天道，不以人的意志为转移”；“”。强势文化就是遵循事物规律的文化，弱势文化就是依赖强者的道德期望破格获取的文化”；“中国为什么穷，穷就穷在幼稚的思维，穷在期望救主、期望救恩的文化上，这是一个渗透到民族骨子里的价值判断体系，太可怕了”。</p>
+<p>如果一个民族的文化从骨子里就是弱势文化属性，怎么可能去承载强势文化的政治、经济？衡量一种文化属性不是看他积淀的时间长短，而是看他与客观规律的距离。五千年的文化是光辉的，是灿烂的，这个没有问题。但是传统和习俗得过过客观规律的筛子”。中国是文明古国，几千年的文化为世界文明做出了贡献，但在近代工业革命的浪潮中落后了，特别是二战后，西方的经济、科技突飞猛进，我们跟在后面举步维艰；改革开放迎来曙光，技术进步了，制度改良了，但几千年弱势文化的根扎得太深，靠恩典吃饭、凑付过日子的思想绵延太长。因此，诸多现象还是弱势文化的反映：嘴上要民主，给你民主也不会用，看着人家议会打仗直摇头；上面政策不对、做法不好，别人能接受咱也不作声；下岗心里难受，领上一袋面一瓶油愁云就没了；碰上不公或骗子，忍了最好，讨个说法摆不平还得忍。老祖宗留下的宝贝大部分是孔孟文化，中国老百姓脑里装着“君臣父子”、“仁义道德”，面朝黄土背朝天几千年。但仁人志士自古有之，鲁迅是现代撞击弱势文化的旗手，孙中山赶跑了皇帝，从此，中国文化属性有变化了，这是东西文化交流的缘故。现在，到西方留学、参观、旅游者，回来后都说外国好，岂不知除了文化差异我们绝不差，这个差异是在哲学、政治、经济领域强弱文化的反映不同。</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E6%80%9D%E8%80%83/" rel="tag"><i class="fas fa-tags"></i>思考</a>
+        
+        <a class="post-tag button" href="../../../../tags/%E5%93%B2%E5%AD%A6/" rel="tag"><i class="fas fa-tags"></i>哲学</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/" rel="next" title="Dang政体制思辨"><i class="fas fa-angle-left"></i><span class="nav-title">Dang政体制思辨</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="../../30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" rel="prev" title="Code-server配置方法"><span class="nav-title">Code-server配置方法</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "虚无主义思考",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">29</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">26</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">48</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89"><span class="toc-text">虚无主义</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89%E7%94%A8%E5%A4%A7%E7%99%BD%E8%AF%9D%E8%AE%B2%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%88%91%E6%89%BE%E4%B8%8D%E5%88%B0%E7%94%9F%E6%B4%BB%E7%9A%84%E7%90%86%E7%94%B1%EF%BC%8C%E6%84%8F%E4%B9%89%E5%92%8C%E7%9B%AE%E7%9A%84%E4%BA%86%E3%80%82"><span class="toc-text">虚无主义用大白话讲，就是我找不到生活的理由，意义和目的了。</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%94%A8%E5%93%B2%E5%AD%A6%E7%9A%84%E8%AF%9D%E8%AF%AD%E6%9D%A5%E8%AE%B2%EF%BC%8C%E5%B0%B1%E6%98%AF%E4%B8%BB%E4%BD%93%E4%B8%A7%E5%A4%B1%E4%BA%86%E6%8A%8A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%9F%E5%91%BD%E7%BB%84%E7%BB%87%E8%B5%B7%E6%9D%A5%EF%BC%8C%E6%8A%8A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%8A%A8%E5%91%98%E8%B5%B7%E6%9D%A5%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-text">用哲学的话语来讲，就是主体丧失了把自己的生命组织起来，把自己的精神动员起来的能力</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%B0%BC%E9%87%87%E6%9B%BE%E8%AF%B4%E8%BF%87%EF%BC%8C%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89%E6%84%8F%E5%91%B3%E7%9D%80%E6%9C%80%E9%AB%98%E4%BB%B7%E5%80%BC%E7%9A%84%E8%87%AA%E6%88%91%E8%B4%AC%E9%BB%9C%E5%92%8C%E8%87%AA%E6%88%91%E6%89%AC%E5%BC%83%E3%80%82%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89%E4%BB%A3%E8%A1%A8%E7%9D%80%E7%94%B1%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E7%9A%84%E6%96%B9%E6%A1%88%E5%BC%80%E5%8F%91%E5%87%BA%E6%9D%A5%E7%8E%B0%E4%BB%A3%E4%B8%96%E7%95%8C%EF%BC%8C%E6%9C%89%E7%9D%80%E6%A0%B9%E6%9C%AC%E7%9A%84%E7%BC%BA%E9%99%B7%EF%BC%8C%E8%80%8C%E5%AE%83%E7%8E%B0%E5%9C%A8%E9%9A%BE%E4%BB%A5%E4%B8%BA%E7%BB%A7%E4%BA%86%EF%BC%8C%E6%94%AF%E6%92%91%E7%9D%80%E7%8E%B0%E4%BB%A3%E4%B8%96%E7%95%8C%E7%9A%84%E9%82%A3%E4%BA%9B%E5%8E%9F%E5%88%99%EF%BC%8C%E8%B5%B0%E5%90%91%E4%BA%86%E8%87%AA%E6%88%91%E5%90%A6%E5%AE%9A%E3%80%82"><span class="toc-text">尼采曾说过，虚无主义意味着最高价值的自我贬黜和自我扬弃。虚无主义代表着由启蒙运动的方案开发出来现代世界，有着根本的缺陷，而它现在难以为继了，支撑着现代世界的那些原则，走向了自我否定。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E8%B5%84%E4%BA%A7%E9%98%B6%E7%BA%A7%E6%B3%95%E6%9D%83"><span class="toc-text">资产阶级法权</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%A4%A9%E9%81%93"><span class="toc-text">天道</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2022</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
