@@ -426,11 +426,11 @@
     <category term="Pytorch" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
     
     
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
-    
     <category term="代码摘抄" scheme="http://huhong.me/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
     
     <category term="Pytorch" scheme="http://huhong.me/tags/Pytorch/"/>
+    
+    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
     
     <category term="更新" scheme="http://huhong.me/tags/%E6%9B%B4%E6%96%B0/"/>
     
