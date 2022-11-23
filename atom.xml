@@ -6,7 +6,7 @@
   <link href="http://huhong.me/atom.xml" rel="self"/>
   
   <link href="http://huhong.me/"/>
-  <updated>2022-11-02T10:12:28.745Z</updated>
+  <updated>2022-11-23T04:30:21.091Z</updated>
   <id>http://huhong.me/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>装机日记</title>
+    <link href="http://huhong.me/2022/11/23/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
+    <id>http://huhong.me/2022/11/23/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/</id>
+    <published>2022-11-23T03:07:12.000Z</published>
+    <updated>2022-11-23T04:30:21.091Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自用的win笔记本总是高负载一会就自动关机（拯救者Y7000P，8750H+GTX1060），加上疫情对居家办公的需求很大，很早就想组装一台台式机。目前暂时整理了两个方案：&lt;/p&gt;
+&lt;h3 id=&quot;方案一：&quot;&gt;&lt;a href=&quot;#方案一：&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="装机" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E8%A3%85%E6%9C%BA/"/>
+    
+    
+    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="装机" scheme="http://huhong.me/tags/%E8%A3%85%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>单向度的人</title>
@@ -585,36 +615,6 @@
     <category term="个人思考" scheme="http://huhong.me/tags/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/"/>
     
     <category term="辩证" scheme="http://huhong.me/tags/%E8%BE%A9%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac快捷键介绍</title>
-    <link href="http://huhong.me/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/"/>
-    <id>http://huhong.me/2019/12/03/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/</id>
-    <published>2019-12-03T02:55:03.000Z</published>
-    <updated>2022-11-02T10:12:28.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;很多人不喜欢Mac系统，觉得很多东西不如Windows上手直观。（这让以“简单易用”为宗旨的某公司怎么洗？？）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;主要原因其实是Mac系统的还是有一定的学习成本的（嗯，高贵的Unix贵族绝不屈服&amp;#x2F;🐶</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="Mac" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/Mac/"/>
-    
-    
-    <category term="Mac" scheme="http://huhong.me/tags/Mac/"/>
-    
-    <category term="快捷键" scheme="http://huhong.me/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
