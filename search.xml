@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>NJ68-AP机械键盘说明书</title>
+      <link href="/2023/01/04/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+      <url>/2023/01/04/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2023/01/04/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/1.png"></p><h3 id="无线连接"><a href="#无线连接" class="headerlink" title="无线连接"></a>无线连接</h3><p>①长按 FN+Q 组合键3秒，键盘进入配对状态，Q指示灯快闪。<br>②打开蓝牙，选中BT5.0KB（ win7系统选择BT3.0KB )<br>③设备显示已连接，配对完成。<br>④连接第二台设备，如果手机连接了Q，长按 FN+W 组合键3秒，W指示灯快闪，重复步骤②③。<br>⑤连接第三台设备（例如笔记本），长按 FN+E 组合键3秒，E指示灯快闪，重复步骤②③。<br>⑥同时把连接好的三个设备的蓝牙都打开，通过短按FN+Q&#x2F;W&#x2F;E进行切换设备连接。<br>⑦2.4G连接：打开键盘电源开关，短按FN+R，R键灯光闪烁，把接收器插入电脑USB口即可。</p><h3 id="灯光操作说明"><a href="#灯光操作说明" class="headerlink" title="灯光操作说明"></a>灯光操作说明</h3><ul><li>FN+ESC &#x3D; 切换到灯效&#x2F;背光模式 </li><li>FN+ENTER &#x3D; 切换背光颜色</li><li>FN+退格 &#x3D; 关闭&#x2F;打开灯光（关灯进入省电）</li><li>FN+\ &#x3D; 切换灯效模式</li><li>FN+方向上 &#x3D; 调高亮度 FN+方向下 &#x3D; 调低亮度</li><li>FN+方向左 &#x3D; 调慢速度 FN+方向右 &#x3D; 调快速度</li><li>FN+Tab &#x3D; 切换灯光休眠时间,<br>Caps灯闪一下为2分钟<br>Caps灯闪两下为30分钟<br>Caps灯闪三下为不休眠</li></ul><h3 id="FN按键操作说明"><a href="#FN按键操作说明" class="headerlink" title="FN按键操作说明"></a>FN按键操作说明</h3><ul><li>FN+Q&#x2F;W&#x2F;E &#x3D; 切换到蓝牙模式</li><li>Fn+R &#x3D; 切换到2.4G模式 </li><li>FN+T &#x3D; 切换到有线模式</li><li>Fn+Del &#x3D; 静音 </li><li>Fn+Pgup &#x3D; 音量加大 </li><li>Fn+Pgdn &#x3D; 音量减小</li><li>Fn+L &#x3D; 浏览网页 </li><li>FN+C &#x3D; 我的电脑 </li><li>Fn+P &#x3D; Print(截图）</li><li>FN+{[ &#x3D; Home </li><li>Fn+}] &#x3D; End </li><li>FN+I &#x3D; Insert</li><li>FN+Win &#x3D; 锁定&#x2F;解锁Win键</li><li>FN+~ &#x3D; 进入编程的灯光模式（FN+esc退出）</li><li>FN+左ctrl（长按三秒） &#x3D; Caps与左ctrl互换</li><li>FN+M  &#x3D; 进入MAC模式</li><li>FN+F &#x3D; 切换FN多媒体键（需先进入MAC模式）</li></ul><h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><p>1、WIFI信号对蓝牙信号有一定干扰，所以蓝牙接收器不能离wifi信号源太近。<br>2、插拔轴体时不需要很用力，若发现需要大力，可能轴体没对准，请停止操作。不然会导致热插拔底座损坏，焊盘脱落。<br>3、可插线模式下或无线2.4g模式下使用驱动编程软件<br>4、Mac模式进入时，长按两秒，空格闪2下为进入，闪1下为退出。<br>5、Mac模式结果是：左alt和win互换，右alt变成win，右ctrl变成alt。<br>6、同时按下键盘四个角按键3秒( ESC、左ctrl、~、右箭头，恢复出厂设置。</p><h3 id="参考参数"><a href="#参考参数" class="headerlink" title="参考参数"></a>参考参数</h3><ul><li>蓝牙有效范围：15m</li><li>聚合物锂电池：3100 mAH&#x2F;3.7V&#x2F;11.47WH</li><li>电池充满时长：&lt;5h (USB输入电流 1A条件下)</li><li>游戏模式(开灯)：150mA(连续工作约 20h)</li><li>游戏模式(不开灯)：40mA(连续工作约 70h)</li><li>省电模式：10mA(连续工作约 280h)</li><li>USB 有线工作电压：DC 5V</li><li>USB 有线工作电流：30～300mA (不充电状态下)</li><li>净重：730g</li><li>长宽高：316.5 x 109 x 35.5 mm</li></ul><p><img src="/2023/01/04/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/nj68.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+          <category> 机械键盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> 机械键盘 </tag>
+            
+            <tag> 说明书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>装机日记</title>
       <link href="/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
       <url>/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/</url>
