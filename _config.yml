@@ -14,12 +14,14 @@ timezone: ''
 
 ## 网址##
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://huhong12345.github.io
-root: /
+#url: https://huhong12345.github.io
+url: http://huhong.me/
+#root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
+  trailing_index: true # Set to false to remove 
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 date_format: YYYY-MM-DD # 日期时间格式
 time_format: HH:mm:ss ## Use post's date for updated date unless set in front-matter
 use_date_for_updated: false
@@ -33,7 +35,8 @@ category_dir: categories  #分类文件夹
 code_dir: downloads/code  
 i18n_dir: :lang
 skip_render:
-include: #	Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 . 开头的文件和文件夹，Hexo 的 _posts 和 _data 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 source 目录下。
+include: 
+#Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 . 开头的文件和文件夹，Hexo 的 _posts 和 _data 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 source 目录下。
 exclude:  #Hexo 会忽略这些文件和目录
 ignore:
 default_category: uncategorized # 分类&标签
@@ -53,9 +56,9 @@ new_post_name: :title.md # 新文章文件名称
 default_layout: post   #预设布局
 titlecase: false # 
 filename_case: 0
-render_drafts: false
+render_drafts: true
 post_asset_folder: true
-relative_link: false
+relative_link: true
 future: true
 highlight:
   enable: true
@@ -105,3 +108,10 @@ deploy:
     github: https://github.com/huhong12345/huhong12345.github.io
 #    coding: https://e.coding.net/MaximeHu/MaximeHu.git
   branch: master
+
+backup:
+  type: git
+  theme: aria
+  repository:
+      github: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup
+      gitcafe: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup

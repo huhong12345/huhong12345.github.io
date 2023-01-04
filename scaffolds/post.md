@@ -1,8 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: 心情
+tags:
+- 生活
 categories:
-- 日记
-- 心情
+- 生活
 ---

@@ -1,0 +1,24 @@
+tar -zcvf ../blog-backup-20230105.tar.gz --exclude=*.deploy_git* --exclude=*node_modules* --exclude=*public* --exclude=*.git* --exclude=*db.json*  ../Blog
+
+
+个人备份习惯
+hexo clean
+git add .
+git commit -m "Backup"
+git push
+hexo g
+hexo d
+
+
+_config.yml站点的配置文件，需要拷贝；
+themes/主题文件夹，需要拷贝；
+source博客文章的.md文件，需要拷贝；
+scaffolds/文章的模板，需要拷贝；
+package.json安装包的名称，需要拷贝；
+.gitignore限定在push时哪些文件可以忽略，需要拷贝；
+
+.git/主题和站点都有，标志这是一个git项目，不需要拷贝；
+node_modules/是安装包的目录，在执行npm install的时候会重新生成，不需要拷贝；
+public是hexo g生成的静态网页，不需要拷贝；
+.deploy_git同上，hexo g也会生成，不需要拷贝；
+db.json文件，不需要拷贝。
