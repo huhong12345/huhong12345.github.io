@@ -245,7 +245,7 @@
     <main class="post-main" itemprop="articleBody">
       
       
-      方法一：下载源码，直接软连接目前Node最新版本为16.15.1，npm 8.11.0。但通过： 1$ sudo apt install nodejs 安装的并不是最新版（目前安装下来的Node为v8.10.0，npm为3.5.2）。此时可以选择下下来后去进行软连接的思路。 登陆官网https://nodejs.org/en/download/ ，下载源码 接下来解压，cd进目录检查此包内node版本 1234$ tar xf node-v16.15.1-linux-x64.tar.xz // 解压$ cd node-v16.15.1-linux-x64/ // 进入解压目录$ ./bin/node -v // 执行node命令 查
+      方法零(2023年1月5日更新)使用nvm安装nodejs，这是一个非常好的node.js版本管理器，例如 123456789101112nvm use 16#Now using node v16.9.1 (npm v7.21.1)node -v#v16.9.1nvm use 14#Now using node v14.18.0 (npm v6.14.15)node -v#v14.18.0nvm install 12#Now using node v12.22.6 (npm v6.14.5)node -v#v12.22.6 NVM的仓库在https://github.com/nvm-sh/nvm 上，安装方法为： 123curl -
       
     </main>
     <footer class="post-footer">
