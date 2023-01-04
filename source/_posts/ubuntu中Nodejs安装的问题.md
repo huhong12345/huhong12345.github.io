@@ -8,7 +8,49 @@ tags:
 - Linux
 - Nodejs
 ---
+## 方法零(2023年1月5日更新)
+使用nvm安装nodejs，这是一个非常好的node.js版本管理器，例如
+```bash
+nvm use 16
+#Now using node v16.9.1 (npm v7.21.1)
+node -v
+#v16.9.1
+nvm use 14
+#Now using node v14.18.0 (npm v6.14.15)
+node -v
+#v14.18.0
+nvm install 12
+#Now using node v12.22.6 (npm v6.14.5)
+node -v
+#v12.22.6
+```
+NVM的仓库在https://github.com/nvm-sh/nvm 上，安装方法为：
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+#或者
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+如果下载不动，可能是GitHub的raw.githubusercontent.com域名解析被污染了，通过修改hosts解决此问题。可在https://www.ipaddress.com/ 查询raw.githubusercontent.com的真实IP。
 
+修改hosts：
+```shell
+sudo vim /etc/hosts
+```
+输入：
+```shell
+199.232.96.133 raw.githubusercontent.com
+```
+
+查看nvm是否安好：
+```shell
+nvm --version
+```
+确认安好后，输入下命令即可：
+```shell
+sudo apt-get remove nodejs
+nvm install 16.15.1
+```
+参考：https://stackoverflow.com/questions/72921215/getting-glibc-2-28-not-found
 
 ## 方法一：下载源码，直接软连接
 目前Node最新版本为16.15.1，npm 8.11.0。但通过：

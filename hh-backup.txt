@@ -1,7 +1,7 @@
 tar -zcvf ../blog-backup-20230105.tar.gz --exclude=*.deploy_git* --exclude=*node_modules* --exclude=*public* --exclude=*.git* --exclude=*db.json*  ../Blog
 
 
-个人备份习惯
+个人备份习惯（Github切换到hexo 为默认）
 hexo clean
 git add .
 git commit -m "Backup"
