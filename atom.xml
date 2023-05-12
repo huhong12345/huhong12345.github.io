@@ -6,7 +6,7 @@
   <link href="http://huhong.me/atom.xml" rel="self"/>
   
   <link href="http://huhong.me/"/>
-  <updated>2023-01-03T21:06:00.698Z</updated>
+  <updated>2023-05-12T09:44:57.493Z</updated>
   <id>http://huhong.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu安装Overleaf Server端</title>
+    <link href="http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/"/>
+    <id>http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/</id>
+    <published>2023-05-12T09:20:41.000Z</published>
+    <updated>2023-05-12T09:44:57.493Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本博客的核心在于通过docker拉取完整版的texlive环境，即：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Transmission Web端实现过程</title>
@@ -490,11 +516,11 @@
     <category term="Pytorch" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
     
     
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
-    
     <category term="代码摘抄" scheme="http://huhong.me/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
     
     <category term="Pytorch" scheme="http://huhong.me/tags/Pytorch/"/>
+    
+    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
     
     <category term="更新" scheme="http://huhong.me/tags/%E6%9B%B4%E6%96%B0/"/>
     
@@ -590,37 +616,6 @@
     <category term="剪视频" scheme="http://huhong.me/tags/%E5%89%AA%E8%A7%86%E9%A2%91/"/>
     
     <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>部分个人影评合集（保持更新）</title>
-    <link href="http://huhong.me/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>http://huhong.me/2020/02/10/%E9%83%A8%E5%88%86%E5%BD%B1%E8%AF%84%E5%90%88%E9%9B%86%EF%BC%88%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
-    <published>2020-02-10T14:31:45.000Z</published>
-    <updated>2022-11-02T10:12:28.757Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：&quot;&gt;&lt;a href=&quot;#寒假看的一些电影，有的是之前看过，现在重新看一遍，写了几个小影评：&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="影评" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E5%BD%B1%E8%AF%84/"/>
-    
-    
-    <category term="更新" scheme="http://huhong.me/tags/%E6%9B%B4%E6%96%B0/"/>
-    
-    <category term="个人影评" scheme="http://huhong.me/tags/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E8%AF%84/"/>
-    
-    <category term="整理合集" scheme="http://huhong.me/tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/"/>
     
   </entry>
   

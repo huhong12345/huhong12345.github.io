@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ubuntu安装Overleaf Server端</title>
+      <link href="/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/"/>
+      <url>/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/</url>
+      
+        <content type="html"><![CDATA[<p>本博客的核心在于通过docker拉取完整版的texlive环境，即：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull tuetenk0pp/sharelatex-full<br></code></pre></td></tr></table></figure><p>‍具体为：</p><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>打开 &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;docker.list​，添加内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vi /etc/apt/sources.list.d/docker.list<br>deb [<span class="hljs-built_in">arch</span>=amd64] https://download.docker.com/linux/ubuntu bionic stable<br></code></pre></td></tr></table></figure><p>更新并安装docker-ce：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install docker-ce<br></code></pre></td></tr></table></figure><p>查看是否安装成功：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker --version<br></code></pre></td></tr></table></figure><p>出现Docker version 20.10.7, build f0df350字样，即安装成功。此处也可参照清华镜像站等手段安装docker:</p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/">https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/</a></p><h2 id="安装-docker-Compose"><a href="#安装-docker-Compose" class="headerlink" title="安装 docker-Compose"></a>安装 docker-Compose</h2><p>进入 <a href="https://github.com/docker/compose/releases%60%E2%80%8B%E6%9F%A5%E7%9C%8B%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC%E4%B8%BA1.29.2">https://github.com/docker/compose/releases`​查看最新版本，当前版本为1.29.2</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`<span class="hljs-built_in">uname</span> -s`-`<span class="hljs-built_in">uname</span> -m` -o /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure><p>设置权限:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chmod</span> +x /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure><p>一般来说，无科学环境github上得较慢，故也可以用pip安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pip install docker-compose<br></code></pre></td></tr></table></figure><p>若显示sudo下没有pip，则sudo apt install  python-pip</p><p>查看是否安装成功:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose --version<br></code></pre></td></tr></table></figure><p>出现类似docker-compose version 1.29.2, build 5becea4c即可。</p><h2 id="安装Overleaf的完整docker镜像"><a href="#安装Overleaf的完整docker镜像" class="headerlink" title="安装Overleaf的完整docker镜像"></a>安装Overleaf的完整docker镜像</h2><p>docker权限问题，添加docker用户组：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#添加docker用户组</span><br>sudo groupadd docker<br>      <br><span class="hljs-comment">#将登陆用户加入到docker用户组中</span><br>sudo gpasswd -a <span class="hljs-variable">$USER</span> docker <br>      <br><span class="hljs-comment">#更新用户组</span><br>newgrp docker <br></code></pre></td></tr></table></figure><p>接着从<a href="https://raw.githubusercontent.com/Tuetenk0pp/sharelatex-full/master/docker-compose.yml">https://raw.githubusercontent.com/Tuetenk0pp/sharelatex-full/master/docker-compose.yml</a> 下载Overleaf配置文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/Tuetenk0pp/sharelatex-full/blob/master/docker-compose.yml<br>vi docker-compose.yml<br></code></pre></td></tr></table></figure><p>需要修改的就是ports: - 80:80​，一般80端口都被apache或nginx占用了，改用其他端口如：ports: - 62728:80。同时记得更新ufw防火墙。</p><p>其他可根据需要修改，如项目名称（SHARELATEX_APP_NAME）、挂载位置等。</p><p>如果已经通过docker安装Overleaf的开源版本sharelatex，可以接着安装完整texlive，即先进入docker容器，在docker中安装编译所需的完整的texlive:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull sharelatex/sharelatex<br>docker <span class="hljs-built_in">exec</span> -it sharelatex bash<br>tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/<br>tlmgr update --self --all<br>tlmgr install scheme-full &amp;<br></code></pre></td></tr></table></figure><p>安装过程较长漫长，为了避免shell断掉加上 &amp;，回车后可以看到安装过程。可重复再执行update和install。</p><h2 id="启动Overleaf"><a href="#启动Overleaf" class="headerlink" title="启动Overleaf"></a>启动Overleaf</h2><p>在docker-compose.yml​所在路径下执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose up -d<br></code></pre></td></tr></table></figure><h2 id="使用Overleaf"><a href="#使用Overleaf" class="headerlink" title="使用Overleaf"></a>使用Overleaf</h2><p>打开浏览器访问 <a href="http://hostname:5000/launchpad">http://hostname:5000/launchpad</a></p><p>创建完成Admin账户，即可。</p><p>‍</p><p>‍</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>1、原始配置文件：<a href="https://raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml">https://raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml</a></p><p>2、<a href="https://www.xiaoledeng.com/2021/06/03/ubuntu-install-overleaf-sharelatex/">https://www.xiaoledeng.com/2021/06/03/ubuntu-install-overleaf-sharelatex/</a></p><p>3、<a href="https://junbin.gitbook.io/studynotes/overleaf-da-jian">https://junbin.gitbook.io/studynotes/overleaf-da-jian</a></p><p>4、<a href="https://zhuanlan.zhihu.com/p/593690031">https://zhuanlan.zhihu.com/p/593690031</a></p><p>5、<a href="https://xlz.pub/2023/01/10/Ubuntu%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BASharelatex-Overleaf%E5%BC%80%E6%BA%90%E7%89%88%E6%9C%AC-%E5%B9%B6%E9%85%8D%E7%BD%AENginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">https://xlz.pub/2023/01/10/Ubuntu%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BASharelatex-Overleaf%E5%BC%80%E6%BA%90%E7%89%88%E6%9C%AC-%E5%B9%B6%E9%85%8D%E7%BD%AENginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</a></p><p>‍</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Transmission Web端实现过程</title>
       <link href="/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/"/>
       <url>/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
@@ -465,11 +490,11 @@
       
         <tags>
             
-            <tag> DL </tag>
-            
             <tag> 代码摘抄 </tag>
             
             <tag> Pytorch </tag>
+            
+            <tag> DL </tag>
             
             <tag> 更新 </tag>
             
@@ -827,13 +852,13 @@
       
         <tags>
             
+            <tag> DL </tag>
+            
             <tag> Python </tag>
             
             <tag> 编程 </tag>
             
             <tag> 练习 </tag>
-            
-            <tag> DL </tag>
             
         </tags>
       

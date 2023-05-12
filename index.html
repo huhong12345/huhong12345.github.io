@@ -208,6 +208,59 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://huhong.me2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/" itemprop="url">ubuntu安装Overleaf Server端</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-05-12T17:20:41+08:00">2023-05-12 17:20:41</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      本博客的核心在于通过docker拉取完整版的texlive环境，即： 1docker pull tuetenk0pp/sharelatex-full ‍具体为： 安装docker打开 &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;docker.list​，添加内容： 12sudo vi /etc/apt/sources.list.d/docker.listdeb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable 更新并安装docker-ce： 12sudo apt-get updatesudo apt-ge
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://huhong.me2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="MaximeHu">
@@ -817,61 +870,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://huhong.me2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/" itemprop="url">Github-Pages+CheapName域名配置</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2021-08-02T17:19:25+08:00">2021-08-02 17:19:25</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/" itemprop="url" rel="index"><span itemprop="name">域名</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      整体思路个人Blog是使用Hexo+Github Pages搭建的。Pages的域名都是默认https://github.com/XXX/XXX.github.io。 如果要绑定域名，需要在域名解析服务商和Github两边都完成操作。具体思路为：1、在域名解析商处注册个人域名，并配置域名解析，将域名绑定到个人的XXX.github.io2、在github pages设置页面配置CNAME文件重定向到解析商得到的域名。类似于双向握手，两边信息匹配握手成功即可。 域名解析配置这里使用的是Namecheap上注册的域名，官网是https://www.namecheap.com/ 。 如果有Github认证学生身份，可以在GitHub St
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="tags/Github/" rel="tag"><i class="fas fa-tags"></i>Github</a>
-        
-        <a class="post-tag button" href="tags/%E5%9F%9F%E5%90%8D/" rel="tag"><i class="fas fa-tags"></i>域名</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><a class="extend next" rel="next" href="page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -918,7 +916,7 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="archives/">32</a></div>
+      <div><a href="archives/">33</a></div>
     </div>
     
     

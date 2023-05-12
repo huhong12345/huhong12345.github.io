@@ -161,7 +161,7 @@
     </script>
     
     <script defer type="text/javascript" src="../../../../js/custom.js"></script>
-    <title>Code-server配置方法 | My Personal Blog - 不积跬步无以至千里</title>
+    <title>ubuntu安装Overleaf Server端 | My Personal Blog - 不积跬步无以至千里</title>
   <meta name="generator" content="Hexo 5.4.1"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -218,11 +218,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">Code-server配置方法</h1>
+      <h1 class="post-title" itemprop="name headline">ubuntu安装Overleaf Server端</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-08-30T17:07:30+08:00">2022-08-30 17:07:30</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-05-12T17:20:41+08:00">2023-05-12 17:20:41</time></span>
         </span>
         
         
@@ -231,7 +231,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span>
         </span>
         
         
@@ -240,67 +240,62 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>一般来说，Vscode可由<a target="_blank" rel="noopener" href="https://vscode.dev/">https://vscode.dev</a> ，在浏览器中运行一个轻量化的编辑器，支持在本地机器打开文件夹并开始工作。这里支持文件系统访问 API（目前的 Edge 和 Chrome）的现代浏览器允许网页访问本地文件系统（在你的许可下）。（图片来自官网）</p>
-<p><img src="/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/code.png"></p>
-<p>这个简单的本地机器网关，快速打开了一些使用 VS Code for the Web 作为零安装本地开发工具的有趣场景，例如：</p>
-<p>1、本地文件查看和编辑。在 Markdown 中快速记笔记（和预览！）。即使你在无法安装完整 VS Code 的受限机器上，仍然可以使用 vscode.dev 查看和编辑本地文件。</p>
-<p>2、结合浏览器工具构建客户端 HTML、JavaScript 和 CSS 应用程序以进行调试。</p>
-<p>3、在 Chromebook 等低功率机器上编辑代码，因为你无法（或者说 “轻松地”）在 Chromebook 安装 VS Code。</p>
-<p>4、在 iPad 上开发。你可以上传 &#x2F; 下载文件（甚至使用 Files 应用程序将它们存储在云中），以及使用内置的 GitHub 存储库扩展远程打开存储库。<br>而且，如果浏览器不支持本地文件系统 API，仍然可以通过浏览器上传和下载单个文件来打开它们。</p>
-<h2 id="在线部署"><a href="#在线部署" class="headerlink" title="在线部署"></a>在线部署</h2><p>如果需要在服务器上部署VSCode服务端，可实现无论什么环境，只需要一台可以上网具有浏览器的设备，也可以方便使用VSCode编辑和运行代码的功能。</p>
-<p>例如针对iPad，它没有Mac上的Code应用程序，但由此即可完成随时随地写代码、维护服务器文件、博客等桌面级功能。VSCode的各种插件甚至可以让它成为一个简易的IDE</p>
-<p>Code-server的Github地址为<a target="_blank" rel="noopener" href="https://github.com/coder/code-server">https://github.com/coder/code-server</a><br>上面强调了其优点是：</p>
-<p>1、在具有一致开发环境的任何设备上编写代码</p>
-<p>2、使用云服务器加速测试、编译、下载等</p>
-<p>3、在旅途中保持电池寿命；所有密集型任务都在您的服务器上运行</p>
-<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><p>具体安装教程可参考：<a target="_blank" rel="noopener" href="https://coder.com/docs/code-server/latest/install%EF%BC%8C%E5%AE%98%E7%BD%91%E4%B8%8A%E6%8F%90%E4%BE%9B%E4%BA%86%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9A">https://coder.com/docs/code-server/latest/install，官网上提供了四种方式：</a></p>
-<p>1、使用安装脚本，它可以自动执行大部分过程，但对网络条件有要求</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -fsSL https://code-server.dev/install.sh | sh<br></code></pre></td></tr></table></figure>
-<p>2、手动安装代码服务器</p>
-<p>3、使用coder&#x2F;coder将代码服务器部署到团队</p>
-<p>4、使用一键式按钮和指南将代码服务器部署到云提供商<br><a target="_blank" rel="noopener" href="https://github.com/coder/deploy-code-server">https://github.com/coder/deploy-code-server</a></p>
-<p>本文主要介绍离线安装包安装。</p>
-<h2 id="具体过程"><a href="#具体过程" class="headerlink" title="具体过程"></a>具体过程</h2><p>最新安装包下载地址<a target="_blank" rel="noopener" href="https://github.com/coder/code-server/releases">https://github.com/coder/code-server/releases</a></p>
-<p>下载完成后，在目录下安装</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dpkg -i code-server_4.6.0_amd64.deb<br></code></pre></td></tr></table></figure>
+      <p>本博客的核心在于通过docker拉取完整版的texlive环境，即：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull tuetenk0pp/sharelatex-full<br></code></pre></td></tr></table></figure>
+<p>‍具体为：</p>
+<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><p>打开 &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;docker.list​，添加内容：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vi /etc/apt/sources.list.d/docker.list<br>deb [<span class="hljs-built_in">arch</span>=amd64] https://download.docker.com/linux/ubuntu bionic stable<br></code></pre></td></tr></table></figure>
 
-<p>先试运行一次，生成配置文件：</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">code-server<br></code></pre></td></tr></table></figure>
+<p>更新并安装docker-ce：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install docker-ce<br></code></pre></td></tr></table></figure>
 
-<p>修改个人的配置文件</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ~/.config/code-server/config.yaml<br></code></pre></td></tr></table></figure>
-<p>端口、密码可自行更改，地址写为0.0.0.0，这样网页可直接访问服务器公网ip:端口号即可访问。</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 远程访问需要把127.0.0.1换成0.0.0.0，端口也可设置</span><br>bind-addr: 0.0.0.0:8080<br> <br><span class="hljs-comment"># 保持默认</span><br>auth: password<br> <br><span class="hljs-comment"># 设置登入密码</span><br>password: ****<br><br><span class="hljs-comment"># 保持默认</span><br>cert: <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
-<p>修改配置文件后，需要重启服务。</p>
-<p>开启服务</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl start code-server@huhong<br></code></pre></td></tr></table></figure>
+<p>查看是否安装成功：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker --version<br></code></pre></td></tr></table></figure>
+<p>出现Docker version 20.10.7, build f0df350字样，即安装成功。此处也可参照清华镜像站等手段安装docker:</p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/">https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/</a></p>
+<h2 id="安装-docker-Compose"><a href="#安装-docker-Compose" class="headerlink" title="安装 docker-Compose"></a>安装 docker-Compose</h2><p>进入 <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases%60%E2%80%8B%E6%9F%A5%E7%9C%8B%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%BD%93%E5%89%8D%E7%89%88%E6%9C%AC%E4%B8%BA1.29.2">https://github.com/docker/compose/releases`​查看最新版本，当前版本为1.29.2</a></p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`<span class="hljs-built_in">uname</span> -s`-`<span class="hljs-built_in">uname</span> -m` -o /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure>
 
-<p>开机自启</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl <span class="hljs-built_in">enable</span> code-server@huhong<br></code></pre></td></tr></table></figure>
+<p>设置权限:</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chmod</span> +x /usr/local/bin/docker-compose<br></code></pre></td></tr></table></figure>
+<p>一般来说，无科学环境github上得较慢，故也可以用pip安装</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pip install docker-compose<br></code></pre></td></tr></table></figure>
+<p>若显示sudo下没有pip，则sudo apt install  python-pip</p>
+<p>查看是否安装成功:</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose --version<br></code></pre></td></tr></table></figure>
+<p>出现类似docker-compose version 1.29.2, build 5becea4c即可。</p>
+<h2 id="安装Overleaf的完整docker镜像"><a href="#安装Overleaf的完整docker镜像" class="headerlink" title="安装Overleaf的完整docker镜像"></a>安装Overleaf的完整docker镜像</h2><p>docker权限问题，添加docker用户组：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#添加docker用户组</span><br>sudo groupadd docker<br>      <br><span class="hljs-comment">#将登陆用户加入到docker用户组中</span><br>sudo gpasswd -a <span class="hljs-variable">$USER</span> docker <br>      <br><span class="hljs-comment">#更新用户组</span><br>newgrp docker <br></code></pre></td></tr></table></figure>
+<p>接着从<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Tuetenk0pp/sharelatex-full/master/docker-compose.yml">https://raw.githubusercontent.com/Tuetenk0pp/sharelatex-full/master/docker-compose.yml</a> 下载Overleaf配置文件：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/Tuetenk0pp/sharelatex-full/blob/master/docker-compose.yml<br>vi docker-compose.yml<br></code></pre></td></tr></table></figure>
+<p>需要修改的就是ports: - 80:80​，一般80端口都被apache或nginx占用了，改用其他端口如：ports: - 62728:80。同时记得更新ufw防火墙。</p>
+<p>其他可根据需要修改，如项目名称（SHARELATEX_APP_NAME）、挂载位置等。</p>
+<p>如果已经通过docker安装Overleaf的开源版本sharelatex，可以接着安装完整texlive，即先进入docker容器，在docker中安装编译所需的完整的texlive:</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull sharelatex/sharelatex<br>docker <span class="hljs-built_in">exec</span> -it sharelatex bash<br>tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/<br>tlmgr update --self --all<br>tlmgr install scheme-full &amp;<br></code></pre></td></tr></table></figure>
 
-<p>到这里就完成了，非常简单。</p>
-<h2 id="其他事项"><a href="#其他事项" class="headerlink" title="其他事项"></a>其他事项</h2><p>1、Code-server相关命令</p>
-<figure class="hljs highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-comment">#启动</span><br>systemctl --user enable --now code-server<br><br><span class="hljs-comment"># 重启</span><br>systemctl --user restart code-server<br><br><span class="hljs-comment"># 查看code-server状态</span><br>systemctl status code-server@root.service<br> <br><span class="hljs-comment"># 查看code-server进程</span><br>ps -aux | grep code-server<br> <br><span class="hljs-comment"># 停止code-server服务</span><br>systemctl stop code-server@root.service<br> <br><span class="hljs-comment"># 杀死code-server进程</span><br>kill &lt;pid&gt;<br></code></pre></td></tr></table></figure>
+<p>安装过程较长漫长，为了避免shell断掉加上 &amp;，回车后可以看到安装过程。可重复再执行update和install。</p>
+<h2 id="启动Overleaf"><a href="#启动Overleaf" class="headerlink" title="启动Overleaf"></a>启动Overleaf</h2><p>在docker-compose.yml​所在路径下执行</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose up -d<br></code></pre></td></tr></table></figure>
 
-<p>2、如果要迁移插件目录</p>
-<p>不同系统下目录分别为：</p>
-<p>Ubuntu+code-server：	~&#x2F;.local&#x2F;share&#x2F;code-server&#x2F;extensions&#x2F;</p>
-<p>linux：	~&#x2F;.vscode&#x2F;extensions,不同发行版可能不同</p>
-<p>windows：	C:&#x2F;Users&#x2F;（你的用户名）&#x2F;.vscode&#x2F;extensions</p>
-<p>Mac	：User&#x2F;（你的用户名）&#x2F;.vscode&#x2F;extensions</p>
-<p>将对应目录的插件迁移过去即可</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#先将插件打包（全选各个插件文件夹然后打包），再使用scp上传</span><br>scp extensions.zip user@host:~/local/share/code-server/extensions/<br><br><span class="hljs-comment">#解压</span><br>unzip extensions.zip<br></code></pre></td></tr></table></figure>
 
-<p>3、开机自启服务相关的参考<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/496990810">https://zhuanlan.zhihu.com/p/496990810</a></p>
+
+<h2 id="使用Overleaf"><a href="#使用Overleaf" class="headerlink" title="使用Overleaf"></a>使用Overleaf</h2><p>打开浏览器访问 <a target="_blank" rel="noopener" href="http://hostname:5000/launchpad">http://hostname:5000/launchpad</a></p>
+<p>创建完成Admin账户，即可。</p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>1、原始配置文件：<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml">https://raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml</a></p>
+<p>2、<a target="_blank" rel="noopener" href="https://www.xiaoledeng.com/2021/06/03/ubuntu-install-overleaf-sharelatex/">https://www.xiaoledeng.com/2021/06/03/ubuntu-install-overleaf-sharelatex/</a></p>
+<p>3、<a target="_blank" rel="noopener" href="https://junbin.gitbook.io/studynotes/overleaf-da-jian">https://junbin.gitbook.io/studynotes/overleaf-da-jian</a></p>
+<p>4、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/593690031">https://zhuanlan.zhihu.com/p/593690031</a></p>
+<p>5、<a target="_blank" rel="noopener" href="https://xlz.pub/2023/01/10/Ubuntu%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BASharelatex-Overleaf%E5%BC%80%E6%BA%90%E7%89%88%E6%9C%AC-%E5%B9%B6%E9%85%8D%E7%BD%AENginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">https://xlz.pub/2023/01/10/Ubuntu%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BASharelatex-Overleaf%E5%BC%80%E6%BA%90%E7%89%88%E6%9C%AC-%E5%B9%B6%E9%85%8D%E7%BD%AENginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</a></p>
+<p>‍</p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="../../../../tags/Code-Online/" rel="tag"><i class="fas fa-tags"></i>Code Online</a>
-        
-        <a class="post-tag button" href="../../../../tags/%E9%85%8D%E7%BD%AE/" rel="tag"><i class="fas fa-tags"></i>配置</a>
+        <a class="post-tag button" href="../../../../tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
         
       </div>
       
@@ -311,12 +306,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="../../23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/" rel="next" title="虚无主义思考"><i class="fas fa-angle-left"></i><span class="nav-title">虚无主义思考</span></a>
+      <a href="../../../01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/" rel="next" title="Transmission Web端实现过程"><i class="fas fa-angle-left"></i><span class="nav-title">Transmission Web端实现过程</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="../../../09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/" rel="prev" title="球状闪电阅读摘抄"><span class="nav-title">球状闪电阅读摘抄</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -343,7 +336,7 @@
       "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "Code-server配置方法",
+      "issue_title": "ubuntu安装Overleaf Server端",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -438,7 +431,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-text">开始</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%9C%A8%E7%BA%BF%E9%83%A8%E7%BD%B2"><span class="toc-text">在线部署</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%85%B7%E4%BD%93%E8%BF%87%E7%A8%8B"><span class="toc-text">具体过程</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%85%B6%E4%BB%96%E4%BA%8B%E9%A1%B9"><span class="toc-text">其他事项</span></a></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85docker"><span class="toc-text">安装docker</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85-docker-Compose"><span class="toc-text">安装 docker-Compose</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%89%E8%A3%85Overleaf%E7%9A%84%E5%AE%8C%E6%95%B4docker%E9%95%9C%E5%83%8F"><span class="toc-text">安装Overleaf的完整docker镜像</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%90%AF%E5%8A%A8Overleaf"><span class="toc-text">启动Overleaf</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E4%BD%BF%E7%94%A8Overleaf"><span class="toc-text">使用Overleaf</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li></ol></div>
     </div>
     
     
