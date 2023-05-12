@@ -210,7 +210,7 @@
       <link itemprop="mainEntityOfPage" href="http://huhong.me">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="MaximeHu">
-       <meta itemprop="description" content="First-year Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
        <meta itemprop="image" content="../../../../images/guidao.jpg">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -231,7 +231,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%BC%96%E7%A8%8B/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
         </span>
         
         
@@ -241,7 +241,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       <p>Transmission是Ubuntu服务器默认的下载工具，但对于服务器开启远程桌面很不方便，这里说明如何安装Web端远程控制。</p>
-<p>部署完成后，使用网页<a href="http://ip:9091的形式访问，ip为你服务器的公网地址，内网下则是局域网ip。">http://ip:9091的形式访问，ip为你服务器的公网地址，内网下则是局域网ip。</a></p>
+<p>部署完成后，使用网页<a target="_blank" rel="noopener" href="http://ip:9091/">http://ip:9091</a>  的形式访问ip为你服务器的公网地址，内网下则是局域网ip。</p>
 <p>安装过程可以用sudo - i</p>
 <h2 id="安装Transmission"><a href="#安装Transmission" class="headerlink" title="安装Transmission"></a>安装Transmission</h2><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common -y<br>sudo add-apt-repository ppa:transmissionbt/ppa<br>sudo apt-get install transmission-daemon -y<br></code></pre></td></tr></table></figure>
 <h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#停止Transmisson后台服务</span><br>systemctl stop transmission-daemon.service<br><span class="hljs-comment">#修改配置文件</span><br>vi /var/lib/transmission-daemon/.config/transmission-daemon/settings.json<br></code></pre></td></tr></table></figure>
@@ -286,7 +286,7 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="../../01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/" rel="next" title="NJ68-AP机械键盘说明书"><i class="fas fa-angle-left"></i><span class="nav-title">NJ68-AP机械键盘说明书</span></a>
+      <a href="../../02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/" rel="next" title="NJ80-AP机械键盘说明书"><i class="fas fa-angle-left"></i><span class="nav-title">NJ80-AP机械键盘说明书</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
@@ -367,7 +367,7 @@
   <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
   
   <h1 class="author-name">MaximeHu</h1>
-  <h2 class="author-description">First-year Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <h2 class="author-description">Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
   <div class="site-count">
     
     
@@ -375,14 +375,14 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="../../../../archives/">33</a></div>
+      <div><a href="../../../../archives/">34</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="../../../../categories/">29</a></div>
+      <div><a href="../../../../categories/">24</a></div>
     </div>
     
     
@@ -438,9 +438,9 @@
       <div><i class="fas fa-link"></i>友情链接</div>
       <ul>
         
-        <li><i class="fas fa-link"></i><a href="http://learn.tsinghua.edu.cn/f/login" target="_blank">清华学堂</a></li>
+        <li><i class="fas fa-link"></i><a href="https://lib.tsinghua.edu.cn/" target="_blank">Library</a></li>
         
-        <li><i class="fas fa-link"></i><a href="http://www.qdaily.com/" target="_blank">好奇心日报</a></li>
+        <li><i class="fas fa-link"></i><a href="https://thu.services/services/" target="_blank">Services</a></li>
         
         <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
         

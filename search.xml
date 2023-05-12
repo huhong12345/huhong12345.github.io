@@ -15,7 +15,7 @@
           
           <category> 编程 </category>
           
-          <category> 服务器 </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -39,14 +39,14 @@
       <link href="/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/"/>
       <url>/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>Transmission是Ubuntu服务器默认的下载工具，但对于服务器开启远程桌面很不方便，这里说明如何安装Web端远程控制。</p><p>部署完成后，使用网页<a href="http://ip:9091的形式访问，ip为你服务器的公网地址，内网下则是局域网ip。">http://ip:9091的形式访问，ip为你服务器的公网地址，内网下则是局域网ip。</a></p><p>安装过程可以用sudo - i</p><h2 id="安装Transmission"><a href="#安装Transmission" class="headerlink" title="安装Transmission"></a>安装Transmission</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common -y<br>sudo add-apt-repository ppa:transmissionbt/ppa<br>sudo apt-get install transmission-daemon -y<br></code></pre></td></tr></table></figure><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#停止Transmisson后台服务</span><br>systemctl stop transmission-daemon.service<br><span class="hljs-comment">#修改配置文件</span><br>vi /var/lib/transmission-daemon/.config/transmission-daemon/settings.json<br></code></pre></td></tr></table></figure><p>在第51行附近修改以下4处</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-string">&quot;rpc-password&quot;</span>: <span class="hljs-string">&quot;填写你的登陆密码&quot;</span>,<br><span class="hljs-string">&quot;rpc-port&quot;</span>: 9091, <span class="hljs-comment">#外网访问端口可以自行更改</span><br><span class="hljs-string">&quot;rpc-username&quot;</span>: <span class="hljs-string">&quot;填写你的登陆账号&quot;</span>,<br><span class="hljs-string">&quot;rpc-whitelist-enabled&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">#默认为true, 如需外网访问最好关</span><br></code></pre></td></tr></table></figure><h2 id="更换Transmission-Web-Control美化主题"><a href="#更换Transmission-Web-Control美化主题" class="headerlink" title="更换Transmission Web Control美化主题"></a>更换Transmission Web Control美化主题</h2><h3 id="获取最新的安装脚本：（使用国内镜像）"><a href="#获取最新的安装脚本：（使用国内镜像）" class="headerlink" title="获取最新的安装脚本：（使用国内镜像）"></a>获取最新的安装脚本：（使用国内镜像）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://gitee.com/culturist/transmission-web-control/raw/master/release/install-tr-control-gitee.sh<br></code></pre></td></tr></table></figure><p>如果提示 https 获取失败，请使用以下命令获取安装脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh --no-check-certificate<br></code></pre></td></tr></table></figure><p>如果提示文件已存在，可以通过 rm install-tr-control-cn.sh 进行删除后再执行下载；或者在 wget 后面添加 -N 参数，如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -N https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh --no-check-certificate<br></code></pre></td></tr></table></figure><h3 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h3><p>添加权限，运行脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install-tr-control-cn.sh<br>bash install-tr-control-cn.sh<br></code></pre></td></tr></table></figure><p>这里运行脚本时我出现了报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">【<span class="hljs-built_in">cp</span>: cannot <span class="hljs-built_in">stat</span> <span class="hljs-string">&#x27;/tmp/tr-web-control/transmission- web-control/src/.&#x27;</span>: No such file or directory】<br></code></pre></td></tr></table></figure><p>检查后发现错误原因在install-tr-control-gitee.sh中185行来源地址与实际地址不符，临时的解决办法是修改install-tr-control-gitee.sh中185行代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">##修改前：</span><br><span class="hljs-built_in">cp</span> -r <span class="hljs-string">&quot;<span class="hljs-variable">$TMP_FOLDER</span>/transmission-web-control/src/.&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$WEB_FOLDER</span>/&quot;</span><br><span class="hljs-comment">##修改后：</span><br><span class="hljs-built_in">cp</span> -r <span class="hljs-string">&quot;<span class="hljs-variable">$TMP_FOLDER</span>/transmission-web-control-v1.6.1-update1/src/.&quot;</span> “<span class="hljs-variable">$WEB_FOLDER</span>/”<br></code></pre></td></tr></table></figure><p>脚本运行正常，输入1，安装最新发布版本。</p><p>安装完成后，用浏览器访问 Transmission Web Interface（如：<a href="http://your_ip:9091/">http://your_ip:9091/</a> ）即可看到新的界面；如果无法看到新界面，可能是浏览器缓存了，请按 Ctrl + F5 强制刷新页面或 清空缓存 后再重新打开；</p><h2 id="启动Transmission后台服务"><a href="#启动Transmission后台服务" class="headerlink" title="启动Transmission后台服务"></a>启动Transmission后台服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#启动服务</span><br>systemctl start transmission-daemon.service<br><span class="hljs-comment">#停止服务</span><br>systemctl stop transmission-daemon.service<br><span class="hljs-comment">#查询运行状态</span><br>systemctl status transmission-daemon.service<br><span class="hljs-comment">#开机自启动</span><br>systemctl <span class="hljs-built_in">enable</span> transmission-daemon.service<br><span class="hljs-comment">#关闭开机自启</span><br>systemctl <span class="hljs-built_in">disable</span> transmission-daemon.service<br></code></pre></td></tr></table></figure><p>到这里博客就结束了。<br><img src="/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/tr.png"></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://zhuanlan.zhihu.com/p/465136042">https://zhuanlan.zhihu.com/p/465136042</a><br>[2] <a href="https://mathpretty.com/15094.html">https://mathpretty.com/15094.html</a><br>[3] <a href="https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN">https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN</a><br>[4] <a href="https://github.com/ronggang/transmission-web-control/issues/583">https://github.com/ronggang/transmission-web-control/issues/583</a></p>]]></content>
+        <content type="html"><![CDATA[<p>Transmission是Ubuntu服务器默认的下载工具，但对于服务器开启远程桌面很不方便，这里说明如何安装Web端远程控制。</p><p>部署完成后，使用网页<a href="http://ip:9091/">http://ip:9091</a>  的形式访问ip为你服务器的公网地址，内网下则是局域网ip。</p><p>安装过程可以用sudo - i</p><h2 id="安装Transmission"><a href="#安装Transmission" class="headerlink" title="安装Transmission"></a>安装Transmission</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install software-properties-common -y<br>sudo add-apt-repository ppa:transmissionbt/ppa<br>sudo apt-get install transmission-daemon -y<br></code></pre></td></tr></table></figure><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#停止Transmisson后台服务</span><br>systemctl stop transmission-daemon.service<br><span class="hljs-comment">#修改配置文件</span><br>vi /var/lib/transmission-daemon/.config/transmission-daemon/settings.json<br></code></pre></td></tr></table></figure><p>在第51行附近修改以下4处</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-string">&quot;rpc-password&quot;</span>: <span class="hljs-string">&quot;填写你的登陆密码&quot;</span>,<br><span class="hljs-string">&quot;rpc-port&quot;</span>: 9091, <span class="hljs-comment">#外网访问端口可以自行更改</span><br><span class="hljs-string">&quot;rpc-username&quot;</span>: <span class="hljs-string">&quot;填写你的登陆账号&quot;</span>,<br><span class="hljs-string">&quot;rpc-whitelist-enabled&quot;</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">#默认为true, 如需外网访问最好关</span><br></code></pre></td></tr></table></figure><h2 id="更换Transmission-Web-Control美化主题"><a href="#更换Transmission-Web-Control美化主题" class="headerlink" title="更换Transmission Web Control美化主题"></a>更换Transmission Web Control美化主题</h2><h3 id="获取最新的安装脚本：（使用国内镜像）"><a href="#获取最新的安装脚本：（使用国内镜像）" class="headerlink" title="获取最新的安装脚本：（使用国内镜像）"></a>获取最新的安装脚本：（使用国内镜像）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://gitee.com/culturist/transmission-web-control/raw/master/release/install-tr-control-gitee.sh<br></code></pre></td></tr></table></figure><p>如果提示 https 获取失败，请使用以下命令获取安装脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh --no-check-certificate<br></code></pre></td></tr></table></figure><p>如果提示文件已存在，可以通过 rm install-tr-control-cn.sh 进行删除后再执行下载；或者在 wget 后面添加 -N 参数，如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -N https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh --no-check-certificate<br></code></pre></td></tr></table></figure><h3 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h3><p>添加权限，运行脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x install-tr-control-cn.sh<br>bash install-tr-control-cn.sh<br></code></pre></td></tr></table></figure><p>这里运行脚本时我出现了报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">【<span class="hljs-built_in">cp</span>: cannot <span class="hljs-built_in">stat</span> <span class="hljs-string">&#x27;/tmp/tr-web-control/transmission- web-control/src/.&#x27;</span>: No such file or directory】<br></code></pre></td></tr></table></figure><p>检查后发现错误原因在install-tr-control-gitee.sh中185行来源地址与实际地址不符，临时的解决办法是修改install-tr-control-gitee.sh中185行代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">##修改前：</span><br><span class="hljs-built_in">cp</span> -r <span class="hljs-string">&quot;<span class="hljs-variable">$TMP_FOLDER</span>/transmission-web-control/src/.&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$WEB_FOLDER</span>/&quot;</span><br><span class="hljs-comment">##修改后：</span><br><span class="hljs-built_in">cp</span> -r <span class="hljs-string">&quot;<span class="hljs-variable">$TMP_FOLDER</span>/transmission-web-control-v1.6.1-update1/src/.&quot;</span> “<span class="hljs-variable">$WEB_FOLDER</span>/”<br></code></pre></td></tr></table></figure><p>脚本运行正常，输入1，安装最新发布版本。</p><p>安装完成后，用浏览器访问 Transmission Web Interface（如：<a href="http://your_ip:9091/">http://your_ip:9091/</a> ）即可看到新的界面；如果无法看到新界面，可能是浏览器缓存了，请按 Ctrl + F5 强制刷新页面或 清空缓存 后再重新打开；</p><h2 id="启动Transmission后台服务"><a href="#启动Transmission后台服务" class="headerlink" title="启动Transmission后台服务"></a>启动Transmission后台服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#启动服务</span><br>systemctl start transmission-daemon.service<br><span class="hljs-comment">#停止服务</span><br>systemctl stop transmission-daemon.service<br><span class="hljs-comment">#查询运行状态</span><br>systemctl status transmission-daemon.service<br><span class="hljs-comment">#开机自启动</span><br>systemctl <span class="hljs-built_in">enable</span> transmission-daemon.service<br><span class="hljs-comment">#关闭开机自启</span><br>systemctl <span class="hljs-built_in">disable</span> transmission-daemon.service<br></code></pre></td></tr></table></figure><p>到这里博客就结束了。<br><img src="/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/tr.png"></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://zhuanlan.zhihu.com/p/465136042">https://zhuanlan.zhihu.com/p/465136042</a><br>[2] <a href="https://mathpretty.com/15094.html">https://mathpretty.com/15094.html</a><br>[3] <a href="https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN">https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN</a><br>[4] <a href="https://github.com/ronggang/transmission-web-control/issues/583">https://github.com/ronggang/transmission-web-control/issues/583</a></p>]]></content>
       
       
       <categories>
           
           <category> 编程 </category>
           
-          <category> 服务器 </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -66,6 +66,37 @@
     
     
     <entry>
+      <title>NJ80-AP机械键盘说明书</title>
+      <link href="/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+      <url>/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/1.jpg"></p><h2 id="蓝牙配对操作方法-首先打开键盘底部的电源开关"><a href="#蓝牙配对操作方法-首先打开键盘底部的电源开关" class="headerlink" title="蓝牙配对操作方法:(首先打开键盘底部的电源开关)"></a>蓝牙配对操作方法:(首先打开键盘底部的电源开关)</h2><p>①长按 FN+1 组合键3秒，键盘进入配对状态，数字1指示灯快闪。<br>②打开移动设备蓝牙（例如手机），选中BT5.0KB（ win7系统选择BT3.0KB ）<br>④连接第二台设备（例如电脑），如果手机连接了1，那我们长按FN+2组合键3秒，数字2指示灯快闪，然后重复步骤②③。<br>⑤连接第三台设备（例如笔记本），长按FN+3组合键3秒，数字3指示灯快闪，然后重复步骤②③。<br>⑥现在同时把连接好的三个设备的蓝牙都打开，通过短按FN+1&#x2F;2&#x2F;3进行切换设备连接。</p><h2 id="2-4G配对操作方法：-首先打开键盘底部的电源开关"><a href="#2-4G配对操作方法：-首先打开键盘底部的电源开关" class="headerlink" title="2.4G配对操作方法：(首先打开键盘底部的电源开关)"></a>2.4G配对操作方法：(首先打开键盘底部的电源开关)</h2><p>打开键盘电源开关，短按FN+4，4键灯光闪烁，把接收器插入电脑USB口即可使用。</p><h2 id="灯光操作说明-有线模式没有休眠设置"><a href="#灯光操作说明-有线模式没有休眠设置" class="headerlink" title="灯光操作说明:(有线模式没有休眠设置)"></a>灯光操作说明:(有线模式没有休眠设置)</h2><ul><li>FN+ESC&#x3D;切换到灯效&#x2F;背光模式 FN+ENTER&#x3D;切换背光颜色</li><li>FN+Backspace&#x3D;关闭&#x2F;打开灯光（关灯后进入省电模式）</li><li>FN+|&#x3D;切换灯效模式（光波、涟漪、雨滴、蛇形、跟随、聚合、正弦波、彩泉涌动、百花争艳、激光、峰回路转、多彩纵横、呼吸、霓虹）</li><li>Caps灯为大小写指示灯,可以通过FN+CAPS改变颜色,但是不能参与灯效。</li><li>FN+Tab&#x3D;切换灯光休眠时间, Caps灯闪一下为2分钟不使用开始休眠,</li><li>Caps灯闪两下为30分钟不使用开始休眠。</li><li>FN+方向上&#x3D;调高亮度 FN+方向下&#x3D;调低亮度</li><li>FN+方向左&#x3D;调慢速度 FN+方向右&#x3D;调快速度</li><li>F12键为电量指示灯:低电量为红色呼吸。充电时为绿色呼吸,充满则指示灯熄灭恢复原来的颜色。</li></ul><h2 id="FN按键操作说明："><a href="#FN按键操作说明：" class="headerlink" title="FN按键操作说明："></a>FN按键操作说明：</h2><ul><li>FN+1&#x2F;2&#x2F;3&#x3D;切换到蓝牙模式</li><li>Fn+4&#x3D;切换到2.4G模式 FN+5&#x3D;切换到有线模式</li><li>Fn+Pgup&#x3D;Home Fn+Pgdn&#x3D;End FN+I&#x3D;Insert</li><li>Fn+L&#x3D;浏览网页 FN+C&#x3D;我的电脑 Fn+P&#x3D;Print(截图）</li><li>FN+Win&#x3D;锁定&#x2F;解锁Win键</li><li>FN+~&#x3D;进入自定义编程的灯光模式（FN+esc退出）</li><li>恢复出厂设置:同时按下键盘四个角按键3秒( ESC、左ctrl、F12、右箭头)</li></ul><h2 id="MAC系统："><a href="#MAC系统：" class="headerlink" title="MAC系统："></a>MAC系统：</h2><ul><li>FN+M（长按两秒，空格闪2下为进入，闪1下为退出）&#x3D;进入苹果MAC系统模式（左alt和win互换，右alt变win，右ctrl变alt）</li><li>FN+F&#x3D;MAC系统切换F区多媒体键&#x2F;标准键（键盘需先进入MAC模式）</li></ul><h2 id="旋钮操作说明："><a href="#旋钮操作说明：" class="headerlink" title="旋钮操作说明："></a>旋钮操作说明：</h2><ul><li>向左旋转&#x3D;调小音量，向右旋转&#x3D;调大音量</li><li>按下去为静音，再按一下恢复音量</li></ul><h2 id="温馨提示："><a href="#温馨提示：" class="headerlink" title="温馨提示："></a>温馨提示：</h2><ol><li>WIFI信号对蓝牙信号有一定干扰，所以蓝牙接收器不能离wifi信号源太近。</li><li>插拔轴体时不需要很用力，当你发现需要很大力时，可能轴体没对准，请停止操作，不然会导致热插拔底座损坏，严重的话会导致焊盘脱落直接废掉PCB。</li><li>驱动使用方式：可插线模式下或无线2.4g模式下使用驱动编程软件</li></ol><h3 id="参考参数"><a href="#参考参数" class="headerlink" title="参考参数"></a>参考参数</h3><ul><li>蓝牙有效范围：15m</li><li>聚合物锂电池：4800 mAH</li><li>电池充满时长：5h (USB输入电流 1A条件下)</li><li>游戏模式(开灯)：200mA(连续工作约 24h)</li><li>省电模式(不开灯)：15mA(连续工作约 320h)</li><li>USB 有线工作电压：DC 5V</li><li>USB 有线工作电流：30～300mA (不充电状态下)</li></ul><p><img src="/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/2.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件 </category>
+          
+          <category> 机械键盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> 机械键盘 </tag>
+            
+            <tag> 说明书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NJ68-AP机械键盘说明书</title>
       <link href="/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
       <url>/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</url>
@@ -75,7 +106,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
           <category> 机械键盘 </category>
           
@@ -106,7 +137,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
           <category> 装机 </category>
           
@@ -137,7 +168,7 @@
           
           <category> 生活 </category>
           
-          <category> 政治 </category>
+          <category> 政治&amp;哲学 </category>
           
       </categories>
       
@@ -164,7 +195,7 @@
       
       <categories>
           
-          <category> 科研 </category>
+          <category> 编程 </category>
           
           <category> Linux </category>
           
@@ -193,7 +224,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
           <category> 软路由 </category>
           
@@ -226,7 +257,7 @@
           
           <category> 生活 </category>
           
-          <category> 读书笔记 </category>
+          <category> 读书&amp;影评 </category>
           
       </categories>
       
@@ -255,16 +286,16 @@
           
           <category> 编程 </category>
           
-          <category> Code </category>
+          <category> Linux </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Code Online </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> VSCode </tag>
             
         </tags>
       
@@ -284,7 +315,7 @@
           
           <category> 生活 </category>
           
-          <category> 哲学 </category>
+          <category> 政治&amp;哲学 </category>
           
       </categories>
       
@@ -313,7 +344,7 @@
           
           <category> 生活 </category>
           
-          <category> 政治 </category>
+          <category> 政治&amp;哲学 </category>
           
       </categories>
       
@@ -342,7 +373,7 @@
           
           <category> 生活 </category>
           
-          <category> 就业 </category>
+          <category> 就业&amp;思考 </category>
           
       </categories>
       
@@ -551,7 +582,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
           <category> Mac </category>
           
@@ -580,9 +611,9 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
-          <category> 剪视频 </category>
+          <category> Mac </category>
           
       </categories>
       
@@ -593,7 +624,7 @@
             
             <tag> 剪视频 </tag>
             
-            <tag> 生活 </tag>
+            <tag> Mac </tag>
             
         </tags>
       
@@ -613,7 +644,7 @@
           
           <category> 生活 </category>
           
-          <category> 影评 </category>
+          <category> 读书&amp;影评 </category>
           
       </categories>
       
@@ -644,7 +675,7 @@
           
           <category> 生活 </category>
           
-          <category> 读书笔记 </category>
+          <category> 读书&amp;影评 </category>
           
       </categories>
       
@@ -673,7 +704,7 @@
           
           <category> 生活 </category>
           
-          <category> 个人思考 </category>
+          <category> 就业&amp;思考 </category>
           
       </categories>
       
@@ -700,7 +731,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 硬件 </category>
           
           <category> Mac </category>
           
@@ -822,7 +853,7 @@
           
           <category> 生活 </category>
           
-          <category> 政治 </category>
+          <category> 政治&amp;哲学 </category>
           
       </categories>
       
@@ -884,7 +915,7 @@
           
           <category> 生活 </category>
           
-          <category> 政治 </category>
+          <category> 政治&amp;哲学 </category>
           
       </categories>
       
@@ -942,7 +973,7 @@
       
       <categories>
           
-          <category> 编程 </category>
+          <category> 博客 </category>
           
           <category> Hexo </category>
           
