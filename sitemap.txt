@@ -89,6 +89,8 @@ http://huhong.me/tags/%E5%93%B2%E5%AD%A6/
 http://huhong.me/tags/%E8%A3%85%E6%9C%BA/
 http://huhong.me/tags/%E4%B8%AA%E4%BA%BA%E5%BD%B1%E8%AF%84/
 http://huhong.me/tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/
+http://huhong.me/tags/ubuntu/
+http://huhong.me/tags/Overleaf/
 http://huhong.me/categories/%E7%BC%96%E7%A8%8B/
 http://huhong.me/categories/%E7%94%9F%E6%B4%BB/
 http://huhong.me/categories/%E5%8D%9A%E5%AE%A2/

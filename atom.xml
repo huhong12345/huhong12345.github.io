@@ -6,7 +6,7 @@
   <link href="http://huhong.me/atom.xml" rel="self"/>
   
   <link href="http://huhong.me/"/>
-  <updated>2023-05-12T09:44:57.493Z</updated>
+  <updated>2023-05-12T10:25:26.408Z</updated>
   <id>http://huhong.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/"/>
     <id>http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/</id>
     <published>2023-05-12T09:20:41.000Z</published>
-    <updated>2023-05-12T09:44:57.493Z</updated>
+    <updated>2023-05-12T10:25:26.408Z</updated>
     
     
       
@@ -35,10 +35,16 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="服务器" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="服务器" scheme="http://huhong.me/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="ubuntu" scheme="http://huhong.me/tags/ubuntu/"/>
+    
+    <category term="Overleaf" scheme="http://huhong.me/tags/Overleaf/"/>
     
   </entry>
   

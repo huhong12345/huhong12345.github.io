@@ -712,6 +712,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://huhong.me/tags/ubuntu/</loc>
+    <lastmod>2023-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huhong.me/tags/Overleaf/</loc>
+    <lastmod>2023-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
