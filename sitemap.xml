@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</loc>
     
     <lastmod>2022-11-02</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</loc>
+    <loc>https://huhong12345.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BCaffe%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94Caffe%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2022-11-02</lastmod>
     
@@ -379,20 +379,6 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huhong12345.github.io/tags/Github/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -401,6 +387,27 @@
   
   <url>
     <loc>https://huhong12345.github.io/tags/%E5%9F%9F%E5%90%8D/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -421,14 +428,21 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/</loc>
+    <loc>https://huhong12345.github.io/tags/%E5%BD%95%E5%B1%8F/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E5%BD%95%E5%B1%8F/</loc>
+    <loc>https://huhong12345.github.io/tags/Linux/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -450,20 +464,6 @@
   
   <url>
     <loc>https://huhong12345.github.io/tags/ESXi/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/tags/Linux/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -638,14 +638,21 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E5%B0%B1%E4%B8%9A/</loc>
+    <loc>https://huhong12345.github.io/tags/C/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://huhong12345.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -666,21 +673,14 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/C/</loc>
+    <loc>https://huhong12345.github.io/tags/%E5%B0%B1%E4%B8%9A/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://huhong12345.github.io/tags/%E9%85%8D%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -752,14 +752,14 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -780,6 +780,13 @@
   </url>
   
   <url>
+    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -787,14 +794,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/</loc>
+    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -822,7 +822,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/Hexo/</loc>
+    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -836,7 +836,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/Hexo/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -851,6 +851,13 @@
   
   <url>
     <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A-%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -878,13 +885,6 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/</loc>
-    <lastmod>2023-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -892,7 +892,7 @@
   </url>
   
   <url>
-    <loc>https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/</loc>
+    <loc>https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
