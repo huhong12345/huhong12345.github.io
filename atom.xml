@@ -3,11 +3,11 @@
   <title>My Personal Blog</title>
   
   <subtitle>不积跬步无以至千里</subtitle>
-  <link href="http://huhong.me/atom.xml" rel="self"/>
+  <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
-  <link href="http://huhong.me/"/>
+  <link href="https://huhong12345.github.io/"/>
   <updated>2023-05-12T12:57:35.670Z</updated>
-  <id>http://huhong.me/</id>
+  <id>https://huhong12345.github.io/</id>
   
   <author>
     <name>MaximeHu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ubuntu安装Overleaf Server端</title>
-    <link href="http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/"/>
-    <id>http://huhong.me/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/</id>
+    <link href="https://huhong12345.github.io/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/"/>
+    <id>https://huhong12345.github.io/2023/05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/</id>
     <published>2023-05-12T09:20:41.000Z</published>
     <updated>2023-05-12T12:57:35.670Z</updated>
     
@@ -35,23 +35,23 @@
     
     
     
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
-    <category term="服务器" scheme="http://huhong.me/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://huhong12345.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="ubuntu" scheme="http://huhong.me/tags/ubuntu/"/>
+    <category term="ubuntu" scheme="https://huhong12345.github.io/tags/ubuntu/"/>
     
-    <category term="Overleaf" scheme="http://huhong.me/tags/Overleaf/"/>
+    <category term="Overleaf" scheme="https://huhong12345.github.io/tags/Overleaf/"/>
     
   </entry>
   
   <entry>
     <title>Transmission Web端实现过程</title>
-    <link href="http://huhong.me/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/"/>
-    <id>http://huhong.me/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</id>
+    <link href="https://huhong12345.github.io/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/"/>
+    <id>https://huhong12345.github.io/2023/01/05/Transmission-Web%E7%AB%AF%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</id>
     <published>2023-01-05T01:40:23.000Z</published>
     <updated>2023-05-12T13:00:56.750Z</updated>
     
@@ -67,23 +67,23 @@
     
     
     
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
-    <category term="远程" scheme="http://huhong.me/tags/%E8%BF%9C%E7%A8%8B/"/>
+    <category term="远程" scheme="https://huhong12345.github.io/tags/%E8%BF%9C%E7%A8%8B/"/>
     
-    <category term="Ubuntu" scheme="http://huhong.me/tags/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://huhong12345.github.io/tags/Ubuntu/"/>
     
-    <category term="服务器" scheme="http://huhong.me/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://huhong12345.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>NJ80-AP机械键盘说明书</title>
-    <link href="http://huhong.me/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
-    <id>http://huhong.me/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
+    <link href="https://huhong12345.github.io/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <id>https://huhong12345.github.io/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
     <published>2023-01-01T18:53:13.000Z</published>
     <updated>2023-05-12T13:18:41.504Z</updated>
     
@@ -99,23 +99,23 @@
     
     
     
-    <category term="硬件" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="机械键盘" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
+    <category term="机械键盘" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
     
     
-    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="机械键盘" scheme="http://huhong.me/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
+    <category term="机械键盘" scheme="https://huhong12345.github.io/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
     
-    <category term="说明书" scheme="http://huhong.me/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <category term="说明书" scheme="https://huhong12345.github.io/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>NJ68-AP机械键盘说明书</title>
-    <link href="http://huhong.me/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
-    <id>http://huhong.me/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
+    <link href="https://huhong12345.github.io/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <id>https://huhong12345.github.io/2023/01/01/NJ68-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/</id>
     <published>2022-12-31T18:53:13.000Z</published>
     <updated>2023-05-12T12:49:36.553Z</updated>
     
@@ -131,23 +131,23 @@
     
     
     
-    <category term="硬件" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="机械键盘" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
+    <category term="机械键盘" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
     
     
-    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="机械键盘" scheme="http://huhong.me/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
+    <category term="机械键盘" scheme="https://huhong12345.github.io/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
     
-    <category term="说明书" scheme="http://huhong.me/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <category term="说明书" scheme="https://huhong12345.github.io/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>装机日记</title>
-    <link href="http://huhong.me/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
-    <id>http://huhong.me/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/</id>
+    <link href="https://huhong12345.github.io/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/"/>
+    <id>https://huhong12345.github.io/2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/</id>
     <published>2022-11-16T03:07:12.000Z</published>
     <updated>2023-05-12T12:49:54.601Z</updated>
     
@@ -163,21 +163,21 @@
     
     
     
-    <category term="硬件" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="装机" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/%E8%A3%85%E6%9C%BA/"/>
+    <category term="装机" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/%E8%A3%85%E6%9C%BA/"/>
     
     
-    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="装机" scheme="http://huhong.me/tags/%E8%A3%85%E6%9C%BA/"/>
+    <category term="装机" scheme="https://huhong12345.github.io/tags/%E8%A3%85%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>单向度的人</title>
-    <link href="http://huhong.me/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/"/>
-    <id>http://huhong.me/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/</id>
+    <link href="https://huhong12345.github.io/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/"/>
+    <id>https://huhong12345.github.io/2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/</id>
     <published>2022-09-20T09:54:39.000Z</published>
     <updated>2023-05-12T12:53:06.737Z</updated>
     
@@ -192,21 +192,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="政治&amp;哲学" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
+    <category term="政治&amp;哲学" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
     
     
-    <category term="政治" scheme="http://huhong.me/tags/%E6%94%BF%E6%B2%BB/"/>
+    <category term="政治" scheme="https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/"/>
     
-    <category term="意识形态" scheme="http://huhong.me/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
+    <category term="意识形态" scheme="https://huhong12345.github.io/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
     
   </entry>
   
   <entry>
     <title>Linux常用命令</title>
-    <link href="http://huhong.me/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://huhong.me/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://huhong12345.github.io/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://huhong12345.github.io/2022/09/16/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2022-09-16T14:56:01.000Z</published>
     <updated>2023-05-12T12:55:11.600Z</updated>
     
@@ -221,21 +221,21 @@
     
     
     
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
-    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
     
-    <category term="Linux" scheme="http://huhong.me/tags/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>N5105软路由——ESXI+iKuai+OpenWrt+黑群晖搭建</title>
-    <link href="http://huhong.me/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/"/>
-    <id>http://huhong.me/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://huhong12345.github.io/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/"/>
+    <id>https://huhong12345.github.io/2022/09/08/N5105%E8%BD%AF%E8%B7%AF%E7%94%B1%E2%80%94%E2%80%94ESXI-iKuai-OpenWrt-%E9%BB%91%E7%BE%A4%E6%99%96%E6%90%AD%E5%BB%BA/</id>
     <published>2022-09-08T03:51:26.000Z</published>
     <updated>2023-05-12T12:49:05.948Z</updated>
     
@@ -250,23 +250,23 @@
     
     
     
-    <category term="硬件" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="软路由" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    <category term="软路由" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     
     
-    <category term="生活" scheme="http://huhong.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="软路由" scheme="http://huhong.me/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    <category term="软路由" scheme="https://huhong12345.github.io/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     
-    <category term="ESXi" scheme="http://huhong.me/tags/ESXi/"/>
+    <category term="ESXi" scheme="https://huhong12345.github.io/tags/ESXi/"/>
     
   </entry>
   
   <entry>
     <title>球状闪电阅读摘抄</title>
-    <link href="http://huhong.me/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/"/>
-    <id>http://huhong.me/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/</id>
+    <link href="https://huhong12345.github.io/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/"/>
+    <id>https://huhong12345.github.io/2022/09/02/%E7%90%83%E7%8A%B6%E9%97%AA%E7%94%B5%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/</id>
     <published>2022-09-02T06:51:16.000Z</published>
     <updated>2023-05-12T12:51:59.984Z</updated>
     
@@ -282,21 +282,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="读书&amp;影评" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6-%E5%BD%B1%E8%AF%84/"/>
+    <category term="读书&amp;影评" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E8%AF%BB%E4%B9%A6-%E5%BD%B1%E8%AF%84/"/>
     
     
-    <category term="摘抄" scheme="http://huhong.me/tags/%E6%91%98%E6%8A%84/"/>
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
     
-    <category term="读书" scheme="http://huhong.me/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://huhong12345.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>Code-server配置方法</title>
-    <link href="http://huhong.me/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
-    <id>http://huhong.me/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</id>
+    <link href="https://huhong12345.github.io/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
+    <id>https://huhong12345.github.io/2022/08/30/Code-server%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</id>
     <published>2022-08-30T09:07:30.000Z</published>
     <updated>2023-05-12T12:56:01.501Z</updated>
     
@@ -311,21 +311,21 @@
     
     
     
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
-    <category term="VSCode" scheme="http://huhong.me/tags/VSCode/"/>
+    <category term="VSCode" scheme="https://huhong12345.github.io/tags/VSCode/"/>
     
-    <category term="配置" scheme="http://huhong.me/tags/%E9%85%8D%E7%BD%AE/"/>
+    <category term="配置" scheme="https://huhong12345.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>虚无主义思考</title>
-    <link href="http://huhong.me/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/"/>
-    <id>http://huhong.me/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/</id>
+    <link href="https://huhong12345.github.io/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/"/>
+    <id>https://huhong12345.github.io/2022/08/23/%E8%99%9A%E6%97%A0%E4%B8%BB%E4%B9%89/</id>
     <published>2022-08-23T06:51:16.000Z</published>
     <updated>2023-05-12T12:54:33.231Z</updated>
     
@@ -340,21 +340,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="政治&amp;哲学" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
+    <category term="政治&amp;哲学" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
     
     
-    <category term="思考" scheme="http://huhong.me/tags/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://huhong12345.github.io/tags/%E6%80%9D%E8%80%83/"/>
     
-    <category term="哲学" scheme="http://huhong.me/tags/%E5%93%B2%E5%AD%A6/"/>
+    <category term="哲学" scheme="https://huhong12345.github.io/tags/%E5%93%B2%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Dang政体制思辨</title>
-    <link href="http://huhong.me/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/"/>
-    <id>http://huhong.me/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/</id>
+    <link href="https://huhong12345.github.io/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/"/>
+    <id>https://huhong12345.github.io/2022/08/20/Dang%E6%94%BF%E4%BD%93%E5%88%B6%E6%80%9D%E8%BE%A8/</id>
     <published>2022-08-20T09:54:39.000Z</published>
     <updated>2023-05-12T12:52:46.097Z</updated>
     
@@ -370,21 +370,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="政治&amp;哲学" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
+    <category term="政治&amp;哲学" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/"/>
     
     
-    <category term="政治" scheme="http://huhong.me/tags/%E6%94%BF%E6%B2%BB/"/>
+    <category term="政治" scheme="https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/"/>
     
-    <category term="意识形态" scheme="http://huhong.me/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
+    <category term="意识形态" scheme="https://huhong12345.github.io/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
     
   </entry>
   
   <entry>
     <title>就业去向分析</title>
-    <link href="http://huhong.me/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/"/>
-    <id>http://huhong.me/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/</id>
+    <link href="https://huhong12345.github.io/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/"/>
+    <id>https://huhong12345.github.io/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/</id>
     <published>2022-08-11T07:11:32.000Z</published>
     <updated>2023-05-12T12:53:56.390Z</updated>
     
@@ -401,21 +401,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="就业&amp;思考" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A-%E6%80%9D%E8%80%83/"/>
+    <category term="就业&amp;思考" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A-%E6%80%9D%E8%80%83/"/>
     
     
-    <category term="思考" scheme="http://huhong.me/tags/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://huhong12345.github.io/tags/%E6%80%9D%E8%80%83/"/>
     
-    <category term="就业" scheme="http://huhong.me/tags/%E5%B0%B1%E4%B8%9A/"/>
+    <category term="就业" scheme="https://huhong12345.github.io/tags/%E5%B0%B1%E4%B8%9A/"/>
     
   </entry>
   
   <entry>
     <title>Github-Pages+CheapName域名配置</title>
-    <link href="http://huhong.me/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
-    <id>http://huhong.me/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
+    <id>https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</id>
     <published>2021-08-02T09:19:25.000Z</published>
     <updated>2022-11-02T10:12:28.721Z</updated>
     
@@ -430,21 +430,21 @@
     
     
     
-    <category term="博客" scheme="http://huhong.me/categories/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="域名" scheme="http://huhong.me/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/"/>
+    <category term="域名" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/"/>
     
     
-    <category term="Github" scheme="http://huhong.me/tags/Github/"/>
+    <category term="Github" scheme="https://huhong12345.github.io/tags/Github/"/>
     
-    <category term="域名" scheme="http://huhong.me/tags/%E5%9F%9F%E5%90%8D/"/>
+    <category term="域名" scheme="https://huhong12345.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>ubuntu中Nodejs安装的问题</title>
-    <link href="http://huhong.me/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://huhong.me/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <link href="https://huhong12345.github.io/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://huhong12345.github.io/2021/07/03/ubuntu%E4%B8%ADNodejs%E5%AE%89%E8%A3%85%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2021-07-03T09:19:25.000Z</published>
     <updated>2023-01-04T20:26:24.721Z</updated>
     
@@ -459,21 +459,21 @@
     
     
     
-    <category term="博客" scheme="http://huhong.me/categories/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="Nodejs" scheme="http://huhong.me/categories/%E5%8D%9A%E5%AE%A2/Nodejs/"/>
+    <category term="Nodejs" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/Nodejs/"/>
     
     
-    <category term="Linux" scheme="http://huhong.me/tags/Linux/"/>
+    <category term="Linux" scheme="https://huhong12345.github.io/tags/Linux/"/>
     
-    <category term="Nodejs" scheme="http://huhong.me/tags/Nodejs/"/>
+    <category term="Nodejs" scheme="https://huhong12345.github.io/tags/Nodejs/"/>
     
   </entry>
   
   <entry>
     <title>学术论文句式整理(保持更新)</title>
-    <link href="http://huhong.me/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/"/>
-    <id>http://huhong.me/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/</id>
+    <link href="https://huhong12345.github.io/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/"/>
+    <id>https://huhong12345.github.io/2020/10/02/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F%E6%95%B4%E7%90%86/</id>
     <published>2020-10-02T09:31:28.000Z</published>
     <updated>2022-11-02T10:12:28.753Z</updated>
     
@@ -488,23 +488,23 @@
     
     
     
-    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
     
-    <category term="论文写作" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
+    <category term="论文写作" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
     
     
-    <category term="总结与摘抄" scheme="http://huhong.me/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
+    <category term="总结与摘抄" scheme="https://huhong12345.github.io/tags/%E6%80%BB%E7%BB%93%E4%B8%8E%E6%91%98%E6%8A%84/"/>
     
-    <category term="写作" scheme="http://huhong.me/tags/%E5%86%99%E4%BD%9C/"/>
+    <category term="写作" scheme="https://huhong12345.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="保持更新" scheme="http://huhong.me/tags/%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0/"/>
+    <category term="保持更新" scheme="https://huhong12345.github.io/tags/%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>厦门&amp;鼓浪屿</title>
-    <link href="http://huhong.me/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/"/>
-    <id>http://huhong.me/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/</id>
+    <link href="https://huhong12345.github.io/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/"/>
+    <id>https://huhong12345.github.io/2020/07/25/%E5%8E%A6%E9%97%A8&amp;%E9%BC%93%E6%B5%AA%E5%B1%BF/</id>
     <published>2020-07-24T18:11:03.000Z</published>
     <updated>2022-11-02T10:12:28.745Z</updated>
     
@@ -520,21 +520,21 @@
     
     
     
-    <category term="生活" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="心情&amp;日记" scheme="http://huhong.me/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/"/>
+    <category term="心情&amp;日记" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%BF%83%E6%83%85-%E6%97%A5%E8%AE%B0/"/>
     
     
-    <category term="心情" scheme="http://huhong.me/tags/%E5%BF%83%E6%83%85/"/>
+    <category term="心情" scheme="https://huhong12345.github.io/tags/%E5%BF%83%E6%83%85/"/>
     
-    <category term="照片" scheme="http://huhong.me/tags/%E7%85%A7%E7%89%87/"/>
+    <category term="照片" scheme="https://huhong12345.github.io/tags/%E7%85%A7%E7%89%87/"/>
     
   </entry>
   
   <entry>
     <title>PyTorch常用代码段合集（保持更新）</title>
-    <link href="http://huhong.me/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/"/>
-    <id>http://huhong.me/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/</id>
+    <link href="https://huhong12345.github.io/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/"/>
+    <id>https://huhong12345.github.io/2020/06/29/PyTorch%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E5%90%88%E9%9B%86/</id>
     <published>2020-06-29T15:13:44.000Z</published>
     <updated>2022-11-02T10:12:28.737Z</updated>
     
@@ -549,25 +549,25 @@
     
     
     
-    <category term="科研" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/"/>
+    <category term="科研" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/"/>
     
-    <category term="Pytorch" scheme="http://huhong.me/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
+    <category term="Pytorch" scheme="https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/Pytorch/"/>
     
     
-    <category term="代码摘抄" scheme="http://huhong.me/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
+    <category term="代码摘抄" scheme="https://huhong12345.github.io/tags/%E4%BB%A3%E7%A0%81%E6%91%98%E6%8A%84/"/>
     
-    <category term="Pytorch" scheme="http://huhong.me/tags/Pytorch/"/>
+    <category term="Pytorch" scheme="https://huhong12345.github.io/tags/Pytorch/"/>
     
-    <category term="DL" scheme="http://huhong.me/tags/DL/"/>
+    <category term="DL" scheme="https://huhong12345.github.io/tags/DL/"/>
     
-    <category term="更新" scheme="http://huhong.me/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="https://huhong12345.github.io/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>多路电梯算法调度的解决思路——类设计角度</title>
-    <link href="http://huhong.me/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/"/>
-    <id>http://huhong.me/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</id>
+    <link href="https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/"/>
+    <id>https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</id>
     <published>2020-06-21T12:34:01.000Z</published>
     <updated>2022-11-02T10:12:28.753Z</updated>
     
@@ -583,23 +583,23 @@
     
     
     
-    <category term="编程" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="C++" scheme="http://huhong.me/categories/%E7%BC%96%E7%A8%8B/C/"/>
+    <category term="C++" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/"/>
     
     
-    <category term="C++" scheme="http://huhong.me/tags/C/"/>
+    <category term="C++" scheme="https://huhong12345.github.io/tags/C/"/>
     
-    <category term="面向对象编程" scheme="http://huhong.me/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
+    <category term="面向对象编程" scheme="https://huhong12345.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="电梯调度算法" scheme="http://huhong.me/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
+    <category term="电梯调度算法" scheme="https://huhong12345.github.io/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Mac录制屏内声音教程</title>
-    <link href="http://huhong.me/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/"/>
-    <id>http://huhong.me/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/</id>
+    <link href="https://huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/"/>
+    <id>https://huhong12345.github.io/2020/02/18/Mac%E5%B1%8F%E5%86%85%E5%BD%95%E5%88%B6%E6%95%99%E7%A8%8B/</id>
     <published>2020-02-18T12:31:22.000Z</published>
     <updated>2023-05-12T12:49:25.233Z</updated>
     
@@ -615,14 +615,14 @@
     
     
     
-    <category term="硬件" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/"/>
+    <category term="硬件" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
     
-    <category term="Mac" scheme="http://huhong.me/categories/%E7%A1%AC%E4%BB%B6/Mac/"/>
+    <category term="Mac" scheme="https://huhong12345.github.io/categories/%E7%A1%AC%E4%BB%B6/Mac/"/>
     
     
-    <category term="Mac" scheme="http://huhong.me/tags/Mac/"/>
+    <category term="Mac" scheme="https://huhong12345.github.io/tags/Mac/"/>
     
-    <category term="录屏" scheme="http://huhong.me/tags/%E5%BD%95%E5%B1%8F/"/>
+    <category term="录屏" scheme="https://huhong12345.github.io/tags/%E5%BD%95%E5%B1%8F/"/>
     
   </entry>
   
