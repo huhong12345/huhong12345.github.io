@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>PT&NAS梳理 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">PT&NAS梳理</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2023-11-15T16:15:48+08:00">2023-11-15 16:15:48</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/PT%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">PT站</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>PT (Private Tracker) 是一种基于私有 BT Tracker 服务器的资源传播形式，经授权的用户使用受允许的客户端进行种子制作与下载。相较于传统 BT 和 emule，PT 站往往采取了严格的邀请制度以及免责制度来规避法律风险，同时要求用户客户端开启传输加密以绕过运营商的检测策略。当然，从实际上来说 PT 站的运营、使用仍然是违反了各国版权法的。</p>
+<p>可以把PT看作是BT的改进版，拥有约束机制，下载速度有保证。在拥有BT所有功能的同时，需要靠上传量和下载量等获取等级权限，以获得下载资源的资格，多多上传资源是保持会员身份和享受下载资源权益的不二法门，保持一定的分享率才能保障不被PT站删除账号。由于PT站是在私密范围内进行种子分享，所以在PT站内下载种子至少需要满足2个条件，即PT站注册帐号和专用下载软件。其实，每一个PT站点，都有自己独一无二的属性，不是千篇一律的，根据你的需要可选择加入不同的PT站点。PT站就是一个在网络上的虚拟组织，有注册用户、管理员和资源种子，也有行为规则和考核机制……，是一个“人人为我，我为人人”的资源共享圈子。</p>
+<p>许多高清爱好者聚集在 PT 站，发布翻录的蓝光原盘、CD 资源以及录制的高清卫星电视讯号；得益于 Netflix、HBO、Apple TV 等高清流媒体在线视频平台的发展，近年也出现了一些 WEB-DL (Download from Web) 资源。目前国内使用的 PT 站源码大部分为基于浙江大学 xiazuojie 团队所开发的开源整站项目 NexusPHP，基于 PHP + MySQL + memcached。部分站点使用 Discuz! 进行二次开发。</p>
+<p>目前U2 和某些教育网的研发能力是相当高的，基于原版 NexusPHP 做了很多改进，对于新版本客户端也持欢迎态度。某些公网 PT 站属于 one-man 站点，Tracker 经常炸，技术 Bug 修老久，把网络问题甩锅 GFW 等等。建议谨慎选择注册用户数小于 1 万或每周活跃用户数小于 1 千的 PT 站。</p>
+<p>根据网络环境和用户群体，国内 PT 站可以划分为两个系别：教育网 PT 站 和 公网 PT 站。</p>
+<h2 id="教育网-PT-站点"><a href="#教育网-PT-站点" class="headerlink" title="教育网 PT 站点"></a>教育网 PT 站点</h2><p>目前来看教育网 PT 站或多或少获得了学校网络中心的技术和政策支持，所以才能存留至今。部分教育网 PT 站仅允许 IPv6 或仅归属于教育网单位的 IPv6 访问，因此对于公众来说访问有些难度。可以通过 Hurricane Electric 提供的 IPv6 TunnelBroker 隧道，或者基于有 IPv6 网络的 VPS 搭建代理来中转 tracker 的流量。</p>
+<p>高校校园网提供的 IPv4 网络一般是有计费及限速策略的，由校方向电信、联通、移动、鹏博士等运营商采购带宽并在出口实施自动分流。而为了推广 IPv6 业务，各高校所接入的中国教育网（CERNET）的 IPv6 网络一般是不计费且不限速的，因此组建一个依托于 IPv6 的免费资源分享网络有着很大意义。一般来说，教育网 PT 站的原创影视资源较少，大部分为转载资源。Coursera、Udacity 等公开课资源（WEB-DL）、考研视频、电子书等内容较多，此外，北邮人等站点还提供一些诸如 Steam 游戏数据备份文件。</p>
+<p>从分享率和发种规范来看，教育网 PT 站十分宽松，以北邮人（北京邮电大学）、蒲公英（西北工业大学）、极速之星（北京理工大学）和六维空间（东北大学）为主。但保种率可能不如公网 PT 站高，资源也没那么丰富。但对于追热门电影和美剧的轻度用户来说还是足够了。建议初次接触 PT 的用户先从教育网 PT 站（如北邮人、蒲公英）养号，之后通过官方邀请帖等渠道间接进入公网 PT 站。部分 tracker 可能仅允许教育网或 IPv6 连接。入站门槛较低，可以凭借 edu 教育域名的邮箱进行注册，也可以通过校内用户发起邀请。对分享率和种子规范的限制比较宽松。</p>
+<p>目前主要的教育网PT站有：<br>BYR 北邮人：北京邮电大学 PT 站，仅对 IPv6 开放<br>TJUPT 北洋园：天津大学 PT 站<br>NanyangPT 南洋：西安交通大学 PT 站<br>葡萄 PT：上海交通大学 PT 站<br>NPUPT 蒲公英：西北工业大学 PT 站<br>BITPT 极速之星：北京理工大学 PT 站<br>六维空间：东北大学 PT 站<br>NexusHD：浙江大学 PT 站，仅供校内用户访问<br>MTPT 麦田 PT: 西北农林科技大学 PT 站<br>西电睿思：西安电子科技大学 PT 站</p>
+<h2 id="公网-PT-站点"><a href="#公网-PT-站点" class="headerlink" title="公网 PT 站点"></a>公网 PT 站点</h2><p>过去中国五大公网 PT 站：HDS、TTG、HDC、CHD、HDR，也有三大 PT 站的说法，即 CHDbits、HDChina、TTG。后来经过世界版权日风波（即被称作“中国版权第一案”的思路网侵权案），HDStar（思路网）管理组被捕入狱，剩下的站点也多多少少受到了一些影响，有些直接关闭了，有的则隐没了。</p>
+<p>现在国内论坛主要流传五大站、十二大等等说法，其中：<br>五大（馒空岛瓷套）： <strong>馒头（MTeam）、天空（HDSky）、彩虹岛（CHDbits）、HDChina（瓷）、TTG（套）</strong>。<br>九大（堡家朋春）：五大+<strong>我堡（Ourbits）、家园（HDHome）、朋友（KeepFRDS）、春天（SSD）</strong>。<br>十二大加上<strong>猫、柠檬、观众</strong>，柠檬23年5月无了，有的把新来的主打WEB资源站点<strong>憨憨</strong>补充进去，成为新十二大。</p>
+<p>五大里，<strong>TTG</strong>发展很快；九大里，<strong>春天</strong>有点没落，十二大里，<strong>猫站（PTer）</strong>发展最快。<br><img src="/2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/pt.jpg" width="60%" height="60%"></p>
+<p>五大站里。瓷器的特色是高清电视的录制，空的特色是同一资源各种分辨率的种子都有（PAD版本也有），岛的特色是UHD原盘DIY 公映国语&#x2F;台配 国配简繁&#x2F;简繁英特效四字幕 BDJ菜单修改（sGnb），TTG特色是游戏和韩剧。</p>
+<h2 id="主要站点介绍"><a href="#主要站点介绍" class="headerlink" title="主要站点介绍"></a>主要站点介绍</h2><h3 id="五大"><a href="#五大" class="headerlink" title="五大"></a>五大</h3><p>1、馒头（M-team）<br>成立时间非常长了，采用老用户邀请的方式入站，站内有电影、电视剧、音乐、记录片、4K专区，当然，大家也喜欢馒头的一个不可描述的分享，知道的都懂，站内电影比较多，保种人数也比较多，让你下载资源可达到带宽满速，上传量也非常好刷，每周在不可描述区域下载大包就可以刷几百G的流量。官方提供付费邀请码购买渠道。</p>
+<p>2、天空（HDsky）<br>也是老站了，综合性站点，对于国内的电影和电视剧更新比较快，有官方压制、录制等小组，新资源更新很快，高清影视资源比较多，也是通过邀请进入的，不过天空比较难进，在其他站的官窑也有官方直接邀请的贴子，不过要求非常高，不过只要你玩几个月，自然会变成有缘人进入了的。不过2022 年年中，HDSky 突然修改了账号等级制度和保号政策，并上调 VIP 价格，吃相有点难看。</p>
+<p>3、彩虹岛（CHDbits）<br>近 10 年的老站点，影视资源很丰富。主打特效字幕，很多电影都有相应的特效字幕，如果你有这方面的爱好，可以到这个站点，其实进站的难度也是比较高的，除了官窑进入，普通会员需要使用50W的魔力才可以买一个邀请，而且还有可能被连累，所以一般没有人邀请。</p>
+<p>4、瓷器（HDChina）<br>近 10 年的老站，用户数据继承自原先的 HDWinG 和 HDStar。资源方面，官方制作组（HDCTV 和 HDChina）的 Netflix、HBO 剧集，原盘，录制的电视剧比较多。</p>
+<p>5、TTG（totheglory）<br>totheglory在PT界被称为TTG，2014年成立，资源以高清影视、游戏资源为主，老牌特色PT站，圈内名气比较大，TTG 由原 GameGui(GG)演变而成，2010 年 4 月份，Wiki小组加盟后网站改版为TTG,从原来的单一游戏 PT 站，转型为集众多高清影视、游戏、音乐、动漫资源的综合PT站，目前在国内PT中居于前列，影片、游戏、剧集更新速度快。</p>
+<h3 id="其他大站"><a href="#其他大站" class="headerlink" title="其他大站"></a>其他大站</h3><p>1、我堡（Ourbits）<br>2016&#x2F;11&#x2F;1成立，相对来说比较有特色的的一个影视网站，资源主要涵盖影视、动漫、纪录片、综艺及无损音乐等资源。可以说是仅次于五大站（hdsky&#x2F;chdbits&#x2F;mteam&#x2F;hdchina&#x2F;ttg）的一个PT站点。官方制作组作品特效字幕是一大亮点，有些资源下载完还没有来得及看就出了特效字幕版本的话，强烈建议洗版，观影体验会极佳。站内有一个保种专区，应该是做种人数低于特定数值后就进入该区，区内种子都是2xFREE的，激励用户下载，特别是新人做任务，同时也有利于减少网站死种。整体资源数量和质量都不错，如果有机会的话不管手里是否有其他pt站，我堡都值得收割。</p>
+<p>2、家园（HDHome）<br>家园PT站的主要资源在蓝光原盘，官方有专门的压制团队，为一些高清蓝光电影增加字幕等进行二次DIY，站内几乎都是影视资源，小种也只有音轨，如果你的设备比较齐全，非常喜欢看高清蓝光电影，可以入这个站，进入相对容易一些，会转种的话上传量刷的会比较快。</p>
+<p>3、猫站（PT之友PTer）<br>综合性的站点，而且是一些比较轻松的站群，进入相对容易一些，而且几乎是一个玩不死的站点，要求比较低，资源也比较丰富，尤其是新剧更新非常快，各大影视站出了马上就会更新，从猫站的官窑可以进入很多大中型PT站。主打游戏和MV资源。</p>
+<p>4、朋友（KEEPFRDS）<br>KEEPFRDS官方解释为Let us keep friends forever，大家都叫朋友，这个站主要就是影视，主打高清小体积的影视资源，全站都是官种，下些资源几乎都是满速，保种非常好，进入全靠邀请，从猫站、北洋官窑比较容易进入。</p>
+<p>5、春天（SSD，CMCT）<br>2010 年创建的老站点，前身为 CMCT 触摸春天。这个站对于宣传非常严格，不允许任何人去宣传，因此进站不太容易。</p>
+<h3 id="其他中小站"><a href="#其他中小站" class="headerlink" title="其他中小站"></a>其他中小站</h3><p>BT School 比特校园：2019 年刚创建的新站点，门槛相对比较低。<br>HD Time 高清时间：老站点，但是没什么名气。<br>52PT 我爱 PT：新站点。<br>PTHome 铂金家：2018 年左右成立的新站，没啥特色。<br>HDCity 城市：2016 年底成立的新站（相对来说）。<br>NicePT 老师站：又称为小馒头（相对于 M-Team 来说），2019 年建站。<br>CCFBits 精品高清：挺老的大站了，资源很丰富也很低调。<br>HDR (HDRoute)：前身为 HDRoad 思路高清，历史悠久。<br>LeagueHD LemonHD 柠檬：小站中发展的还算不错的，2019 年成立。已于 2023 年 5 月 20 日永久关闭。<br>Haidan 海胆之家：2020 年刚成立的小站。<br>Great Poster Wall (GPW) 海豹: 基于 Gazelle 开发的国内 PT 站，2021 年刚开，没啥特色。<br>HDU 好多油: 2014 年 12 月 27日创建的老站，距今也快 10 年了。知名度很低，资源一般，没什么原创种。<br>还有以动漫资源为主的特色站：<br>U2 动漫花园 幼儿园：老牌动漫 PT 站。各种上古资源都能找到。<br>Skyey Snow 天雪动漫：基于 Discuz! 构建的 PT 站点，相对来说新一些。<br>以音乐资源为主的特色站：<br>OpenCD 皇后 PT：小体积种子比较多，基本靠攒魔力值来保号。<br>DICMusic 海豚音乐: 基于 Gazelle 开发的国内音乐 PT 站，前身是空耳 PT。</p>
+<p>根据@土爹爹整理<a target="_blank" rel="noopener" href="https://www.tudiedie.com/pt-websites.html%EF%BC%8C">https://www.tudiedie.com/pt-websites.html，</a> 可参考如下分类：<br><img src="/2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/tu2.png"></p>
+<h2 id="站点数据"><a href="#站点数据" class="headerlink" title="站点数据"></a>站点数据</h2><p>1、最新的数据可以参考<a target="_blank" rel="noopener" href="https://api.rhilip.info/ptanalytics.html">https://api.rhilip.info/ptanalytics.html</a></p>
+<h3 id="五大站："><a href="#五大站：" class="headerlink" title="五大站："></a>五大站：</h3><p>馒头MTeam：2022: Total Online days: 246 (67.40 %), With Recorded Torrents: 41914, Average 170.38 (Online days), 114.83 (Total Year) torrents per day<br>天空HDSky：2023: Total Online days: 309 (84.66 %), With Recorded Torrents: 56731, Average 183.60 (Online days), 155.43 (Total Year) torrents per day<br>彩虹岛CHDBits：2023: Total Online days: 308 (84.38 %), With Recorded Torrents: 67788, Average 220.09 (Online days), 185.72 (Total Year) torrents per day<br>瓷器HDChina：2023: Total Online days: 305 (83.56 %), With Recorded Torrents: 33475, Average 109.75 (Online days), 91.71 (Total Year) torrents per day<br>套TTG：2023: Total Online days: 310 (84.93 %), With Recorded Torrents: 32989, Average 106.42 (Online days), 90.38 (Total Year) torrents per day</p>
+<h3 id="其他大站-1"><a href="#其他大站-1" class="headerlink" title="其他大站"></a>其他大站</h3><p>我堡（Ourbits）：2023: Total Online days: 310 (84.93 %), With Recorded Torrents: 29111, Average 93.91 (Online days), 79.76 (Total Year) torrents per day<br>家园（HDHome）：2021: Total Online days: 213 (58.36 %), With Recorded Torrents: 12405, Average 58.24 (Online days), 33.99 (Total Year) torrents per day<br>春天（SSD）：2023: Total Online days: 308 (84.38 %), With Recorded Torrents: 31592, Average 102.57 (Online days), 86.55 (Total Year) torrents per day<br>猫站（PTer）：2022: Total Online days: 277 (75.89 %), With Recorded Torrents: 48146, Average 173.81 (Online days), 131.91 (Total Year) torrents per day<br>学校（BTSChool）：2022: Total Online days: 284 (77.81 %), With Recorded Torrents: 16950, Average 59.68 (Online days), 46.44 (Total Year) torrents per day</p>
+<h3 id="教育网"><a href="#教育网" class="headerlink" title="教育网"></a>教育网</h3><p>北邮BYR：2022: Total Online days: 365 (100.00 %), With Recorded Torrents: 12147, Average 33.28 (Online days), 33.28 (Total Year) torrents per day<br>北洋TJUPT：2023: Total Online days: 316 (86.58 %), With Recorded Torrents: 40647, Average 128.63 (Online days), 111.36 (Total Year) torrents per day</p>
+<p>2、根据 @Rhilip 的分析，对按官方种占比排序。数据源日期为 2018&#x2F;4&#x2F;10<a target="_blank" rel="noopener" href="https://blog.rhilip.info/archives/839/">https://blog.rhilip.info/archives/839/</a></p>
+<p><img src="/2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/sj.jpg"></p>
+<h2 id="PT-下载客户端选择"><a href="#PT-下载客户端选择" class="headerlink" title="PT 下载客户端选择"></a>PT 下载客户端选择</h2><p>U2 关于客户端版本的公告<br>不同网站对于 BT 客户端的兼容性不同。尤其是 BitTorrent v2 协议推出后，与旧版本的客户端均不兼容。因此部分 PT 站会拒绝较新版本的 BT 软件。此外，普通的 PT 下载器如 Free Download Manager (FDM)、迅雷、Aria2c 以及 qBittorrent-enhanced 是被严格禁止的。</p>
+<p>99.9% 的 seedbox 用户选择 Rtorrent&#x2F;Rutorrent，因为有些 seedbox provider 只提供这些。<br>大部分 Windows 用户选择了 µTorrent (uTorrent)。但是 uTorrent 3.x&#x2F;4.x 并不稳定，性能也不好，内置了浏览器、工具栏等奇怪的插件。另外一部分用户选择了 qBittorrent。<br>大部分群晖用户会选择 Synology Download Station；而由于糟糕的兼容性，大部分威联通用户会选择封装好的 qBittorrent。还有一部分人用 Transmission。这里更推荐使用 qBittorrent 的 Docker 镜像，方便迁移数据和版本升级等。<br>Linux 用户可能会选择 libtorrent 或 qBittorrent-nox。</p>
+<h2 id="硬盘选择"><a href="#硬盘选择" class="headerlink" title="硬盘选择"></a>硬盘选择</h2><p>推荐购买 WD Ultrastar 和 希捷银河 (Seagate Exos) 这两个系列的硬盘，国行经销商（非京东、淘宝官方店）的购买价格约为 110-130 元&#x2F;TB。几家圈内知名代理商的淘宝店。这几家店价格基本一致，哪家售后好买哪家就行：</p>
+<ul>
+<li>南京梵多</li>
+<li>北京硬盘之家</li>
+<li>上海硬盘公园</li>
+<li>上海坤心</li>
+</ul>
+<p>个人购买的是希捷银河18T（放服务器），和四个4T海康威视的VX0015监控盘（放NAS里）。</p>
+<h2 id="NAS选择"><a href="#NAS选择" class="headerlink" title="NAS选择"></a>NAS选择</h2><h3 id="成品NAS"><a href="#成品NAS" class="headerlink" title="成品NAS"></a>成品NAS</h3><p>1、群晖 (Synology) 和威联通 (QNAP) 总部都位于台湾，但前者的本地化 (localization) 做的明显比后者好，无论是帮助文档、软件的 UI&#x2F;UX 还是云中转隧道服务。特别需要注意的是，群晖在大陆的销售活动实施控价销售，在非官方促销活动时，从淘宝、天猫和京东等平台查看的售价要高于实际经销商售价的几百至几千不等。</p>
+<p>2、群晖在亚马逊美国（美亚）的价格比国内低 20-30%，即使算上关税和运费也比国内目录价便宜几百上千。但需要注意的是海淘群晖无法在大陆享受保修服务，部分淘宝商家可以代为邮寄至香港保修。</p>
+<p>3、威联通 QTS 现在有第三方应用商店 Qnapclub Store，资源相当丰富，更新也很及时。<a target="_blank" rel="noopener" href="https://qnapclub.eu/en">https://qnapclub.eu/en</a></p>
+<p>4、本人目前使用的是威联通464C，CPU是5095内存8G，4个4T硬盘组的raid0；同时有一个N5105的软路由，内置2T固态，有一个黑群晖。平时的照片备份、笔记之类的都还是用UI更好一些的群晖，威联通主要用来存数据和干一些粗活（如PT），相当于双持党。同时照片等一些重要数据，通过内网传输，在两台NAS上做了双备份，最重要的数据，定期上传到云盘或冷备份。个人还是不太相信所谓的Raid。</p>
+<h3 id="替代方案"><a href="#替代方案" class="headerlink" title="替代方案"></a>替代方案</h3><p>只需要本地文件存储的用户，选购移动硬盘配合 OpenWrt 路由的 SMB 共享。<br>有转码、Docker 容器和 KVM 虚拟机等需求的用户，尽量选择自己组装 TrueNAS、UNRAID 等平台。<br>有充足预算，需要代维护的小企业和 SOHO 用户，可以考虑群晖 Synology。<br>傻瓜方案：安装 Ubuntu Server，用 docker 跑 qbittorrent-nox，再装一份 Plex Media Server 就可以了。GPU 转码没什么必要，TV 端和移动端的 Plex 支持本地解码。文件存储用 Seafile 或 NextCloud。备份通过 rclone 同步至 OneDrive 或 Backblaze B2。<br>替代方案有：<br>照片备份 &#x3D;&gt; OneDrive&#x2F;iCloud&#x2F;Google Drive&#x2F;…<br>PT 下载 &#x3D;&gt; qBittorrent&#x2F;libtorrent&#x2F;rtorrent&#x2F;…<br>数据备份 &#x3D;&gt; rclone&#x2F;rsync&#x2F;btrfs-send&#x2F;…<br>文件同步 &#x3D;&gt; OwnCloud&#x2F;NextCloud&#x2F;…<br>文件读写 &#x3D;&gt; Samba&#x2F;nfs-kernel-server&#x2F;…<br>VPN 访问 &#x3D;&gt; ZeroTier&#x2F;WireGuard&#x2F;OpenVPN&#x2F;…<br>虚拟化 &#x3D;&gt; ESXi&#x2F;Docker&#x2F;LXC&#x2F;LXD&#x2F;…</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>除非在特定板块，不要在某个 PT 站提到其他 PT 站点的名字。<br>有些网站管理员非常介意用户流失，或者与其他站点发生过不愉快的事情，因此会对触犯此条例的用户执行封禁。<br>尽可能地尊重发布者，不要在评论区发表不积极的意见。<br>尊重资源发布者是一种美德。触犯此条例可能会获得警告信或者永久封禁。<br>遇到技术问题应先使用搜索引擎检索，而不是当伸手党。<br>网站管理员一般非常反感小白用户的问题。<br>不要作弊<br>由于圈子很小，可能会遭受连锁封禁（被多个站点同时封禁）。你也可以理解为国内 PT 站点有着一个类似 John Wick 里的 High Table（高桌会）组织，会就行为恶劣的事件达成共识。<br>不要持有小号（马甲）<br>管理员一般会基于以下规则来判断马甲账号<br>用户的登录、注册 IP<br>用户客户端上报 Tracker 所使用的 IP<br>用户名及邮箱的命名规律<br>匿名举报<br>谨慎选择邀请人，不要随意向陌生人发送邀请。<br>部分站点对于违反某些规则的用户会采取连坐措施，封禁整个邀请链（树）。<br>不要在公共场合发送、索求邀请码，或者提到网站网址和名称。<br>这个“传统”已经持续近十年了，只不过是自我安慰。</p>
+<h2 id="站点链接"><a href="#站点链接" class="headerlink" title="站点链接"></a>站点链接</h2><p>序号	英文名	中文名	网址	主要资源类型<br>1	mteam	馒头	<a target="_blank" rel="noopener" href="https://kp.m-team.cc/">https://kp.m-team.cc/</a>	影视、XXX、音乐<br>2	hdsky	天空	<a target="_blank" rel="noopener" href="https://hdsky.me/">https://hdsky.me/</a>	影视<br>3	chdbits	彩虹岛	<a target="_blank" rel="noopener" href="https://chdbits.co/">https://chdbits.co/</a>	影视<br>4	TTG	套套哥	<a target="_blank" rel="noopener" href="https://totheglory.im/">https://totheglory.im/</a>	影视、游戏<br>5	hdchina	瓷器	<a target="_blank" rel="noopener" href="https://hdchina.org/">https://hdchina.org/</a>	影视<br>6	ourbits	我堡	<a target="_blank" rel="noopener" href="https://ourbits.club/">https://ourbits.club/</a>	影视<br>7	hdhome	家园	<a target="_blank" rel="noopener" href="https://hdhome.org/">https://hdhome.org/</a>	影视<br>8	HDroute	思路	<a target="_blank" rel="noopener" href="http://hdroute.org/">http://hdroute.org/</a>	影视<br>9	frds	朋友	<a target="_blank" rel="noopener" href="https://pt.keepfrds.com/">https://pt.keepfrds.com/</a>	影视<br>10	SSD&#x2F;cmct	春天	<a target="_blank" rel="noopener" href="https://springsunday.net/">https://springsunday.net/</a>	影视<br>11	lemonhd	柠檬	<a target="_blank" rel="noopener" href="https://lemonhd.org/">https://lemonhd.org/</a>	影视<br>12	hdcity	城市	<a target="_blank" rel="noopener" href="https://hdcity.leniter.org/">https://hdcity.leniter.org/</a>	影视<br>13	btschool	学校	<a target="_blank" rel="noopener" href="https://pt.btschool.club/">https://pt.btschool.club/</a>	影视<br>14	HD Dolby	杜比	<a target="_blank" rel="noopener" href="https://www.hddolby.com/">https://www.hddolby.com/</a>	影视<br>15	Pthome	铂金家	<a target="_blank" rel="noopener" href="https://www.pthome.net/">https://www.pthome.net/</a>	影视<br>16	dmhy&#x2F;U2	幼儿园	<a target="_blank" rel="noopener" href="https://u2.dmhy.org/">https://u2.dmhy.org/</a>	动漫<br>17	HDTime	时间	<a target="_blank" rel="noopener" href="https://hdtime.org/">https://hdtime.org/</a>	影视<br>18	TJUPT	北洋园(天津大学)	<a target="_blank" rel="noopener" href="https://tjupt.org/">https://tjupt.org/</a>	影视、学习<br>19	SJTU	葡萄（上海交通大学）	<a target="_blank" rel="noopener" href="https://pt.sjtu.edu.cn/">https://pt.sjtu.edu.cn/</a>	影视、学习<br>20	HITPT	百川（哈尔滨工业大学）	<a target="_blank" rel="noopener" href="https://www.hitpt.com/">https://www.hitpt.com/</a>	影视、学习<br>21	nanyangpt	南洋（西安交通大学）	<a target="_blank" rel="noopener" href="http://nanyangpt.com/">http://nanyangpt.com/</a>	影视、学习<br>22	unxin&#x2F;HDU	好多油（杭州电子科技大学）	<a target="_blank" rel="noopener" href="https://pt.hdupt.com/">https://pt.hdupt.com/</a>	影视、学习<br>23	HUD	蝴蝶（华中电子科技大学）	<a target="_blank" rel="noopener" href="https://hudbt.hust.edu.cn/">https://hudbt.hust.edu.cn/</a>	影视、学习<br>24	BYRBT	北邮人（北京邮电大学）	<a target="_blank" rel="noopener" href="https://bt.byr.cn/">https://bt.byr.cn/</a>	影视、学习<br>25	neu6	六维空间（东北大学）	<a target="_blank" rel="noopener" href="http://bt.neu6.edu.cn/">http://bt.neu6.edu.cn/</a>	影视、学习<br>26	nwsuaf6	麦田PT（西北农林科技大学）	<a target="_blank" rel="noopener" href="https://pt.nwsuaf6.edu.cn/">https://pt.nwsuaf6.edu.cn/</a>	影视、学习<br>27	NPU	蒲公英（西工大）	<a target="_blank" rel="noopener" href="https://npupt.com/">https://npupt.com/</a>	影视、学习<br>28	HDArea	视界	<a target="_blank" rel="noopener" href="https://www.hdarea.co/">https://www.hdarea.co/</a>	影视<br>29	HD4Fans	兽站	<a target="_blank" rel="noopener" href="https://pt.hd4fans.org/">https://pt.hd4fans.org/</a>	影视<br>30	PTerclub	猫站&#x2F;PT之友	<a target="_blank" rel="noopener" href="https://pterclub.com/">https://pterclub.com/</a>	影视<br>31	TLFBits&#x2F;eastgame	吐鲁番	<a target="_blank" rel="noopener" href="https://pt.eastgame.org/">https://pt.eastgame.org/</a>	影视<br>32	ccfbits	吹吹风	<a target="_blank" rel="noopener" href="https://ccfbits.org/">https://ccfbits.org/</a>	影视<br>33	JoyHD	JoyHD	<a target="_blank" rel="noopener" href="https://www.joyhd.net/">https://www.joyhd.net/</a>	影视<br>34	Ptsbao	烧包	<a target="_blank" rel="noopener" href="https://ptsbao.club/">https://ptsbao.club</a>	影视<br>35	Beitai	备胎	<a target="_blank" rel="noopener" href="https://www.beitai.pt/">https://www.beitai.pt/</a>	影视<br>36	PTMSG	马杀鸡	<a target="_blank" rel="noopener" href="https://pt.msg.vg/">https://pt.msg.vg/</a>	影视<br>37	52PT	我爱PT	<a target="_blank" rel="noopener" href="https://52pt.site/">https://52pt.site/</a>	影视<br>38	HDFans	红豆饭	<a target="_blank" rel="noopener" href="https://hdfans.org/">https://hdfans.org/</a>	影视<br>39	HDZone	空间	<a target="_blank" rel="noopener" href="https://hdzone.me/">https://hdzone.me/</a>	影视<br>40	HaiDan	海胆	<a target="_blank" rel="noopener" href="https://www.haidan.video/">https://www.haidan.video/</a>	影视<br>41	1ptba	壹PT	<a target="_blank" rel="noopener" href="https://1ptba.com/">https://1ptba.com/</a>	影视<br>42	pttime	PT时间	<a target="_blank" rel="noopener" href="https://www.pttime.org/">https://www.pttime.org/</a>	影视<br>43	hdatmos	全景声	<a target="_blank" rel="noopener" href="https://hdatmos.club/">https://hdatmos.club/</a>	影视<br>44	Soulvoice	聆音	<a target="_blank" rel="noopener" href="https://pt.soulvoice.club/">https://pt.soulvoice.club/</a>	电子书、学习<br>45	opencd	皇后	<a target="_blank" rel="noopener" href="https://open.cd/">https://open.cd/</a>	音乐<br>46	DICMusic	海豚音乐	<a target="_blank" rel="noopener" href="https://dicmusic.club/">https://dicmusic.club/</a>	音乐<br>47	NicePT	老师	<a target="_blank" rel="noopener" href="https://www.nicept.net/">https://www.nicept.net/</a>	XXX<br>48	AVGV	艾薇网	<a target="_blank" rel="noopener" href="https://avgv.cc/">https://avgv.cc/</a>	XXX<br>49	HDbd	伊甸园	<a target="_blank" rel="noopener" href="https://pt.hdbd.us/">https://pt.hdbd.us/</a>	XXX<br>50	SkyeySnow	天雪	<a target="_blank" rel="noopener" href="https://www.skyey2.com/">https://www.skyey2.com/</a>	动漫<br>51	DiscFan	港知堂	<a target="_blank" rel="noopener" href="https://discfan.net/">https://discfan.net/</a>	影视<br>52	TCCF&#x2F;torrentccf	他吹吹风	<a target="_blank" rel="noopener" href="https://et8.org/">https://et8.org/</a>	影视<br>53	Audiences	观众	<a target="_blank" rel="noopener" href="https://audiences.me/">https://audiences.me/</a>	影视<br>54	htpt	海棠PT	<a target="_blank" rel="noopener" href="https://www.htpt.cc/">https://www.htpt.cc/</a>	曲艺,小品,有声小说<br>55	GPW	海豹	<a target="_blank" rel="noopener" href="https://greatposterwall.com/">https://greatposterwall.com/</a>	电影<br>56	HDPOST	HDPOST	<a target="_blank" rel="noopener" href="https://pt.hdpost.top/">https://pt.hdpost.top/</a>	电影,电视剧<br>57	hhanclud	憨憨	<a target="_blank" rel="noopener" href="https://hhanclub.top/">https://hhanclub.top/</a>	奈飞4K、爱奇艺4K等影视资源</p>
+<p>参考：<br>[1] 站点：<a target="_blank" rel="noopener" href="https://iecho.cc/2019/01/09/PT-%E4%B8%8B%E8%BD%BD%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%BB%E8%80%81/">https://iecho.cc/2019/01/09/PT-%E4%B8%8B%E8%BD%BD%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%BB%E8%80%81/</a><br>[2] NAS和硬盘选择：<a target="_blank" rel="noopener" href="https://iecho.cc/2022/02/06/beginners-guide-to-private-tracker-3/">https://iecho.cc/2022/02/06/beginners-guide-to-private-tracker-3/</a><br>[3] 药丸论坛：<a target="_blank" rel="noopener" href="https://invites.fun/">https://invites.fun/</a><br>[4] 保种：<a target="_blank" rel="noopener" href="https://reseed.tongyifan.me/">https://reseed.tongyifan.me/</a><br>[5] QnapClub：<a target="_blank" rel="noopener" href="https://qnapclub.eu/en">https://qnapclub.eu/en</a></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
+        
+        <a class="post-tag button" href="../../../../tags/PT%E7%AB%99/" rel="tag"><i class="fas fa-tags"></i>PT站</a>
+        
+        <a class="post-tag button" href="../../../../tags/NAS/" rel="tag"><i class="fas fa-tags"></i>NAS</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../../05/12/ubuntu%E5%AE%89%E8%A3%85Overleaf-Server%E7%AB%AF/" rel="next" title="ubuntu安装Overleaf Server端"><i class="fas fa-angle-left"></i><span class="nav-title">ubuntu安装Overleaf Server端</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "PT&NAS梳理",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">35</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">25</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">58</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%95%99%E8%82%B2%E7%BD%91-PT-%E7%AB%99%E7%82%B9"><span class="toc-text">教育网 PT 站点</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%85%AC%E7%BD%91-PT-%E7%AB%99%E7%82%B9"><span class="toc-text">公网 PT 站点</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E4%B8%BB%E8%A6%81%E7%AB%99%E7%82%B9%E4%BB%8B%E7%BB%8D"><span class="toc-text">主要站点介绍</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BA%94%E5%A4%A7"><span class="toc-text">五大</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%85%B6%E4%BB%96%E5%A4%A7%E7%AB%99"><span class="toc-text">其他大站</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%85%B6%E4%BB%96%E4%B8%AD%E5%B0%8F%E7%AB%99"><span class="toc-text">其他中小站</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%AB%99%E7%82%B9%E6%95%B0%E6%8D%AE"><span class="toc-text">站点数据</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%BA%94%E5%A4%A7%E7%AB%99%EF%BC%9A"><span class="toc-text">五大站：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%85%B6%E4%BB%96%E5%A4%A7%E7%AB%99-1"><span class="toc-text">其他大站</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%95%99%E8%82%B2%E7%BD%91"><span class="toc-text">教育网</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#PT-%E4%B8%8B%E8%BD%BD%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%80%89%E6%8B%A9"><span class="toc-text">PT 下载客户端选择</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%A1%AC%E7%9B%98%E9%80%89%E6%8B%A9"><span class="toc-text">硬盘选择</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#NAS%E9%80%89%E6%8B%A9"><span class="toc-text">NAS选择</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%88%90%E5%93%81NAS"><span class="toc-text">成品NAS</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88"><span class="toc-text">替代方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%AB%99%E7%82%B9%E9%93%BE%E6%8E%A5"><span class="toc-text">站点链接</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://lib.tsinghua.edu.cn/" target="_blank">Library</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://thu.services/services/" target="_blank">Services</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2023</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

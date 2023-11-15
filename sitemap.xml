@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://huhong12345.github.io/2023/11/15/PT%E7%AB%99%E6%A2%B3%E7%90%86/</loc>
+    <loc>https://huhong12345.github.io/2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
@@ -746,6 +746,13 @@
   
   <url>
     <loc>https://huhong12345.github.io/tags/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/tags/NAS/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
