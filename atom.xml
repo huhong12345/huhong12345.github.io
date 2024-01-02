@@ -6,7 +6,7 @@
   <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://huhong12345.github.io/"/>
-  <updated>2023-12-31T15:47:21.065Z</updated>
+  <updated>2024-01-02T16:49:56.740Z</updated>
   <id>https://huhong12345.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux清理系统内存&amp;&amp;QB相关</title>
+    <link href="https://huhong12345.github.io/2024/01/03/Linux%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AD%98/"/>
+    <id>https://huhong12345.github.io/2024/01/03/Linux%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AD%98/</id>
+    <published>2024-01-03T14:56:01.000Z</published>
+    <updated>2024-01-02T16:49:56.740Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;qbittorrent系统占用内存非常大，本篇主要在不中断任何进程或服务的情况下清除缓存。&lt;/p&gt;
+&lt;h2 id=&quot;单次清理&quot;&gt;&lt;a href=&quot;#单次清理&quot; class=&quot;headerlink&quot; title=&quot;单次清理&quot;&gt;&lt;/a&gt;单次清理&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="摘抄" scheme="https://huhong12345.github.io/tags/%E6%91%98%E6%8A%84/"/>
+    
+    <category term="Linux" scheme="https://huhong12345.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>PT&amp;NAS梳理</title>
@@ -592,38 +622,6 @@
     <category term="Pytorch" scheme="https://huhong12345.github.io/tags/Pytorch/"/>
     
     <category term="更新" scheme="https://huhong12345.github.io/tags/%E6%9B%B4%E6%96%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多路电梯算法调度的解决思路——类设计角度</title>
-    <link href="https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/"/>
-    <id>https://huhong12345.github.io/2020/06/21/%E5%A4%9A%E8%B7%AF%E7%94%B5%E6%A2%AF%E7%AE%97%E6%B3%95%E8%B0%83%E5%BA%A6%E7%9A%84%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E2%80%94%E2%80%94%E7%B1%BB%E8%AE%BE%E8%AE%A1%E8%A7%92%E5%BA%A6/</id>
-    <published>2020-06-21T12:34:01.000Z</published>
-    <updated>2022-11-02T10:12:28.753Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这学期C++接触得有点多，为熟练类设计，做了一个多路电梯调度算法。&lt;/p&gt;
-&lt;p&gt;总的来说，这份代码主要包含调度核心算法、乘客行为设计、电梯动作函数设计等，最终完成了一个十路电梯的群控仿真算法系统。同时为了增强了整个电梯系统的控制简便性和高效性，还将电梯进行分组。也设计了不</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="C++" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/C/"/>
-    
-    
-    <category term="C++" scheme="https://huhong12345.github.io/tags/C/"/>
-    
-    <category term="面向对象编程" scheme="https://huhong12345.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="电梯调度算法" scheme="https://huhong12345.github.io/tags/%E7%94%B5%E6%A2%AF%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
