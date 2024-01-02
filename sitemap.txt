@@ -1,3 +1,5 @@
+https://huhong12345.github.io/2024/01/03/%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566/
+https://huhong12345.github.io/about/index.html
 https://huhong12345.github.io/2024/01/03/Linux%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AD%98/
 https://huhong12345.github.io/2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/
 https://huhong12345.github.io/2023/01/02/NJ80-AP%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%AF%B4%E6%98%8E%E4%B9%A6/
@@ -36,7 +38,6 @@ https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%
 https://huhong12345.github.io/2019/11/29/Hello%20World%EF%BC%8CHexo/
 https://huhong12345.github.io/tags/index.html
 https://huhong12345.github.io/categories/index.html
-https://huhong12345.github.io/about/index.html
 https://huhong12345.github.io/
 https://huhong12345.github.io/tags/VSCode/
 https://huhong12345.github.io/tags/%E9%85%8D%E7%BD%AE/
@@ -121,3 +122,4 @@ https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/Pytorch/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/RL/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/
+https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%91%98%E6%8A%84/

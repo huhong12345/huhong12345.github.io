@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>大明王朝1566解读（一） | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">大明王朝1566解读（一）</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-01-03T02:35:17+08:00">2024-01-03 02:35:17</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E7%94%9F%E6%B4%BB/%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">摘抄</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>不要以为大明王朝都是屠龙术<br>实际上做人的道理都有共通之处<br>一个人即便踩在了风口上<br>也要记住在得意的时候莫要把事做绝了<br>这就是势不可去尽的道理<br>更何况很多时候<br>人只是接近了权力<br>而误以为自己拥有了权力<br>吕芳清醒的知道<br>他的权力来自于嘉靖而不是皇权<br>皇权可以更替<br>嘉靖只有一个<br>所以吕芳不在激流的顶端考虑之后的事<br>必然会有一朝天子一朝臣的下场 </p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>拼了是人民内部的阶级矛盾<br>反了是敌我的外部矛盾<br>人民内部的矛盾是可以论是非曲直的<br>即便是一方错了<br>也可以用治病救人的态度来对待<br>但敌我矛盾是尖锐而残酷的<br>只能像秋风扫落叶一般的无情<br>马宁远这个人物非常的典型<br>几乎可以说<br>每一个角落<br>每一个人身上<br>都有马宁远的影子<br>马宁远并不是严党<br>他并非打着江山社稷<br>天下大势的牌子假公济私<br>他有自己的政治抱负<br>但他就是陀思妥耶夫斯基所谓的<br>“爱具体的人，不要爱抽象的人，要爱生活，不要爱生活的意义”的反面教材<br>他知道要上利国家<br>下利百姓<br>可他并不知道什么才叫利国<br>什么才叫利民<br>所以他做的事看起来如此精分<br>一边是高举着利国利民的大旗<br>一边喊着浙江人死绝了也要改<br>因为马宁远脑袋里的国是抽象的国<br>是没有他眼前活生生就要被逼得饿死的百姓的国<br>我们回头想一想我们自己<br>是不是也常常陷入到一种口号式的认知<br>抽象式的理解当中<br>比如说我们讨厌一个人<br>我们究竟是因为一个人的行为而讨厌这个人<br>还是讨厌这个人以后<br>找到一切理由去强化自己的讨厌<br>我们欣赏一个人的时候<br>究竟是处于他本人的行为认知学识追求去欣赏他<br>还是因为欣赏他<br>进而去美化他的一切行为<br>当我们同一个人争论的时候<br>我们究竟是不同意他本来的观点<br>还是扭曲他的观点<br>沦为稻草人谬误<br>为了驳倒他对方而辩驳<br>当我们的行为失去了原本的目的<br>这就是一种放弃具体而追求抽象<br>马宁远就是这样的人<br>他放弃了具体<br>他不去理解百姓的行为背后的原因<br>把因为生计而不得不反抗的百姓<br>戴上了倭寇煽动的帽子<br>胡宗宪的“借机发难”是一心为公<br>但这是一个揣测动机远高于就事论事的世界<br>理就摆着这里<br>讲不过就是讲不过<br>但是打到一个人的方法不是讲理<br>是抹黑他的屁股<br>因动机而废言<br>因言而废人<br>这招不但每个人都见过<br>很多人还无师自通运用熟练<br>职场人也要记住<br>大事的主意不要自己拿<br>要领导拿<br>虽然如果最后办砸了<br>锅还是你背<br>但雷不是你抗<br>懂的领导不会追究你的责任<br>倘若你自己拿了主意<br>那么锅是你背<br>雷是你抗<br>在领导的心理<br>你既目无上司<br>又办事不利<br>下场就凄惨了</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>我相信任何的时代<br>民心都不可欺<br>民智也不可愚<br>人民懂得的道理越多<br>便越能成为别人的炬火<br>毁堤淹田背后的金融逻辑其实一直在上演<br>任何“资本主义国家”都会经历<br>通胀-经融危机-无数人失业-通缩-资产贬值的轮回<br>当资产贬值的时候<br>手握现金的人就到了抄底的时候<br>土地可以看做是封建王朝的最大固定资产<br>粮食可以看做是和钱一样的硬通货<br>毁堤淹田造成的就是浙江局部的通缩<br>土地瞬间贬值<br>大户趁低价收购土地<br>完成兼并<br>我特别喜欢这段话<br>“君以此兴必以此亡”<br>这并不是宿命论<br>而是历史规律<br>每一次的走捷径<br>都会被标记好背后的价格<br>例如“资本主义国家”*2的放水刺激GDP<br>能有一时的繁荣<br>却要三代人的钱包偿还<br>除了正道<br>我们无路可走<br>可偏偏历史上的人类<br>除了正道<br>什么路都肯走<br>大明王朝从朝野到民间<br>充斥着大大小小的旋涡<br>一旦卷进去<br>就没有生还的可能<br>这不是人力所能决定的<br>我们看了太多英雄主义的故事<br>好像什么问题都是有解的<br>只是人不够聪明<br>没有找到办法<br>大明王朝在告诉我们一个道理<br>人类社会的许多困境<br>是不会以个人意志为转移的<br>有些局面<br>是个人必定解不开的<br>有些时代<br>是注定要落幕的<br>不是河堤护不住百姓<br>也不是沙包堵不住激流<br>是大明的体制下<br>拦不住官僚士绅阶级的贪欲<br>在官僚体系下<br>多做多错<br>少做少错<br>不做不错<br>按照章程办事<br>出再大问题<br>也没有你的责任<br>但倘若你挺身而出<br>出了事那就是一辈子的污点<br>甚至当场就被打倒<br>江畔何人初见月？江月何年初照人？人生代代无穷已，江月年年望相似。谁也不可否认时代的进步<br>在自然学科中我们不断的站在巨人肩膀上迭代了我们的科学认知<br>但是人文历史认知的“江月”，可曾换过东升西落的模样<br>大明王朝为什么会特意把历史人物的形象做了修改<br>如果答案是它在讲另一个特定时代的故事<br>我觉得未免囿于了“只见树木不见森林”<br>“彼时彼刻的恰如”绝不是我要传递的重点<br>如果一个人发烧了<br>我们把发烧的“症状”看做是生病的“病因”<br>那么我们永远不可能治愈下一个发烧的人<br>鲁迅先生的名句<br>“人类的悲欢并不相通<br>我只是觉得他们吵闹”<br>帝国副相<br>万人之上<br>一句话就能决定无数人的命运<br>坐到这个位置的时候<br>又有几人能把人当做一个个具体的个体来看待<br>一个外卖员因为订单超时而闯了红灯<br>点了订单的你因为加班到半夜<br>还没拿到订单而饥肠辘辘<br>你的老板开着跑车在去夜店的路上<br>从红绿灯前呼啸而过险些撞到了这个闯红灯的外卖员<br>这样交错的时空里<br>谁会为谁共情<br>在阶层的划分和资本的异化下<br>人与人之间鸿沟的差距<br>不仅仅停留在社会资源和地位上<br>更是在阅历学识认知上的大相径庭<br>诚然吕芳的话是肉食者的麻木<br>但这也是必然的局限<br>一个不曾附身于泥淖中与百姓一同挣扎过的施政者<br>无论他怎样去读圣贤书<br>也不会真正的和这个群体站在一起   </p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>清流也罢<br>乃至网络上沉迷宏大叙事的键委们<br>都没有把视角真正的平视到百姓中<br>已识乾坤大固然是一种开悟<br>犹怜草木青才是真正的看山还是山   </p>
+<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p>海母这一叹如尘埃坠地般轻微<br>海妻这一望似白驹过隙般短暂<br>海瑞这一步步的头也不回<br>却有轰然坠地般的坚定不移<br>我这里想说一句可能是整部解读里<br>我个人最主观的话<br>读出师表不哭者其人不忠<br>读陈情表不哭者其人不孝<br>见此景心无所恸者<br>其人不仁矣<br>钱钟书曾说<br>夸一个女人有才学<br>好比夸鲜花在称上有白薯的斤两<br>这部剧里如果仅仅是夸海瑞清廉忠直<br>那我也大有此感<br>面对厦之将倾<br>海瑞拿出的雷霆手段<br>绝不是一个清一个直所可以涵盖<br>海瑞的“势”与“术”究竟是如何堪称神剑 </p>
+<h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><p>吸收并理解的才是知识<br>记住并不认同的叫考题</p>
+<h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><p>一个曾在加拿大居住的特大走私案的主犯<br>说过一句名言<br>不怕领导领导讲原则<br>就怕领导没爱好</p>
+<h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><p>很多时候看待一件事的角度不同<br>产生的判断结果也不同<br>当我们选错了角度<br>或者在维度尺度上选择的角度不够广<br>就会导致一种认知错误<br>这不是逻辑的问题<br>而是出发点的失察<br>所以“有依据”的支撑判断事物其实很容易<br>一拍脑袋就能找到落脚点<br>但了解事物的全貌却很难<br>我们看了很多落叶知秋的故事<br>做的却常常是管窥蠡测的傻事<br>很多人分析起来头头是道<br>但真正行动起来却漏洞百出<br>从不同的角度去判断<br>可以得到不同的结论<br>究竟哪个角度才是对的<br>哪个判断才是真正抓住了事物的脉络<br>这常常需要一种玄学的直觉<br>我和大家讲了很久的逻辑<br>但很可惜很多事情的逻辑是对的<br>出发点却是可以不一样的<br>我们和那些伟人的差距<br>不在于逻辑的不可学习性<br>而在于对具体事物判断的准确性<br>当然这不代表逻辑本身没有用<br>只是理论和实践的鸿沟<br>有时候就是个人所无法跨越的<br>别说在人类社会这样的人文学科里<br>很多事情没有定义<br>即便在自然学科里<br>很多事情的论证也是如此<br>同样两个自洽的逻辑却有不同的结论<br>比如量子力学所谓的圈论和弦论<br>在最终实验证明之前<br>两个理论都能从各自角度出发<br>解释大统一理论<br>所以很多时候我们懂得越多<br>就发现自己越困惑<br>反过来讲<br>我们推翻了曾经的已知<br>究竟是认知的进步<br>还是曾经所了解的体系的崩塌<br>我们究竟是摧毁了错误的幻象<br>还是变得更加一无所有</p>
+<p>民以食为天<br>百姓的天都已经塌了<br>这帮官兵却还在毁百姓的天<br>淳安建德本来就田少<br>还刚刚遭了水灾<br>说一句穷山恶水还真是贴切不过<br>齐大柱面对官兵毫无道理的炮火<br>还能理智到天真的去和官兵讲没犯法<br>讲他们每天有人饿死<br>讲他们是凑钱买粮救命<br>但官府让你不要买粮<br>你偏偏要买粮<br>这自然算犯法<br>犯法的百姓叫刁民<br>从这个角度看<br>这帮灾民还真真堪称“穷山恶水出刁民”<br>当然淳安建德百姓和官府的冲突<br>黑白很分明<br>但当集体主义和个人主义发生冲突的时候<br>我们到底从什么角度去评判是非曲直<br>即便一件事最后我们得到了一个明确的结果<br>但是在我们没有打开盒子看到里面对错的时候<br>我们究竟如何的去做判断和选择<br>人为规定的评判标准就一定是正确的标准吗<br>谁来给评判标准本身一个评判标准呢</p>
+<h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>甚矣吾衰矣<br>怅平生、交游零落<br>只今余几<br>白发空垂三千丈<br>一笑人间万事<br>问何物、能令公喜<br>我见青山多妩媚<br>料青山见我应如是<br>情与貌<br>略相似<br>从唯物主义的角度来讲<br>山就是山<br>即便妩媚如五十八岁的辛弃疾<br>也不会让青山垂青半眼<br>辛弃疾先是见青山妩媚<br>更进一步到青山见我妩媚<br>以物观我<br>其实是极写以我观物<br>很多时候我们对事物的看法<br>就是我们内心的投射<br>说粗俗一点叫屁股决定脑袋<br>但认真一点讲<br>叫我们的价值取向<br>决定了我们对世界的认知<br>我上集说过<br>逻辑是对的<br>角度却可以不同<br>我们观察事物的落脚点<br>往往源于我们内心的倾向<br>所以我们观察事物<br>也可以反向成为事物对我们的观察</p>
+<p>很多人对唯心主义有一种最基本的认知错误<br>几乎把唯心主义和否定物质画等号了<br>慧能的“既非风动亦非幡动”<br>自然是唯心主义的一个分支<br>但王阳明的“心外无物，心外无理”也是唯心主义<br>这两者看似异曲同工<br>其实差别很大<br>唯心主义不能粗暴的理解成<br>事物是心创造出来的<br>而是事物的意义是由心而来<br>未看此花时<br>此花与汝心同归于寂<br>并不是否定花本身的存在<br>而是告诉我们<br>我们会因自身的视角而导致对事物看待的不同<br>所以客观上同样的事物<br>对于不同的人来讲<br>可能就是不同的东西<br>所谓我之蜜糖彼之砒霜是也<br>当我们从看待事物的结果<br>来反推我们的内心<br>也许会获得一种更慎审的自我认知<br>而当我们不遗余力的去批判<br>或追捧某些事物的时候<br>会不会是淫者见淫般的“小丑竟是我自己”呢<br>（客观事物就真的一样吗？<br>   唯物的世界里偏偏“心外无物”）</p>
+<p>我特别喜欢刘和平和赵立新塑造沈一石的时候<br>为沈一石注入的这点猜不透的气质<br>他的话听起来好像都是实话<br>但总给人一种没底的感觉<br>但你要说他像个骗子<br>可他又那么波澜不惊的看起来好像无任何所图<br>我最喜欢古龙的两部小说<br>一是流星蝴蝶剑<br>二是白玉老虎<br>里面的人物就是如此<br>好像每一句话都是真话<br>每一句话又都像假话<br>观众就仿佛被作者灌醉了一般<br>只能跟着他们的话迷糊<br>最后放弃思考<br>一步步的看到图穷匕见的时候<br>再回头去对照开始的话<br>才能恍然大悟<br>而故事就在人物温吞如水的对话里<br>最终出人意料</p>
+<p>如果我是高瀚文<br>最不会相信的就是沈一石的这段话<br>可高瀚文却最被这段话打动<br>偏偏沈一石最真的也是这段话<br>我不信这段话<br>是因为我本是俗人<br>并不相信琴艺乐理能如此得动人心<br>这就是我观“青山”的结果<br>“青山”也就照出了我的原型<br>高瀚文也观“青山”<br>结果却大相迥异</p>
+<p>只要稍微看过一点资本论<br>都不难看沈一石的话错在哪<br>百姓卖掉土地给大户种田<br>本质上就是从生产资料的占有者<br>变成了真正的无产者<br>原本的一亩田收益除了给朝廷交税<br>其余收益都是自己的<br>而一旦田被大户收买<br>同样的一亩田<br>大户就会收走大部分的收益<br>这就是持田者对无田者最简单的剥削<br>而一旦沦为佃户<br>几乎不存在可以翻身的可能<br>道理很简单<br>一个人佃户是不可能创造出能买下土地的劳动价值<br>也就是说<br>佃户的劳动是不可能增值的<br>佃户在这亩地创造的价值越多<br>大户就可以把分成比例压的越低<br>只要能维持佃户的生存不饿死<br>大户们就可以高枕无忧<br>再退一步<br>即便大户不改分成比例<br>一亩田能产的粮食越多<br>那一亩田的价值就越高<br>所以佃户越劳动<br>只会让资产越值钱<br>资产越值钱<br>只会让佃户越买不起<br>这就好比在骑在驴身上的人<br>拿着鞭子在驴脸前吊一根萝卜<br>驴跑的越快<br>萝卜只会跑的越快<br>驴却永远没有追上萝卜的可能<br>推而广之<br>工业时代<br>机械设备就是新时代的田地<br>打工人就是新时代的佃户<br>身处资本游戏里的诸位肯定更有体会<br>我在海瑞出场的视频里<br>讲过我还有一个不和谐的引申<br>就是在工业社会之上<br>有一个更新型的大户<br>它的名字叫平台<br>所谓的平台模式<br>本质就是把平台作为新的土地<br>把商户作为新的佃户<br>通过资本烧钱的亏本推广<br>其实就是“土地”兼并的把戏<br>商户并入平台<br>本质就是沦为“佃户”<br>当然可以说既然觉得平台吸血<br>你商户可以不进驻平台呀<br>在面对资本涌入控制流量的时候<br>个体已经无力对抗这样的模式<br>正如淳安建德的百姓也可以不卖田一样<br>面对大户兼并<br>这种所谓的“自愿”选择<br>真的还有说“不”的余地吗<br>所以为什么互联网和金融的利润会如此的高<br>因为它可以把所有行业都兼并到自己的“土地”之下<br>吸每一个行业的血<br>焉能不高</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E6%91%98%E6%8A%84/" rel="tag"><i class="fas fa-tags"></i>摘抄</a>
+        
+        <a class="post-tag button" href="../../../../tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../../../../2023/11/15/PT&NAS%E6%A2%B3%E7%90%86/" rel="next" title="PT&NAS梳理"><i class="fas fa-angle-left"></i><span class="nav-title">PT&NAS梳理</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="../Linux%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AD%98/" rel="prev" title="Linux清理系统内存&&QB相关"><span class="nav-title">Linux清理系统内存&&QB相关</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "大明王朝1566解读（一）",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">37</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">26</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">58</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#5"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#6"><span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#7"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#8"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#9"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#10"><span class="toc-text">10</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://lib.tsinghua.edu.cn/" target="_blank">Library</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://thu.services/services/" target="_blank">Services</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2024</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huhong12345.github.io/2024/01/03/%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566/</loc>
+    
+    <lastmod>2024-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/about/index.html</loc>
+    
+    <lastmod>2024-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huhong12345.github.io/2024/01/03/Linux%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AD%98/</loc>
     
     <lastmod>2024-01-02</lastmod>
@@ -336,15 +354,6 @@
   
   <url>
     <loc>https://huhong12345.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-11-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huhong12345.github.io/about/index.html</loc>
     
     <lastmod>2022-11-02</lastmod>
     
@@ -939,6 +948,13 @@
   
   <url>
     <loc>https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%91%98%E6%8A%84/</loc>
     <lastmod>2024-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
