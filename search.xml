@@ -4,6 +4,68 @@
   
     
     <entry>
+      <title>nodejs版本管理与hexo多终端重新部署</title>
+      <link href="/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+      <url>/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="nodejs安装与版本管理"><a href="#nodejs安装与版本管理" class="headerlink" title="nodejs安装与版本管理"></a>nodejs安装与版本管理</h2><p>由于涉及到windows下部署hexo环境，先要安装nodejs，并通过nvm来切换版本。</p><p>node官网：<br><a href="https://nodejs.org/en">https://nodejs.org/en</a></p><p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nodejs目录下。</p><p>nvm可到github下载，地址如下，选nvm-setup.exe<br><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p><p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nvm目录下，在选择nodejs时目录时选择了刚刚的地址。</p><p>这里就可以使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvm list<br>nvm list available<br>nvm install 16.15.1<br>nvm use 16.15.1<br>npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>等方式安装特定的node版本并使用。</p><p>后续安装hexo就同理：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>注意在nvm install时需要使用管理员运行cmd方式安装。</p><p>相关链接：</p><p>1、git下载链接：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p><p>2、node多版本下载链接：<a href="https://nodejs.org/en/download/package-manager">https://nodejs.org/en/download/package-manager</a></p><p>3、hexo主题：<a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><h2 id="git分支进行多终端部署"><a href="#git分支进行多终端部署" class="headerlink" title="git分支进行多终端部署"></a>git分支进行多终端部署</h2><p>如果需要在多终端都进行部署，即完成hexo源文件备份，可使用git的分支系统进行多终端工作。这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作。</p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>hexo d上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件。也就是上传的是在本地目录里自动生成的.deploy_git里面。而我们本地文件的source、配置文件、主题文件都没有上传上去。所以可以利用git的分支管理，将源文件上传到github的另一个分支即可。</p><h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>首先，在我们的github中的blog库中添加新分支hexo，在仓库的settings中，将hexo设置为默认分支(之前为master)。</p><h3 id="将源文件上传到hexo分支中"><a href="#将源文件上传到hexo分支中" class="headerlink" title="将源文件上传到hexo分支中"></a>将源文件上传到hexo分支中</h3><p>在本地的任意目录下，打开git bash，将该分支git clone下来。此时，因为默认分支已经设置成了hexo，所以clone时，只clone了hexo。</p><p>之后，在克隆到本地的文件夹中，把除了.git文件夹外所有的文件都删掉。然后把之前我们写的博客源文件全部复制过来，除了.deploy_git。</p><p>注意：如果之前clone过theme的主题文件，则应该将主题文件中的.git文件夹也删掉。而且，我们复制过来的文件应该有一个.gitignore文件，这个文件包括了git时要忽略提交的文件，如果没有，自己创建一个，添加上如下内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">.DS_Store<br>Thumbs.db<br>db.json<br>*.<span class="hljs-built_in">log</span><br>node_modules/<br>public/<br>.deploy*/<br></code></pre></td></tr></table></figure><p>之后运行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;add branch hexo&quot;</span><br>git push<br></code></pre></td></tr></table></figure><h3 id="新设备操作"><a href="#新设备操作" class="headerlink" title="新设备操作"></a>新设备操作</h3><p>跟之前一样搭建好环境，安装好git、node.js、设置好ssh、安装hexo，但注意此时不需要再对hexo初始化了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-cli -g<br></code></pre></td></tr></table></figure><p>之后，将该库，clone到任意文件夹下。进入到该文件夹，安装一些配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br>npm install hexo-deployer-git --save<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure><p>之后就可以写博客了。最好每次写完博客，都将源文件上传一下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;new push&quot;</span><br>git push<br></code></pre></td></tr></table></figure><p>参考文章：</p><p>1、<a href="https://blog.csdn.net/qq_43657442/article/details/120523934">https://blog.csdn.net/qq_43657442/article/details/120523934</a></p><p>2、<a href="https://blog.csdn.net/qq_43657442/article/details/120522180">https://blog.csdn.net/qq_43657442/article/details/120522180</a></p><p>3、<a href="http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> Nodejs </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>win11 LTSC初体验</title>
+      <link href="/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+      <url>/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<p>由于装新电脑，尝试了一下2024年4月刚出的win11 LTSC泄露版。</p><p>目前时全英文的，不过后续可以汉化，问题不大。</p><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h3><p>在安装这步选择lot版本，该版本可以跳过win11系统的硬件检测，同时有10年的超长支持期（虽然也没啥啥用）<br><img src="/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/1.png"></p><p>这里如果没有联网，就可以直接使用本地账户。</p><p>如果选了普通版，也可以通过以下方式跳过：</p><p>安装按Shift+F10，打开命令行界面，输入regedit打开注册表，然后定位到HKEY_LOCAL_MACHINESYSTEMSetup，接着创建一个名为“LabConfig”的项</p><p>接着在“LabConfig”下创建两个DWORD值：键为“BypassTPMCheck”，值为“00000001”，键为“BypassSecureBootCheck”，值为“00000001”</p><p>安装完后系统显示Version 24H2，OS build为26100.1</p><h3 id="2、汉化"><a href="#2、汉化" class="headerlink" title="2、汉化"></a>2、汉化</h3><p>如下图，添加语言<br><img src="/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/2.png"><br>下载中文并设为首选语言。</p><p><img src="/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/3.png"></p><p>在下面的区域设置(Country or region) 中，把国家和地区改为中国。</p><p>在管理语言设置（Administrative language settings），把下面两个勾都打上，能改成中文的都改了。<br><img src="/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/4.png"></p><p>同时在Change system location处把地址改为中国，重启后，就为中文了。</p><p>重启后可能会出现简体中文输入法问题，下载“基本输入法”即可。</p><p>如果将 Win11 设置成中文后界面出现中英文混杂的情况，可以尝试在语言和区域设置中将系统语言改回英文，然后删掉刚才下载的中文语言包。 重启过后再进行一遍汉化的步骤即可。</p><h3 id="3、优化"><a href="#3、优化" class="headerlink" title="3、优化"></a>3、优化</h3><p>此处，可使用HEU KMS Activate数字激活。</p><h4 id="恢复windows应用商店"><a href="#恢复windows应用商店" class="headerlink" title="恢复windows应用商店"></a>恢复windows应用商店</h4><p>按下win+R，输入命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wsreset -i<br></code></pre></td></tr></table></figure><p>系统就会自动下载。</p><h4 id="释放保留的存储空间"><a href="#释放保留的存储空间" class="headerlink" title="释放保留的存储空间"></a>释放保留的存储空间</h4><p>管理员身份进入powershell，输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">DISM.exe /Online /Set-ReservedStorageState /State:Disabled<br></code></pre></td></tr></table></figure><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>1、原帖镜像：archive.org&#x2F;details&#x2F;26100-ltsc-x64-enus</p><p>2、系统镜像：<a href="https://www.bilibili.com/video/BV1pT421C7f1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa">https://www.bilibili.com/video/BV1pT421C7f1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa</a></p><p>3、安装教程：<a href="https://www.bilibili.com/video/BV1pT421C7f1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa">https://www.bilibili.com/video/BV1pT421C7f1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件 </category>
+          
+          <category> 装机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> win11 </tag>
+            
+            <tag> 系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>装机日记2</title>
       <link href="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/"/>
       <url>/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/</url>
@@ -645,11 +707,11 @@
       
         <tags>
             
-            <tag> DL </tag>
-            
             <tag> 代码摘抄 </tag>
             
             <tag> Pytorch </tag>
+            
+            <tag> DL </tag>
             
             <tag> 更新 </tag>
             
@@ -1007,13 +1069,13 @@
       
         <tags>
             
+            <tag> DL </tag>
+            
             <tag> Python </tag>
             
             <tag> 编程 </tag>
             
             <tag> 练习 </tag>
-            
-            <tag> DL </tag>
             
         </tags>
       
@@ -1141,6 +1203,17 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<p>Python is For Fun： Python</p><p>深度学习之Caffe入门——Caffe环境配置： DL</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>about</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -1157,17 +1230,6 @@
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<p>Python is For Fun： Python</p><p>深度学习之Caffe入门——Caffe环境配置： DL</p>]]></content>
       
     </entry>
     

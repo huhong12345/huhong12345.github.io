@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="google-site-verification" content="OZLJPBF16hIAV-G24xvVKkFP0bYNbDLgW83PPvxBctk">
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="../../../../favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="../../../../favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="../../../../favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="../../../../atom.xml" title="My Personal Blog" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="../../../../css/page.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/lightgallery.min.css">
+    <script type="text/javascript" src="../../../../js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/util.js"></script>
+    <script defer type="text/javascript" src="../../../../js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="../../../../js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="../../../../js/lg-zoom.min.js"></script>
+    
+    <script defer src="../../../../js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="../../../../js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    
+    
+    <script defer type="text/javascript" src="../../../../js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">复制</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"复制\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="../../../../js/custom.js"></script>
+    <title>nodejs版本管理与hexo多终端重新部署 | My Personal Blog - 不积跬步无以至千里</title>
+  <meta name="generator" content="Hexo 5.4.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="../../../../index.html">My Personal Blog</a></h1>
+        <h2 class="subtitle">不积跬步无以至千里</h2>
+      </div>
+      
+      <div class="logo">
+        <img src="../../../../images/mylogo2.png" alt="logo">
+      </div>
+      
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="切换导航栏"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="../../../../index.html"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
+        
+        <li role="menuitem"><a href="../../../../about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="MaximeHu">
+       <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
+       <meta itemprop="image" content="../../../../images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">nodejs版本管理与hexo多终端重新部署</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-05-26T22:38:00+08:00">2024-05-26 22:38:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/%E5%8D%9A%E5%AE%A2/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="nodejs安装与版本管理"><a href="#nodejs安装与版本管理" class="headerlink" title="nodejs安装与版本管理"></a>nodejs安装与版本管理</h2><p>由于涉及到windows下部署hexo环境，先要安装nodejs，并通过nvm来切换版本。</p>
+<p>node官网：<br><a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a></p>
+<p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nodejs目录下。</p>
+<p>nvm可到github下载，地址如下，选nvm-setup.exe<br><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nvm目录下，在选择nodejs时目录时选择了刚刚的地址。</p>
+<p>这里就可以使用：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvm list<br>nvm list available<br>nvm install 16.15.1<br>nvm use 16.15.1<br>npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+<p>等方式安装特定的node版本并使用。</p>
+<p>后续安装hexo就同理：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+<p>注意在nvm install时需要使用管理员运行cmd方式安装。</p>
+<p>相关链接：</p>
+<p>1、git下载链接：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>2、node多版本下载链接：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager">https://nodejs.org/en/download/package-manager</a></p>
+<p>3、hexo主题：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<h2 id="git分支进行多终端部署"><a href="#git分支进行多终端部署" class="headerlink" title="git分支进行多终端部署"></a>git分支进行多终端部署</h2><p>如果需要在多终端都进行部署，即完成hexo源文件备份，可使用git的分支系统进行多终端工作。这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>hexo d上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件。也就是上传的是在本地目录里自动生成的.deploy_git里面。而我们本地文件的source、配置文件、主题文件都没有上传上去。所以可以利用git的分支管理，将源文件上传到github的另一个分支即可。</p>
+<h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>首先，在我们的github中的blog库中添加新分支hexo，在仓库的settings中，将hexo设置为默认分支(之前为master)。</p>
+<h3 id="将源文件上传到hexo分支中"><a href="#将源文件上传到hexo分支中" class="headerlink" title="将源文件上传到hexo分支中"></a>将源文件上传到hexo分支中</h3><p>在本地的任意目录下，打开git bash，将该分支git clone下来。此时，因为默认分支已经设置成了hexo，所以clone时，只clone了hexo。</p>
+<p>之后，在克隆到本地的文件夹中，把除了.git文件夹外所有的文件都删掉。然后把之前我们写的博客源文件全部复制过来，除了.deploy_git。</p>
+<p>注意：如果之前clone过theme的主题文件，则应该将主题文件中的.git文件夹也删掉。而且，我们复制过来的文件应该有一个.gitignore文件，这个文件包括了git时要忽略提交的文件，如果没有，自己创建一个，添加上如下内容：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">.DS_Store<br>Thumbs.db<br>db.json<br>*.<span class="hljs-built_in">log</span><br>node_modules/<br>public/<br>.deploy*/<br></code></pre></td></tr></table></figure>
+<p>之后运行命令：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;add branch hexo&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
+<h3 id="新设备操作"><a href="#新设备操作" class="headerlink" title="新设备操作"></a>新设备操作</h3><p>跟之前一样搭建好环境，安装好git、node.js、设置好ssh、安装hexo，但注意此时不需要再对hexo初始化了。</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-cli -g<br></code></pre></td></tr></table></figure>
+<p>之后，将该库，clone到任意文件夹下。进入到该文件夹，安装一些配置：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br>npm install hexo-deployer-git --save<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
+<p>之后就可以写博客了。最好每次写完博客，都将源文件上传一下：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;new push&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
+
+<p>参考文章：</p>
+<p>1、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43657442/article/details/120523934">https://blog.csdn.net/qq_43657442/article/details/120523934</a></p>
+<p>2、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43657442/article/details/120522180">https://blog.csdn.net/qq_43657442/article/details/120522180</a></p>
+<p>3、<a target="_blank" rel="noopener" href="http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="../../../../tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
+        
+        <a class="post-tag button" href="../../../../tags/Nodejs/" rel="tag"><i class="fas fa-tags"></i>Nodejs</a>
+        
+        <a class="post-tag button" href="../../../../tags/hexo/" rel="tag"><i class="fas fa-tags"></i>hexo</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="../win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/" rel="next" title="win11 LTSC初体验"><i class="fas fa-angle-left"></i><span class="nav-title">win11 LTSC初体验</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div class="commentjs" id="comment-thread"></div>
+  <link rel="stylesheet" href="../../../../css/commentjs.css">
+  <script defer type="text/javascript" src="../../../../js/marked.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/timeago.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/highlight.min.js"></script>
+  <script defer type="text/javascript" src="../../../../js/commentjs.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    getComments({
+      "type": "github",
+      "user": "huhong12345",
+      "repo": "huhong12345.github.io",
+      "client_id": "553c59d0dc113422c1c6",
+      "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
+      "no_comment": "这个页面还没有评论，现在就去评论吧！",
+      "go_to_comment": "去评论",
+      "issue_title": "nodejs版本管理与hexo多终端重新部署",
+      "btn_class": "button",
+      "comments_target": "#comment-thread"
+    });
+    marked.setOptions({
+      "highlight": function (code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+    function mark() {
+      var markdowns = document.getElementsByClassName("markdown");
+      for (var i = 0; i < markdowns.length; ++i){
+        if (markdowns[i].innerHTML) {
+          markdowns[i].innerHTML = marked(markdowns[i].innerHTML);
+        }
+      }
+    }
+    window.addEventListener("DOMContentLoaded", mark, false);
+    window.addEventListener("load", mark, false);
+  });
+  </script>
+  
+  
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(../../../../images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="../../../../images/guidao.jpg" alt="MaximeHu">
+  
+  <h1 class="author-name">MaximeHu</h1>
+  <h2 class="author-description">Ph.D. Candidate @THU Economics& Social Analysis Group</h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">归档</div>
+      <div><a href="../../../../archives/">40</a></div>
+    </div>
+    
+    
+    
+    <div class="categories-count count-block">
+      <div class="site-count-title">分类</div>
+      <div><a href="../../../../categories/">27</a></div>
+    </div>
+    
+    
+    
+    <div class="tags-count count-block">
+      <div class="site-count-title">标签</div>
+      <div><a href="../../../../tags/">61</a></div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="../../../../atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#nodejs%E5%AE%89%E8%A3%85%E4%B8%8E%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="toc-text">nodejs安装与版本管理</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#git%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%83%A8%E7%BD%B2"><span class="toc-text">git分支进行多终端部署</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF"><span class="toc-text">创建新分支</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%B0%86%E6%BA%90%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%88%B0hexo%E5%88%86%E6%94%AF%E4%B8%AD"><span class="toc-text">将源文件上传到hexo分支中</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%96%B0%E8%AE%BE%E5%A4%87%E6%93%8D%E4%BD%9C"><span class="toc-text">新设备操作</span></a></li></ol></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>社交链接</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:huhong.thu@gmail.com" target="_blank">huhong.thu@gmail.com</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/huhong12345" target="_blank">MaximeHu</a></li>
+        
+        <li><i class="fab fa-zhihu"></i><a href="https://www.zhihu.com/people/maximehu" target="_blank">少临</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>友情链接</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://lib.tsinghua.edu.cn/" target="_blank">Library</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://thu.services/services/" target="_blank">Services</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://www.runoob.com/python3/python3-data-type.html" target="_blank">Runood</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="回到顶部"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">MaximeHu</span><span class="year"><i class="far fa-copyright"></i>2024</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="站点点击量" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="站点用户数" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="页面点击量" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
