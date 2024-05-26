@@ -5,8 +5,8 @@
     
     <entry>
       <title>nodejs版本管理与hexo多终端重新部署</title>
-      <link href="/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
-      <url>/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</url>
+      <link href="/2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"/>
+      <url>/2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</url>
       
         <content type="html"><![CDATA[<h2 id="nodejs安装与版本管理"><a href="#nodejs安装与版本管理" class="headerlink" title="nodejs安装与版本管理"></a>nodejs安装与版本管理</h2><p>由于涉及到windows下部署hexo环境，先要安装nodejs，并通过nvm来切换版本。</p><p>node官网：<br><a href="https://nodejs.org/en">https://nodejs.org/en</a></p><p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nodejs目录下。</p><p>nvm可到github下载，地址如下，选nvm-setup.exe<br><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p><p>我安装到了C:&#x2F;&#x2F;My_Program&#x2F;nvm目录下，在选择nodejs时目录时选择了刚刚的地址。</p><p>这里就可以使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvm list<br>nvm list available<br>nvm install 16.15.1<br>nvm use 16.15.1<br>npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>等方式安装特定的node版本并使用。</p><p>后续安装hexo就同理：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>注意在nvm install时需要使用管理员运行cmd方式安装。</p><p>相关链接：</p><p>1、git下载链接：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p><p>2、node多版本下载链接：<a href="https://nodejs.org/en/download/package-manager">https://nodejs.org/en/download/package-manager</a></p><p>3、hexo主题：<a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><h2 id="git分支进行多终端部署"><a href="#git分支进行多终端部署" class="headerlink" title="git分支进行多终端部署"></a>git分支进行多终端部署</h2><p>如果需要在多终端都进行部署，即完成hexo源文件备份，可使用git的分支系统进行多终端工作。这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作。</p><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>hexo d上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件。也就是上传的是在本地目录里自动生成的.deploy_git里面。而我们本地文件的source、配置文件、主题文件都没有上传上去。所以可以利用git的分支管理，将源文件上传到github的另一个分支即可。</p><h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>首先，在我们的github中的blog库中添加新分支hexo，在仓库的settings中，将hexo设置为默认分支(之前为master)。</p><h3 id="将源文件上传到hexo分支中"><a href="#将源文件上传到hexo分支中" class="headerlink" title="将源文件上传到hexo分支中"></a>将源文件上传到hexo分支中</h3><p>在本地的任意目录下，打开git bash，将该分支git clone下来。此时，因为默认分支已经设置成了hexo，所以clone时，只clone了hexo。</p><p>之后，在克隆到本地的文件夹中，把除了.git文件夹外所有的文件都删掉。然后把之前我们写的博客源文件全部复制过来，除了.deploy_git。</p><p>注意：如果之前clone过theme的主题文件，则应该将主题文件中的.git文件夹也删掉。而且，我们复制过来的文件应该有一个.gitignore文件，这个文件包括了git时要忽略提交的文件，如果没有，自己创建一个，添加上如下内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">.DS_Store<br>Thumbs.db<br>db.json<br>*.<span class="hljs-built_in">log</span><br>node_modules/<br>public/<br>.deploy*/<br></code></pre></td></tr></table></figure><p>之后运行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;add branch hexo&quot;</span><br>git push<br></code></pre></td></tr></table></figure><h3 id="新设备操作"><a href="#新设备操作" class="headerlink" title="新设备操作"></a>新设备操作</h3><p>跟之前一样搭建好环境，安装好git、node.js、设置好ssh、安装hexo，但注意此时不需要再对hexo初始化了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-cli -g<br></code></pre></td></tr></table></figure><p>之后，将该库，clone到任意文件夹下。进入到该文件夹，安装一些配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br>npm install hexo-deployer-git --save<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure><p>之后就可以写博客了。最好每次写完博客，都将源文件上传一下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;new push&quot;</span><br>git push<br></code></pre></td></tr></table></figure><p>参考文章：</p><p>1、<a href="https://blog.csdn.net/qq_43657442/article/details/120523934">https://blog.csdn.net/qq_43657442/article/details/120523934</a></p><p>2、<a href="https://blog.csdn.net/qq_43657442/article/details/120522180">https://blog.csdn.net/qq_43657442/article/details/120522180</a></p><p>3、<a href="http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://baidinghub.github.io/2020/03/02/Windows%E4%B8%8B%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>]]></content>
       
@@ -15,18 +15,18 @@
           
           <category> 博客 </category>
           
-          <category> hexo </category>
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
+            <tag> Hexo </tag>
+            
             <tag> 生活 </tag>
             
             <tag> Nodejs </tag>
-            
-            <tag> hexo </tag>
             
         </tags>
       

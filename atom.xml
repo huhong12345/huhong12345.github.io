@@ -6,7 +6,7 @@
   <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://huhong12345.github.io/"/>
-  <updated>2024-05-26T15:02:22.380Z</updated>
+  <updated>2024-05-26T16:32:41.689Z</updated>
   <id>https://huhong12345.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>nodejs版本管理与hexo多终端重新部署</title>
-    <link href="https://huhong12345.github.io/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
-    <id>https://huhong12345.github.io/2024/05/26/win11%E5%AE%89%E8%A3%85%E6%8A%80%E5%B7%A7-node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</id>
+    <link href="https://huhong12345.github.io/2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/"/>
+    <id>https://huhong12345.github.io/2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</id>
     <published>2024-05-26T14:38:00.000Z</published>
-    <updated>2024-05-26T15:02:22.380Z</updated>
+    <updated>2024-05-26T16:32:41.689Z</updated>
     
     
       
@@ -36,14 +36,14 @@
     
     <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="hexo" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/hexo/"/>
+    <category term="Hexo" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
     
+    
+    <category term="Hexo" scheme="https://huhong12345.github.io/tags/Hexo/"/>
     
     <category term="生活" scheme="https://huhong12345.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
     <category term="Nodejs" scheme="https://huhong12345.github.io/tags/Nodejs/"/>
-    
-    <category term="hexo" scheme="https://huhong12345.github.io/tags/hexo/"/>
     
   </entry>
   
