@@ -8,7 +8,7 @@
       <link href="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/"/>
       <url>/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/</url>
       
-        <content type="html"><![CDATA[<p>最近利用手里的设备，购买了一些新设备，重新装了两台电脑：</p><h3 id="电脑一（用机者要求必须要有水冷，以好看为目标）："><a href="#电脑一（用机者要求必须要有水冷，以好看为目标）：" class="headerlink" title="电脑一（用机者要求必须要有水冷，以好看为目标）："></a>电脑一（用机者要求必须要有水冷，以好看为目标）：</h3><ul><li>CPU：i5-12600KF盒装 </li><li>主板：华硕重炮手B660M Plus Wifi</li><li>显卡：华硕6600XT8G Dual（自备）</li><li>内存：金百达银爵 16G*2 3200MHZ 长鑫A-Die（自备）</li><li>硬盘：西数SN850 1T（自备）</li><li>散热：瓦尔基里VA240水冷</li><li>电源：Almordor650W金牌全模黑色</li><li>机箱：机械大师C28（自备）</li></ul><h3 id="电脑二（尽量省钱，装一台itx）："><a href="#电脑二（尽量省钱，装一台itx）：" class="headerlink" title="电脑二（尽量省钱，装一台itx）："></a>电脑二（尽量省钱，装一台itx）：</h3><ul><li>CPU：i5-13600KF盒装（自备）</li><li>主板：华硕B760itx Wifi</li><li>显卡：蓝宝石6750GRE极地白（自备）</li><li>内存：光威龙武16G*2 6400 海力士M-die</li><li>硬盘：三星980Pro（自备）</li><li>散热：利民PA120 白色（自备）</li><li>电源：海韵Focus750W 白色（自备）</li><li>机箱：闪鳞G200-U3</li></ul><p>共花费：</p><ul><li>CPU: Intel 12600kf 盒装940元</li><li>主板 ：华硕b760i wifi 1299元</li><li>电源：Almordor 650W金牌全模 黑色 384元</li><li>机箱 ：闪鳞G200-U3 278元</li><li>散热：瓦尔基里VA240水冷 264元</li><li>风扇：利民12025<em>3+IDCooiing12015</em>1 101元</li><li>内存 ：光威龙武16G*2 DDR5 594元<br>总价：3860元</li></ul><h3 id="装机思路："><a href="#装机思路：" class="headerlink" title="装机思路："></a>装机思路：</h3><p>两台电脑，一黑一白，分别分享下思路。</p><h3 id="黑色C28"><a href="#黑色C28" class="headerlink" title="黑色C28"></a>黑色C28</h3><p>第一台是以颜值为目标，所以想使用240水冷，并采用纯黑风格。我最先定下的其实是CPU，目前12600KF降到了900多元的历史最低价，搭配一张铭瑄B760M终结者板U只需要1600左右。最开始的思路是用U320，最后可以弄一个win11+黑苹果双系统方案，如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/3.png"><br>参考的配置如下，SN850、6600xt这些对黑苹果的兼容性很好。<br>机箱：15升的MATX SOEYI U320<br>主板：D5型号的铭瑄终结者B760M和Z790M终结者 、华硕B760-G小吹雪<br>CPU: i5-12600KF&#x2F;i5-13600KF&#x2F;i7-14700KF<br>显卡：RX6600&#x2F;6800&#x2F;6900系列<br>散热：利民PA120 mini 或240水冷<br>内存：主板兼容的D5 比如金百达银爵系列<br>硬盘：推荐国产或兼容性的西数SN850X</p><p>具体可参见：<br><a href="https://www.bilibili.com/video/BV1Gw4m1m7sv/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa">https://www.bilibili.com/video/BV1Gw4m1m7sv/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa</a></p><p>黑苹果教程可参考黑果小兵的长期维护文档：<br>1、<a href="https://apple.sqlsec.com/">https://apple.sqlsec.com/</a><br>2、<a href="https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html">https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html</a></p><p>接下来重点的时间花在了挑选机箱，使用者最初看上了海景房，看了以下几款：</p><p><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/7.png"><br>但最后因为体积过大而放弃。接着看了很多主要是单面侧透的机器，这里我放了目前较小的matx机箱尺寸做对比，如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/6.png"></p><p>可见，目前主流型号的matx机箱体积都较大，卖的比较好的是20L左右的乔思伯Z20。</p><p>如果选择上itx主板，我觉得小喆优品的B2不错，可惜不能水冷；如果是matx，小喆C2P（179元），铝小宝的P90（144元）也都是很好的选择，可惜质感稍差。<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/4.png"></p><p>最后，选择了原价799的机械大师C28，质感较好，体积17.9L。选择了方案1（matx+240水冷+SFX电源）：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/8.png"></p><p>准备顶部水冷两把黑色ARGB风扇，后面一把12025，下面两把12025.故选择了购买利民TLS12S黑色三把工包。</p><p>其实也可以去淘宝“散热数码商城”店购买丛林豹棱镜6pro（16.7一把），可以选反向风扇。或者分形工艺Prisma幻彩版（19元一把），性价比都很高。</p><p>水冷这里选择了VA240，主要是颜值高，且预涂了硅脂，安装非常方便。</p><p>目前SFX电源性价比比较高的是神雕和TT，最后选择了全日系电容的神雕650W。</p><p>主板选择的是已有的B660m重炮手D4，考虑到的是拓展性好，可接硬盘多。未来准备升级到64G内存。</p><p>至此第一台电脑就算完工了。</p><h3 id="白色G200"><a href="#白色G200" class="headerlink" title="白色G200"></a>白色G200</h3><p>第二台电脑是我自己用，我想着还没装过itx，现在itx机箱也不算贵（跟C28 799比真的便宜），就随便选了个白色mesh版的闪鳞G200直插机箱，279元，凑合着先用。</p><p>itx机箱目前可以说被闪鳞霸占。最火的应该是来源于蜂鸟团队的A4机箱S300及其后续。这里做体积对比如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/5.png"></p><p>其中S300风冷限高60，可用利民AP90-53来压，不过这个压13600KF属实够呛，可能12600KF都不太行。有看过一个思路是把散热器的风扇换成一个120mm风扇，不过还需要淘宝买一个40多的转接器，有点麻烦，而且散热效果提高不算明显。</p><p>S400最初限高67，但有人反馈仍然放不进利民AP120，不过后来V2版本修复了。但我较大其实实物看起来比300大一圈，而且目前价格偏贵（S300 329，S400 379）。还有一款S450，可以用上水冷，不过感觉体积不太行了，而且机箱内风道较差。</p><p>最后选择了这款G200，因为是直插所以还可以剩下PCIE转接线的钱。其优点是CPU散热高度很好（最高162，甚至可以放下九州风神的AK620冰立方），还可以使用ATX电源。这里我就用上了我原来已有的散热器和电源，没额外花钱。</p><p>最后是主板选择，区别见下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/1.png"></p><p>本来准备上铭瑄B760I终结者，可是现在D4终结者版本已经停产了,D5主板是挑战者，砍掉了很多USB换了一堆显示器接口和两个网口，属实把我整懵了。</p><p>七彩虹的D5版本倒是还行，相比D4供电都有所提升，不过价格900多，感觉性价比很低。恰巧华硕B760i价格从1799降到了1299，而且供电、拓展都挺不错，最后就选了这个。<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/2.png"></p><p>内存的话，目前DDR5价格其实跟D4差的也不多了。大致可按海力士Adie、海力士Mdie、三星Adie和其他依次排序，最后选了威刚龙武，6400频率海力士M-die，感觉够用了也正好百亿补贴599元16G*2，就下手了。</p>]]></content>
+        <content type="html"><![CDATA[<p>最近利用手里的设备，购买了一些新设备，重新装了两台电脑：</p><h3 id="电脑一（用机者要求必须要有水冷，以好看为目标）："><a href="#电脑一（用机者要求必须要有水冷，以好看为目标）：" class="headerlink" title="电脑一（用机者要求必须要有水冷，以好看为目标）："></a>电脑一（用机者要求必须要有水冷，以好看为目标）：</h3><ul><li>CPU：i5-12600KF盒装 </li><li>主板：华硕重炮手B660M Plus Wifi</li><li>显卡：华硕6600XT8G Dual（自备）</li><li>内存：金百达银爵 16G*2 3200MHZ 长鑫A-Die（自备）</li><li>硬盘：西数SN850 1T（自备）</li><li>散热：瓦尔基里VA240水冷</li><li>电源：Almordor650W金牌全模黑色</li><li>机箱：机械大师C28（自备）</li></ul><h3 id="电脑二（尽量省钱，装一台itx）："><a href="#电脑二（尽量省钱，装一台itx）：" class="headerlink" title="电脑二（尽量省钱，装一台itx）："></a>电脑二（尽量省钱，装一台itx）：</h3><ul><li>CPU：i5-13600KF盒装（自备）</li><li>主板：华硕B760itx Wifi</li><li>显卡：蓝宝石6750GRE极地白（自备）</li><li>内存：光威龙武16G*2 6400 海力士M-die</li><li>硬盘：三星980Pro（自备）</li><li>散热：利民PA120 白色（自备）</li><li>电源：海韵Focus750W 白色（自备）</li><li>机箱：闪鳞G200-U3</li></ul><p>共花费：</p><ul><li>CPU: Intel 12600kf 盒装940元</li><li>主板 ：华硕b760i wifi 1299元</li><li>电源：Almordor 650W金牌全模 黑色 384元</li><li>机箱 ：闪鳞G200-U3 278元</li><li>散热：瓦尔基里VA240水冷 264元</li><li>风扇：利民12025<em>3+IDCooiing12015</em>1 101元</li><li>内存 ：光威龙武16G*2 DDR5 594元<br>总价：3860元</li></ul><h3 id="装机思路："><a href="#装机思路：" class="headerlink" title="装机思路："></a>装机思路：</h3><p>两台电脑，一黑一白，分别分享下思路。</p><h3 id="黑色C28"><a href="#黑色C28" class="headerlink" title="黑色C28"></a>黑色C28</h3><p>第一台是以颜值为目标，所以想使用240水冷，并采用纯黑风格。我最先定下的其实是CPU，目前12600KF降到了900多元的历史最低价，搭配一张铭瑄B760M终结者板U只需要1600左右。最开始的思路是用U320，最后可以弄一个win11+黑苹果双系统方案，如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/3.png"><br>参考的配置如下，SN850、6600xt这些对黑苹果的兼容性很好。<br>机箱：15升的MATX SOEYI U320<br>主板：D5型号的铭瑄终结者B760M和Z790M终结者 、华硕B760-G小吹雪<br>CPU: i5-12600KF&#x2F;i5-13600KF&#x2F;i7-14700KF<br>显卡：RX6600&#x2F;6800&#x2F;6900系列<br>散热：利民PA120 mini 或240水冷<br>内存：主板兼容的D5 比如金百达银爵系列<br>硬盘：推荐国产或兼容性的西数SN850X</p><p>具体可参见：<br><a href="https://www.bilibili.com/video/BV1Gw4m1m7sv/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa">https://www.bilibili.com/video/BV1Gw4m1m7sv/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=cf9bf18d8cd9c4647e5513862d2eb7aa</a></p><p>黑苹果教程可参考黑果小兵的长期维护文档：<br>1、<a href="https://apple.sqlsec.com/">https://apple.sqlsec.com/</a><br>2、<a href="https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html">https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html</a></p><p>接下来重点的时间花在了挑选机箱，使用者最初看上了海景房，看了以下几款：</p><p><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/7.png"><br>但最后因为体积过大而放弃。接着看了很多主要是单面侧透的机器，这里我放了目前较小的matx机箱尺寸做对比，如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/6.png"></p><p>可见，目前主流型号的matx机箱体积都较大，卖的比较好的是20L左右的乔思伯Z20。</p><p>如果选择上itx主板，我觉得小喆优品的B2不错，可惜不能水冷；如果是matx，小喆C2P（179元），铝小宝的P90（144元）也都是很好的选择，可惜质感稍差。<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/4.png"></p><p>最后，选择了原价799的机械大师C28，质感较好，体积17.9L。选择了方案1（matx+240水冷+SFX电源）：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/8.png"></p><p>准备顶部水冷两把黑色ARGB风扇，后面一把12025，下面两把12025.故选择了购买利民TLS12S黑色三把工包。</p><p>其实也可以去淘宝“散热数码商城”店购买丛林豹棱镜6pro（16.7一把），可以选反向风扇。或者分形工艺Prisma幻彩版（19元一把），性价比都很高。</p><p>水冷这里选择了VA240，主要是颜值高，且预涂了硅脂，安装非常方便。</p><p>目前SFX电源性价比比较高的是神雕和TT，最后选择了全日系电容的神雕650W。</p><p>主板选择的是已有的B660m重炮手D4，考虑到的是拓展性好，可接硬盘多。未来准备升级到64G内存。</p><p>至此第一台电脑就算完工了。</p><h3 id="白色G200"><a href="#白色G200" class="headerlink" title="白色G200"></a>白色G200</h3><p>第二台电脑是我自己用，我想着还没装过itx，现在itx机箱也不算贵（跟C28 799比真的便宜），就随便选了个白色mesh版的闪鳞G200直插机箱，279元，凑合着先用。</p><p>itx机箱目前可以说被闪鳞霸占。最火的应该是来源于蜂鸟团队的A4机箱S300及其后续。这里做体积对比如下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/5.png"></p><p>其中S300风冷限高60，可用利民AP90-53来压，不过这个压13600KF属实够呛，可能12600KF都不太行。有看过一个思路是把散热器的风扇换成一个120mm风扇，不过还需要淘宝买一个40多的转接器，有点麻烦，而且散热效果提高不算明显。</p><p>S400最初限高67，但有人反馈仍然放不进利民AP120，不过后来V2版本修复了。但我较大其实实物看起来比300大一圈，而且目前价格偏贵（S300 329，S400 379）。还有一款S450，可以用上水冷，不过感觉体积不太行了，而且机箱内风道较差。</p><p>最后选择了这款G200，因为是直插所以还可以剩下PCIE转接线的钱。其优点是CPU散热高度很好（最高162，甚至可以放下九州风神的AK620冰立方），还可以使用ATX电源。这里我就用上了我原来已有的散热器和电源，没额外花钱。</p><p>最后是主板选择，区别见下：<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/1.png"></p><p>本来准备上铭瑄B760I终结者，可是现在D4终结者版本已经停产了,D5主板是挑战者，砍掉了很多USB换了一堆显示器接口和两个网口，属实把我整懵了。</p><p>七彩虹的D5版本倒是还行，相比D4供电都有所提升，不过价格900多，感觉性价比很低。恰巧华硕B760i价格从1799降到了1299，而且供电、拓展都挺不错，最后就选了这个。<br><img src="/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/2.png"></p><p>内存的话，目前DDR5价格其实跟D4差的也不多了。大致可按海力士Adie、海力士Mdie、三星Adie和其他依次排序，最后选了威刚龙武，6400频率海力士M-die，感觉够用了也正好百亿补贴599元16G*2，最后选了它。</p>]]></content>
       
       
       <categories>
@@ -645,11 +645,11 @@
       
         <tags>
             
+            <tag> DL </tag>
+            
             <tag> 代码摘抄 </tag>
             
             <tag> Pytorch </tag>
-            
-            <tag> DL </tag>
             
             <tag> 更新 </tag>
             
@@ -1007,13 +1007,13 @@
       
         <tags>
             
-            <tag> DL </tag>
-            
             <tag> Python </tag>
             
             <tag> 编程 </tag>
             
             <tag> 练习 </tag>
+            
+            <tag> DL </tag>
             
         </tags>
       
@@ -1152,22 +1152,22 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<p>Python is For Fun： Python</p><p>深度学习之Caffe入门——Caffe环境配置： DL</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>Python is For Fun： Python</p><p>深度学习之Caffe入门——Caffe环境配置： DL</p>]]></content>
       
     </entry>
     
