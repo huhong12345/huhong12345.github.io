@@ -5,7 +5,7 @@ tags:
 - 摘抄
 - Hexo
 categories:
-- 编程
+- 博客
 - Hexo
 ---
 

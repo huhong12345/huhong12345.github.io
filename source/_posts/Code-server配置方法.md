@@ -3,9 +3,9 @@ title: Code-server配置方法
 date: 2022-08-30 17:07:30
 categories:
 - 编程
-- Code
+- Linux
 tags:
-- Code Online
+- VSCode
 - 配置
 ---
 ## 开始

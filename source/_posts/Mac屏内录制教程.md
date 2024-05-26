@@ -4,7 +4,7 @@ tags:
   - Mac
   - 录屏
 categories:
-  - 生活
+  - 硬件
   - Mac
 date: 2020-02-18 20:31:22
 ---

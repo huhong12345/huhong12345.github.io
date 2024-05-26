@@ -6,7 +6,7 @@
 # 网址题头布局
 title: My Personal Blog
 subtitle: '不积跬步无以至千里'
-description: 'First-year Ph.D. Candidate @THU Economics& Social Analysis Group'
+description: 'Ph.D. Candidate @THU Economics& Social Analysis Group'
 keywords:
 author: MaximeHu
 language: zh_CN
@@ -14,8 +14,8 @@ timezone: ''
 
 ## 网址##
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-#url: https://huhong12345.github.io
-url: http://huhong.me/
+url: https://huhong12345.github.io
+#url: http://huhong.me/
 #root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -109,9 +109,9 @@ deploy:
 #    coding: https://e.coding.net/MaximeHu/MaximeHu.git
   branch: master
 
-backup:
-  type: git
-  theme: aria
-  repository:
-      github: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup
-      gitcafe: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup
+# backup:
+#   type: git
+#   theme: aria
+#   repository:
+#       github: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup
+#       gitcafe: git@github.com:huhong12345/huhong12345.github.io.git,hexo-backup

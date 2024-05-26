@@ -77,7 +77,9 @@ sidebar: left
 # Animation in Home, Archive, Category and Tag.
 animate: true
 
-busuanzi: true
+#busuanzi: true
+busuanzi:
+  enable: true
 
 # If you want ARIA generate excerpt, set it to the length you want. If you don't, leave it blank.
 # Recomend to place `<!--more-->` to where you want to stop excerpt in content instead of use this option.
@@ -145,11 +147,11 @@ social:
 blogroll:
   enable: true
   links:
-    - name: 清华学堂
-      link: http://learn.tsinghua.edu.cn/f/login
+    - name: Library
+      link: https://lib.tsinghua.edu.cn/
       icon: <i class="fas fa-link"></i>
-    - name: 好奇心日报
-      link: http://www.qdaily.com/
+    - name: Services
+      link: https://thu.services/services/
       icon: <i class="fas fa-link"></i>
     - name: Runood
       link: https://www.runoob.com/python3/python3-data-type.html

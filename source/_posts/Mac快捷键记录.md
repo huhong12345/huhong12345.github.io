@@ -4,7 +4,7 @@ tags:
   - Mac
   - 快捷键
 categories:
-  - 生活
+  - 硬件
   - Mac
   
 date: 2019-12-03 10:55:03

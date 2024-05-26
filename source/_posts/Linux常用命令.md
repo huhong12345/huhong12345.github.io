@@ -2,7 +2,7 @@
 title: Linux常用命令
 date: 2022-09-16 22:56:01
 categories:
-- 科研
+- 编程
 - Linux
 tags:
 - 摘抄
