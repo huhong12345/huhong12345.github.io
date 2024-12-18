@@ -161,7 +161,7 @@
     </script>
     
     <script defer type="text/javascript" src="../../../../js/custom.js"></script>
-    <title>Ubuntu dpkg锁解决办法 | My Personal Blog - 不积跬步无以至千里</title>
+    <title>Ubuntu github 连接不上问题 | My Personal Blog - 不积跬步无以至千里</title>
   <meta name="generator" content="Hexo 5.4.1"></head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN"  data-spy="scroll" data-target=".list-group">
     
@@ -218,11 +218,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">Ubuntu dpkg锁解决办法</h1>
+      <h1 class="post-title" itemprop="name headline">Ubuntu github 连接不上问题</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-12-18T12:20:32+08:00">2024-12-18 12:20:32</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-12-18T13:29:34+08:00">2024-12-18 13:29:34</time></span>
         </span>
         
         
@@ -240,16 +240,28 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h3 id="Ubuntu-dpkg锁"><a href="#Ubuntu-dpkg锁" class="headerlink" title="Ubuntu dpkg锁"></a>Ubuntu dpkg锁</h3><p>ubuntu 经常出现：E: 无法获得锁 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock-frontend - open (11: 资源暂时不可用)</p>
-<p>这个错误表明Ubuntu系统在尝试使用APT（高级包装工具）时无法获取一个锁文件。锁文件用于防止多个进程同时修改系统软件包数据库，以防止数据库损坏。错误信息中的“资源暂时不可用”通常意味着文件系统正忙于处理其他进程的I&#x2F;O操作，或者有其他用户正在使用APT。</p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><h4 id="【方法一】确认没有其他进程正在使用APT。"><a href="#【方法一】确认没有其他进程正在使用APT。" class="headerlink" title="【方法一】确认没有其他进程正在使用APT。"></a>【方法一】确认没有其他进程正在使用APT。</h4><p>可以使用sudo lsof &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock-frontend来检查是否有进程正在使用该文件。</p>
-<h4 id="【方法二】如果没有其他进程正在使用。"><a href="#【方法二】如果没有其他进程正在使用。" class="headerlink" title="【方法二】如果没有其他进程正在使用。"></a>【方法二】如果没有其他进程正在使用。</h4><p>可以尝试等待一段时间后重试，或者重启系统。</p>
-<h4 id="【方法三】可以尝试手动删除锁文件。"><a href="#【方法三】可以尝试手动删除锁文件。" class="headerlink" title="【方法三】可以尝试手动删除锁文件。"></a>【方法三】可以尝试手动删除锁文件。</h4><p>这是一个风险操作，因为它可能会导致软件包系统处于不一致的状态。只有当其他方法都无法解决问题时才应执行此操作：</p>
-<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#停止所有APT相关的进程：</span><br>sudo killall apt apt-get apt-cdrom<br><span class="hljs-comment">#然后删除锁文件：</span><br>sudo <span class="hljs-built_in">rm</span> /var/lib/dpkg/lock-frontend<br><span class="hljs-comment">#清理APT状态：</span><br>sudo dpkg --configure -a<br><span class="hljs-comment">#更新软件包列表：</span><br>sudo apt update<br></code></pre></td></tr></table></figure>
+      <p>执行 git clone 报错</p>
+<h3 id="Error-110"><a href="#Error-110" class="headerlink" title="Error 110"></a>Error 110</h3><p>1、错误提示：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">fatal: unable to access <span class="hljs-string">&#x27;https://github.com/****.git/&#x27;</span>: GnuTLS recv error (-110): The TLS connection was non-properly terminated.<br></code></pre></td></tr></table></figure>
 
-<h4 id="【方法四】直接杀死进程"><a href="#【方法四】直接杀死进程" class="headerlink" title="【方法四】直接杀死进程"></a>【方法四】直接杀死进程</h4><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -e | grep apt-get<br><span class="hljs-comment">#找出名称含有apt-get是进程，查到PID执行</span><br>sudo <span class="hljs-built_in">kill</span> PID<br></code></pre></td></tr></table></figure>
+<p>2、解决方案</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">imaginemiracle@im-Linux:~$ sudo apt-get update<br>imaginemiracle@im-Linux:~$ sudo apt-get install gnutls-bin<br>imaginemiracle@im-Linux:~$ git config --global http.sslVerify <span class="hljs-literal">false</span><br>imaginemiracle@im-Linux:~$ git config --global http.postBuffer 1048576000<br></code></pre></td></tr></table></figure>
 
-<h4 id="【方法五】强制解锁"><a href="#【方法五】强制解锁" class="headerlink" title="【方法五】强制解锁"></a>【方法五】强制解锁</h4><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> /var/cache/apt/archives/lock<br>sudo <span class="hljs-built_in">rm</span> /var/lib/dpkg/lock<br></code></pre></td></tr></table></figure>
+<h3 id="Error-7"><a href="#Error-7" class="headerlink" title="Error 7"></a>Error 7</h3><p>1、错误提示：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused <br></code></pre></td></tr></table></figure>
+<p>可以发现，脚本需要到 raw.githubusercontent.com 上拉取代码。网上搜索了一下，发现是 github 的一些域名的 DNS 解析被污染，导致DNS 解析过程无法通过域名取得正确的IP地址。</p>
+<p>2、解决方案<br>打开 <a target="_blank" rel="noopener" href="https://www.ipaddress.com/">https://www.ipaddress.com/</a> 输入访问不了的域名<br>查询之后可以获得正确的 IP 地址</p>
+<p>在本机的 host 文件中添加，建议使用 switchhosts 方便 host 管理</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">199.232.68.133 raw.githubusercontent.com<br>199.232.68.133 user-images.githubusercontent.com<br>199.232.68.133 avatars2.githubusercontent.com<br>199.232.68.133 avatars1.githubusercontent.com<br></code></pre></td></tr></table></figure>
+
+<p>3、Ubuntu修改host</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/hosts<br><span class="hljs-comment"># 模仿已有的配置,比如</span><br>0.0.0.0 account.jetbrains.com<br></code></pre></td></tr></table></figure>
+
+<p>修改 hosts 后,使 hosts 文件修改生效:</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo /etc/init.d/dns-clean start<br>sudo /etc/init.d/networking restart<br></code></pre></td></tr></table></figure>
+<p>保存后重启网络就可以了。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://github.com/hawtim/hawtim.github.io/issues/10">https://github.com/hawtim/hawtim.github.io/issues/10</a></p>
+
     </main>
     <footer class="post-footer">
       
@@ -268,12 +280,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="../Oh-My-ZSH-%E5%92%8C-Powerlevel10k/" rel="next" title="Oh My ZSH 和 Powerlevel10k"><i class="fas fa-angle-left"></i><span class="nav-title">Oh My ZSH 和 Powerlevel10k</span></a>
+      <a href="../Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" rel="next" title="Ubuntu dpkg锁解决办法"><i class="fas fa-angle-left"></i><span class="nav-title">Ubuntu dpkg锁解决办法</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="../Ubuntu%20github%20%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E9%97%AE%E9%A2%98/" rel="prev" title="Ubuntu github 连接不上问题"><span class="nav-title">Ubuntu github 连接不上问题</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -300,7 +310,7 @@
       "client_secret": "dd4d567e2c3038605681e28135d4a4265fd77b03",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "Ubuntu dpkg锁解决办法",
+      "issue_title": "Ubuntu github 连接不上问题",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -395,7 +405,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Ubuntu-dpkg%E9%94%81"><span class="toc-text">Ubuntu dpkg锁</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">解决方法：</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E3%80%90%E6%96%B9%E6%B3%95%E4%B8%80%E3%80%91%E7%A1%AE%E8%AE%A4%E6%B2%A1%E6%9C%89%E5%85%B6%E4%BB%96%E8%BF%9B%E7%A8%8B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8APT%E3%80%82"><span class="toc-text">【方法一】确认没有其他进程正在使用APT。</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E3%80%90%E6%96%B9%E6%B3%95%E4%BA%8C%E3%80%91%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E5%85%B6%E4%BB%96%E8%BF%9B%E7%A8%8B%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E3%80%82"><span class="toc-text">【方法二】如果没有其他进程正在使用。</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E3%80%90%E6%96%B9%E6%B3%95%E4%B8%89%E3%80%91%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E6%89%8B%E5%8A%A8%E5%88%A0%E9%99%A4%E9%94%81%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-text">【方法三】可以尝试手动删除锁文件。</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E3%80%90%E6%96%B9%E6%B3%95%E5%9B%9B%E3%80%91%E7%9B%B4%E6%8E%A5%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B"><span class="toc-text">【方法四】直接杀死进程</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E3%80%90%E6%96%B9%E6%B3%95%E4%BA%94%E3%80%91%E5%BC%BA%E5%88%B6%E8%A7%A3%E9%94%81"><span class="toc-text">【方法五】强制解锁</span></a></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Error-110"><span class="toc-text">Error 110</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#Error-7"><span class="toc-text">Error 7</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol></div>
     </div>
     
     
