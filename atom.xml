@@ -6,7 +6,7 @@
   <link href="https://huhong12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://huhong12345.github.io/"/>
-  <updated>2024-05-26T16:34:38.309Z</updated>
+  <updated>2024-12-18T04:24:39.873Z</updated>
   <id>https://huhong12345.github.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu dpkg锁解决办法</title>
+    <link href="https://huhong12345.github.io/2024/12/18/Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>https://huhong12345.github.io/2024/12/18/Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2024-12-18T04:20:32.000Z</published>
+    <updated>2024-12-18T04:24:39.873Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Ubuntu-dpkg锁&quot;&gt;&lt;a href=&quot;#Ubuntu-dpkg锁&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu dpkg锁&quot;&gt;&lt;/a&gt;Ubuntu dpkg锁&lt;/h3&gt;&lt;p&gt;ubuntu 经常出现：E: 无法获得锁</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://huhong12345.github.io/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="服务器" scheme="https://huhong12345.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="ubuntu" scheme="https://huhong12345.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oh My ZSH 和 Powerlevel10k</title>
+    <link href="https://huhong12345.github.io/2024/12/18/Oh-My-ZSH-%E5%92%8C-Powerlevel10k/"/>
+    <id>https://huhong12345.github.io/2024/12/18/Oh-My-ZSH-%E5%92%8C-Powerlevel10k/</id>
+    <published>2024-12-18T03:00:04.000Z</published>
+    <updated>2024-12-18T04:22:50.386Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大多数 Linux 发行版中的默认 Shell 是 Bash。Bash 是一个可靠的和传统的工具。然而，它缺乏一些自定义功能，比如漂亮的颜色、光标支持等等。&lt;/p&gt;
+&lt;p&gt;同时，也可以使用另一个 Shell，即 Zsh 来得到更多的设置调整，并帮助你扩展你的 Bash</summary>
+        
+      
+    
+    
+    
+    <category term="终端" scheme="https://huhong12345.github.io/categories/%E7%BB%88%E7%AB%AF/"/>
+    
+    <category term="ZSH" scheme="https://huhong12345.github.io/categories/%E7%BB%88%E7%AB%AF/ZSH/"/>
+    
+    
+    <category term="Linux" scheme="https://huhong12345.github.io/tags/Linux/"/>
+    
+    <category term="编程" scheme="https://huhong12345.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>nodejs版本管理与hexo多终端重新部署</title>
@@ -562,66 +621,6 @@
     <category term="政治" scheme="https://huhong12345.github.io/tags/%E6%94%BF%E6%B2%BB/"/>
     
     <category term="意识形态" scheme="https://huhong12345.github.io/tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>就业去向分析</title>
-    <link href="https://huhong12345.github.io/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/"/>
-    <id>https://huhong12345.github.io/2022/08/11/%E5%B0%B1%E4%B8%9A%E5%8E%BB%E5%90%91/</id>
-    <published>2022-08-11T07:11:32.000Z</published>
-    <updated>2023-05-12T12:53:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;就业去向看到的一个评论，有点意思，摘抄一下：&lt;/p&gt;
-&lt;p&gt;80年代大家都是挤破脑袋进体制内。公务员和军队是一等人，国企事业单位次之。私企？个体户？那是资本主义的尾巴，哪天说割就割了。&lt;/p&gt;
-&lt;p&gt;然而，90年代实现双轨制。造导弹的不如卖茶叶蛋的，一大堆体制内下海经商，国</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="就业&amp;思考" scheme="https://huhong12345.github.io/categories/%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A-%E6%80%9D%E8%80%83/"/>
-    
-    
-    <category term="思考" scheme="https://huhong12345.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-    <category term="就业" scheme="https://huhong12345.github.io/tags/%E5%B0%B1%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github-Pages+CheapName域名配置</title>
-    <link href="https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
-    <id>https://huhong12345.github.io/2021/08/02/Github-Pages-CheapName-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</id>
-    <published>2021-08-02T09:19:25.000Z</published>
-    <updated>2022-11-02T10:12:28.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;整体思路&quot;&gt;&lt;a href=&quot;#整体思路&quot; class=&quot;headerlink&quot; title=&quot;整体思路&quot;&gt;&lt;/a&gt;整体思路&lt;/h2&gt;&lt;p&gt;个人Blog是使用Hexo+Github Pages搭建的。Pages的域名都是默认&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="域名" scheme="https://huhong12345.github.io/categories/%E5%8D%9A%E5%AE%A2/%E5%9F%9F%E5%90%8D/"/>
-    
-    
-    <category term="Github" scheme="https://huhong12345.github.io/tags/Github/"/>
-    
-    <category term="域名" scheme="https://huhong12345.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   

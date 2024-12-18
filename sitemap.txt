@@ -1,3 +1,5 @@
+https://huhong12345.github.io/2024/12/18/Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
+https://huhong12345.github.io/2024/12/18/Oh-My-ZSH-%E5%92%8C-Powerlevel10k/
 https://huhong12345.github.io/2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/
 https://huhong12345.github.io/2024/05/26/win11-LTSC%E5%88%9D%E4%BD%93%E9%AA%8C/
 https://huhong12345.github.io/2024/05/26/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B02/
@@ -128,3 +130,5 @@ https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/Pytorch/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/RL/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/
 https://huhong12345.github.io/categories/%E7%A7%91%E7%A0%94/DL/
+https://huhong12345.github.io/categories/%E7%BB%88%E7%AB%AF/
+https://huhong12345.github.io/categories/%E7%BB%88%E7%AB%AF/ZSH/

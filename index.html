@@ -208,6 +208,116 @@
   
   <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io2024/12/18/Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="2024/12/18/Ubuntu-dpkg%E9%94%81%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" itemprop="url">Ubuntu dpkg锁解决办法</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-12-18T12:20:32+08:00">2024-12-18 12:20:32</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%BC%96%E7%A8%8B/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      Ubuntu dpkg锁ubuntu 经常出现：E: 无法获得锁 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock-frontend - open (11: 资源暂时不可用) 这个错误表明Ubuntu系统在尝试使用APT（高级包装工具）时无法获取一个锁文件。锁文件用于防止多个进程同时修改系统软件包数据库，以防止数据库损坏。错误信息中的“资源暂时不可用”通常意味着文件系统正忙于处理其他进程的I&#x2F;O操作，或者有其他用户正在使用APT。 解决方法：【方法一】确认没有其他进程正在使用APT。可以使用sudo lsof &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock-fron
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"><i class="fas fa-tags"></i>服务器</a>
+        
+        <a class="post-tag button" href="tags/ubuntu/" rel="tag"><i class="fas fa-tags"></i>ubuntu</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io2024/12/18/Oh-My-ZSH-%E5%92%8C-Powerlevel10k/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="MaximeHu">
+        <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
+        <meta itemprop="image" content="images/guidao.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="My Personal Blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="2024/12/18/Oh-My-ZSH-%E5%92%8C-Powerlevel10k/" itemprop="url">Oh My ZSH 和 Powerlevel10k</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-12-18T11:00:04+08:00">2024-12-18 11:00:04</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%BB%88%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">终端</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%BB%88%E7%AB%AF/ZSH/" itemprop="url" rel="index"><span itemprop="name">ZSH</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      
+      大多数 Linux 发行版中的默认 Shell 是 Bash。Bash 是一个可靠的和传统的工具。然而，它缺乏一些自定义功能，比如漂亮的颜色、光标支持等等。 同时，也可以使用另一个 Shell，即 Zsh 来得到更多的设置调整，并帮助你扩展你的 Bash Shell 体验。 这个简单的指南解释了如何安装 Zsh、Oh My Zsh 并应用 Powerlevel10k 主题 安装ZSH和改变Shell1、打开一个终端，使用以下适用于你的发行版的命令安装 Zsh。 1sudo apt install zsh 2、安装完后，找到ZSH安装路径 1whereis zsh 3、使用当前用户的 Zsh 可执行路径改变 Shell。 1chsh 
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="tags/Linux/" rel="tag"><i class="fas fa-tags"></i>Linux</a>
+        
+        <a class="post-tag button" href="tags/%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fas fa-tags"></i>编程</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io2024/05/26/nodejs%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E4%B8%8Ehexo%E5%A4%9A%E7%BB%88%E7%AB%AF%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="MaximeHu">
@@ -770,116 +880,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="2022/11/16/%E8%A3%85%E6%9C%BA%E6%97%A5%E8%AE%B0/" itemprop="url">装机日记</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-11-16T11:07:12+08:00">2022-11-16 11:07:12</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%A1%AC%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">硬件</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%A1%AC%E4%BB%B6/%E8%A3%85%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">装机</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      自用的win笔记本总是高负载一会就自动关机（拯救者Y7000P，8750H+GTX1060），加上疫情对居家办公的需求很大，很早就想组装一台台式机。目前暂时整理了两个方案： 方案一： CPU：i5-12600KF 1599 主板：微星B660M MORTAR WIFI DDR4 1060 显卡：七彩虹RTX3070 3299 内存：科赋雷霆XR 8G×2 389 硬盘：西数SN570 1T 379 散热：利民AX120R SE ARGB 150 电源：安钛克NE650 650w金牌全模 460 机箱：爱国者A15全侧透 100 方案二 CPU：i5-13600KF 主板：微星B660M MORTAR WIFI DDR4 显卡：七彩虹
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fas fa-tags"></i>生活</a>
-        
-        <a class="post-tag button" href="tags/%E8%A3%85%E6%9C%BA/" rel="tag"><i class="fas fa-tags"></i>装机</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://huhong12345.github.io2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="MaximeHu">
-        <meta itemprop="description" content="Ph.D. Candidate @THU Economics& Social Analysis Group">
-        <meta itemprop="image" content="images/guidao.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="My Personal Blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="2022/09/20/%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E4%BA%BA/" itemprop="url">单向度的人</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2022-09-20T17:54:39+08:00">2022-09-20 17:54:39</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="categories/%E7%94%9F%E6%B4%BB/%E6%94%BF%E6%B2%BB-%E5%93%B2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">政治&哲学</span></a></span>
-        </span>
-        
-        
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      
-      序——张峰 1990年2月于北京本书作者马尔库塞是当代美国著名哲学家和政治思想家、法兰克福学派和弗洛伊德主义的马克思主义的重要代表人物。六十年代下半期，美国和西欧爆发了大规模的学生造反运动，造反学生拥戴马尔库塞为他们的精神领袖。当然，就马尔库塞个人的意愿而言，他也许无意追求这种精神领袖的地位，但当造反学生把这个头衔加在他头上时，他也不反对。 1898年，马尔库塞诞生在德国柏林的一个犹太人家庭。先后在柏林大学和弗莱堡大学就读。１９１７年至１９１８年，他参加了德国社会民主党，但随着李卜克内西和罗莎.卢森堡被暗杀后，他便退出了该党，此后再也没有参加任何政党。为了取得在大学哲学系教书的资格，他在存在主义哲学家海德格尔的指导下，写了《黑格尔的
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="tags/%E6%94%BF%E6%B2%BB/" rel="tag"><i class="fas fa-tags"></i>政治</a>
-        
-        <a class="post-tag button" href="tags/%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/" rel="tag"><i class="fas fa-tags"></i>意识形态</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="page/4/">4</a><a class="extend next" rel="next" href="page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -926,14 +926,14 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="archives/">40</a></div>
+      <div><a href="archives/">42</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="categories/">26</a></div>
+      <div><a href="categories/">28</a></div>
     </div>
     
     
