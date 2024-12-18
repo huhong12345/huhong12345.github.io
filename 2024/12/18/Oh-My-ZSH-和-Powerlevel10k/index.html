@@ -272,6 +272,13 @@
 <p>3、添加插件<br>通过文本编辑器打开 ~&#x2F;.zshrc文件（使用以下命令），并找到 plugins&#x3D;(git) 一行。并将其替换为以下内容：</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">nano ~/.zshrc<br>plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)<br></code></pre></td></tr></table></figure>
 <p>使用 CTRL+O、回车和 CTRL+X 保存并关闭该文件。</p>
+<p>4、移除 on-my-zsh<br>可以輸入以下指令：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ uninstall_oh_my_zshCopy<br></code></pre></td></tr></table></figure>
+<p>注意：這只是移除 oh-my-zsh，並不會移除 zsh。</p>
+<p>查詢系統安裝了哪些 Shell：</p>
+<figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /etc/shells<br></code></pre></td></tr></table></figure>
+
+
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>[1] <a target="_blank" rel="noopener" href="https://holychung.github.io/2020/12/24/%E3%80%90%E5%88%86%E4%BA%AB%E3%80%91Oh-My-Zsh-powerlevel10k-%E5%BF%AB%E9%80%9F%E6%89%93%E9%80%A0%E5%A5%BD%E7%9C%8B%E5%A5%BD%E7%94%A8%E7%9A%84-command-line-%E7%92%B0%E5%A2%83/">https://holychung.github.io/2020/12/24/【分享】Oh-My-Zsh-powerlevel10k-快速打造好看好用的-command-line-環境/</a><br>[2] <a target="_blank" rel="noopener" href="https://linux.cn/article-15432-1.html">https://linux.cn/article-15432-1.html</a></p>
 
     </main>
